@@ -1,6 +1,1 @@
-import EditFormRoute from 'ember-flexberry/routes/edit-form';
-
-export default EditFormRoute.extend({
-  modelProjection: 'Sec_LinkGroupE',
-  modelName: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group'
-});
+export { default } from 'ember-flexberry-security/routes/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e';
