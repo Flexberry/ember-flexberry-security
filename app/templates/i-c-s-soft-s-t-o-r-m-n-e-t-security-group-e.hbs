@@ -1,0 +1,145 @@
+<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.caption'}}</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  {{#if model.errors.name}}
+  <span style="color:red">
+    {{model.errors.name}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.name
+  class=(if model.errors.name 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.name-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.connString}}
+  <span style="color:red">
+    {{model.errors.connString}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.connString
+  class=(if model.errors.connString 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.connString-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.connString pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.createTime}}
+  <span style="color:red">
+    {{model.errors.createTime}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.createTime
+  class=(if model.errors.createTime 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.createTime-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.createTime pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.creator}}
+  <span style="color:red">
+    {{model.errors.creator}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.creator
+  class=(if model.errors.creator 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.creator-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.creator pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.editTime}}
+  <span style="color:red">
+    {{model.errors.editTime}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.editTime
+  class=(if model.errors.editTime 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.editTime-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.editTime pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.editor}}
+  <span style="color:red">
+    {{model.errors.editor}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.editor
+  class=(if model.errors.editor 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.editor-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.editor pointing="pointing"}}
+</div>
+
+</form>

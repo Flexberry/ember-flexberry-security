@@ -1,0 +1,141 @@
+<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.caption'}}</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption'}}</label>
+  {{#if model.errors.role}}
+      <span style="color:red">{{model.errors.role}}</span>
+  {{/if}}
+  {{
+  flexberry-lookup
+  choose='showLookupDialog'
+  remove='removeLookupValue'
+  value=model.role
+  
+  relationName='role'
+  projection='RoleL'
+  title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption')
+  readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.role pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.role.name}}
+  <span style="color:red">
+    {{model.errors.role.name}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=true
+  required=true
+  value=model.role.name
+  class=(if model.errors.role.name 'error' '')
+  label=(Роль)
+}}
+  {{flexberry-validationmessage error=model.errors.role.name pointing="pointing"}}
+</div>
+
+<div class="field">
+    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption'}}</label>
+  {{#if model.errors.agent}}
+      <span style="color:red">{{model.errors.agent}}</span>
+  {{/if}}
+  {{
+  flexberry-lookup
+  choose='showLookupDialog'
+  remove='removeLookupValue'
+  value=model.agent
+  
+  relationName='agent'
+  projection='RoleL'
+  title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption')
+  readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.agent pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.agent.name}}
+  <span style="color:red">
+    {{model.errors.agent.name}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=true
+  required=true
+  value=model.agent.name
+  class=(if model.errors.agent.name 'error' '')
+  label=(Агент)
+}}
+  {{flexberry-validationmessage error=model.errors.agent.name pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.startDate-caption'}}</label>
+  {{#if model.errors.startDate}}
+  <span style="color:red">{{model.errors.startDate}}</span>
+  {{/if}}
+  {{
+    flexberry-datepicker
+    placeholder='(no value)'
+    readonly=readonly
+    value=model.startDate
+    class=(if model.errors.startDate 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.startDate pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.endDate-caption'}}</label>
+  {{#if model.errors.endDate}}
+  <span style="color:red">{{model.errors.endDate}}</span>
+  {{/if}}
+  {{
+    flexberry-datepicker
+    placeholder='(no value)'
+    readonly=readonly
+    value=model.endDate
+    class=(if model.errors.endDate 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.endDate pointing="pointing"}}
+</div>
+
+</form>

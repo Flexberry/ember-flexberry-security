@@ -1,0 +1,118 @@
+<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.caption'}}</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  {{#if model.errors.name}}
+  <span style="color:red">
+    {{model.errors.name}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.name
+  class=(if model.errors.name 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.name-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.login}}
+  <span style="color:red">
+    {{model.errors.login}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.login
+  class=(if model.errors.login 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.login-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.login pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.pwd}}
+  <span style="color:red">
+    {{model.errors.pwd}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.pwd
+  class=(if model.errors.pwd 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.pwd pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.connString}}
+  <span style="color:red">
+    {{model.errors.connString}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.connString
+  class=(if model.errors.connString 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.connString-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.connString pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption'}}</label>
+  {{#if model.errors.enabled}}
+  <span style="color:red">{{model.errors.enabled}}</span>
+  {{/if}}
+  {{flexberry-checkbox readonly=readonly value=model.enabled}}
+  {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
+</div>
+
+</form>
