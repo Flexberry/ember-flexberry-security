@@ -1,6 +1,10 @@
 # Ember-flexberry-security
 
-This README outlines the details of collaborating on this Ember addon.
+[![Travis master branch](https://img.shields.io/travis/Flexberry/ember-flexberry-security/master.svg?label=master%20build%20)](https://travis-ci.org/Flexberry/ember-flexberry-security)
+[![Travis develop branch](https://img.shields.io/travis/Flexberry/ember-flexberry-security/develop.svg?label=develop%20build)](https://travis-ci.org/Flexberry/ember-flexberry-security/branches)
+[![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)](https://github.com/orangemug/stability-badges#work-in-progress)
+
+Role based security module, authentification and authorization module, audit modile for [ember-flexberry](https://github.com/flexberry/ember-flexberry).
 
 ## Installation
 
