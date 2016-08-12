@@ -1,0 +1,469 @@
+﻿{
+  "name": "ICSSoftSTORMNETSecuritySubject",
+  "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+  "className": "Subject",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string100",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "flexberryType": "string100",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "isAttribute",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "isOperation",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "isView",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "isClass",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "sharedOper",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "full",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "read",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "insert",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "update",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "delete",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "execute",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "permitted",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "createTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "type",
+          "caption": "Тип",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "isAttribute",
+          "caption": "Атрибут",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "isOperation",
+          "caption": "Операция",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "isView",
+          "caption": "Представление",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "isClass",
+          "caption": "Класс",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "sharedOper",
+          "caption": "Разделяемая операция",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "DetermineProperties",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "attrs": [
+        {
+          "name": "isAttribute",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "isOperation",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "isView",
+          "caption": "",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "isClass",
+          "caption": "",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_OperationLE",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "isAttribute",
+          "caption": "",
+          "hidden": true,
+          "index": 1
+        },
+        {
+          "name": "isOperation",
+          "caption": "",
+          "hidden": true,
+          "index": 2
+        },
+        {
+          "name": "isView",
+          "caption": "",
+          "hidden": true,
+          "index": 3
+        },
+        {
+          "name": "isClass",
+          "caption": "",
+          "hidden": true,
+          "index": 4
+        },
+        {
+          "name": "type",
+          "caption": "Тип",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "sharedOper",
+          "caption": "Общая операция",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "createTime",
+          "caption": "Дата создания",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "creator",
+          "caption": "Создатель",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "editTime",
+          "caption": "Дата изменения",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "editor",
+          "caption": "Редактор",
+          "hidden": false,
+          "index": 10
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_SubjectE",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "isClass",
+          "caption": "Класс",
+          "hidden": true,
+          "index": 1
+        },
+        {
+          "name": "isView",
+          "caption": "Представление",
+          "hidden": true,
+          "index": 2
+        },
+        {
+          "name": "isOperation",
+          "caption": "Операция",
+          "hidden": true,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_SubjectL",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "isAttribute",
+          "caption": "Атрибут",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "isOperation",
+          "caption": "Операция",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "isView",
+          "caption": "Вид",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "isClass",
+          "caption": "Класс",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "createTime",
+          "caption": "Дата создания",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "creator",
+          "caption": "Создатель",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "editTime",
+          "caption": "Дата изменения",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "editor",
+          "caption": "Редактор",
+          "hidden": false,
+          "index": 8
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_SubjectTypeAccess",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "isAttribute",
+          "caption": "",
+          "hidden": true,
+          "index": 1
+        },
+        {
+          "name": "isOperation",
+          "caption": "",
+          "hidden": true,
+          "index": 2
+        },
+        {
+          "name": "isView",
+          "caption": "",
+          "hidden": true,
+          "index": 3
+        },
+        {
+          "name": "isClass",
+          "caption": "",
+          "hidden": true,
+          "index": 4
+        },
+        {
+          "name": "full",
+          "caption": "Полный доступ",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "read",
+          "caption": "Чтение",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "insert",
+          "caption": "Вставка",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "update",
+          "caption": "Обновление",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "delete",
+          "caption": "Удаление",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "execute",
+          "caption": "Исполнение",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "permitted",
+          "caption": "",
+          "hidden": true,
+          "index": 11
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Agent",
+      "projection": "Sec_AgentL"
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Subject",
+      "projection": "Sec_SubjectL"
+    }
+  ],
+  "caption": "Разрешение",
+  "name": "ICSSoftSTORMNETSecurityPermitionE",
+  "className": "PermitionE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
+      "modelProjection": "Sec_PermitionE"
+    }
+  ]
+}

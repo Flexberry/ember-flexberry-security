@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e",
+  "editForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e",
+  "caption": null,
+  "name": "ICSSoftSTORMNETSecurityLinkGroupL",
+  "className": "LinkGroupL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group",
+      "modelProjection": "Sec_LinkGroupL"
+    }
+  ]
+}

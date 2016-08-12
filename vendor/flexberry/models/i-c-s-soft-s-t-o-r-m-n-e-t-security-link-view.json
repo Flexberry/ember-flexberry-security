@@ -1,0 +1,225 @@
+﻿{
+  "name": "ICSSoftSTORMNETSecurityLinkView",
+  "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view",
+  "className": "LinkView",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "createTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "view",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "class",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Имя класса",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "caption": "Класс",
+          "name": "class",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "View",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Имя представления",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "caption": "Представление",
+          "name": "view",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_LinkViewE",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "View",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Вид",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "caption": "",
+          "name": "view",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Класс",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "caption": "",
+          "name": "class",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_LinkViewL",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view",
+      "attrs": [
+        {
+          "name": "createTime",
+          "caption": "Дата создания",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "creator",
+          "caption": "Создатель",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "editTime",
+          "caption": "Дата изменения",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "editor",
+          "caption": "Редактор",
+          "hidden": false,
+          "index": 7
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "View",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Вид",
+              "hidden": false,
+              "index": 0
+            }
+          ],
+          "index": 3,
+          "caption": "Вид",
+          "name": "view",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Class",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Класс",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": 2,
+          "caption": "Класс",
+          "name": "class",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Permition",
+      "projection": "Sec_PermitionL"
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Permition.Agent",
+      "projection": ""
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Permition.Subject",
+      "projection": ""
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Filter",
+      "projection": ""
+    }
+  ],
+  "caption": "Доступ",
+  "name": "ICSSoftSTORMNETSecurityAccessE",
+  "className": "AccessE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+      "modelProjection": "Sec_AccessE"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+﻿{
+  "applicationCaption": "Консоль безопасности",
+  "applicationTitle": null,
+  "items": [
+    {
+      "link": null,
+      "menuName": "полномочия",
+      "caption": "Полномочия",
+      "title": "Полномочия",
+      "children": [
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l",
+          "menuName": null,
+          "caption": "Пользователи",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l",
+          "menuName": null,
+          "caption": "Роли",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l",
+          "menuName": null,
+          "caption": "Группы",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l",
+          "menuName": null,
+          "caption": "Классы",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l",
+          "menuName": null,
+          "caption": "Операции",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l",
+          "menuName": null,
+          "caption": "Представления",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l",
+          "menuName": null,
+          "caption": "Разрешения",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l",
+          "menuName": null,
+          "caption": "Доступы",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l",
+          "menuName": null,
+          "caption": "Связи с группой",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l",
+          "menuName": null,
+          "caption": "Связи с ролью",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ]
+}

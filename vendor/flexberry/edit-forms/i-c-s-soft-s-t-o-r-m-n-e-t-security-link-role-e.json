@@ -1,0 +1,28 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Role",
+      "projection": "RoleL"
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Agent",
+      "projection": "RoleL"
+    }
+  ],
+  "caption": null,
+  "name": "ICSSoftSTORMNETSecurityLinkRoleE",
+  "className": "LinkRoleE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role",
+      "modelProjection": "Sec_LinkRoleE"
+    }
+  ]
+}

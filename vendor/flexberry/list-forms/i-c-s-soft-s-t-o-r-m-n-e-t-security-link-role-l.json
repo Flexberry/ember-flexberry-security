@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e",
+  "editForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e",
+  "caption": null,
+  "name": "ICSSoftSTORMNETSecurityLinkRoleL",
+  "className": "LinkRoleL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role",
+      "modelProjection": "Sec_LinkRoleL"
+    }
+  ]
+}

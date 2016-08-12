@@ -1,0 +1,237 @@
+﻿{
+  "name": "ICSSoftSTORMNETSecurityImpersonalization",
+  "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-impersonalization",
+  "className": "Impersonalization",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "createTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "user",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "agent",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-impersonalization",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Agent",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Имя агента",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "login",
+              "caption": "Логин агента",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 0,
+          "caption": "Агент",
+          "name": "agent",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "User",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Имя пользователя",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "login",
+              "caption": "Логин пользователя",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": 3,
+          "caption": "Пользователь",
+          "name": "user",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_ImpersonalizationE",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-impersonalization",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "User",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Пользователь",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "caption": "Пользователь",
+          "name": "user",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Agent",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Агент",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "caption": "Агент",
+          "name": "agent",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_ImpersonalizationL",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-impersonalization",
+      "attrs": [
+        {
+          "name": "createTime",
+          "caption": "Дата создания",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "creator",
+          "caption": "Создатель",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "editTime",
+          "caption": "Дата изменения",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "editor",
+          "caption": "Редактор",
+          "hidden": false,
+          "index": 7
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "User",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Пользователь",
+              "hidden": false,
+              "index": 0
+            }
+          ],
+          "index": 2,
+          "caption": "Пользователь",
+          "name": "user",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Agent",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Агент",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": 3,
+          "caption": "Агент",
+          "name": "agent",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ]
+}

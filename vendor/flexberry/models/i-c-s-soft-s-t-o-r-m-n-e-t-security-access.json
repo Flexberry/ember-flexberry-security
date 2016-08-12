@@ -1,0 +1,515 @@
+﻿{
+  "name": "ICSSoftSTORMNETSecurityAccess",
+  "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+  "className": "Access",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "typeAccess",
+      "type": "i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access",
+      "flexberryType": "tTypeAccess",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "createTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editTime",
+      "type": "string",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "filter",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "permition",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
+      "inverse": "access"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+      "attrs": [
+        {
+          "name": "typeAccess",
+          "caption": "Тип доступа",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "FilterText",
+          "lookupValueField": "filterText",
+          "relationName": "Filter",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Имя фильтра",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "filterText",
+              "caption": "Заголовок фильтра",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 1,
+          "caption": "Фильтр",
+          "name": "filter",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Permition",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Agent",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "name",
+                  "caption": "Имя агента",
+                  "hidden": false,
+                  "index": 5
+                },
+                {
+                  "name": "login",
+                  "caption": "Логи агента",
+                  "hidden": false,
+                  "index": 6
+                }
+              ],
+              "index": -1,
+              "caption": "",
+              "name": "agent",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Subject",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "name",
+                  "caption": "Имя субъекта",
+                  "hidden": false,
+                  "index": 7
+                }
+              ],
+              "index": -1,
+              "caption": "",
+              "name": "subject",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [],
+          "index": 4,
+          "caption": "Разрешение",
+          "name": "permition",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "CheckAccessClass",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+      "attrs": [
+        {
+          "name": "typeAccess",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Permition",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Subject",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "name",
+                  "caption": "",
+                  "hidden": false,
+                  "index": 3
+                }
+              ],
+              "index": 2,
+              "caption": "",
+              "name": "subject",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Agent",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [],
+              "index": 4,
+              "caption": "",
+              "name": "agent",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [],
+          "index": 1,
+          "caption": "",
+          "name": "permition",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Filter",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "filterText",
+              "caption": "",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "caption": "",
+          "name": "filter",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "CheckAccessOnObject",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+      "attrs": [
+        {
+          "name": "typeAccess",
+          "caption": "",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Filter",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "filterText",
+              "caption": "",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "name",
+              "caption": "",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 0,
+          "caption": "",
+          "name": "filter",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_AccessD",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+      "attrs": [
+        {
+          "name": "typeAccess",
+          "caption": "Тип доступа",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_AccessE",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+      "attrs": [
+        {
+          "name": "typeAccess",
+          "caption": "Тип доступа",
+          "hidden": false,
+          "index": 7
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Permition",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Agent",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "name",
+                  "caption": "Агент",
+                  "hidden": false,
+                  "index": 2
+                }
+              ],
+              "index": 1,
+              "caption": "",
+              "name": "agent",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Subject",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "name",
+                  "caption": "Субъект",
+                  "hidden": false,
+                  "index": 4
+                },
+                {
+                  "name": "isClass",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 5
+                },
+                {
+                  "name": "isOperation",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 6
+                }
+              ],
+              "index": 3,
+              "caption": "",
+              "name": "subject",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [],
+          "index": 0,
+          "caption": "~",
+          "name": "permition",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Filter",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Имя фильтра",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "caption": "~",
+          "name": "filter",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "Sec_AccessL",
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
+      "attrs": [
+        {
+          "name": "typeAccess",
+          "caption": "Тип доступа",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "createTime",
+          "caption": "Дата создания",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "creator",
+          "caption": "Создатель",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "editTime",
+          "caption": "Дата изменения",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "editor",
+          "caption": "Редактор",
+          "hidden": false,
+          "index": 8
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Permition",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Agent",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "name",
+                  "caption": "Агент",
+                  "hidden": false,
+                  "index": 1
+                }
+              ],
+              "index": -1,
+              "caption": "",
+              "name": "agent",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Permition.Subject",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "name",
+                  "caption": "Субъект",
+                  "hidden": false,
+                  "index": 2
+                }
+              ],
+              "index": -1,
+              "caption": "",
+              "name": "subject",
+              "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+              "inverse": null
+            }
+          ],
+          "hidden": true,
+          "attrs": [],
+          "index": 0,
+          "caption": "",
+          "name": "permition",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Filter",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Фильтр",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "caption": "Фильтр",
+          "name": "filter",
+          "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ]
+}

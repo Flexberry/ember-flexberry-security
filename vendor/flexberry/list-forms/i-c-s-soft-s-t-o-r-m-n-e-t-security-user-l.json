@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e",
+  "editForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e",
+  "caption": "Пользователи",
+  "name": "ICSSoftSTORMNETSecurityUserL",
+  "className": "UserL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+      "modelProjection": "Sec_AgentL"
+    }
+  ]
+}

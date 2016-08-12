@@ -1,0 +1,13 @@
+﻿{
+  "propertyLookup": [],
+  "caption": "Класс",
+  "name": "ICSSoftSTORMNETSecurityClassE",
+  "className": "ClassE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
+      "modelProjection": "Sec_SubjectE"
+    }
+  ]
+}

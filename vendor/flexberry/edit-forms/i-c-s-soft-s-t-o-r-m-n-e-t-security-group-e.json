@@ -1,0 +1,13 @@
+﻿{
+  "propertyLookup": [],
+  "caption": "Группа",
+  "name": "ICSSoftSTORMNETSecurityGroupE",
+  "className": "GroupE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
+      "modelProjection": "Sec_NotUserL"
+    }
+  ]
+}
