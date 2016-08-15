@@ -1,11 +1,11 @@
 import { createEnum } from 'ember-flexberry-data/utils/enum-functions';
 
 export default createEnum({
-  Full: null,
-  Read: null,
-  Insert: null,
-  Update: null,
-  Delete: null,
-  Execute: null,
+  Full: 'Full',
+  Read: 'Read',
+  Insert: 'Insert',
+  Update: 'Update',
+  Delete: 'Delete',
+  Execute: 'Execute',
   Print: ''
 });

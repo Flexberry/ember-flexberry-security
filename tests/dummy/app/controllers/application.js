@@ -11,8 +11,7 @@ export default Ember.Controller.extend({
           caption: i18n.t('forms.application.sitemap.index.caption'),
           title: i18n.t('forms.application.sitemap.index.title'),
           children: null
-        },
-        {
+        }, {
           link: null,
           caption: i18n.t('forms.application.sitemap.полномочия.caption'),
           title: i18n.t('forms.application.sitemap.полномочия.title'),
