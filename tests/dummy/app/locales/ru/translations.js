@@ -34,6 +34,32 @@ import ICSSoftSTORMNETSecurityPermitionModel from './models/i-c-s-soft-s-t-o-r-m
 import ICSSoftSTORMNETSecuritySessionModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-session';
 import ICSSoftSTORMNETSecuritySubjectModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
 
+import EmberFlexberryDummyApplicationUserListForm from './forms/ember-flexberry-dummy-application-user-list';
+import EmberFlexberryDummyLocalizationListForm from './forms/ember-flexberry-dummy-localization-list';
+import EmberFlexberryDummySuggestionListForm from './forms/ember-flexberry-dummy-suggestion-list';
+import EmberFlexberryDummySuggestionTypeListForm from './forms/ember-flexberry-dummy-suggestion-type-list';
+import EmberFlexberryDummyTestPolyChildListForm from './forms/ember-flexberry-dummy-test-poly-child-list';
+import EmberFlexberryDummyTestPolyListForm from './forms/ember-flexberry-dummy-test-poly-list';
+import EmberFlexberryDummyApplicationUserEditForm from './forms/ember-flexberry-dummy-application-user-edit';
+import EmberFlexberryDummyCommentEditForm from './forms/ember-flexberry-dummy-comment-edit';
+import EmberFlexberryDummyLocalizationEditForm from './forms/ember-flexberry-dummy-localization-edit';
+import EmberFlexberryDummySuggestionEditForm from './forms/ember-flexberry-dummy-suggestion-edit';
+import EmberFlexberryDummySuggestionTypeEditForm from './forms/ember-flexberry-dummy-suggestion-type-edit';
+import EmberFlexberryDummyTestPolyChildEditForm from './forms/ember-flexberry-dummy-test-poly-child-edit';
+import EmberFlexberryDummyTestPolyEditForm from './forms/ember-flexberry-dummy-test-poly-edit';
+import EmberFlexberryDummyApplicationUserModel from './models/ember-flexberry-dummy-application-user';
+import EmberFlexberryDummyCommentVoteModel from './models/ember-flexberry-dummy-comment-vote';
+import EmberFlexberryDummyCommentModel from './models/ember-flexberry-dummy-comment';
+import EmberFlexberryDummyLocalizationModel from './models/ember-flexberry-dummy-localization';
+import EmberFlexberryDummyLocalizedSuggestionTypeModel from './models/ember-flexberry-dummy-localized-suggestion-type';
+import EmberFlexberryDummySuggestionFileModel from './models/ember-flexberry-dummy-suggestion-file';
+import EmberFlexberryDummySuggestionTypeModel from './models/ember-flexberry-dummy-suggestion-type';
+import EmberFlexberryDummySuggestionModel from './models/ember-flexberry-dummy-suggestion';
+import EmberFlexberryDummyTestPolyBaseModel from './models/ember-flexberry-dummy-test-poly-base';
+import EmberFlexberryDummyTestPolyChildModel from './models/ember-flexberry-dummy-test-poly-child';
+import EmberFlexberryDummyTestPolyModel from './models/ember-flexberry-dummy-test-poly';
+import EmberFlexberryDummyVoteModel from './models/ember-flexberry-dummy-vote';
+
 const translations = {};
 Ember.$.extend(true, translations, EmberFlexberryTranslations);
 
@@ -51,9 +77,22 @@ Ember.$.extend(true, translations, {
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition': ICSSoftSTORMNETSecurityPermitionModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-session': ICSSoftSTORMNETSecuritySessionModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject': ICSSoftSTORMNETSecuritySubjectModel,
+
+    'ember-flexberry-dummy-application-user': EmberFlexberryDummyApplicationUserModel,
+    'ember-flexberry-dummy-comment-vote': EmberFlexberryDummyCommentVoteModel,
+    'ember-flexberry-dummy-comment': EmberFlexberryDummyCommentModel,
+    'ember-flexberry-dummy-localization': EmberFlexberryDummyLocalizationModel,
+    'ember-flexberry-dummy-localized-suggestion-type': EmberFlexberryDummyLocalizedSuggestionTypeModel,
+    'ember-flexberry-dummy-suggestion-file': EmberFlexberryDummySuggestionFileModel,
+    'ember-flexberry-dummy-suggestion-type': EmberFlexberryDummySuggestionTypeModel,
+    'ember-flexberry-dummy-suggestion': EmberFlexberryDummySuggestionModel,
+    'ember-flexberry-dummy-test-poly-base': EmberFlexberryDummyTestPolyBaseModel,
+    'ember-flexberry-dummy-test-poly-child': EmberFlexberryDummyTestPolyChildModel,
+    'ember-flexberry-dummy-test-poly': EmberFlexberryDummyTestPolyModel,
+    'ember-flexberry-dummy-vote': EmberFlexberryDummyVoteModel,
   },
 
-  'application-name': 'Консоль безопасности',
+  'application-name': 'Dummy',
 
   forms: {
     loading: {
@@ -81,7 +120,7 @@ Ember.$.extend(true, translations, {
       },
 
       footer: {
-        'application-name': 'Консоль безопасности',
+        'application-name': 'Dummy',
         'application-version': {
           caption: 'Версия аддона {{version}}',
           title: 'Это версия аддона ember-flexberry, которая сейчас используется в этом тестовом приложении ' +
@@ -92,8 +131,8 @@ Ember.$.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: 'Консоль безопасности',
-          title: ''
+          caption: 'Dummy',
+          title: 'Dummy'
         },
         'application-version': {
           caption: 'Версия аддона {{version}}',
@@ -159,6 +198,40 @@ Ember.$.extend(true, translations, {
 
           }
         },
+        application: {
+          caption: 'Application',
+          title: 'Application',
+          'ember-flexberry-dummy-application-user-list': {
+            caption: 'Application Users',
+            title: '',
+
+          },
+          'ember-flexberry-dummy-localization-list': {
+            caption: 'Localizations',
+            title: '',
+
+          },
+          'ember-flexberry-dummy-suggestion-list': {
+            caption: 'Suggestions',
+            title: '',
+
+          },
+          'ember-flexberry-dummy-suggestion-type-list': {
+            caption: 'Suggestion types',
+            title: '',
+
+          },
+          'ember-flexberry-dummy-test-poly-child-list': {
+            caption: 'TestPolyChildList',
+            title: '',
+
+          },
+          'ember-flexberry-dummy-test-poly-list': {
+            caption: 'TestPolyList',
+            title: '',
+
+          }
+        },
       }
     },
 
@@ -190,6 +263,20 @@ Ember.$.extend(true, translations, {
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e': ICSSoftSTORMNETSecurityRoleEForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e': ICSSoftSTORMNETSecurityUserEForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e': ICSSoftSTORMNETSecurityViewEForm,
+
+    'ember-flexberry-dummy-application-user-list': EmberFlexberryDummyApplicationUserListForm,
+    'ember-flexberry-dummy-localization-list': EmberFlexberryDummyLocalizationListForm,
+    'ember-flexberry-dummy-suggestion-list': EmberFlexberryDummySuggestionListForm,
+    'ember-flexberry-dummy-suggestion-type-list': EmberFlexberryDummySuggestionTypeListForm,
+    'ember-flexberry-dummy-test-poly-child-list': EmberFlexberryDummyTestPolyChildListForm,
+    'ember-flexberry-dummy-test-poly-list': EmberFlexberryDummyTestPolyListForm,
+    'ember-flexberry-dummy-application-user-edit': EmberFlexberryDummyApplicationUserEditForm,
+    'ember-flexberry-dummy-comment-edit': EmberFlexberryDummyCommentEditForm,
+    'ember-flexberry-dummy-localization-edit': EmberFlexberryDummyLocalizationEditForm,
+    'ember-flexberry-dummy-suggestion-edit': EmberFlexberryDummySuggestionEditForm,
+    'ember-flexberry-dummy-suggestion-type-edit': EmberFlexberryDummySuggestionTypeEditForm,
+    'ember-flexberry-dummy-test-poly-child-edit': EmberFlexberryDummyTestPolyChildEditForm,
+    'ember-flexberry-dummy-test-poly-edit': EmberFlexberryDummyTestPolyEditForm,
   },
 
 });

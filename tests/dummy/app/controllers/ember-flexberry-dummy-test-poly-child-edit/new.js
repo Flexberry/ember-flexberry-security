@@ -1,0 +1,4 @@
+import EmberFlexberryDummyTestPolyChildEditController from '../ember-flexberry-dummy-test-poly-child-edit';
+
+var EmberFlexberryDummyTestPolyChildEditNewController = EmberFlexberryDummyTestPolyChildEditController;
+export default EmberFlexberryDummyTestPolyChildEditNewController;

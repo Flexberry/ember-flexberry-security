@@ -1,0 +1,220 @@
+<h3 class="ui header">{{t 'forms.ember-flexberry-dummy-suggestion-edit.caption'}}</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  {{#if model.errors.address}}
+  <span style="color:red">
+    {{model.errors.address}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.address
+  class=(if model.errors.address 'error' '')
+  label=(t 'forms.ember-flexberry-dummy-suggestion-edit.address-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.address pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.text}}
+  <span style="color:red">
+    {{model.errors.text}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.text
+  class=(if model.errors.text 'error' '')
+  label=(t 'forms.ember-flexberry-dummy-suggestion-edit.text-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.text pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.date-caption'}}</label>
+  {{#if model.errors.date}}
+  <span style="color:red">{{model.errors.date}}</span>
+  {{/if}}
+  {{
+    flexberry-datepicker
+    placeholder='(no value)'
+    readonly=readonly
+    value=model.date
+    class=(if model.errors.date 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.date pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.votes}}
+  <span style="color:red">
+    {{model.errors.votes}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.votes
+  class=(if model.errors.votes 'error' '')
+  label=(t 'forms.ember-flexberry-dummy-suggestion-edit.votes-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.votes pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.moderated-caption'}}</label>
+  {{#if model.errors.moderated}}
+  <span style="color:red">{{model.errors.moderated}}</span>
+  {{/if}}
+  {{flexberry-checkbox readonly=readonly value=model.moderated}}
+  {{flexberry-validationmessage error=model.errors.moderated pointing="pointing"}}
+</div>
+
+<div class="field">
+    <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.type-caption'}}</label>
+  {{#if model.errors.type}}
+      <span style="color:red">{{model.errors.type}}</span>
+  {{/if}}
+  {{
+  flexberry-lookup
+  choose='showLookupDialog'
+  remove='removeLookupValue'
+  value=model.type
+  displayAttributeName='name'
+  relationName='type'
+  projection='SuggestionTypeL'
+  title=(t 'forms.ember-flexberry-dummy-suggestion-edit.type-caption')
+  readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.type pointing="pointing"}}
+</div>
+
+<div class="field">
+    <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.author-caption'}}</label>
+  {{#if model.errors.author}}
+      <span style="color:red">{{model.errors.author}}</span>
+  {{/if}}
+  {{
+  flexberry-lookup
+  choose='showLookupDialog'
+  remove='removeLookupValue'
+  value=model.author
+  displayAttributeName='name'
+  relationName='author'
+  projection='ApplicationUserL'
+  title=(t 'forms.ember-flexberry-dummy-suggestion-edit.author-caption')
+  readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.author pointing="pointing"}}
+</div>
+
+<div class="field">
+    <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.editor1-caption'}}</label>
+  {{#if model.errors.editor1}}
+      <span style="color:red">{{model.errors.editor1}}</span>
+  {{/if}}
+  {{
+  flexberry-lookup
+  choose='showLookupDialog'
+  remove='removeLookupValue'
+  value=model.editor1
+  
+  relationName='editor1'
+  projection='ApplicationUserL'
+  title=(t 'forms.ember-flexberry-dummy-suggestion-edit.editor1-caption')
+  readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.editor1 pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.files-caption'}}</label>
+  {{#if model.errors.files}}
+    <span style="color:red">{{model.errors.files}}</span>
+  {{/if}}
+  {{flexberry-groupedit
+    componentName="filesGroupEdit"
+    modelProjection=modelProjection.attributes.files
+    content=model.files
+    readonly=readonly
+    orderable=false
+    class=(if model.errors.files 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.files pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.userVotes-caption'}}</label>
+  {{#if model.errors.userVotes}}
+    <span style="color:red">{{model.errors.userVotes}}</span>
+  {{/if}}
+  {{flexberry-groupedit
+    componentName="userVotesGroupEdit"
+    modelProjection=modelProjection.attributes.userVotes
+    content=model.userVotes
+    readonly=readonly
+    orderable=false
+    class=(if model.errors.userVotes 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.userVotes pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.ember-flexberry-dummy-suggestion-edit.comments-caption'}}</label>
+  {{#if model.errors.comments}}
+    <span style="color:red">{{model.errors.comments}}</span>
+  {{/if}}
+  {{flexberry-groupedit
+    componentName="commentsGroupEdit"
+    modelProjection=modelProjection.attributes.comments
+    content=model.comments
+    readonly=readonly
+    orderable=false
+    class=(if model.errors.comments 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.comments pointing="pointing"}}
+</div>
+
+</form>
