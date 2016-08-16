@@ -7,6 +7,6 @@ moduleForModel('user-login', 'Unit | Model | user login', {
 
 test('it exists', function(assert) {
   let model = this.subject();
-  // let store = this.store();
+
   assert.ok(!!model);
 });
