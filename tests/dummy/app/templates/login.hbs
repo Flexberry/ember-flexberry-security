@@ -1,0 +1,74 @@
+Login form
+
+<h3 class="ui header">Login form</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+  {{#if model.errors.login}}
+  <span style="color:red">
+    {{model.errors.login}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.login
+  class=(if model.errors.login 'error' '')
+  label=(t 'forms.ember-flexberry-dummy-test-poly-edit.selfPole-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.selfPole pointing="pointing"}}
+</div>
+  <div class="field">
+  {{#if model.errors.password}}
+  <span style="color:red">
+    {{model.errors.password}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.password
+  class=(if model.errors.password 'error' '')
+  label=(t 'forms.ember-flexberry-dummy-test-poly-edit.selfPole-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.selfPole pointing="pointing"}}
+</div>
+
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'login'}}>
+          Login
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui button" {{action 'register'}}>
+            Register
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+</form>
