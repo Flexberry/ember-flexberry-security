@@ -1,0 +1,28 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ObjectType",
+      "projection": ""
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "AuditFields.MainChange",
+      "projection": ""
+    }
+  ],
+  "caption": null,
+  "name": "ICSSoftSTORMNETBusinessAuditObjectsAuditEntityE",
+  "className": "AuditEntityE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity",
+      "modelProjection": "AuditEntityE"
+    }
+  ]
+}

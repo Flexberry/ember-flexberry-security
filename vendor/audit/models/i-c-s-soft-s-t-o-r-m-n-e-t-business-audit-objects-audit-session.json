@@ -1,0 +1,62 @@
+﻿{
+  "name": "ICSSoftSTORMNETBusinessAuditObjectsAuditSession",
+  "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session",
+  "className": "AuditSession",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "startTime",
+      "type": "date",
+      "flexberryType": "typeDate",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "endDate",
+      "type": "date",
+      "flexberryType": "typeDate",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "lastActionTime",
+      "type": "date",
+      "flexberryType": "typeDate",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "flexberryType": "typeString255",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "enabled",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "duration",
+      "type": "string",
+      "flexberryType": "typeString100",
+      "notNull": false,
+      "defaultValue": ""
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "user",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": []
+}

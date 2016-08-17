@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e",
+  "editForm": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e",
+  "caption": null,
+  "name": "ICSSoftSTORMNETBusinessAuditObjectsAuditEntityL",
+  "className": "AuditEntityL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity",
+      "modelProjection": "AuditEntityL"
+    }
+  ]
+}

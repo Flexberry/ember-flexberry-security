@@ -1,0 +1,110 @@
+﻿{
+  "name": "ICSSoftSTORMNETBusinessAuditObjectsAgent",
+  "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent",
+  "className": "Agent",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string80",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "login",
+      "type": "string",
+      "flexberryType": "string50",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "pwd",
+      "type": "string",
+      "flexberryType": "string50",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "isUser",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "isGroup",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "isRole",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "connString",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "enabled",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "true"
+    },
+    {
+      "name": "full",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "read",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "insert",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "update",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "delete",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "execute",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": ""
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": []
+}

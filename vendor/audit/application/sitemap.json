@@ -1,0 +1,21 @@
+﻿{
+  "applicationCaption": null,
+  "applicationTitle": null,
+  "items": [
+    {
+      "link": null,
+      "menuName": "audit-forms",
+      "caption": "Audit forms",
+      "title": "Audit forms",
+      "children": [
+        {
+          "link": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l",
+          "menuName": null,
+          "caption": "Audit form",
+          "title": "Форма для просмотра всех записей по аудиту",
+          "children": null
+        }
+      ]
+    }
+  ]
+}

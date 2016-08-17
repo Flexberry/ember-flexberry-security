@@ -1,0 +1,26 @@
+﻿{
+  "name": "ICSSoftSTORMNETBusinessAuditObjectsLinkGroup",
+  "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group",
+  "className": "LinkGroup",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "user",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "group",
+      "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": []
+}
