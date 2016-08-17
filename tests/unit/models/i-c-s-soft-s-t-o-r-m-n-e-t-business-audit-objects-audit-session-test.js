@@ -1,6 +1,7 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session', 'Unit | Model | i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session', {
+moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session',
+'Unit | Model | i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session', {
   // Specify the other units that are required for this test.
   needs: [
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent',

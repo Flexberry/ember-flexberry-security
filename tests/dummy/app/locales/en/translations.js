@@ -1,47 +1,55 @@
 import Ember from 'ember';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/en/translations';
 
-import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l';
-import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e';
-import ICSSoftSTORMNETBusinessAuditObjectsAgentModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent';
-import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity';
-import ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field';
-import ICSSoftSTORMNETBusinessAuditObjectsAuditSessionModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session';
-import ICSSoftSTORMNETBusinessAuditObjectsLinkGroupModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group';
-import ICSSoftSTORMNETBusinessAuditObjectsObjectTypeModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-object-type';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityLForm from
+'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityEForm from
+'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e';
+import ICSSoftSTORMNETBusinessAuditObjectsAgentModel from
+'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityModel from
+'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel from
+'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditSessionModel from
+'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session';
+import ICSSoftSTORMNETBusinessAuditObjectsLinkGroupModel from
+'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group';
+import ICSSoftSTORMNETBusinessAuditObjectsObjectTypeModel from
+'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-object-type';
 
-import ICSSoftSTORMNETSecurityAccessLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l';
-import ICSSoftSTORMNETSecurityClassLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l';
-import ICSSoftSTORMNETSecurityGroupLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l';
-import ICSSoftSTORMNETSecurityLinkGroupLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l';
-import ICSSoftSTORMNETSecurityLinkRoleLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l';
-import ICSSoftSTORMNETSecurityOperationLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l';
-import ICSSoftSTORMNETSecurityPermitionLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l';
-import ICSSoftSTORMNETSecurityRoleLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l';
-import ICSSoftSTORMNETSecurityUserLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l';
-import ICSSoftSTORMNETSecurityViewLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l';
-import ICSSoftSTORMNETSecurityAccessEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e';
-import ICSSoftSTORMNETSecurityClassEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-class-e';
-import ICSSoftSTORMNETSecurityGroupEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e';
-import ICSSoftSTORMNETSecurityLinkGroupEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e';
-import ICSSoftSTORMNETSecurityLinkRoleEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e';
-import ICSSoftSTORMNETSecurityOperationEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e';
-import ICSSoftSTORMNETSecurityPermitionEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e';
-import ICSSoftSTORMNETSecurityRoleEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e';
-import ICSSoftSTORMNETSecurityUserEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e';
-import ICSSoftSTORMNETSecurityViewEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e';
-import ICSSoftSTORMNETSecurityAccessModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-access';
-import ICSSoftSTORMNETSecurityAgentModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
-import ICSSoftSTORMNETSecurityFilterModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-filter';
-import ICSSoftSTORMNETSecurityImpersonalizationModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-impersonalization';
-import ICSSoftSTORMNETSecurityLinkAttributeModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-attribute';
-import ICSSoftSTORMNETSecurityLinkGroupModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group';
-import ICSSoftSTORMNETSecurityLinkOperationModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-operation';
-import ICSSoftSTORMNETSecurityLinkRoleModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role';
-import ICSSoftSTORMNETSecurityLinkViewModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view';
-import ICSSoftSTORMNETSecurityPermitionModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
-import ICSSoftSTORMNETSecuritySessionModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-session';
-import ICSSoftSTORMNETSecuritySubjectModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
+import ICSSoftSTORMNETSecurityAccessLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l';
+import ICSSoftSTORMNETSecurityClassLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l';
+import ICSSoftSTORMNETSecurityGroupLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l';
+import ICSSoftSTORMNETSecurityLinkGroupLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l';
+import ICSSoftSTORMNETSecurityLinkRoleLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l';
+import ICSSoftSTORMNETSecurityOperationLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l';
+import ICSSoftSTORMNETSecurityPermitionLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l';
+import ICSSoftSTORMNETSecurityRoleLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l';
+import ICSSoftSTORMNETSecurityUserLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l';
+import ICSSoftSTORMNETSecurityViewLForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l';
+import ICSSoftSTORMNETSecurityAccessEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e';
+import ICSSoftSTORMNETSecurityClassEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-class-e';
+import ICSSoftSTORMNETSecurityGroupEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e';
+import ICSSoftSTORMNETSecurityLinkGroupEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e';
+import ICSSoftSTORMNETSecurityLinkRoleEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e';
+import ICSSoftSTORMNETSecurityOperationEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e';
+import ICSSoftSTORMNETSecurityPermitionEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e';
+import ICSSoftSTORMNETSecurityRoleEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e';
+import ICSSoftSTORMNETSecurityUserEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e';
+import ICSSoftSTORMNETSecurityViewEForm from 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e';
+import ICSSoftSTORMNETSecurityAccessModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-access';
+import ICSSoftSTORMNETSecurityAgentModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
+import ICSSoftSTORMNETSecurityFilterModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-filter';
+import ICSSoftSTORMNETSecurityImpersonalizationModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-impersonalization';
+import ICSSoftSTORMNETSecurityLinkAttributeModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-attribute';
+import ICSSoftSTORMNETSecurityLinkGroupModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group';
+import ICSSoftSTORMNETSecurityLinkOperationModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-operation';
+import ICSSoftSTORMNETSecurityLinkRoleModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role';
+import ICSSoftSTORMNETSecurityLinkViewModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view';
+import ICSSoftSTORMNETSecurityPermitionModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
+import ICSSoftSTORMNETSecuritySessionModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-session';
+import ICSSoftSTORMNETSecuritySubjectModel from 'ember-flexberry-security/locales/en/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
 
 import EmberFlexberryDummyApplicationUserListForm from './forms/ember-flexberry-dummy-application-user-list';
 import EmberFlexberryDummyLocalizationListForm from './forms/ember-flexberry-dummy-localization-list';

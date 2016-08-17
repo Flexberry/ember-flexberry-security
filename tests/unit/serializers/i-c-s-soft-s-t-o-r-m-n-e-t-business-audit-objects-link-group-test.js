@@ -1,6 +1,7 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group', 'Unit | Serializer | i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group', {
+moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group',
+'Unit | Serializer | i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group', {
   // Specify the other units that are required for this test.
   needs: [
     'serializer:i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group',

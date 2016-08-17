@@ -1,6 +1,7 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l', 'Unit | Controller | i c s soft s t o r m n e t business audit objects audit entity l', {
+moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l',
+'Unit | Controller | i c s soft s t o r m n e t business audit objects audit entity l', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
