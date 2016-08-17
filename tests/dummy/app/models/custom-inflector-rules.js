@@ -2,6 +2,9 @@ import Inflector from 'ember-inflector';
 
 const inflector = Inflector.inflector;
 
+inflector.irregular('entity', 'entitys');
+inflector.irregular('field', 'fields');
+
 inflector.irregular('access', 'accesss');
 inflector.irregular('agent', 'agents');
 inflector.irregular('filter', 'filters');
@@ -19,7 +22,6 @@ inflector.irregular('user', 'users');
 inflector.irregular('vote', 'votes');
 inflector.irregular('comment', 'comments');
 inflector.irregular('localization', 'localizations');
-inflector.irregular('type', 'types');
 inflector.irregular('file', 'files');
 inflector.irregular('type', 'types');
 inflector.irregular('suggestion', 'suggestions');

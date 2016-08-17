@@ -1,0 +1,251 @@
+<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.caption'}}</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  {{#if model.errors.objectPrimaryKey}}
+  <span style="color:red">
+    {{model.errors.objectPrimaryKey}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.objectPrimaryKey
+  class=(if model.errors.objectPrimaryKey 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.objectPrimaryKey-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.objectPrimaryKey pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.objectType.name}}
+  <span style="color:red">
+    {{model.errors.objectType.name}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=true
+  required=true
+  value=model.objectType.name
+  class=(if model.errors.objectType.name 'error' '')
+  label=(Тип объекта)
+}}
+  {{flexberry-validationmessage error=model.errors.objectType.name pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.operationTime-caption'}}</label>
+  {{#if model.errors.operationTime}}
+  <span style="color:red">{{model.errors.operationTime}}</span>
+  {{/if}}
+  {{
+    flexberry-datepicker
+    placeholder='(no value)'
+    readonly=readonly
+    value=model.operationTime
+    class=(if model.errors.operationTime 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.operationTime pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.operationType}}
+  <span style="color:red">
+    {{model.errors.operationType}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.operationType
+  class=(if model.errors.operationType 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.operationType-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.operationType pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.executionResult-caption'}}</label>
+  {{#if model.errors.executionResult}}
+  <span style="color:red">{{model.errors.executionResult}}</span>
+  {{/if}}
+  {{flexberry-dropdown items=(flexberry-enum 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-t-execution-variant') value=model.executionResult readonly=readonly}}
+  {{flexberry-validationmessage error=model.errors.executionResult pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.source}}
+  <span style="color:red">
+    {{model.errors.source}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.source
+  class=(if model.errors.source 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.source-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.source pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.user.name}}
+  <span style="color:red">
+    {{model.errors.user.name}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=true
+  required=true
+  value=model.user.name
+  class=(if model.errors.user.name 'error' '')
+  label=(Имя)
+}}
+  {{flexberry-validationmessage error=model.errors.user.name pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.user.login}}
+  <span style="color:red">
+    {{model.errors.user.login}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=true
+  required=true
+  value=model.user.login
+  class=(if model.errors.user.login 'error' '')
+  label=(Логин)
+}}
+  {{flexberry-validationmessage error=model.errors.user.login pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.createTime-caption'}}</label>
+  {{#if model.errors.createTime}}
+  <span style="color:red">{{model.errors.createTime}}</span>
+  {{/if}}
+  {{
+    flexberry-datepicker
+    placeholder='(no value)'
+    readonly=readonly
+    value=model.createTime
+    class=(if model.errors.createTime 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.createTime pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.creator}}
+  <span style="color:red">
+    {{model.errors.creator}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.creator
+  class=(if model.errors.creator 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.creator-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.creator pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.editTime-caption'}}</label>
+  {{#if model.errors.editTime}}
+  <span style="color:red">{{model.errors.editTime}}</span>
+  {{/if}}
+  {{
+    flexberry-datepicker
+    placeholder='(no value)'
+    readonly=readonly
+    value=model.editTime
+    class=(if model.errors.editTime 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.editTime pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{#if model.errors.editor}}
+  <span style="color:red">
+    {{model.errors.editor}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.editor
+  class=(if model.errors.editor 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.editor-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.editor pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.auditFields-caption'}}</label>
+  {{#if model.errors.auditFields}}
+    <span style="color:red">{{model.errors.auditFields}}</span>
+  {{/if}}
+  {{flexberry-groupedit
+    componentName="auditFieldsGroupEdit"
+    modelProjection=modelProjection.attributes.auditFields
+    content=model.auditFields
+    readonly=readonly
+    orderable=false
+    class=(if model.errors.auditFields 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.auditFields pointing="pointing"}}
+</div>
+
+</form>

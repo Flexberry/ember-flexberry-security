@@ -11,41 +11,17 @@ export default Ember.Controller.extend({
           caption: i18n.t('forms.application.sitemap.index.caption'),
           title: i18n.t('forms.application.sitemap.index.title'),
           children: null
-        }, {
+        },
+        {
           link: null,
-          caption: i18n.t('forms.application.sitemap.application.caption'),
-          title: i18n.t('forms.application.sitemap.application.title'),
+          caption: i18n.t('forms.application.sitemap.audit-forms.caption'),
+          title: i18n.t('forms.application.sitemap.audit-forms.title'),
           children: [{
-            link: 'ember-flexberry-dummy-application-user-list',
-            caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-application-user-list.caption'),
-            title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-application-user-list.title'),
+            link: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l',
+            caption: i18n.t('forms.application.sitemap.audit-forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l.caption'),
+            title: i18n.t('forms.application.sitemap.audit-forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l.title'),
             children: null
-          }, {
-              link: 'ember-flexberry-dummy-localization-list',
-              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-localization-list.caption'),
-              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-localization-list.title'),
-              children: null
-            }, {
-              link: 'ember-flexberry-dummy-suggestion-list',
-              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-list.caption'),
-              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-list.title'),
-              children: null
-            }, {
-              link: 'ember-flexberry-dummy-suggestion-type-list',
-              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-type-list.caption'),
-              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-type-list.title'),
-              children: null
-            }, {
-              link: 'ember-flexberry-dummy-test-poly-child-list',
-              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-child-list.caption'),
-              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-child-list.title'),
-              children: null
-            }, {
-              link: 'ember-flexberry-dummy-test-poly-list',
-              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-list.caption'),
-              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-list.title'),
-              children: null
-            }]
+          }]
         },
         {
           link: null,
@@ -100,6 +76,42 @@ export default Ember.Controller.extend({
               link: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l',
               caption: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l.caption'),
               title: i18n.t('forms.application.sitemap.полномочия.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l.title'),
+              children: null
+            }]
+        },
+        {
+          link: null,
+          caption: i18n.t('forms.application.sitemap.application.caption'),
+          title: i18n.t('forms.application.sitemap.application.title'),
+          children: [{
+            link: 'ember-flexberry-dummy-application-user-list',
+            caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-application-user-list.caption'),
+            title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-application-user-list.title'),
+            children: null
+          }, {
+              link: 'ember-flexberry-dummy-localization-list',
+              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-localization-list.caption'),
+              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-localization-list.title'),
+              children: null
+            }, {
+              link: 'ember-flexberry-dummy-suggestion-list',
+              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-list.caption'),
+              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-list.title'),
+              children: null
+            }, {
+              link: 'ember-flexberry-dummy-suggestion-type-list',
+              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-type-list.caption'),
+              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-suggestion-type-list.title'),
+              children: null
+            }, {
+              link: 'ember-flexberry-dummy-test-poly-child-list',
+              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-child-list.caption'),
+              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-child-list.title'),
+              children: null
+            }, {
+              link: 'ember-flexberry-dummy-test-poly-list',
+              caption: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-list.caption'),
+              title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-list.title'),
               children: null
             }]
         }

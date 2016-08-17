@@ -1,6 +1,15 @@
 import Ember from 'ember';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations';
 
+import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityEForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e';
+import ICSSoftSTORMNETBusinessAuditObjectsAgentModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field';
+import ICSSoftSTORMNETBusinessAuditObjectsAuditSessionModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session';
+import ICSSoftSTORMNETBusinessAuditObjectsLinkGroupModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group';
+import ICSSoftSTORMNETBusinessAuditObjectsObjectTypeModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-object-type';
+
 import ICSSoftSTORMNETSecurityAccessLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l';
 import ICSSoftSTORMNETSecurityClassLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l';
 import ICSSoftSTORMNETSecurityGroupLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l';
@@ -65,6 +74,13 @@ Ember.$.extend(true, translations, EmberFlexberryTranslations);
 
 Ember.$.extend(true, translations, {
   models: {
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-agent': ICSSoftSTORMNETBusinessAuditObjectsAgentModel,
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity': ICSSoftSTORMNETBusinessAuditObjectsAuditEntityModel,
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field': ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel,
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-session': ICSSoftSTORMNETBusinessAuditObjectsAuditSessionModel,
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-link-group': ICSSoftSTORMNETBusinessAuditObjectsLinkGroupModel,
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-object-type': ICSSoftSTORMNETBusinessAuditObjectsObjectTypeModel,
+
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-access': ICSSoftSTORMNETSecurityAccessModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent': ICSSoftSTORMNETSecurityAgentModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-filter': ICSSoftSTORMNETSecurityFilterModel,
@@ -143,6 +159,15 @@ Ember.$.extend(true, translations, {
         index: {
           caption: 'Главная',
           title: ''
+        },
+        'audit-forms': {
+          caption: 'Audit forms',
+          title: 'Audit forms',
+          'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': {
+            caption: 'Audit form',
+            title: 'Форма для просмотра всех записей по аудиту',
+
+          }
         },
         полномочия: {
           caption: 'Полномочия',
@@ -243,6 +268,9 @@ Ember.$.extend(true, translations, {
       'delete-success-message': 'Объект удален',
       'delete-error-message-caption': 'Ошибка удаления'
     },
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': ICSSoftSTORMNETBusinessAuditObjectsAuditEntityLForm,
+    'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e': ICSSoftSTORMNETBusinessAuditObjectsAuditEntityEForm,
+
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l': ICSSoftSTORMNETSecurityAccessLForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l': ICSSoftSTORMNETSecurityClassLForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l': ICSSoftSTORMNETSecurityGroupLForm,
