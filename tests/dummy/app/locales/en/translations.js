@@ -126,6 +126,19 @@ Ember.$.extend(true, translations, {
       greeting: 'Welcome to ember-flexberry test stand!'
     },
 
+    login: {
+      caption: 'Login',
+      back: 'Back',
+      login: 'Login',
+      password: 'Password',
+      errors: {
+        'empty-login': 'Login can not be empty.',
+        'empty-password': 'Password can not be empty.',
+        'server-error': 'Not response from server.',
+        'incorrect-auth-data': 'Wrong login or password.',
+      },
+    },
+
     application: {
       header: {
         menu: {
