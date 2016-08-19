@@ -220,12 +220,12 @@
   {{flexberry-validationmessage error=model.errors.vip pointing="pointing"}}
 </div>
 
-<div class="field">
-  <label>{{t 'forms.ember-flexberry-dummy-application-user-edit.karma-caption'}}</label>
-  {{#if model.errors.karma}}
-  <span style="color:red">{{model.errors.karma}}</span>
-  {{/if}}
-  {{flexberry-dropdown items=(flexberry-enum 'decimal') value=model.karma readonly=readonly}}
+<div class="field {{if model.errors.karma "error" ""}}">
+  {{flexberry-field
+    value=model.karma
+    label=(t "forms.ember-flexberry-dummy-application-user-edit.karma-caption")
+    readonly=readonly
+  }}
   {{flexberry-validationmessage error=model.errors.karma pointing="pointing"}}
 </div>
 
