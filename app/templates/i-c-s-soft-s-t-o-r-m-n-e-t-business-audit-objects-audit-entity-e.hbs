@@ -65,7 +65,7 @@
   required=true
   value=model.objectType.name
   class=(if model.errors.objectType.name 'error' '')
-  label=(Тип объекта)
+  label='(Тип объекта)'
 }}
   {{flexberry-validationmessage error=model.errors.objectType.name pointing="pointing"}}
 </div>
@@ -77,6 +77,7 @@
   {{/if}}
   {{
     flexberry-datepicker
+    hasTimePicker=true
     placeholder='(no value)'
     readonly=readonly
     value=model.operationTime
@@ -143,7 +144,7 @@
   required=true
   value=model.user.name
   class=(if model.errors.user.name 'error' '')
-  label=(Имя)
+  label='(Имя)'
 }}
   {{flexberry-validationmessage error=model.errors.user.name pointing="pointing"}}
 </div>
@@ -161,7 +162,7 @@
   required=true
   value=model.user.login
   class=(if model.errors.user.login 'error' '')
-  label=(Логин)
+  label='(Логин)'
 }}
   {{flexberry-validationmessage error=model.errors.user.login pointing="pointing"}}
 </div>
