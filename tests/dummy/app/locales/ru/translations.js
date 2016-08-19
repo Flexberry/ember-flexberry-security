@@ -140,6 +140,7 @@ Ember.$.extend(true, translations, {
     },
 
     application: {
+      'sync-up': 'Выполнить синхронизацию',
       header: {
         menu: {
           'sitemap-button': {

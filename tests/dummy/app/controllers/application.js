@@ -1,6 +1,31 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  /**
+  */
+  offlineGlobals: Ember.inject.service('offline-globals'),
+
+  /**
+  */
+  onlineStatus: Ember.computed('offlineGlobals.isOnline', {
+    get() {
+      return this.get('offlineGlobals.isOnline');
+    },
+    set(key, newValue, oldValue) {
+      if (newValue !== oldValue) {
+        this.get('offlineGlobals').setOnlineAvailable(newValue);
+      }
+
+      return newValue;
+    },
+  }),
+
+  /**
+  */
+  synchronizes: false,
+
+  /**
+  */
   sitemap: Ember.computed('i18n.locale', function () {
     let i18n = this.get('i18n');
 
@@ -118,9 +143,25 @@ export default Ember.Controller.extend({
       ]
     };
   }),
+
   actions: {
+    /**
+    */
     toggleSidebar() {
       Ember.$('.ui.sidebar').sidebar('toggle');
-    }
+    },
+
+    /**
+    */
+    syncUp() {
+      let _this = this;
+      _this.set('synchronizes', true);
+      let syncer = Ember.getOwner(this).lookup('syncer:main');
+      syncer.syncUp().then(() => {
+        _this.set('synchronizes', false);
+      }).catch((reason) => {
+        Ember.Logger.debug(reason);
+      });
+    },
   }
 });
