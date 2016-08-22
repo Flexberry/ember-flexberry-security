@@ -5,9 +5,9 @@ export let Model = Ember.Mixin.create({
   filterText: DS.attr('string'),
   name: DS.attr('string'),
   filterTypeNView: DS.attr('string'),
-  createTime: DS.attr('string'),
+  createTime: DS.attr('date'),
   creator: DS.attr('string'),
-  editTime: DS.attr('string'),
+  editTime: DS.attr('date'),
   editor: DS.attr('string'),
   subject: DS.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', { inverse: null, async: false }),
   validations: {

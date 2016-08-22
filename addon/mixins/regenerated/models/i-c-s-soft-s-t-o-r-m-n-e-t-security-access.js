@@ -3,9 +3,9 @@ import DS from 'ember-data';
 import { Projection } from 'ember-flexberry-data';
 export let Model = Ember.Mixin.create({
   typeAccess: DS.attr('i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access'),
-  createTime: DS.attr('string'),
+  createTime: DS.attr('date'),
   creator: DS.attr('string'),
-  editTime: DS.attr('string'),
+  editTime: DS.attr('date'),
   editor: DS.attr('string'),
   filter: DS.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', { inverse: null, async: false }),
   permition: DS.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', { inverse: 'access', async: false }),
