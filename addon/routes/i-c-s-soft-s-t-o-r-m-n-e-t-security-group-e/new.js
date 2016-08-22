@@ -4,4 +4,9 @@ export default EditFormNewRoute.extend({
   modelProjection: 'Sec_NotUserL',
   modelName: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent',
   templateName: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e',
+  afterModel: function (model) {
+    model.set('isUser', false);
+    model.set('isGroup', true);
+    model.set('isRole', false);
+  }
 });
