@@ -23,13 +23,13 @@
     {{flexberry-validationmessage error=emptyLogin pointing="pointing"}}
   </div>
 
-  <div class="field">
-    {{flexberry-field
-      placeholder=(t 'components.flexberry-field.placeholder')
+  <div class="field{{if emptyPassword ' error' ''}}">
+    <label>{{t "forms.login.password"}}</label>
+    {{input
+      type="password"
       required=true
       value=password
-      class=(if emptyPassword 'error' '')
-      label=(t 'forms.login.password')
+      placeholder=(t 'components.flexberry-field.placeholder')
     }}
     {{flexberry-validationmessage error=emptyPassword pointing="pointing"}}
   </div>
