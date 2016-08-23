@@ -14,8 +14,8 @@
             <button class="ui basic button tiny {{unless (and onlineStatus (not synchronizes)) 'disabled'}} {{if synchronizes 'loading'}}" {{action 'syncUp'}} style="margin:0.75em;">
               {{t "forms.application.sync-up"}}
             </button>
-            {{flexberry-checkbox
-              value=onlineStatus
+            {{ui-checkbox
+              checked=onlineStatus
               label=(if onlineStatus "Online" "Offline")
               class="toggle vertical segment"
             }}
