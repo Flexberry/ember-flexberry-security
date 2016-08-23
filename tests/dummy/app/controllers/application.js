@@ -163,5 +163,11 @@ export default Ember.Controller.extend({
         Ember.Logger.debug(reason);
       });
     },
+
+    /**
+    */
+    login() {
+      this.transitionToRoute('login');
+    },
   }
 });
