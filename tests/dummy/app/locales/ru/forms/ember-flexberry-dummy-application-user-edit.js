@@ -12,5 +12,6 @@ export default {
   'birthday-caption': 'Birthday',
   'gender-caption': 'Gender',
   'vip-caption': 'Vip',
-  'karma-caption': 'Karma'
+  'karma-caption': 'Karma',
+  'audit-button-text': 'Аудит'
 };

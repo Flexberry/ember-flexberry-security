@@ -1,4 +1,6 @@
+import Ember from 'ember';
 import ListFormRoute from 'ember-flexberry/routes/list-form';
+import { Query } from 'ember-flexberry-data';
 
 export default ListFormRoute.extend({
   /**
@@ -43,4 +45,53 @@ export default ListFormRoute.extend({
     @default {}
   */
   developerUserSettings: { ICSSoftSTORMNETBusinessAuditObjectsAuditEntityL: {} },
+
+  queryParams: {
+    filterByObjectId: {
+      refreshModel: true
+    },
+    filterByObjectType: {
+      refreshModel: true
+    }
+  },
+
+  /**
+    It overrides base method and forms the limit predicate for loaded data.
+    If there is displayed even number or records per page, records where 'address' attribute contains letter 'S' are filtered.
+    If there is displayed odd number or records per page, records where 'address' attribute contains letter 'п' are filtered.
+
+    @public
+    @method objectListViewLimitPredicate
+    @param {Object} options Method options.
+    @param {String} [options.modelName] Type of records to load.
+    @param {String} [options.projectionName] Projection name to load data by.
+    @param {String} [options.params] Current route query parameters.
+    @return {BasePredicate} The predicate to limit loaded data.
+   */
+  objectListViewLimitPredicate: function(options) {
+    let methodOptions = Ember.merge({
+      modelName: undefined,
+      projectionName: undefined,
+      params: undefined
+    }, options);
+
+    if (methodOptions.modelName === this.get('modelName') &&
+        methodOptions.projectionName === this.get('modelProjection')) {
+
+      let objectTypeName = options.params.filterByObjectType;
+      if (objectTypeName) {
+        let limitFunction = new Query.SimplePredicate('objectType.Name', Query.FilterOperator.Eq, objectTypeName);
+        return limitFunction;
+      }
+
+      let objectPrimaryKey = options.params.filterByObjectId;
+
+      if (objectPrimaryKey) {
+        let limitFunction = new Query.SimplePredicate('objectPrimaryKey', Query.FilterOperator.Eq, objectPrimaryKey);
+        return limitFunction;
+      }
+    }
+
+    return undefined;
+  }
 });

@@ -8,5 +8,8 @@ export default ListFormController.extend({
     @type String
     @default 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e'
    */
-  editFormRoute: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e'
+  editFormRoute: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e',
+  queryParams: ['filterByObjectId', 'filterByObjectType'],
+  filterByObjectId: null,
+  filterByObjectType: null
 });
