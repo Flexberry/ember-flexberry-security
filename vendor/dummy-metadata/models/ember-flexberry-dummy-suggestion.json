@@ -42,7 +42,7 @@
     },
     {
       "name": "createTime",
-      "type": "string",
+      "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
       "defaultValue": ""
@@ -56,7 +56,7 @@
     },
     {
       "name": "editTime",
-      "type": "string",
+      "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
       "defaultValue": ""
@@ -73,15 +73,15 @@
     {
       "polymorphic": false,
       "presence": true,
-      "name": "editor1",
-      "relatedTo": "ember-flexberry-dummy-application-user",
+      "name": "type",
+      "relatedTo": "ember-flexberry-dummy-suggestion-type",
       "inverse": null
     },
     {
       "polymorphic": false,
       "presence": true,
-      "name": "type",
-      "relatedTo": "ember-flexberry-dummy-suggestion-type",
+      "name": "editor1",
+      "relatedTo": "ember-flexberry-dummy-application-user",
       "inverse": null
     },
     {
@@ -94,6 +94,11 @@
   ],
   "hasMany": [
     {
+      "name": "userVotes",
+      "relatedTo": "ember-flexberry-dummy-vote",
+      "inverse": "suggestion"
+    },
+    {
       "name": "files",
       "relatedTo": "ember-flexberry-dummy-suggestion-file",
       "inverse": "suggestion"
@@ -101,11 +106,6 @@
     {
       "name": "comments",
       "relatedTo": "ember-flexberry-dummy-comment",
-      "inverse": "suggestion"
-    },
-    {
-      "name": "userVotes",
-      "relatedTo": "ember-flexberry-dummy-vote",
       "inverse": "suggestion"
     }
   ],
