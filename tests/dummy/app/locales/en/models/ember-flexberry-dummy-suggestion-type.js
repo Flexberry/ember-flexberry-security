@@ -49,6 +49,9 @@ export default {
           name: {
             caption: 'name'
           }
+        },
+        suggestionType: {
+          caption: 'suggestionType'
         }
       }
     },

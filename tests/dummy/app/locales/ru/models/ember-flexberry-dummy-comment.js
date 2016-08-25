@@ -47,6 +47,12 @@ export default {
       }
     },
     CommentE: {
+      suggestion: {
+        caption: 'Address',
+        address: {
+          caption: ''
+        }
+      },
       text: {
         caption: 'Text'
       },
@@ -75,6 +81,9 @@ export default {
           name: {
             caption: 'Name'
           }
+        },
+        comment: {
+          caption: ''
         }
       }
     }

@@ -5,9 +5,9 @@ export let Model = Ember.Mixin.create({
   text: DS.attr('string'),
   votes: DS.attr('number'),
   moderated: DS.attr('boolean'),
-  createTime: DS.attr('string'),
+  createTime: DS.attr('date'),
   creator: DS.attr('string'),
-  editTime: DS.attr('string'),
+  editTime: DS.attr('date'),
   editor: DS.attr('string'),
   author: DS.belongsTo('ember-flexberry-dummy-application-user', { inverse: null, async: false }),
   suggestion: DS.belongsTo('ember-flexberry-dummy-suggestion', { inverse: 'comments', async: false }),
@@ -42,6 +42,9 @@ export let defineProjections = function (model) {
     }, { displayMemberPath: 'name' })
   });
   model.defineProjection('CommentE', 'ember-flexberry-dummy-comment', {
+    suggestion: Projection.belongsTo('ember-flexberry-dummy-suggestion', 'Address', {
+      address: Projection.attr('', { hidden: true })
+    }),
     text: Projection.attr('Text'),
     votes: Projection.attr('Votes'),
     moderated: Projection.attr('Moderated'),
@@ -53,7 +56,10 @@ export let defineProjections = function (model) {
       voteType: Projection.attr('Vote type'),
       applicationUser: Projection.belongsTo('ember-flexberry-dummy-application-user', 'Application user', {
         name: Projection.attr('Name', { hidden: true })
-      }, { displayMemberPath: 'name' })
+      }, { displayMemberPath: 'name' }),
+      comment: Projection.belongsTo('ember-flexberry-dummy-comment', '', {
+
+      })
     })
   });
 };

@@ -20,6 +20,9 @@ export default {
         name: {
           caption: 'name'
         }
+      },
+      comment: {
+        caption: 'comment'
       }
     }
   }

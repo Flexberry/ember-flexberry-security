@@ -14,6 +14,9 @@ export default {
       },
       file: {
         caption: 'File'
+      },
+      suggestion: {
+        caption: ''
       }
     }
   }

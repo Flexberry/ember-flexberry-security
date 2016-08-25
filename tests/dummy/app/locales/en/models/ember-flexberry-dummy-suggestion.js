@@ -133,6 +133,9 @@ export default {
         },
         file: {
           caption: 'file'
+        },
+        suggestion: {
+          caption: 'suggestion'
         }
       },
       userVotes: {
@@ -145,6 +148,9 @@ export default {
           name: {
             caption: 'name'
           }
+        },
+        suggestion: {
+          caption: 'suggestion'
         }
       },
       comments: {
