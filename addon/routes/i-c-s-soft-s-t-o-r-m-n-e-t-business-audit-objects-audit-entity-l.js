@@ -87,7 +87,8 @@ export default ListFormRoute.extend({
       let objectPrimaryKey = options.params.filterByObjectId;
 
       if (objectPrimaryKey) {
-        let limitFunction = new Query.SimplePredicate('objectPrimaryKey', Query.FilterOperator.Eq, objectPrimaryKey);
+        let limitFunction = new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey);
+
         return limitFunction;
       }
     }
