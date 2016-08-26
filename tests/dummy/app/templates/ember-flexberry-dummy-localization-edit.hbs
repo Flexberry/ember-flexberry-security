@@ -32,7 +32,12 @@
       <button type="submit" class="ui button" {{action 'close'}}>
         {{t "forms.edit-form.close-button-text"}}
       </button>
-    </div>
+      {{#unless model.isNew}}
+      <button type="submit" class="ui button" {{action 'showAudit'}}>
+        {{t "forms.audit.show-audit-button-text"}}
+      </button>
+      {{/unless}}
+</div>
   </div>
   <div class="field">
   {{#if model.errors.name}}

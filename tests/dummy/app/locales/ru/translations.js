@@ -281,6 +281,9 @@ Ember.$.extend(true, translations, {
         },
       }
     },
+    audit: {
+      'show-audit-button-text': 'Аудит'
+    },
 
     'edit-form': {
       'save-success-message-caption': 'Сохранение завершилось успешно',
