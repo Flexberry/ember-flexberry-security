@@ -8,9 +8,9 @@ export default ListFormRoute.extend({
 
     @property modelProjection
     @type String
-    @default 'Sec_NotUserL'
+    @default 'RoleOrGroupL'
   */
-  modelProjection: 'Sec_NotUserL',
+  modelProjection: 'RoleOrGroupL',
 
   /**
     Name of model to be used as list's records types.
