@@ -11,16 +11,18 @@
         <div class="ui container">
           <a {{ action 'toggleSidebar' }} title="Menu" class="launch icon item"><i class="sidebar icon"></i></a>
           <div class="right menu">
-            {{ui-checkbox
-              checked=onlineStatus
-              label=(if onlineStatus "Online" "Offline")
-              class="toggle vertical segment"
-            }}
-            <button class="ui basic button mini {{unless (and onlineStatus (not synchronizes)) 'disabled'}} {{if synchronizes 'loading'}}" {{action 'syncUp'}} style="margin:0.75em;">
+            <div style="margin:0.65em;">
+              {{ui-checkbox
+                checked=onlineStatus
+                label=(if onlineStatus "Online" "Offline")
+                class="toggle"
+              }}
+            </div>
+            <button class="ui basic button mini {{unless (and onlineStatus (not synchronizes)) 'disabled'}} {{if synchronizes 'loading'}}" {{action 'syncUp'}} style="margin:0.5em;">
               {{t "forms.application.sync-up"}}
             </button>
-            <button class="ui basic button mini" {{action 'login'}} style="margin:0.75em;">
-              {{t "forms.login.caption"}}
+            <button class="ui basic button mini" {{action (if login 'logout' 'goToLoginForm')}} style="margin:0.5em;">
+              {{t (if login "forms.login.logout" "forms.login.caption")}}
             </button>
           </div>
         </div>

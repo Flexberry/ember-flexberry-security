@@ -1,45 +1,50 @@
 <h3 class="ui header">{{t "forms.login.caption"}}</h3>
 
-{{#if errorMessages}}
+{{#if errorMessage}}
   {{ui-message
     type='error'
     closeable=true
-    visible=true
-    title='Error occurred'
-    message=errorMessages
+    message=errorMessage
   }}
 {{/if}}
 
-<form class="ui form flexberry-vertical-form" role="form">
+<form class="ui form flexberry-vertical-form {{if tryToLogin 'loading'}}" role="form">
 
-  <div class="field">
-    {{flexberry-field
-      placeholder=(t 'components.flexberry-field.placeholder')
-      required=true
-      value=login
-      class=(if emptyLogin 'error' '')
-      label=(t 'forms.login.login')
+  {{#if login}}
+    {{ui-message
+      type='info'
+      message=(t 'forms.login.you-logged-as' login=login)
     }}
-    {{flexberry-validationmessage error=emptyLogin pointing="pointing"}}
-  </div>
+  {{else}}
+    <div class="field">
+      {{flexberry-field
+        placeholder=(t 'components.flexberry-field.placeholder')
+        required=true
+        value=loginInput
+        class=(if emptyLogin 'error' '')
+        label=(t 'forms.login.login')
+      }}
+      {{flexberry-validationmessage error=emptyLogin pointing="pointing"}}
+    </div>
 
-  <div class="field{{if emptyPassword ' error' ''}}">
-    <label>{{t "forms.login.password"}}</label>
-    {{input
-      type="password"
-      required=true
-      value=password
-      placeholder=(t 'components.flexberry-field.placeholder')
-    }}
-    {{flexberry-validationmessage error=emptyPassword pointing="pointing"}}
-  </div>
+    <div class="field{{if emptyPassword ' error' ''}}">
+      <label>{{t "forms.login.password"}}</label>
+      {{input
+        type="password"
+        required=true
+        value=password
+        placeholder=(t 'components.flexberry-field.placeholder')
+      }}
+      {{flexberry-validationmessage error=emptyPassword pointing="pointing"}}
+    </div>
+  {{/if}}
 
   <div class="field">
     <div class="flexberry-edit-panel">
-      <button type="submit" class="ui positive button" {{action 'login'}}>
-        {{t "forms.login.caption"}}
+      <button type="submit" class="ui positive button" {{action (if login 'logout' 'login')}}>
+        {{t (if login "forms.login.logout" "forms.login.caption")}}
       </button>
-      <button type="submit" class="ui button" {{action 'close'}}>
+      <button type="submit" class="ui button" {{action 'closeLoginForm'}}>
         {{t "forms.login.back"}}
       </button>
     </div>

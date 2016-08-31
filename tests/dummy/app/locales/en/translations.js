@@ -129,14 +129,18 @@ Ember.$.extend(true, translations, {
 
     login: {
       caption: 'Login',
+      logout: 'Logout',
       back: 'Back',
       login: 'Login',
       password: 'Password',
+      'you-logged-as': 'You logged as: "{{login}}".',
       errors: {
         'empty-login': 'Login can not be empty.',
         'empty-password': 'Password can not be empty.',
         'server-error': 'Not response from server.',
         'incorrect-auth-data': 'Wrong login or password.',
+        'login-please': 'Please, login.',
+        'unknown-error': 'Oh, something went wrong...',
       },
     },
 
