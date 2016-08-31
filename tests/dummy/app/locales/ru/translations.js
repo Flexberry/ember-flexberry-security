@@ -128,14 +128,18 @@ Ember.$.extend(true, translations, {
 
     login: {
       caption: 'Войти',
+      logout: 'Выйти',
       back: 'Назад',
       login: 'Логин',
       password: 'Пароль',
+      'you-logged-as': 'Вы вошли как: "{{login}}".',
       errors: {
         'empty-login': 'Логин не может быть пустым.',
         'empty-password': 'Пароль не может быть пустым.',
         'server-error': 'Не удалось получить ответ от сервера.',
         'incorrect-auth-data': 'Неверный логин или пароль.',
+        'login-please': 'Пожалуйста, войдите.',
+        'unknown-error': 'Ой, что то пошло не так...',
       },
     },
 
