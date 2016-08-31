@@ -1,9 +1,12 @@
 export default {
   caption: 'Пользователь',
-  'name-caption': 'Имя',
-  'login-caption': 'Логин',
-  'pwd-caption': 'Пароль',
-  'connString-caption': 'Строка подключения',
-  'enabled-caption': 'Актуален',
-  'isUser-caption': ''
+  'name-caption': '',
+  'login-caption': '',
+  'email-caption': '',
+  'enabled-caption': '',
+  'pwd-caption': '',
+  'createTime-caption': '',
+  'creator-caption': '',
+  'editTime-caption': '',
+  'editor-caption': ''
 };

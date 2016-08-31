@@ -1,12 +1,12 @@
 export default {
   caption: 'Группа',
-  'name-caption': 'Имя',
+  'name-caption': '',
+  'enabled-caption': '',
   'isUser-caption': '',
   'isGroup-caption': '',
   'isRole-caption': '',
-  'connString-caption': 'Строка подключения',
-  'createTime-caption': 'Дата создания',
-  'creator-caption': 'Создатель',
-  'editTime-caption': 'Дата изменения',
-  'editor-caption': 'Редактор'
+  'createTime-caption': '',
+  'creator-caption': '',
+  'editTime-caption': '',
+  'editor-caption': ''
 };

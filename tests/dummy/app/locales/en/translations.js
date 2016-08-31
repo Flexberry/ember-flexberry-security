@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/en/translations';
+import EmberFlexberrySecurityTranslations from 'ember-flexberry-security/locales/en/translations';
 
 import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityLForm from
 'ember-flexberry-security/locales/en/forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l';
@@ -78,7 +79,7 @@ import EmberFlexberryDummyTestPolyModel from './models/ember-flexberry-dummy-tes
 import EmberFlexberryDummyVoteModel from './models/ember-flexberry-dummy-vote';
 
 const translations = {};
-Ember.$.extend(true, translations, EmberFlexberryTranslations);
+Ember.$.extend(true, translations, EmberFlexberryTranslations, EmberFlexberrySecurityTranslations);
 
 Ember.$.extend(true, translations, {
   models: {

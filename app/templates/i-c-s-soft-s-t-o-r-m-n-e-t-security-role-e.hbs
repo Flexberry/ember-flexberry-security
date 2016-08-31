@@ -53,93 +53,12 @@
 </div>
 
 <div class="field">
-  {{#if model.errors.connString}}
-  <span style="color:red">
-    {{model.errors.connString}}
-  </span>
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.enabled-caption'}}</label>
+  {{#if model.errors.enabled}}
+  <span style="color:red">{{model.errors.enabled}}</span>
   {{/if}}
-  {{
-  flexberry-field
-  placeholder=(t 'components.flexberry-field.placeholder')
-  readonly=readonly
-  required=true
-  value=model.connString
-  class=(if model.errors.connString 'error' '')
-  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.connString-caption')
-}}
-  {{flexberry-validationmessage error=model.errors.connString pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{#if model.errors.createTime}}
-  <span style="color:red">
-    {{model.errors.createTime}}
-  </span>
-  {{/if}}
-  {{
-  flexberry-field
-  placeholder=(t 'components.flexberry-field.placeholder')
-  readonly=readonly
-  required=true
-  value=model.createTime
-  class=(if model.errors.createTime 'error' '')
-  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.createTime-caption')
-}}
-  {{flexberry-validationmessage error=model.errors.createTime pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{#if model.errors.creator}}
-  <span style="color:red">
-    {{model.errors.creator}}
-  </span>
-  {{/if}}
-  {{
-  flexberry-field
-  placeholder=(t 'components.flexberry-field.placeholder')
-  readonly=readonly
-  required=true
-  value=model.creator
-  class=(if model.errors.creator 'error' '')
-  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.creator-caption')
-}}
-  {{flexberry-validationmessage error=model.errors.creator pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{#if model.errors.editTime}}
-  <span style="color:red">
-    {{model.errors.editTime}}
-  </span>
-  {{/if}}
-  {{
-  flexberry-field
-  placeholder=(t 'components.flexberry-field.placeholder')
-  readonly=readonly
-  required=true
-  value=model.editTime
-  class=(if model.errors.editTime 'error' '')
-  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.editTime-caption')
-}}
-  {{flexberry-validationmessage error=model.errors.editTime pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{#if model.errors.editor}}
-  <span style="color:red">
-    {{model.errors.editor}}
-  </span>
-  {{/if}}
-  {{
-  flexberry-field
-  placeholder=(t 'components.flexberry-field.placeholder')
-  readonly=readonly
-  required=true
-  value=model.editor
-  class=(if model.errors.editor 'error' '')
-  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.editor-caption')
-}}
-  {{flexberry-validationmessage error=model.errors.editor pointing="pointing"}}
+  {{flexberry-checkbox readonly=readonly value=model.enabled}}
+  {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
 </div>
 
 </form>

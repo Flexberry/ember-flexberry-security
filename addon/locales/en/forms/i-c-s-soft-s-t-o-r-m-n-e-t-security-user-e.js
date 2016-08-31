@@ -2,8 +2,11 @@ export default {
   caption: 'ICSSoftSTORMNETSecurityUserE',
   'name-caption': 'name',
   'login-caption': 'login',
-  'pwd-caption': 'pwd',
-  'connString-caption': 'connString',
+  'email-caption': 'email',
   'enabled-caption': 'enabled',
-  'isUser-caption': 'isUser'
+  'pwd-caption': 'pwd',
+  'createTime-caption': 'createTime',
+  'creator-caption': 'creator',
+  'editTime-caption': 'editTime',
+  'editor-caption': 'editor'
 };

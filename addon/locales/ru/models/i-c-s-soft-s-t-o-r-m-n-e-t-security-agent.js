@@ -74,6 +74,64 @@ export default {
         caption: ''
       }
     },
+    RoleOrGroupE: {
+      name: {
+        caption: ''
+      },
+      enabled: {
+        caption: ''
+      },
+      isUser: {
+        caption: ''
+      },
+      isGroup: {
+        caption: ''
+      },
+      isRole: {
+        caption: ''
+      },
+      createTime: {
+        caption: ''
+      },
+      creator: {
+        caption: ''
+      },
+      editTime: {
+        caption: ''
+      },
+      editor: {
+        caption: ''
+      }
+    },
+    RoleOrGroupL: {
+      name: {
+        caption: ''
+      },
+      enabled: {
+        caption: ''
+      },
+      isUser: {
+        caption: ''
+      },
+      isGroup: {
+        caption: ''
+      },
+      isRole: {
+        caption: ''
+      },
+      createTime: {
+        caption: ''
+      },
+      creator: {
+        caption: ''
+      },
+      editTime: {
+        caption: ''
+      },
+      editor: {
+        caption: ''
+      }
+    },
     Sec_AgentE: {
       name: {
         caption: 'Имя'
@@ -233,6 +291,70 @@ export default {
       },
       editor: {
         caption: 'Редактор'
+      }
+    },
+    UserE: {
+      name: {
+        caption: ''
+      },
+      login: {
+        caption: ''
+      },
+      email: {
+        caption: ''
+      },
+      enabled: {
+        caption: ''
+      },
+      pwd: {
+        caption: ''
+      },
+      createTime: {
+        caption: ''
+      },
+      creator: {
+        caption: ''
+      },
+      editTime: {
+        caption: ''
+      },
+      editor: {
+        caption: ''
+      }
+    },
+    UserL: {
+      name: {
+        caption: ''
+      },
+      login: {
+        caption: ''
+      },
+      email: {
+        caption: ''
+      },
+      isUser: {
+        caption: ''
+      },
+      isGroup: {
+        caption: ''
+      },
+      isRole: {
+        caption: ''
+      },
+      enabled: {
+        caption: ''
+      },
+      createTime: {
+        caption: ''
+      },
+      creator: {
+        caption: ''
+      },
+      editTime: {
+        caption: ''
+      },
+      editor: {
+        caption: ''
       }
     }
   }

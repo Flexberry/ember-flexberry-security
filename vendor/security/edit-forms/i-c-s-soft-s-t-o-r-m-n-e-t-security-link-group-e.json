@@ -5,14 +5,14 @@
       "displayAttributeName": null,
       "required": false,
       "relationName": "User",
-      "projection": "RoleL"
+      "projection": "RoleOrGroupL"
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Group",
-      "projection": "RoleL"
+      "projection": "RoleOrGroupL"
     }
   ],
   "caption": null,

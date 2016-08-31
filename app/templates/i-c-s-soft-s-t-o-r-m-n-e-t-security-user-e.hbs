@@ -71,6 +71,33 @@
 </div>
 
 <div class="field">
+  {{#if model.errors.email}}
+  <span style="color:red">
+    {{model.errors.email}}
+  </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder=(t 'components.flexberry-field.placeholder')
+  readonly=readonly
+  required=true
+  value=model.email
+  class=(if model.errors.email 'error' '')
+  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.email-caption')
+}}
+  {{flexberry-validationmessage error=model.errors.email pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption'}}</label>
+  {{#if model.errors.enabled}}
+  <span style="color:red">{{model.errors.enabled}}</span>
+  {{/if}}
+  {{flexberry-checkbox readonly=readonly value=model.enabled}}
+  {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
+</div>
+
+<div class="field">
   {{#if model.errors.pwd}}
   <span style="color:red">
     {{model.errors.pwd}}
@@ -86,33 +113,6 @@
   label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption')
 }}
   {{flexberry-validationmessage error=model.errors.pwd pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{#if model.errors.connString}}
-  <span style="color:red">
-    {{model.errors.connString}}
-  </span>
-  {{/if}}
-  {{
-  flexberry-field
-  placeholder=(t 'components.flexberry-field.placeholder')
-  readonly=readonly
-  required=true
-  value=model.connString
-  class=(if model.errors.connString 'error' '')
-  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.connString-caption')
-}}
-  {{flexberry-validationmessage error=model.errors.connString pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption'}}</label>
-  {{#if model.errors.enabled}}
-  <span style="color:red">{{model.errors.enabled}}</span>
-  {{/if}}
-  {{flexberry-checkbox readonly=readonly value=model.enabled}}
-  {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
 </div>
 
 </form>

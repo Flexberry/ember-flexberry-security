@@ -74,6 +74,64 @@ export default {
         caption: 'enabled'
       }
     },
+    RoleOrGroupE: {
+      name: {
+        caption: 'name'
+      },
+      enabled: {
+        caption: 'enabled'
+      },
+      isUser: {
+        caption: 'isUser'
+      },
+      isGroup: {
+        caption: 'isGroup'
+      },
+      isRole: {
+        caption: 'isRole'
+      },
+      createTime: {
+        caption: 'createTime'
+      },
+      creator: {
+        caption: 'creator'
+      },
+      editTime: {
+        caption: 'editTime'
+      },
+      editor: {
+        caption: 'editor'
+      }
+    },
+    RoleOrGroupL: {
+      name: {
+        caption: 'name'
+      },
+      enabled: {
+        caption: 'enabled'
+      },
+      isUser: {
+        caption: 'isUser'
+      },
+      isGroup: {
+        caption: 'isGroup'
+      },
+      isRole: {
+        caption: 'isRole'
+      },
+      createTime: {
+        caption: 'createTime'
+      },
+      creator: {
+        caption: 'creator'
+      },
+      editTime: {
+        caption: 'editTime'
+      },
+      editor: {
+        caption: 'editor'
+      }
+    },
     Sec_AgentE: {
       name: {
         caption: 'name'
@@ -221,6 +279,70 @@ export default {
       },
       isRole: {
         caption: 'isRole'
+      },
+      createTime: {
+        caption: 'createTime'
+      },
+      creator: {
+        caption: 'creator'
+      },
+      editTime: {
+        caption: 'editTime'
+      },
+      editor: {
+        caption: 'editor'
+      }
+    },
+    UserE: {
+      name: {
+        caption: 'name'
+      },
+      login: {
+        caption: 'login'
+      },
+      email: {
+        caption: 'email'
+      },
+      enabled: {
+        caption: 'enabled'
+      },
+      pwd: {
+        caption: 'pwd'
+      },
+      createTime: {
+        caption: 'createTime'
+      },
+      creator: {
+        caption: 'creator'
+      },
+      editTime: {
+        caption: 'editTime'
+      },
+      editor: {
+        caption: 'editor'
+      }
+    },
+    UserL: {
+      name: {
+        caption: 'name'
+      },
+      login: {
+        caption: 'login'
+      },
+      email: {
+        caption: 'email'
+      },
+      isUser: {
+        caption: 'isUser'
+      },
+      isGroup: {
+        caption: 'isGroup'
+      },
+      isRole: {
+        caption: 'isRole'
+      },
+      enabled: {
+        caption: 'enabled'
       },
       createTime: {
         caption: 'createTime'

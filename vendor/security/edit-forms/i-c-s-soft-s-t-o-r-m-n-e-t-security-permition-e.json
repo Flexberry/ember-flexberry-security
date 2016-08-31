@@ -5,14 +5,14 @@
       "displayAttributeName": null,
       "required": false,
       "relationName": "Agent",
-      "projection": "Sec_AgentL"
+      "projection": "RoleOrGroupL"
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Subject",
-      "projection": "Sec_SubjectL"
+      "projection": "Sec_SubjectE"
     }
   ],
   "caption": "Разрешение",
