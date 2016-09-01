@@ -35,39 +35,33 @@
     </div>
   </div>
   <div class="field">
-    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption'}}</label>
-  {{#if model.errors.user}}
-      <span style="color:red">{{model.errors.user}}</span>
-  {{/if}}
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption'}}</label>
   {{
-  flexberry-lookup
-  choose='showLookupDialog'
-  remove='removeLookupValue'
-  value=model.user
-  displayAttributeName='name'
-  relationName='user'
-  projection='RoleL'
-  title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption')
-  readonly=readonly
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.user
+    displayAttributeName='name'
+    relationName='user'
+    projection='RoleOrGroupL'
+    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption')
+    readonly=readonly
   }}
   {{flexberry-validationmessage error=model.errors.user pointing="pointing"}}
 </div>
 
 <div class="field">
-    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption'}}</label>
-  {{#if model.errors.group}}
-      <span style="color:red">{{model.errors.group}}</span>
-  {{/if}}
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption'}}</label>
   {{
-  flexberry-lookup
-  choose='showLookupDialog'
-  remove='removeLookupValue'
-  value=model.group
-  displayAttributeName='name'
-  relationName='group'
-  projection='RoleL'
-  title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption')
-  readonly=readonly
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.group
+    displayAttributeName='name'
+    relationName='group'
+    projection='RoleOrGroupL'
+    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption')
+    readonly=readonly
   }}
   {{flexberry-validationmessage error=model.errors.group pointing="pointing"}}
 </div>

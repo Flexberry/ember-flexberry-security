@@ -35,49 +35,41 @@
     </div>
   </div>
   <div class="field">
-    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption'}}</label>
-  {{#if model.errors.agent}}
-      <span style="color:red">{{model.errors.agent}}</span>
-  {{/if}}
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption'}}</label>
   {{
-  flexberry-lookup
-  choose='showLookupDialog'
-  remove='removeLookupValue'
-  value=model.agent
-  displayAttributeName='name'
-  relationName='agent'
-  projection='Sec_AgentL'
-  title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption')
-  readonly=readonly
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.agent
+    displayAttributeName='name'
+    relationName='agent'
+    projection='RoleOrGroupL'
+    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption')
+    readonly=readonly
   }}
   {{flexberry-validationmessage error=model.errors.agent pointing="pointing"}}
 </div>
 
 <div class="field">
-    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption'}}</label>
-  {{#if model.errors.subject}}
-      <span style="color:red">{{model.errors.subject}}</span>
-  {{/if}}
+  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption'}}</label>
   {{
-  flexberry-lookup
-  choose='showLookupDialog'
-  remove='removeLookupValue'
-  value=model.subject
-  displayAttributeName='name'
-  relationName='subject'
-  projection='Sec_SubjectL'
-  title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption')
-  readonly=readonly
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.subject
+    displayAttributeName='name'
+    relationName='subject'
+    projection='Sec_SubjectE'
+    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption')
+    readonly=readonly
   }}
   {{flexberry-validationmessage error=model.errors.subject pointing="pointing"}}
 </div>
 
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.access-caption'}}</label>
-  {{#if model.errors.access}}
-    <span style="color:red">{{model.errors.access}}</span>
-  {{/if}}
-  {{flexberry-groupedit
+  {{
+    flexberry-groupedit
     componentName="accessGroupEdit"
     modelProjection=modelProjection.attributes.access
     content=model.access

@@ -35,29 +35,25 @@
     </div>
   </div>
   <div class="field">
-  {{#if model.errors.name}}
-  <span style="color:red">
-    {{model.errors.name}}
-  </span>
-  {{/if}}
   {{
-  flexberry-field
-  placeholder=(t 'components.flexberry-field.placeholder')
-  readonly=readonly
-  required=true
-  value=model.name
-  class=(if model.errors.name 'error' '')
-  label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.name-caption')
-}}
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.name
+    class=(if model.errors.name 'error' '')
+    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.name-caption')
+  }}
   {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
 </div>
 
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.enabled-caption'}}</label>
-  {{#if model.errors.enabled}}
-  <span style="color:red">{{model.errors.enabled}}</span>
-  {{/if}}
-  {{flexberry-checkbox readonly=readonly value=model.enabled}}
+  {{
+    flexberry-checkbox 
+    readonly=readonly 
+    value=model.enabled
+  }}
   {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
 </div>
 
