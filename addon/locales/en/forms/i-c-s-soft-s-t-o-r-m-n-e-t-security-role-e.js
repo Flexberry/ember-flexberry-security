@@ -1,12 +1,12 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityRoleE',
-  'name-caption': 'name',
-  'enabled-caption': 'enabled',
-  'isUser-caption': 'isUser',
-  'isGroup-caption': 'isGroup',
-  'isRole-caption': 'isRole',
-  'createTime-caption': 'createTime',
-  'creator-caption': 'creator',
-  'editTime-caption': 'editTime',
-  'editor-caption': 'editor'
+  caption: 'Role',
+  'name-caption': 'Name',
+  'enabled-caption': 'Enabled',
+  'isUser-caption': 'Is user',
+  'isGroup-caption': 'Is group',
+  'isRole-caption': 'Is role',
+  'createTime-caption': 'Create time',
+  'creator-caption': 'Creator',
+  'editTime-caption': 'Edit time',
+  'editor-caption': 'Editor'
 };

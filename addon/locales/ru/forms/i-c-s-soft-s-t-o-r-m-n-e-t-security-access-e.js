@@ -1,6 +1,6 @@
 export default {
   caption: 'Доступ',
   'typeAccess-caption': 'Тип доступа',
-  'permition-caption': '~',
-  'filter-caption': '~'
+  'permition-caption': 'Разрешение',
+  'filter-caption': 'Фильтр'
 };

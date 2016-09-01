@@ -53,123 +53,74 @@ Ember.$.extend(true, translations, {
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject': ICSSoftSTORMNETSecuritySubjectModel,
   },
 
-  'application-name': 'Application caption',
-
   forms: {
-    loading: {
-      'spinner-caption': 'Loading stuff, please have a cold beer...'
-    },
-    index: {
-      greeting: 'Welcome to ember-flexberry test stand!'
-    },
-
     application: {
-      header: {
-        menu: {
-          'sitemap-button': {
-            caption: '',
-            title: 'Menu'
-          },
-          'user-settings-service-checkbox': {
-            caption: 'Use service to save user settings'
-          },
-          'language-dropdown': {
-            caption: 'Application language',
-            placeholder: 'Choose language'
-          }
-        }
-      },
-
-      footer: {
-        'application-name': 'Application caption',
-        'application-version': {
-          caption: 'Addon version {{version}}',
-          title: 'It is version of ember-flexberry addon, which uses in this dummy application ' +
-          '(npm version + commit sha). ' +
-          'Click to open commit on GitHub.'
-        }
-      },
-
       sitemap: {
-        'application-name': {
-          caption: 'Application caption',
-          title: 'Application title'
-        },
-        'application-version': {
-          caption: 'Addon version {{version}}',
-          title: 'It is version of ember-flexberry addon, which uses in this dummy application ' +
-          '(npm version + commit sha). ' +
-          'Click to open commit on GitHub.'
-        },
-        index: {
-          caption: 'Home',
-          title: ''
+        'audit-forms': {
+          caption: 'Audit',
+          title: 'Audit data',
+          'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': {
+            caption: 'Audit list form',
+            title: 'Audit list form',
+
+          }
         },
         полномочия: {
-          caption: 'полномочия',
-          title: 'полномочия',
+          caption: 'Security',
+          title: 'Security management',
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l',
+            caption: 'Users',
+            title: 'Application users',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l',
+            caption: 'Roles',
+            title: 'User roles',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l',
+            caption: 'Groups',
+            title: 'User groups or domains',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l',
+            caption: 'Classes',
+            title: 'Application classes',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l',
+            caption: 'Operations',
+            title: 'User operations',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l',
+            caption: 'Views',
+            title: 'Views',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l',
+            caption: 'Permissions',
+            title: 'Permissions',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l',
+            caption: 'Accesses',
+            title: 'Accesses',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l',
+            caption: 'Link groups',
+            title: 'Link groups',
 
           },
           'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l',
-
+            caption: 'Link roles',
+            title: 'Link roles',
           }
         },
       }
     },
 
-    'edit-form': {
-      'save-success-message-caption': 'Save operation succeed',
-      'save-success-message': 'Object saved',
-      'save-error-message-caption': 'Save operation failed',
-      'delete-success-message-caption': 'Delete operation succeed',
-      'delete-success-message': 'Object deleted',
-      'delete-error-message-caption': 'Delete operation failed'
-    },
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l': ICSSoftSTORMNETSecurityAccessLForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l': ICSSoftSTORMNETSecurityClassLForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l': ICSSoftSTORMNETSecurityGroupLForm,
@@ -191,7 +142,6 @@ Ember.$.extend(true, translations, {
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e': ICSSoftSTORMNETSecurityUserEForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e': ICSSoftSTORMNETSecurityViewEForm,
   },
-
 });
 
 export default translations;

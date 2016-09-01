@@ -1,5 +1,5 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityLinkGroupE',
-  'user-caption': 'user',
-  'group-caption': 'group'
+  caption: 'Link group',
+  'user-caption': 'User',
+  'group-caption': 'Group'
 };

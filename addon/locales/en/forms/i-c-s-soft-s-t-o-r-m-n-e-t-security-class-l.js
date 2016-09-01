@@ -1,3 +1,3 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityClassL'
+  caption: 'Classes'
 };

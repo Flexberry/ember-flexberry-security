@@ -1,7 +1,7 @@
 export default {
-  caption: '',
-  'startDate-caption': '',
-  'endDate-caption': '',
-  'role-caption': '',
-  'agent-caption': ''
+  caption: 'Связь с ролью',
+  'startDate-caption': 'Дата начала',
+  'endDate-caption': 'Дата окончания',
+  'role-caption': 'Роль',
+  'agent-caption': 'Агент'
 };

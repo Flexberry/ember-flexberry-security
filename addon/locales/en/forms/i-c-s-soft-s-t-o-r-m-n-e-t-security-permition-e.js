@@ -1,6 +1,6 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityPermitionE',
-  'agent-caption': 'agent',
-  'subject-caption': 'subject',
-  'access-caption': 'access'
+  caption: 'Permition',
+  'agent-caption': 'Agent',
+  'subject-caption': 'Subject',
+  'access-caption': 'Access'
 };

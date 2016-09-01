@@ -1,3 +1,3 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityAccessL'
+  caption: 'Access list'
 };

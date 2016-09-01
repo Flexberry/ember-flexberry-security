@@ -1,12 +1,12 @@
 export default {
   caption: 'Пользователь',
-  'name-caption': '',
-  'login-caption': '',
-  'email-caption': '',
-  'enabled-caption': '',
-  'pwd-caption': '',
-  'createTime-caption': '',
-  'creator-caption': '',
-  'editTime-caption': '',
-  'editor-caption': ''
+  'name-caption': 'Имя',
+  'login-caption': 'Логин',
+  'email-caption': 'E-Mail',
+  'enabled-caption': 'Актуален',
+  'pwd-caption': 'Пароль',
+  'createTime-caption': 'Дата создания',
+  'creator-caption': 'Создатель',
+  'editTime-caption': 'Дата редактирования',
+  'editor-caption': 'Редактор'
 };

@@ -1,6 +1,6 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityAccessE',
-  'typeAccess-caption': 'typeAccess',
-  'permition-caption': 'permition',
-  'filter-caption': 'filter'
+  caption: 'Access',
+  'typeAccess-caption': 'Type access',
+  'permition-caption': 'Permission',
+  'filter-caption': 'Filter'
 };

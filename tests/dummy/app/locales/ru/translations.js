@@ -187,69 +187,6 @@ Ember.$.extend(true, translations, {
           caption: 'Главная',
           title: ''
         },
-        'audit-forms': {
-          caption: 'Audit forms',
-          title: 'Audit forms',
-          'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': {
-            caption: 'Audit form',
-            title: 'Форма для просмотра всех записей по аудиту',
-
-          }
-        },
-        полномочия: {
-          caption: 'Полномочия',
-          title: 'Полномочия',
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l': {
-            caption: 'Пользователи',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l': {
-            caption: 'Роли',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l': {
-            caption: 'Группы',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l': {
-            caption: 'Классы',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l': {
-            caption: 'Операции',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l': {
-            caption: 'Представления',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l': {
-            caption: 'Разрешения',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l': {
-            caption: 'Доступы',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l': {
-            caption: 'Связи с группой',
-            title: '',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l': {
-            caption: 'Связи с ролью',
-            title: '',
-
-          }
-        },
         application: {
           caption: 'Application',
           title: 'Application',

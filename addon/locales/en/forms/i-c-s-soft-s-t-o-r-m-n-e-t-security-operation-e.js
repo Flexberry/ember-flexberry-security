@@ -1,14 +1,14 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityOperationE',
-  'name-caption': 'name',
-  'isAttribute-caption': 'isAttribute',
-  'isOperation-caption': 'isOperation',
-  'isView-caption': 'isView',
-  'isClass-caption': 'isClass',
-  'type-caption': 'type',
-  'sharedOper-caption': 'sharedOper',
-  'createTime-caption': 'createTime',
-  'creator-caption': 'creator',
-  'editTime-caption': 'editTime',
-  'editor-caption': 'editor'
+  caption: 'Operation',
+  'name-caption': 'Name',
+  'isAttribute-caption': 'Is attribute',
+  'isOperation-caption': 'Is operation',
+  'isView-caption': 'Is view',
+  'isClass-caption': 'Is class',
+  'type-caption': 'Type',
+  'sharedOper-caption': 'Shared operation',
+  'createTime-caption': 'Create time',
+  'creator-caption': 'Creator',
+  'editTime-caption': 'Edit time',
+  'editor-caption': 'Editor'
 };

@@ -1,3 +1,3 @@
 export default {
-  caption: 'ICSSoftSTORMNETBusinessAuditObjectsAuditEntityL'
+  caption: 'Audit entities'
 };

@@ -1,3 +1,3 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityLinkRoleL'
+  caption: 'Link roles'
 };

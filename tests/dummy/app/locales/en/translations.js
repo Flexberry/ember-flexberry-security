@@ -121,10 +121,10 @@ Ember.$.extend(true, translations, {
 
   forms: {
     loading: {
-      'spinner-caption': 'Loading stuff, please have a cold beer...'
+      'spinner-caption': 'Loading stuff, please wait...'
     },
     index: {
-      greeting: 'Welcome to ember-flexberry test stand!'
+      greeting: 'Welcome to ember-flexberry-security dummy application!'
     },
 
     login: {
@@ -187,15 +187,6 @@ Ember.$.extend(true, translations, {
           caption: 'Home',
           title: ''
         },
-        'audit-forms': {
-          caption: 'audit-forms',
-          title: 'audit-forms',
-          'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l',
-
-          }
-        },
         application: {
           caption: 'application',
           title: 'application',
@@ -227,60 +218,6 @@ Ember.$.extend(true, translations, {
           'ember-flexberry-dummy-test-poly-list': {
             caption: 'ember-flexberry-dummy-test-poly-list',
             title: 'ember-flexberry-dummy-test-poly-list',
-
-          }
-        },
-        полномочия: {
-          caption: 'полномочия',
-          title: 'полномочия',
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-group-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-l',
-
-          },
-          'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l': {
-            caption: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l',
-            title: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-l',
 
           }
         },

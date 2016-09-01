@@ -9,7 +9,7 @@ export default {
   'creator-caption': 'Создатель',
   'editTime-caption': 'Редактирование',
   'editor-caption': 'Редактор',
-  'objectType-caption': '',
+  'objectType-caption': 'Тип объекта',
   'user-caption': 'Имя',
   'auditFields-caption': 'Изменения'
 };

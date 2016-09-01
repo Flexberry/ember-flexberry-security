@@ -1,7 +1,7 @@
 export default {
-  caption: 'ICSSoftSTORMNETSecurityViewE',
-  'name-caption': 'name',
-  'isClass-caption': 'isClass',
-  'isView-caption': 'isView',
-  'isOperation-caption': 'isOperation'
+  caption: 'View',
+  'name-caption': 'Name',
+  'isClass-caption': 'Is class',
+  'isView-caption': 'Is view',
+  'isOperation-caption': 'Is operation'
 };

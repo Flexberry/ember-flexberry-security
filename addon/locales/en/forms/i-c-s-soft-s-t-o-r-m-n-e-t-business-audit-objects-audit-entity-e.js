@@ -1,15 +1,15 @@
 export default {
-  caption: 'ICSSoftSTORMNETBusinessAuditObjectsAuditEntityE',
-  'objectPrimaryKey-caption': 'objectPrimaryKey',
-  'operationTime-caption': 'operationTime',
-  'operationType-caption': 'operationType',
-  'executionResult-caption': 'executionResult',
-  'source-caption': 'source',
-  'createTime-caption': 'createTime',
-  'creator-caption': 'creator',
-  'editTime-caption': 'editTime',
-  'editor-caption': 'editor',
-  'objectType-caption': 'objectType',
-  'user-caption': 'user',
-  'auditFields-caption': 'auditFields'
+  caption: 'Audit entity',
+  'objectPrimaryKey-caption': 'Object Primary Key',
+  'operationTime-caption': 'Operation time',
+  'operationType-caption': 'Operation type',
+  'executionResult-caption': 'Execution result',
+  'source-caption': 'Source',
+  'createTime-caption': 'Create time',
+  'creator-caption': 'Creator',
+  'editTime-caption': 'Edit time',
+  'editor-caption': 'Editor',
+  'objectType-caption': 'Object type',
+  'user-caption': 'User',
+  'auditFields-caption': 'Audit fields'
 };
