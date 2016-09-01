@@ -76,60 +76,60 @@ export default {
     },
     RoleOrGroupE: {
       name: {
-        caption: ''
+        caption: 'Название'
       },
       enabled: {
-        caption: ''
+        caption: 'Актуально'
       },
       isUser: {
-        caption: ''
+        caption: 'Пользователь'
       },
       isGroup: {
-        caption: ''
+        caption: 'Группа'
       },
       isRole: {
-        caption: ''
+        caption: 'Роль'
       },
       createTime: {
-        caption: ''
+        caption: 'Дата создания'
       },
       creator: {
-        caption: ''
+        caption: 'Создатель'
       },
       editTime: {
-        caption: ''
+        caption: 'Дата редактирования'
       },
       editor: {
-        caption: ''
+        caption: 'Редактор'
       }
     },
     RoleOrGroupL: {
       name: {
-        caption: ''
+        caption: 'Название'
       },
       enabled: {
-        caption: ''
+        caption: 'Актуально'
       },
       isUser: {
-        caption: ''
+        caption: 'Пользователь'
       },
       isGroup: {
-        caption: ''
+        caption: 'Группа'
       },
       isRole: {
-        caption: ''
+        caption: 'Роль'
       },
       createTime: {
-        caption: ''
+        caption: 'Дата создания'
       },
       creator: {
-        caption: ''
+        caption: 'Создатель'
       },
       editTime: {
-        caption: ''
+        caption: 'Дата редактирования'
       },
       editor: {
-        caption: ''
+        caption: 'Редактор'
       }
     },
     Sec_AgentE: {
@@ -295,66 +295,66 @@ export default {
     },
     UserE: {
       name: {
-        caption: ''
+        caption: 'Имя'
       },
       login: {
-        caption: ''
+        caption: 'Логин'
       },
       email: {
-        caption: ''
+        caption: 'E-Mail'
       },
       enabled: {
-        caption: ''
+        caption: 'Актуален'
       },
       pwd: {
-        caption: ''
+        caption: 'Пароль'
       },
       createTime: {
-        caption: ''
+        caption: 'Дата создания'
       },
       creator: {
-        caption: ''
+        caption: 'Создатель'
       },
       editTime: {
-        caption: ''
+        caption: 'Дата изменения'
       },
       editor: {
-        caption: ''
+        caption: 'Редактор'
       }
     },
     UserL: {
       name: {
-        caption: ''
+        caption: 'Имя'
       },
       login: {
-        caption: ''
+        caption: 'Логин'
       },
       email: {
-        caption: ''
+        caption: 'E-Mail'
       },
       isUser: {
-        caption: ''
+        caption: 'Пользователь'
       },
       isGroup: {
-        caption: ''
+        caption: 'Группа'
       },
       isRole: {
-        caption: ''
+        caption: 'Роль'
       },
       enabled: {
-        caption: ''
+        caption: 'Актуален'
       },
       createTime: {
-        caption: ''
+        caption: 'Дата создания'
       },
       creator: {
-        caption: ''
+        caption: 'Создатель'
       },
       editTime: {
-        caption: ''
+        caption: 'Дата изменения'
       },
       editor: {
-        caption: ''
+        caption: 'Редактор'
       }
     }
   }

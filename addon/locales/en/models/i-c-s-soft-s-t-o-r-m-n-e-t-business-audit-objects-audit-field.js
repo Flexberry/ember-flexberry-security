@@ -2,30 +2,30 @@ export default {
   projections: {
     AuditEntityUpdateView: {
       field: {
-        caption: 'field'
+        caption: 'Field'
       },
       oldValue: {
-        caption: 'oldValue'
+        caption: 'Old value'
       },
       newValue: {
-        caption: 'newValue'
+        caption: 'New value'
       }
     },
     AuditFieldE: {
       field: {
-        caption: 'field'
+        caption: 'Field'
       },
       caption: {
-        caption: 'caption'
+        caption: 'Caption'
       },
       oldValue: {
-        caption: 'oldValue'
+        caption: 'Old value'
       },
       newValue: {
-        caption: 'newValue'
+        caption: 'New value'
       },
       mainChange: {
-        caption: 'mainChange'
+        caption: 'Main change'
       }
     }
   }

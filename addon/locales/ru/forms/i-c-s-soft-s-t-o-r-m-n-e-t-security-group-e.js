@@ -7,6 +7,6 @@ export default {
   'isRole-caption': 'Роль',
   'createTime-caption': 'Дата создания',
   'creator-caption': 'Создатель',
-  'editTime-caption': 'Дата редактирования',
+  'editTime-caption': 'Дата изменения',
   'editor-caption': 'Редактор'
 };

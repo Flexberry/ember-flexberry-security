@@ -2,133 +2,133 @@ export default {
   projections: {
     AuditEntityE: {
       objectPrimaryKey: {
-        caption: 'objectPrimaryKey'
+        caption: 'Object primary key'
       },
       objectType: {
-        caption: 'objectType',
+        caption: 'Object type',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       operationTime: {
-        caption: 'operationTime'
+        caption: 'Operation time'
       },
       operationType: {
-        caption: 'operationType'
+        caption: 'Operation type'
       },
       executionResult: {
-        caption: 'executionResult'
+        caption: 'Execution result'
       },
       source: {
-        caption: 'source'
+        caption: 'Source'
       },
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       },
       auditFields: {
-        caption_: 'auditFields',
+        caption_: 'Audit fields',
         field: {
-          caption: 'field'
+          caption: 'Field'
         },
         caption: {
-          caption: 'caption'
+          caption: 'Caption'
         },
         oldValue: {
-          caption: 'oldValue'
+          caption: 'Old value'
         },
         newValue: {
-          caption: 'newValue'
+          caption: 'New value'
         },
         mainChange: {
-          caption: 'mainChange'
+          caption: 'Main change'
         }
       }
     },
     AuditEntityL: {
       objectPrimaryKey: {
-        caption: 'objectPrimaryKey'
+        caption: 'Object primary key'
       },
       objectType: {
-        caption: 'objectType',
+        caption: 'Object type',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       operationTime: {
-        caption: 'operationTime'
+        caption: 'Operation time'
       },
       operationType: {
-        caption: 'operationType'
+        caption: 'Operation type'
       },
       executionResult: {
-        caption: 'executionResult'
+        caption: 'Execution result'
       },
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       source: {
-        caption: 'source'
+        caption: 'Source'
       }
     },
     AuditEntityUpdateView: {
       operationTime: {
-        caption: 'operationTime'
+        caption: 'Operation time'
       },
       executionResult: {
-        caption: 'executionResult'
+        caption: 'Execution result'
       },
       auditFields: {
-        caption: 'auditFields',
+        caption: 'Audit fields',
         field: {
-          caption: 'field'
+          caption: 'Field'
         },
         oldValue: {
-          caption: 'oldValue'
+          caption: 'Old value'
         },
         newValue: {
-          caption: 'newValue'
+          caption: 'New value'
         }
       }
     },
     ConstructNotStoredAttr: {
       objectPrimaryKey: {
-        caption: 'objectPrimaryKey'
+        caption: 'Object primary key'
       },
       operationTime: {
-        caption: 'operationTime'
+        caption: 'Operation time'
       },
       operationType: {
-        caption: 'operationType'
+        caption: 'Operation type'
       },
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       executionResult: {
-        caption: 'executionResult'
+        caption: 'Execution result'
       }
     }
   }

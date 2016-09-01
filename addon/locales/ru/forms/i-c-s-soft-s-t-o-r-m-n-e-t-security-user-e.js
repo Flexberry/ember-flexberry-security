@@ -7,6 +7,6 @@ export default {
   'pwd-caption': 'Пароль',
   'createTime-caption': 'Дата создания',
   'creator-caption': 'Создатель',
-  'editTime-caption': 'Дата редактирования',
+  'editTime-caption': 'Дата изменения',
   'editor-caption': 'Редактор'
 };
