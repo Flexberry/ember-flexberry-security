@@ -2,49 +2,49 @@ export default {
   projections: {
     AuditView: {
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       },
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       access: {
-        caption: 'access',
+        caption: 'Access',
         typeAccess: {
-          caption: 'typeAccess'
+          caption: 'Type access'
         },
         filter: {
-          caption: 'filter',
+          caption: 'Filter',
           name: {
-            caption: 'name'
+            caption: 'Name'
           },
           filterText: {
-            caption: 'filterText'
+            caption: 'Filter text'
           }
         },
         permition: {
           caption: 'permition',
           agent: {
-            caption: 'agent',
+            caption: 'Agent',
             name: {
-              caption: 'name'
+              caption: 'Name'
             },
             login: {
-              caption: 'login'
+              caption: 'Login'
             }
           },
           subject: {
-            caption: 'subject',
+            caption: 'Subject',
             name: {
-              caption: 'name'
+              caption: 'Name'
             }
           }
         }
@@ -52,188 +52,188 @@ export default {
     },
     CheckAccessOnObject: {
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         isAttribute: {
-          caption: 'isAttribute'
+          caption: 'Attribute'
         },
         isOperation: {
-          caption: 'isOperation'
+          caption: 'Operation'
         },
         isView: {
-          caption: 'isView'
+          caption: 'View'
         },
         isClass: {
-          caption: 'isClass'
+          caption: 'Class'
         },
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         },
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         },
         isGroup: {
-          caption: 'isGroup'
+          caption: 'Group'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       },
       access: {
-        caption: 'access',
+        caption: 'Access',
         filter: {
-          caption: 'filter',
+          caption: 'Filter',
           filterText: {
-            caption: 'filterText'
+            caption: 'Filter text'
           },
           name: {
-            caption: 'name'
+            caption: 'Name'
           }
         },
         typeAccess: {
-          caption: 'typeAccess'
+          caption: 'Type access'
         }
       }
     },
     CheckAccessOperation: {
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isOperation: {
-          caption: 'isOperation'
+          caption: 'Operation'
         }
       },
       agent: {
-        caption: 'agent'
+        caption: 'Agent'
       }
     },
     Sec_CheckClasses: {
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isOperation: {
-          caption: 'isOperation'
+          caption: 'Operation'
         },
         isClass: {
-          caption: 'isClass'
+          caption: 'Class'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         },
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       }
     },
     Sec_CheckClassesAndGetDetails: {
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isOperation: {
-          caption: 'isOperation'
+          caption: 'Operation'
         },
         isClass: {
-          caption: 'isClass'
+          caption: 'Class'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         },
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       },
       access: {
-        caption: 'access',
+        caption: 'Access',
         typeAccess: {
-          caption: 'typeAccess'
+          caption: 'Type access'
         }
       }
     },
     Sec_PermitionE: {
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       access: {
-        caption: 'access',
+        caption: 'Access',
         typeAccess: {
-          caption: 'typeAccess'
+          caption: 'Type access'
         }
       }
     },
     Sec_PermitionL: {
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         },
         isGroup: {
-          caption: 'isGroup'
+          caption: 'Group'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }

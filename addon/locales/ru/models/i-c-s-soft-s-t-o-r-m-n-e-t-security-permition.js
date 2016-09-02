@@ -17,7 +17,7 @@ export default {
         }
       },
       access: {
-        caption: 'Access',
+        caption: 'Доступ',
         typeAccess: {
           caption: 'Тип доступа'
         },
@@ -33,16 +33,16 @@ export default {
         permition: {
           caption: 'Разрешение',
           agent: {
-            caption: '',
+            caption: 'Агент',
             name: {
               caption: 'Имя агента'
             },
             login: {
-              caption: 'Логи агента'
+              caption: 'Логин'
             }
           },
           subject: {
-            caption: '',
+            caption: 'Субъект',
             name: {
               caption: 'Имя субъекта'
             }
@@ -52,126 +52,126 @@ export default {
     },
     CheckAccessOnObject: {
       subject: {
-        caption: '',
+        caption: 'Субъект',
         isAttribute: {
-          caption: ''
+          caption: 'Атрибут'
         },
         isOperation: {
-          caption: ''
+          caption: 'Операция'
         },
         isView: {
-          caption: ''
+          caption: 'Представление'
         },
         isClass: {
-          caption: ''
+          caption: 'Класс'
         },
         name: {
-          caption: ''
+          caption: 'Имя субъекта'
         }
       },
       agent: {
-        caption: '',
+        caption: 'Агент',
         name: {
-          caption: ''
+          caption: 'Имя агента'
         },
         login: {
-          caption: ''
+          caption: 'Логин'
         },
         isUser: {
-          caption: ''
+          caption: 'Пользователь'
         },
         isGroup: {
-          caption: ''
+          caption: 'Группа'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         }
       },
       access: {
-        caption: '',
+        caption: 'Доступ',
         filter: {
-          caption: '',
+          caption: 'Фильтр',
           filterText: {
-            caption: ''
+            caption: 'Заголовок фильтра'
           },
           name: {
-            caption: ''
+            caption: 'Наименование'
           }
         },
         typeAccess: {
-          caption: ''
+          caption: 'Тип доступа'
         }
       }
     },
     CheckAccessOperation: {
       subject: {
-        caption: '',
+        caption: 'Субъект',
         name: {
-          caption: ''
+          caption: 'Имя субъекта'
         },
         isOperation: {
-          caption: ''
+          caption: 'Операция'
         }
       },
       agent: {
-        caption: ''
+        caption: 'Агент'
       }
     },
     Sec_CheckClasses: {
       subject: {
-        caption: '',
+        caption: 'Субъект',
         name: {
-          caption: ''
+          caption: 'Имя субъекта'
         },
         isOperation: {
-          caption: ''
+          caption: 'Операция'
         },
         isClass: {
-          caption: ''
+          caption: 'Класс'
         }
       },
       agent: {
-        caption: '',
+        caption: 'Агент',
         name: {
-          caption: ''
+          caption: 'Имя агента'
         },
         login: {
-          caption: ''
+          caption: 'Логин'
         },
         isUser: {
-          caption: ''
+          caption: 'Пользователь'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         }
       }
     },
     Sec_CheckClassesAndGetDetails: {
       subject: {
-        caption: '',
+        caption: 'Субъект',
         name: {
-          caption: ''
+          caption: 'Имя субъекта'
         },
         isOperation: {
-          caption: ''
+          caption: 'Операция'
         },
         isClass: {
-          caption: ''
+          caption: 'Класс'
         }
       },
       agent: {
-        caption: '',
+        caption: 'Агент',
         name: {
-          caption: ''
+          caption: 'Имя агента'
         },
         login: {
-          caption: ''
+          caption: 'Логин'
         },
         isUser: {
-          caption: ''
+          caption: 'Пользователь'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         }
       },
       access: {
@@ -185,13 +185,13 @@ export default {
       agent: {
         caption: 'Агент',
         name: {
-          caption: ''
+          caption: 'Имя агента'
         }
       },
       subject: {
         caption: 'Субъект',
         name: {
-          caption: ''
+          caption: 'Имя субъекта'
         }
       },
       access: {
@@ -203,18 +203,18 @@ export default {
     },
     Sec_PermitionL: {
       subject: {
-        caption: '',
+        caption: 'Субъект',
         name: {
-          caption: 'Субъект'
+          caption: 'Имя субъекта'
         }
       },
       agent: {
-        caption: '',
+        caption: 'Агент',
         name: {
-          caption: 'Агент'
+          caption: 'Имя агента'
         },
         isUser: {
-          caption: 'Юзер'
+          caption: 'Пользователь'
         },
         isGroup: {
           caption: 'Группа'

@@ -31,47 +31,47 @@ export default {
     },
     CheckExistLogin: {
       login: {
-        caption: ''
+        caption: 'Логин'
       }
     },
     CheckLoginPwd: {
       enabled: {
-        caption: ''
+        caption: 'Включен'
       },
       login: {
-        caption: ''
+        caption: 'Логин'
       },
       pwd: {
-        caption: ''
+        caption: 'Пароль'
       },
       isUser: {
-        caption: ''
+        caption: 'Пользователь'
       },
       name: {
-        caption: ''
+        caption: 'Имя'
       },
       email: {
-        caption: ''
+        caption: 'E-mail'
       }
     },
     OwnProperties: {
       name: {
-        caption: ''
+        caption: 'Имя'
       },
       login: {
-        caption: ''
+        caption: 'Логин'
       },
       isUser: {
-        caption: ''
+        caption: 'Пользователь'
       },
       isGroup: {
-        caption: ''
+        caption: 'Группа'
       },
       isRole: {
-        caption: ''
+        caption: 'Роль'
       },
       enabled: {
-        caption: ''
+        caption: 'Актуально'
       }
     },
     RoleOrGroupE: {
@@ -149,7 +149,7 @@ export default {
         caption: 'Актуален'
       },
       isUser: {
-        caption: ''
+        caption: 'Пользователь'
       }
     },
     Sec_AgentL: {
@@ -241,13 +241,13 @@ export default {
         caption: 'Имя'
       },
       isUser: {
-        caption: ''
+        caption: 'Пользователь'
       },
       isGroup: {
-        caption: ''
+        caption: 'Группа'
       },
       isRole: {
-        caption: ''
+        caption: 'Роль'
       },
       connString: {
         caption: 'Строка подключения'
@@ -267,10 +267,10 @@ export default {
     },
     Sec_OpAgentRolesE: {
       name: {
-        caption: ''
+        caption: 'Имя'
       },
       login: {
-        caption: ''
+        caption: 'Логин'
       }
     },
     Sec_RolesL: {
@@ -278,7 +278,7 @@ export default {
         caption: 'Название'
       },
       isRole: {
-        caption: ''
+        caption: 'Роль'
       },
       createTime: {
         caption: 'Дата создания'

@@ -2,56 +2,56 @@ export default {
   projections: {
     AuditView: {
       view: {
-        caption: 'view',
+        caption: 'View',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       attribute: {
-        caption: 'attribute',
+        caption: 'Attribute',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       }
     },
     Sec_LinkAttributeE: {
       attribute: {
-        caption: 'attribute',
+        caption: 'Attribute',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       view: {
-        caption: 'view',
+        caption: 'View',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       }
     },
     Sec_LinkAttributeL: {
       attribute: {
-        caption: 'attribute',
+        caption: 'Attribute',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       view: {
-        caption: 'view',
+        caption: 'View',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }

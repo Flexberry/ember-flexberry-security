@@ -2,18 +2,18 @@ export default {
   projections: {
     AuditView: {
       filterText: {
-        caption: 'Filter text'
+        caption: 'Заголовок фильтра'
       },
       name: {
         caption: 'Name'
       },
       filterTypeNView: {
-        caption: 'Filter type n view'
+        caption: 'Тип фильтра'
       },
       subject: {
-        caption: 'Subject',
+        caption: 'Субъект',
         name: {
-          caption: 'Name'
+          caption: 'Имя'
         }
       }
     },
@@ -22,7 +22,7 @@ export default {
         caption: 'Наименование'
       },
       filterText: {
-        caption: ''
+        caption: 'Заголовок фильтра'
       },
       subject: {
         caption: 'Объект',
@@ -31,12 +31,12 @@ export default {
         }
       },
       filterTypeNView: {
-        caption: ''
+        caption: 'Тип фильтра'
       }
     },
     Sec_FilterL: {
       name: {
-        caption: ''
+        caption: 'Наименование'
       },
       createTime: {
         caption: 'Дата создания'

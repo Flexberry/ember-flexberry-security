@@ -25,152 +25,152 @@ export default {
     },
     GetParentRoles: {
       agent: {
-        caption: '',
+        caption: 'Агент',
         name: {
-          caption: ''
+          caption: 'Имя агента'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         }
       },
       role: {
-        caption: '',
+        caption: 'Роль',
         name: {
-          caption: ''
+          caption: 'Наименование роли'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         }
       },
       startDate: {
-        caption: ''
+        caption: 'Начальная дата'
       },
       endDate: {
-        caption: ''
+        caption: 'Конечная дата'
       }
     },
     LinkedAgents: {
       startDate: {
-        caption: ''
+        caption: 'Начальная дата'
       },
       endDate: {
-        caption: ''
+        caption: 'Конечная дата'
       },
       agent: {
-        caption: ''
+        caption: 'Агент'
       },
       role: {
-        caption: ''
+        caption: 'Роль'
       }
     },
     SearchLinkRole: {
       agent: {
-        caption: '',
+        caption: 'Агент',
         name: {
-          caption: ''
+          caption: 'Имя агента'
         },
         login: {
-          caption: ''
+          caption: 'Логин'
         },
         enabled: {
-          caption: ''
+          caption: 'Актуален'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         },
         isUser: {
-          caption: ''
+          caption: 'Пользователь'
         }
       },
       role: {
-        caption: '',
+        caption: 'Роль',
         name: {
-          caption: ''
+          caption: 'Наименование роли'
         },
         login: {
-          caption: ''
+          caption: 'Логин'
         },
         isUser: {
-          caption: ''
+          caption: 'Пользователь'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         },
         enabled: {
-          caption: ''
+          caption: 'Актуальна'
         }
       },
       startDate: {
-        caption: ''
+        caption: 'Начальная дата'
       },
       endDate: {
-        caption: ''
+        caption: 'Конечная дата'
       }
     },
     Sec_GetRoles: {
       role: {
         caption: 'Роль',
         name: {
-          caption: 'Роль'
+          caption: 'Наименование роли'
         }
       },
       agent: {
         caption: 'Агент',
         name: {
-          caption: 'Агент'
+          caption: 'Имя агента'
         },
         login: {
           caption: 'Логин'
         }
       },
       startDate: {
-        caption: ''
+        caption: 'Начальная дата'
       },
       endDate: {
-        caption: ''
+        caption: 'Конечная дата'
       }
     },
     Sec_LinkRoleE: {
       role: {
-        caption: '',
+        caption: 'Роль',
         name: {
-          caption: 'Роль'
+          caption: 'Наименование роли'
         }
       },
       agent: {
-        caption: '',
+        caption: 'Агент',
         name: {
-          caption: 'Агент'
+          caption: 'Имя агента'
         }
       },
       startDate: {
-        caption: ''
+        caption: 'Начальная дата'
       },
       endDate: {
-        caption: ''
+        caption: 'Конечная дата'
       }
     },
     Sec_LinkRoleL: {
       role: {
         caption: 'Роль',
         name: {
-          caption: 'Роль'
+          caption: 'Наименование роли'
         }
       },
       agent: {
         caption: 'Агент',
         name: {
-          caption: 'Агент'
+          caption: 'Имя агента'
         },
         login: {
           caption: 'Логин'
         }
       },
       startDate: {
-        caption: ''
+        caption: 'Начальная дата'
       },
       endDate: {
-        caption: ''
+        caption: 'Конечная дата'
       },
       createTime: {
         caption: 'Дата создания'

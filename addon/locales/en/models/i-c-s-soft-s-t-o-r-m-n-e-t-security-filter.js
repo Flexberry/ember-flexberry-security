@@ -2,53 +2,53 @@ export default {
   projections: {
     AuditView: {
       filterText: {
-        caption: 'filterText'
+        caption: 'Filter text'
       },
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       filterTypeNView: {
-        caption: 'filterTypeNView'
+        caption: 'Filter type new view'
       },
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       }
     },
     Sec_FilterE: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       filterText: {
-        caption: 'filterText'
+        caption: 'Filter text'
       },
       subject: {
-        caption: 'subject',
+        caption: 'Subject',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       filterTypeNView: {
-        caption: 'filterTypeNView'
+        caption: 'Filter type new view'
       }
     },
     Sec_FilterL: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }
