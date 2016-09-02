@@ -66,6 +66,7 @@
     placeholder=(t 'components.flexberry-field.placeholder')
     readonly=readonly
     required=true
+    type='email'
     value=model.email
     class=(if model.errors.email 'error' '')
     label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.email-caption')
@@ -76,8 +77,8 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption'}}</label>
   {{
-    flexberry-checkbox 
-    readonly=readonly 
+    flexberry-checkbox
+    readonly=readonly
     value=model.enabled
   }}
   {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
@@ -89,6 +90,7 @@
     placeholder=(t 'components.flexberry-field.placeholder')
     readonly=readonly
     required=true
+    type='password'
     value=model.pwd
     class=(if model.errors.pwd 'error' '')
     label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption')
