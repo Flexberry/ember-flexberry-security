@@ -35,67 +35,118 @@
     </div>
   </div>
   <div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.name
-    class=(if model.errors.name 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.name-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
-</div>
+    {{
+      flexberry-field
+      placeholder=(t 'components.flexberry-field.placeholder')
+      readonly=readonly
+      required=true
+      value=model.name
+      class=(if model.errors.name 'error' '')
+      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.name-caption')
+    }}
+    {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+  </div>
 
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.login
-    class=(if model.errors.login 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.login-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.login pointing="pointing"}}
-</div>
+  <div class="field">
+    {{
+      flexberry-field
+      placeholder=(t 'components.flexberry-field.placeholder')
+      readonly=readonly
+      required=true
+      value=model.login
+      class=(if model.errors.login 'error' '')
+      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.login-caption')
+    }}
+    {{flexberry-validationmessage error=model.errors.login pointing="pointing"}}
+  </div>
 
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    type='email'
-    value=model.email
-    class=(if model.errors.email 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.email-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.email pointing="pointing"}}
-</div>
+  <div class="field">
+    {{
+      flexberry-field
+      placeholder=(t 'components.flexberry-field.placeholder')
+      readonly=readonly
+      required=true
+      type='email'
+      value=model.email
+      class=(if model.errors.email 'error' '')
+      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.email-caption')
+    }}
+    {{flexberry-validationmessage error=model.errors.email pointing="pointing"}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption'}}</label>
-  {{
-    flexberry-checkbox
-    readonly=readonly
-    value=model.enabled
-  }}
-  {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
-</div>
+  <div class="field">
+    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption'}}</label>
+    {{
+      flexberry-checkbox
+      readonly=readonly
+      value=model.enabled
+    }}
+    {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
+  </div>
 
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    type='password'
-    value=model.pwd
-    class=(if model.errors.pwd 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.pwd pointing="pointing"}}
-</div>
+  <div class="field">
+    {{
+      flexberry-field
+      placeholder=(t 'components.flexberry-field.placeholder')
+      readonly=readonly
+      required=true
+      type='password'
+      value=model.pwd
+      class=(if model.errors.pwd 'error' '')
+      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption')
+    }}
+    {{flexberry-validationmessage error=model.errors.pwd pointing="pointing"}}
+  </div>
 
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=userRoles
+      }}
+    {{/flexberry-toggler}}
+  </div>
+
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-groups-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=userGroups
+      }}
+    {{/flexberry-toggler}}
+  </div>
+
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=userClasses
+      }}
+    {{/flexberry-toggler}}
+  </div>
+
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-operations-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=userOperations
+      }}
+    {{/flexberry-toggler}}
+  </div>
 </form>
