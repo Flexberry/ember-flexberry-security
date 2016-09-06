@@ -1,0 +1,34 @@
+<table class="object-list-view ui unstackable celled {{if readonly 'readonly'}} table">
+  <thead>
+    <tr>
+      {{#each value.headers as |column|}}
+        <th>
+          {{column}}
+        </th>
+      {{/each}}
+  </tr>
+  </thead>
+  <tbody>
+    {{#unless value.hasContent}}
+      <tr>
+        <td colspan="{{colspan}}" style="text-align:center;">{{placeholder}}</td>
+      </tr>
+    {{/unless}}
+    {{#each value.rows as |row|}}
+      <tr>
+        <td>
+        {{row.name}}
+        </td>
+        {{#each row.columns as |column|}}
+          <td>
+          {{
+            flexberry-checkbox
+            readonly=(if (or readonly column.readonly) "true")
+            value=column.checked
+          }}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
