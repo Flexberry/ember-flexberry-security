@@ -2,7 +2,7 @@ import Ember from 'ember';
 import EditFormRoute from 'ember-flexberry/routes/edit-form';
 import SecurityAssignDataObject from '../objects/security-assign-data';
 import { Query } from 'ember-flexberry-data';
-const { Builder, FilterOperator } = Query;
+const { Builder, FilterOperator, SimplePredicate, ComplexPredicate, Condition } = Query;
 
 export default EditFormRoute.extend({
   modelProjection: 'UserE',
@@ -52,26 +52,35 @@ export default EditFormRoute.extend({
   _getUserRoles(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
       let _this = this;
+      let i18n = _this.get('i18n');
       let _userRoles = SecurityAssignDataObject.create({
-        headers: ['Наименование', 'Своё', 'Унаследовано'],
+        // TODO: translate it.
+        headers: [
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-name'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-own'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-inherit')
+          ],
         rows: [],
         hasContent: false
       });
       _this.set('userRoles', _userRoles);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
 
-      // TODO: exclude enabled=false roles.
+      let isRolePredicate = new SimplePredicate('isRole', FilterOperator.Eq, true);
+      let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq, true);
+      let predicate = new ComplexPredicate(Condition.And, isRolePredicate, enabledPredicate);
+
       let builder = new Builder(_this.store, modelName)
       .select('id,name,isRole')
-      .where('isRole', FilterOperator.Eq, true)
+      .where(predicate)
       .orderBy('name asc');
 
       _this.store.query(modelName, builder.build()).then(function(roles) {
         roles.forEach(role => {
           _userRoles.rows.push({
             name: role.get('name'),
-            columns: [{ checked: false, readonly: false },
-              { checked: false, readonly: true },
+            columns: [{ checked: false, readonly: false, changed: false, object: null },
+              { checked: false, readonly: true, changed: false, object: null },
             ]
           });
           _userRoles.hasContent = true;
@@ -84,12 +93,15 @@ export default EditFormRoute.extend({
 
         //.select('id,role.name') //TODO: Fix loads by select and delete next line.
         .selectByProjection('Sec_LinkRoleL')
-        .where('agent', FilterOperator.Eq, model.get('id')).orderBy('role.name asc');
+        .where('agent', FilterOperator.Eq, model.get('id'))
+        .orderBy('role.name asc');
+
         _this.store.query(modelName, builder.build()).then(function(linkRoles) {
           linkRoles.forEach(linkRole => {
             _userRoles.rows.forEach(row => {
               if (row.name === linkRole.get('role.name')) {
                 row.columns[0].checked = true;
+                row.columns[0].object = linkRole;
               }
             });
             _userRoles.hasContent = true;
@@ -103,18 +115,25 @@ export default EditFormRoute.extend({
   _getUserGroups(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
       let _this = this;
+      let i18n = _this.get('i18n');
       let _userGroups = SecurityAssignDataObject.create({
-        headers: ['Наименование', 'Наличие'],
+        headers: [
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-groups-name'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-groups-assign')
+          ],
         rows: [],
         hasContent: false
       });
       _this.set('userGroups', _userGroups);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
 
-      // TODO: exclude enabled=false groups.
+      let isGroupPredicate = new SimplePredicate('isGroup', FilterOperator.Eq, true);
+      let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq, true);
+      let predicate = new ComplexPredicate(Condition.And, isGroupPredicate, enabledPredicate);
+
       let builder = new Builder(_this.store, modelName)
       .select('id,name,isGroup')
-      .where('isGroup', FilterOperator.Eq, true)
+      .where(predicate)
       .orderBy('name asc');
 
       _this.store.query(modelName, builder.build()).then(function(groups) {
@@ -133,7 +152,7 @@ export default EditFormRoute.extend({
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group';
         builder = new Builder(_this.store, modelName)
 
-        //.select('id,role.name') //TODO: Fix loads by select and delete next line.
+        //.select('id,group.name') //TODO: Fix loads by select and delete next line.
         .selectByProjection('Sec_LinkGroupL')
         .where('user', FilterOperator.Eq, model.get('id'))
         .orderBy('group.name asc');
@@ -156,8 +175,17 @@ export default EditFormRoute.extend({
   _getUserClasses(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
       let _this = this;
+      let i18n = _this.get('i18n');
       let _userClasses = SecurityAssignDataObject.create({
-        headers: ['Наименование', 'Полный доступ', 'Чтение', 'Вставка', 'Обновление', 'Удаление', 'Исполнение'],
+        headers: [
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-name'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-full'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-read'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-insert'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-update'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-delete'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-execute')
+          ],
         rows: [],
         hasContent: false
       });
@@ -188,22 +216,33 @@ export default EditFormRoute.extend({
         }).catch(error => {reject(error);}).then(()=> {
         // Load Permissions for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
+
+        let isClassPredicate = new SimplePredicate('subject.isClass', FilterOperator.Eq, true);
+        let agentIdPredicate = new SimplePredicate('agent', FilterOperator.Eq, model.get('id'));
+        let predicate = new ComplexPredicate(Condition.And, isClassPredicate, agentIdPredicate);
+
         builder = new Builder(_this.store, modelName)
         .selectByProjection('Sec_CheckClassesAndGetDetails')
-
-        // TODO: where subject is class
-        .where('agent', FilterOperator.Eq, model.get('id'))
+        .where(predicate)
         .orderBy('subject.name asc');
 
         _this.store.query(modelName, builder.build()).then(function(permissions) {
           permissions.forEach(permission => {
             _userClasses.rows.forEach(row => {
               if (row.name === permission.get('subject.name')) {
-                // TODO: apply accesses
-                row.columns[0].checked = true;
+                let accesses = permission.get('access');
+                accesses.forEach(access => {
+                  switch (access.get('typeAccess')) {
+                    case 'Full': row.columns[0].checked = true; break;
+                    case 'Read': row.columns[1].checked = true; break;
+                    case 'Insert': row.columns[2].checked = true; break;
+                    case 'Update': row.columns[3].checked = true; break;
+                    case 'Delete': row.columns[4].checked = true; break;
+                    case 'Execute': row.columns[5].checked = true; break;
+                  }
+                });
               }
             });
-            _userClasses.hasContent = true;
           });
           resolve();
         }).catch(error => {reject(error);});
@@ -214,8 +253,12 @@ export default EditFormRoute.extend({
   _getUserOperations(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
       let _this = this;
+      let i18n = _this.get('i18n');
       let _userOperations = SecurityAssignDataObject.create({
-        headers: ['Наименование', 'Наличие'],
+        headers: [
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-operations-name'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-operations-assign'),
+          ],
         rows: [],
         hasContent: false
       });
@@ -239,13 +282,12 @@ export default EditFormRoute.extend({
       }).catch(error => {reject(error);}).then(()=> {
         // Load Permissions for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
+        let isOperationPredicate = new SimplePredicate('subject.isOperation', FilterOperator.Eq, true);
+        let agentIdPredicate = new SimplePredicate('agent', FilterOperator.Eq, model.get('id'));
+        let predicate = new ComplexPredicate(Condition.And, isOperationPredicate, agentIdPredicate);
         builder = new Builder(_this.store, modelName)
-
-        //.select('id,role.name') //TODO: Fix loads by select and delete next line.
         .selectByProjection('CheckAccessOperation')
-
-        // where subject is operation
-        .where('agent', FilterOperator.Eq, model.get('id'))
+        .where(predicate)
         .orderBy('subject.name asc');
 
         _this.store.query(modelName, builder.build()).then(function(permissions) {
@@ -255,7 +297,6 @@ export default EditFormRoute.extend({
                 row.columns[0].checked = true;
               }
             });
-            _userOperations.hasContent = true;
           });
           resolve();
         }).catch(error => {reject(error);});
