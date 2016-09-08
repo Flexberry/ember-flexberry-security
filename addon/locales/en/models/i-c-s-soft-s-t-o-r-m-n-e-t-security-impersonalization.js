@@ -2,62 +2,62 @@ export default {
   projections: {
     AuditView: {
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       },
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       }
     },
     Sec_ImpersonalizationE: {
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       }
     },
     Sec_ImpersonalizationL: {
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }

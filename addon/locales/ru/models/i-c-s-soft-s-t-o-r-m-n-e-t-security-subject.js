@@ -25,33 +25,33 @@ export default {
     },
     DetermineProperties: {
       isAttribute: {
-        caption: ''
+        caption: 'Атрибут'
       },
       isOperation: {
-        caption: ''
+        caption: 'Операция'
       },
       isView: {
-        caption: ''
+        caption: 'Представление'
       },
       isClass: {
-        caption: ''
+        caption: 'Класс'
       }
     },
     Sec_OperationLE: {
       name: {
-        caption: 'Имя'
+        caption: 'Наименование'
       },
       isAttribute: {
-        caption: ''
+        caption: 'Атрибут'
       },
       isOperation: {
-        caption: ''
+        caption: 'Операция'
       },
       isView: {
-        caption: ''
+        caption: 'Представление'
       },
       isClass: {
-        caption: ''
+        caption: 'Класс'
       },
       type: {
         caption: 'Тип'
@@ -97,7 +97,7 @@ export default {
         caption: 'Операция'
       },
       isView: {
-        caption: 'Вид'
+        caption: 'Представление'
       },
       isClass: {
         caption: 'Класс'
@@ -120,16 +120,16 @@ export default {
         caption: 'Имя'
       },
       isAttribute: {
-        caption: ''
+        caption: 'Атрибут'
       },
       isOperation: {
-        caption: ''
+        caption: 'Операция'
       },
       isView: {
-        caption: ''
+        caption: 'Представление'
       },
       isClass: {
-        caption: ''
+        caption: 'Класс'
       },
       full: {
         caption: 'Полный доступ'
@@ -150,7 +150,7 @@ export default {
         caption: 'Исполнение'
       },
       permitted: {
-        caption: ''
+        caption: 'Разрешение'
       }
     }
   }

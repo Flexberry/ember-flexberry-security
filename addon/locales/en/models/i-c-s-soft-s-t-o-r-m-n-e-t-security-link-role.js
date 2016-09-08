@@ -2,187 +2,187 @@ export default {
   projections: {
     AuditView: {
       startDate: {
-        caption: 'startDate'
+        caption: 'Start date'
       },
       endDate: {
-        caption: 'endDate'
+        caption: 'End date'
       },
       role: {
-        caption: 'role',
+        caption: 'Role',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       }
     },
     GetParentRoles: {
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       },
       role: {
-        caption: 'role',
+        caption: 'Role',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       },
       startDate: {
-        caption: 'startDate'
+        caption: 'Start date'
       },
       endDate: {
-        caption: 'endDate'
+        caption: 'End date'
       }
     },
     LinkedAgents: {
       startDate: {
-        caption: 'startDate'
+        caption: 'Start date'
       },
       endDate: {
-        caption: 'endDate'
+        caption: 'End date'
       },
       agent: {
-        caption: 'agent'
+        caption: 'Agent'
       },
       role: {
-        caption: 'role'
+        caption: 'Role'
       }
     },
     SearchLinkRole: {
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         },
         enabled: {
-          caption: 'enabled'
+          caption: 'Enabled'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         },
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         }
       },
       role: {
-        caption: 'role',
+        caption: 'Role',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         },
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         },
         enabled: {
-          caption: 'enabled'
+          caption: 'Enabled'
         }
       },
       startDate: {
-        caption: 'startDate'
+        caption: 'Start date'
       },
       endDate: {
-        caption: 'endDate'
+        caption: 'End date'
       }
     },
     Sec_GetRoles: {
       role: {
-        caption: 'role',
+        caption: 'Role',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       },
       startDate: {
-        caption: 'startDate'
+        caption: 'Start date'
       },
       endDate: {
-        caption: 'endDate'
+        caption: 'End date'
       }
     },
     Sec_LinkRoleE: {
       role: {
-        caption: 'role',
+        caption: 'Role',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       startDate: {
-        caption: 'startDate'
+        caption: 'Start date'
       },
       endDate: {
-        caption: 'endDate'
+        caption: 'End date'
       }
     },
     Sec_LinkRoleL: {
       role: {
-        caption: 'role',
+        caption: 'Role',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       agent: {
-        caption: 'agent',
+        caption: 'Agent',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       },
       startDate: {
-        caption: 'startDate'
+        caption: 'Start date'
       },
       endDate: {
-        caption: 'endDate'
+        caption: 'End date'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }

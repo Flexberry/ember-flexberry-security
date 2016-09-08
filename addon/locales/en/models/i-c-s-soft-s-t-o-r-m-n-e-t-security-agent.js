@@ -2,359 +2,359 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       pwd: {
-        caption: 'pwd'
+        caption: 'Password'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       connString: {
-        caption: 'connString'
+        caption: 'Connection string'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       email: {
-        caption: 'email'
+        caption: 'E-mail'
       }
     },
     CheckExistLogin: {
       login: {
-        caption: 'login'
+        caption: 'Login'
       }
     },
     CheckLoginPwd: {
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       pwd: {
-        caption: 'pwd'
+        caption: 'Password'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       email: {
-        caption: 'email'
+        caption: 'E-mail'
       }
     },
     OwnProperties: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       }
     },
     RoleOrGroupE: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       createTime: {
         caption: 'createTime'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     },
     RoleOrGroupL: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editorr'
       }
     },
     Sec_AgentE: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       pwd: {
-        caption: 'pwd'
+        caption: 'Password'
       },
       connString: {
-        caption: 'connString'
+        caption: 'Connection string'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       }
     },
     Sec_AgentL: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       connString: {
-        caption: 'connString'
+        caption: 'Connection string'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     },
     Sec_AgentTypeAccess: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       connString: {
-        caption: 'connString'
+        caption: 'Connection string'
       },
       full: {
-        caption: 'full'
+        caption: 'Full'
       },
       read: {
-        caption: 'read'
+        caption: 'Read'
       },
       insert: {
-        caption: 'insert'
+        caption: 'Insert'
       },
       update: {
-        caption: 'update'
+        caption: 'Update'
       },
       delete: {
-        caption: 'delete'
+        caption: 'Delete'
       },
       execute: {
-        caption: 'execute'
+        caption: 'Execute'
       }
     },
     Sec_GetRoles: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       }
     },
     Sec_NotUserL: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       connString: {
-        caption: 'connString'
+        caption: 'Connection string'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     },
     Sec_OpAgentRolesE: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       }
     },
     Sec_RolesL: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     },
     UserE: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       email: {
-        caption: 'email'
+        caption: 'E-mail'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       pwd: {
-        caption: 'pwd'
+        caption: 'Password'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creatorr'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     },
     UserL: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       login: {
-        caption: 'login'
+        caption: 'Login'
       },
       email: {
-        caption: 'email'
+        caption: 'E-mail'
       },
       isUser: {
-        caption: 'isUser'
+        caption: 'User'
       },
       isGroup: {
-        caption: 'isGroup'
+        caption: 'Group'
       },
       isRole: {
-        caption: 'isRole'
+        caption: 'Role'
       },
       enabled: {
-        caption: 'enabled'
+        caption: 'Enabled'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }

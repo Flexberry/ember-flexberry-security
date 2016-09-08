@@ -2,127 +2,127 @@ export default {
   projections: {
     AuditView: {
       group: {
-        caption: 'group',
+        caption: 'Group',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         login: {
-          caption: 'login'
+          caption: 'Login'
         }
       }
     },
     GetGroupsNameByUserKey: {
       group: {
-        caption: 'group',
+        caption: 'Group',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isGroup: {
-          caption: 'isGroup'
+          caption: 'Group'
         },
         enabled: {
-          caption: 'enabled'
+          caption: 'Enabled'
         }
       },
       user: {
-        caption: 'user'
+        caption: 'User'
       }
     },
     GetUserByUsername: {
       group: {
-        caption: 'group',
+        caption: 'Group',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         isGroup: {
-          caption: 'isGroup'
+          caption: 'Group'
         },
         enabled: {
-          caption: 'enabled'
+          caption: 'Enabled'
         }
       },
       user: {
-        caption: 'user'
+        caption: 'User'
       }
     },
     LinkedAgents: {
       group: {
-        caption: 'group'
+        caption: 'Group'
       },
       user: {
-        caption: 'user'
+        caption: 'User'
       }
     },
     SearchLinkGroup: {
       user: {
-        caption: 'user',
+        caption: 'Userr',
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         },
         isGroup: {
-          caption: 'isGroup'
+          caption: 'Group'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       },
       group: {
-        caption: 'group',
+        caption: 'Group',
         isUser: {
-          caption: 'isUser'
+          caption: 'User'
         },
         isGroup: {
-          caption: 'isGroup'
+          caption: 'Group'
         },
         isRole: {
-          caption: 'isRole'
+          caption: 'Role'
         }
       }
     },
     Sec_LinkGroupE: {
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       group: {
-        caption: 'group',
+        caption: 'Group',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       }
     },
     Sec_LinkGroupL: {
       user: {
-        caption: 'user',
+        caption: 'User',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       group: {
-        caption: 'group',
+        caption: 'Group',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }

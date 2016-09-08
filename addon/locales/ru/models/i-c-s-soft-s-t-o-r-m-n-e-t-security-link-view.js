@@ -16,29 +16,29 @@ export default {
     },
     Sec_LinkViewE: {
       view: {
-        caption: '',
+        caption: 'Представление',
         name: {
-          caption: 'Вид'
-        }
-      },
-      class: {
-        caption: '',
-        name: {
-          caption: 'Класс'
-        }
-      }
-    },
-    Sec_LinkViewL: {
-      view: {
-        caption: 'Вид',
-        name: {
-          caption: 'Вид'
+          caption: 'Имя представления'
         }
       },
       class: {
         caption: 'Класс',
         name: {
-          caption: 'Класс'
+          caption: 'Имя класса'
+        }
+      }
+    },
+    Sec_LinkViewL: {
+      view: {
+        caption: 'Представление',
+        name: {
+          caption: 'Имя представления'
+        }
+      },
+      class: {
+        caption: 'Класс',
+        name: {
+          caption: 'Наименование класса'
         }
       },
       createTime: {

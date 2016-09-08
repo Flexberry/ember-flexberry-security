@@ -19,69 +19,69 @@ export default {
     },
     GetGroupsNameByUserKey: {
       group: {
-        caption: '',
+        caption: 'Группа',
         name: {
-          caption: ''
+          caption: 'Наименование'
         },
         isGroup: {
-          caption: ''
+          caption: 'Группа'
         },
         enabled: {
-          caption: ''
+          caption: 'Актуальна'
         }
       },
       user: {
-        caption: ''
+        caption: 'Пользователь'
       }
     },
     GetUserByUsername: {
       group: {
-        caption: '',
+        caption: 'Группа',
         name: {
-          caption: ''
+          caption: 'Наименование'
         },
         isGroup: {
-          caption: ''
+          caption: 'Группа'
         },
         enabled: {
-          caption: ''
+          caption: 'Актуальна'
         }
       },
       user: {
-        caption: ''
+        caption: 'Пользователь'
       }
     },
     LinkedAgents: {
       group: {
-        caption: ''
+        caption: 'Группа'
       },
       user: {
-        caption: ''
+        caption: 'Пользователь'
       }
     },
     SearchLinkGroup: {
       user: {
-        caption: '',
+        caption: 'Пользователь',
         isUser: {
-          caption: ''
+          caption: 'Пользователь'
         },
         isGroup: {
-          caption: ''
+          caption: 'Группа'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         }
       },
       group: {
-        caption: '',
+        caption: 'Группа',
         isUser: {
-          caption: ''
+          caption: 'Пользователь'
         },
         isGroup: {
-          caption: ''
+          caption: 'Группа'
         },
         isRole: {
-          caption: ''
+          caption: 'Роль'
         }
       }
     },
@@ -89,27 +89,27 @@ export default {
       user: {
         caption: 'Пользователь',
         name: {
-          caption: ''
+          caption: 'Имя'
         }
       },
       group: {
         caption: 'Группа',
         name: {
-          caption: ''
+          caption: 'Наименование'
         }
       }
     },
     Sec_LinkGroupL: {
       user: {
-        caption: 'Юзер',
+        caption: 'Пользователь',
         name: {
-          caption: 'Юзер'
+          caption: 'Имя пользователя'
         }
       },
       group: {
         caption: 'Группа',
         name: {
-          caption: 'Группа'
+          caption: 'Наименование'
         }
       },
       createTime: {

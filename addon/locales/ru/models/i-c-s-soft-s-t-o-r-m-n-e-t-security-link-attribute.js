@@ -16,15 +16,15 @@ export default {
     },
     Sec_LinkAttributeE: {
       attribute: {
-        caption: '',
+        caption: 'Атрибут',
         name: {
-          caption: 'Атрибут'
+          caption: 'Имя'
         }
       },
       view: {
-        caption: '',
+        caption: 'Представление',
         name: {
-          caption: 'Вид'
+          caption: 'Название'
         }
       }
     },
@@ -38,7 +38,7 @@ export default {
       view: {
         caption: 'Вид',
         name: {
-          caption: 'Вид'
+          caption: 'Название'
         }
       },
       createTime: {

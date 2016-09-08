@@ -2,146 +2,146 @@ export default {
   projections: {
     AuditView: {
       typeAccess: {
-        caption: 'typeAccess'
+        caption: 'Type access'
       },
       filter: {
-        caption: 'filter',
+        caption: 'Filter',
         name: {
-          caption: 'name'
+          caption: 'Name'
         },
         filterText: {
-          caption: 'filterText'
+          caption: 'Filter text'
         }
       },
       permition: {
-        caption: 'permition',
+        caption: 'Permition',
         agent: {
-          caption: 'agent',
+          caption: 'Agent',
           name: {
-            caption: 'name'
+            caption: 'Name'
           },
           login: {
-            caption: 'login'
+            caption: 'Login'
           }
         },
         subject: {
-          caption: 'subject',
+          caption: 'Subject',
           name: {
-            caption: 'name'
+            caption: 'Name'
           }
         }
       }
     },
     CheckAccessClass: {
       typeAccess: {
-        caption: 'typeAccess'
+        caption: 'Type access'
       },
       permition: {
-        caption: 'permition',
+        caption: 'Permition',
         subject: {
-          caption: 'subject',
+          caption: 'Subject',
           name: {
-            caption: 'name'
+            caption: 'Name'
           }
         },
         agent: {
-          caption: 'agent'
+          caption: 'Agent'
         }
       },
       filter: {
-        caption: 'filter',
+        caption: 'Filter',
         filterText: {
-          caption: 'filterText'
+          caption: 'Filter text'
         }
       }
     },
     CheckAccessOnObject: {
       filter: {
-        caption: 'filter',
+        caption: 'Filter',
         filterText: {
-          caption: 'filterText'
+          caption: 'Filter text'
         },
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       typeAccess: {
-        caption: 'typeAccess'
+        caption: 'Type access'
       }
     },
     Sec_AccessD: {
       typeAccess: {
-        caption: 'typeAccess'
+        caption: 'Type access'
       }
     },
     Sec_AccessE: {
       permition: {
-        caption: 'permition',
+        caption: 'Permition',
         agent: {
-          caption: 'agent',
+          caption: 'Agent',
           name: {
-            caption: 'name'
+            caption: 'Name'
           }
         },
         subject: {
-          caption: 'subject',
+          caption: 'Subject',
           name: {
-            caption: 'name'
+            caption: 'Name'
           },
           isClass: {
-            caption: 'isClass'
+            caption: 'Class'
           },
           isOperation: {
-            caption: 'isOperation'
+            caption: 'Operation'
           }
         }
       },
       typeAccess: {
-        caption: 'typeAccess'
+        caption: 'Type access'
       },
       filter: {
-        caption: 'filter',
+        caption: 'Filter',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       }
     },
     Sec_AccessL: {
       permition: {
-        caption: 'permition',
+        caption: 'Permition',
         agent: {
-          caption: 'agent',
+          caption: 'Agent',
           name: {
-            caption: 'name'
+            caption: 'Name'
           }
         },
         subject: {
-          caption: 'subject',
+          caption: 'Subject',
           name: {
-            caption: 'name'
+            caption: 'Name'
           }
         }
       },
       typeAccess: {
-        caption: 'typeAccess'
+        caption: 'Type access'
       },
       filter: {
-        caption: 'filter',
+        caption: 'Filter',
         name: {
-          caption: 'name'
+          caption: 'Name'
         }
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     }
   }

@@ -16,15 +16,15 @@ export default {
     },
     Sec_LinkOperationE: {
       operation: {
-        caption: '',
+        caption: 'Операция',
         name: {
-          caption: 'Операция'
+          caption: 'Наименование операции'
         }
       },
       class: {
-        caption: '',
+        caption: 'Класс',
         name: {
-          caption: 'Класс'
+          caption: 'Наименование класса'
         }
       }
     },
@@ -32,13 +32,13 @@ export default {
       operation: {
         caption: 'Операция',
         name: {
-          caption: 'Операция'
+          caption: 'Наименование операции'
         }
       },
       class: {
         caption: 'Класс',
         name: {
-          caption: 'Класс'
+          caption: 'Наименование класса'
         }
       },
       createTime: {

@@ -2,155 +2,155 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       type: {
-        caption: 'type'
+        caption: 'Type'
       },
       isAttribute: {
-        caption: 'isAttribute'
+        caption: 'Attribute'
       },
       isOperation: {
-        caption: 'isOperation'
+        caption: 'Operation'
       },
       isView: {
-        caption: 'isView'
+        caption: 'View'
       },
       isClass: {
-        caption: 'isClass'
+        caption: 'Class'
       },
       sharedOper: {
-        caption: 'sharedOper'
+        caption: 'Shared oper'
       }
     },
     DetermineProperties: {
       isAttribute: {
-        caption: 'isAttribute'
+        caption: 'Attribute'
       },
       isOperation: {
-        caption: 'isOperation'
+        caption: 'Operation'
       },
       isView: {
-        caption: 'isView'
+        caption: 'View'
       },
       isClass: {
-        caption: 'isClass'
+        caption: 'Class'
       }
     },
     Sec_OperationLE: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       isAttribute: {
-        caption: 'isAttribute'
+        caption: 'Attribute'
       },
       isOperation: {
-        caption: 'isOperation'
+        caption: 'Operation'
       },
       isView: {
-        caption: 'isView'
+        caption: 'View'
       },
       isClass: {
-        caption: 'isClass'
+        caption: 'Class'
       },
       type: {
-        caption: 'type'
+        caption: 'Type'
       },
       sharedOper: {
-        caption: 'sharedOper'
+        caption: 'Shared oper'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     },
     Sec_SubjectE: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       isClass: {
-        caption: 'isClass'
+        caption: 'Class'
       },
       isView: {
-        caption: 'isView'
+        caption: 'View'
       },
       isOperation: {
-        caption: 'isOperation'
+        caption: 'Operation'
       }
     },
     Sec_SubjectL: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       isAttribute: {
-        caption: 'isAttribute'
+        caption: 'Attribute'
       },
       isOperation: {
-        caption: 'isOperation'
+        caption: 'Operation'
       },
       isView: {
-        caption: 'isView'
+        caption: 'View'
       },
       isClass: {
-        caption: 'isClass'
+        caption: 'Class'
       },
       createTime: {
-        caption: 'createTime'
+        caption: 'Create time'
       },
       creator: {
-        caption: 'creator'
+        caption: 'Creator'
       },
       editTime: {
-        caption: 'editTime'
+        caption: 'Edit time'
       },
       editor: {
-        caption: 'editor'
+        caption: 'Editor'
       }
     },
     Sec_SubjectTypeAccess: {
       name: {
-        caption: 'name'
+        caption: 'Name'
       },
       isAttribute: {
-        caption: 'isAttribute'
+        caption: 'Attribute'
       },
       isOperation: {
-        caption: 'isOperation'
+        caption: 'Operation'
       },
       isView: {
-        caption: 'isView'
+        caption: 'View'
       },
       isClass: {
-        caption: 'isClass'
+        caption: 'Class'
       },
       full: {
-        caption: 'full'
+        caption: 'Full'
       },
       read: {
-        caption: 'read'
+        caption: 'Read'
       },
       insert: {
-        caption: 'insert'
+        caption: 'Insert'
       },
       update: {
-        caption: 'update'
+        caption: 'Update'
       },
       delete: {
-        caption: 'delete'
+        caption: 'Delete'
       },
       execute: {
-        caption: 'execute'
+        caption: 'Execute'
       },
       permitted: {
-        caption: 'permitted'
+        caption: 'Permitted'
       }
     }
   }

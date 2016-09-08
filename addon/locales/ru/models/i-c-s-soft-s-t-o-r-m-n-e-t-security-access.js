@@ -16,7 +16,7 @@ export default {
       permition: {
         caption: 'Разрешение',
         agent: {
-          caption: '',
+          caption: 'Агент',
           name: {
             caption: 'Имя агента'
           },
@@ -25,7 +25,7 @@ export default {
           }
         },
         subject: {
-          caption: '',
+          caption: 'Субъект',
           name: {
             caption: 'Имя субъекта'
           }
@@ -34,39 +34,39 @@ export default {
     },
     CheckAccessClass: {
       typeAccess: {
-        caption: ''
+        caption: 'Тип доступа'
       },
       permition: {
-        caption: '',
+        caption: 'Разрешение',
         subject: {
-          caption: '',
+          caption: 'Субъект',
           name: {
-            caption: ''
+            caption: 'Имя субъекта'
           }
         },
         agent: {
-          caption: ''
+          caption: 'Агент'
         }
       },
       filter: {
-        caption: '',
+        caption: 'Фильтр',
         filterText: {
-          caption: ''
+          caption: 'Заголовок фильтра'
         }
       }
     },
     CheckAccessOnObject: {
       filter: {
-        caption: '',
+        caption: 'Фильтр',
         filterText: {
-          caption: ''
+          caption: 'Заголовок фильтра'
         },
         name: {
-          caption: ''
+          caption: 'Название'
         }
       },
       typeAccess: {
-        caption: ''
+        caption: 'Тип  доступа'
       }
     },
     Sec_AccessD: {
@@ -78,21 +78,21 @@ export default {
       permition: {
         caption: '~',
         agent: {
-          caption: '',
+          caption: 'Агент',
           name: {
-            caption: 'Агент'
+            caption: 'Имя агента'
           }
         },
         subject: {
-          caption: '',
+          caption: 'Субъект',
           name: {
-            caption: 'Субъект'
+            caption: 'Имя субъекта'
           },
           isClass: {
-            caption: ''
+            caption: 'Класс'
           },
           isOperation: {
-            caption: ''
+            caption: 'Операция'
           }
         }
       },
@@ -100,7 +100,7 @@ export default {
         caption: 'Тип доступа'
       },
       filter: {
-        caption: '~',
+        caption: 'Фильтр',
         name: {
           caption: 'Имя фильтра'
         }
@@ -108,17 +108,17 @@ export default {
     },
     Sec_AccessL: {
       permition: {
-        caption: '',
+        caption: 'Разрешение',
         agent: {
-          caption: '',
+          caption: 'Агент',
           name: {
-            caption: 'Агент'
+            caption: 'Имя агента'
           }
         },
         subject: {
-          caption: '',
+          caption: 'Субъект',
           name: {
-            caption: 'Субъект'
+            caption: 'Имя субъекта'
           }
         }
       },

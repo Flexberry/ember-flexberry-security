@@ -5,9 +5,9 @@ export default {
         caption: 'Идентификатор'
       },
       objectType: {
-        caption: '',
+        caption: 'Тип объекта',
         name: {
-          caption: 'Тип объекта'
+          caption: 'Имя'
         }
       },
       operationTime: {
@@ -23,7 +23,7 @@ export default {
         caption: 'Источник'
       },
       user: {
-        caption: 'Имя',
+        caption: 'Пользователь',
         name: {
           caption: 'Имя'
         },
@@ -58,7 +58,7 @@ export default {
           caption: 'Новое значение'
         },
         mainChange: {
-          caption: ''
+          caption: 'Изменение'
         }
       }
     },
@@ -67,9 +67,9 @@ export default {
         caption: 'Идентификатор'
       },
       objectType: {
-        caption: '',
+        caption: 'Тип объекта',
         name: {
-          caption: 'Тип объекта'
+          caption: 'Имя'
         }
       },
       operationTime: {
@@ -93,42 +93,42 @@ export default {
     },
     AuditEntityUpdateView: {
       operationTime: {
-        caption: ''
+        caption: 'Время операции'
       },
       executionResult: {
-        caption: ''
+        caption: 'Результат выполнения'
       },
       auditFields: {
-        caption: '',
+        caption: 'Поля аудита',
         field: {
-          caption: ''
+          caption: 'Поле'
         },
         oldValue: {
-          caption: ''
+          caption: 'Старое значение'
         },
         newValue: {
-          caption: ''
+          caption: 'Новое значение'
         }
       }
     },
     ConstructNotStoredAttr: {
       objectPrimaryKey: {
-        caption: ''
+        caption: 'Идентификатор'
       },
       operationTime: {
-        caption: ''
+        caption: 'Время операции'
       },
       operationType: {
-        caption: ''
+        caption: 'Тип операции'
       },
       user: {
-        caption: '',
+        caption: 'Пользователь',
         name: {
-          caption: ''
+          caption: 'Имя'
         }
       },
       executionResult: {
-        caption: ''
+        caption: 'Результат'
       }
     }
   }
