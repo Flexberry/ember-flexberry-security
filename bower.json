@@ -9,6 +9,6 @@
     "semantic-ui-daterangepicker": "5d46ed2e6e5a0bf398bb6a5df82e06036dfc46be",
     "blueimp-file-upload": "9.11.2",
     "devicejs": "0.2.7",
-    "semantic-ui": "^2.2.2"
+    "semantic-ui": "^2.2.4"
   }
 }
