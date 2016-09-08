@@ -22,14 +22,14 @@ export default EditFormRoute.extend({
     @param {Object} transition
    */
   model() {
-    return this._super.apply(this, arguments).then((model) => {
-        return Ember.RSVP.all([
+    return this._super.apply(this, arguments).then((model) =>
+         Ember.RSVP.all([
           this._getUserRoles(model),
           this._getUserGroups(model),
           this._getUserClasses(model),
           this._getUserOperations(model)
-          ]).then(() => model);
-      });
+          ]).then(() => model)
+      );
   },
 
   /**
@@ -48,6 +48,7 @@ export default EditFormRoute.extend({
     controller.set('userOperations', this.userOperations);
   },
 
+  //TODO: move it to mixin
   _getUserRoles(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
       let _this = this;
@@ -60,7 +61,10 @@ export default EditFormRoute.extend({
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
 
       // TODO: exclude enabled=false roles.
-      let builder = new Builder(_this.store, modelName).select('id,name,isRole').where('isRole', FilterOperator.Eq, true).orderBy('name asc');
+      let builder = new Builder(_this.store, modelName)
+      .select('id,name,isRole')
+      .where('isRole', FilterOperator.Eq, true)
+      .orderBy('name asc');
 
       _this.store.query(modelName, builder.build()).then(function(roles) {
         roles.forEach(role => {
@@ -77,6 +81,7 @@ export default EditFormRoute.extend({
         // Load LinkRoles for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role';
         builder = new Builder(_this.store, modelName)
+
         //.select('id,role.name') //TODO: Fix loads by select and delete next line.
         .selectByProjection('Sec_LinkRoleL')
         .where('agent', FilterOperator.Eq, model.get('id')).orderBy('role.name asc');
@@ -97,34 +102,164 @@ export default EditFormRoute.extend({
 
   _getUserGroups(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
+      let _this = this;
+      let _userGroups = SecurityAssignDataObject.create({
+        headers: ['Наименование', 'Наличие'],
+        rows: [],
+        hasContent: false
+      });
+      _this.set('userGroups', _userGroups);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
-      let builder = new Builder(this.store, modelName).where('isGroup', FilterOperator.Eq, true);
 
-      this.store.query(modelName, builder.build()).then(function(roles) {
-      resolve();
-      }).catch(error => {reject(error);});
+      // TODO: exclude enabled=false groups.
+      let builder = new Builder(_this.store, modelName)
+      .select('id,name,isGroup')
+      .where('isGroup', FilterOperator.Eq, true)
+      .orderBy('name asc');
+
+      _this.store.query(modelName, builder.build()).then(function(groups) {
+
+        groups.forEach(group => {
+          _userGroups.rows.push({
+            name: group.get('name'),
+            columns: [{ checked: false, readonly: false }
+            ]
+          });
+          _userGroups.hasContent = true;
+        });
+
+      }).catch(error => {reject(error);}).then(()=> {
+        // Load LinkGroups for user.
+        modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group';
+        builder = new Builder(_this.store, modelName)
+
+        //.select('id,role.name') //TODO: Fix loads by select and delete next line.
+        .selectByProjection('Sec_LinkGroupL')
+        .where('user', FilterOperator.Eq, model.get('id'))
+        .orderBy('group.name asc');
+
+        _this.store.query(modelName, builder.build()).then(function(linkGroups) {
+          linkGroups.forEach(linkGroup => {
+            _userGroups.rows.forEach(row => {
+              if (row.name === linkGroup.get('group.name')) {
+                row.columns[0].checked = true;
+              }
+            });
+            _userGroups.hasContent = true;
+          });
+          resolve();
+        }).catch(error => {reject(error);});
+      });
     });
   },
 
   _getUserClasses(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
+      let _this = this;
+      let _userClasses = SecurityAssignDataObject.create({
+        headers: ['Наименование', 'Полный доступ', 'Чтение', 'Вставка', 'Обновление', 'Удаление', 'Исполнение'],
+        rows: [],
+        hasContent: false
+      });
+      _this.set('userClasses', _userClasses);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
-      let builder = new Builder(this.store, modelName).where('isClass', FilterOperator.Eq, true);
+      let builder = new Builder(_this.store, modelName)
+      .select('id,name,isClass')
+      .where('isClass', FilterOperator.Eq, true)
+      .orderBy('name asc');
 
-      this.store.query(modelName, builder.build()).then(function(roles) {
-      resolve();
-      }).catch(error => {reject(error);});
+      _this.store.query(modelName, builder.build()).then(function(classes) {
+          classes.forEach(cls => {
+            _userClasses.rows.push({
+              name: cls.get('name'),
+              columns: [
+                { checked: false, readonly: false },
+                { checked: false, readonly: false },
+                { checked: false, readonly: false },
+                { checked: false, readonly: false },
+                { checked: false, readonly: false },
+                { checked: false, readonly: false }
+              ]
+            });
+            _userClasses.hasContent = true;
+          });
+
+          resolve();
+        }).catch(error => {reject(error);}).then(()=> {
+        // Load Permissions for user.
+        modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
+        builder = new Builder(_this.store, modelName)
+        .selectByProjection('Sec_CheckClassesAndGetDetails')
+
+        // TODO: where subject is class
+        .where('agent', FilterOperator.Eq, model.get('id'))
+        .orderBy('subject.name asc');
+
+        _this.store.query(modelName, builder.build()).then(function(permissions) {
+          permissions.forEach(permission => {
+            _userClasses.rows.forEach(row => {
+              if (row.name === permission.get('subject.name')) {
+                // TODO: apply accesses
+                row.columns[0].checked = true;
+              }
+            });
+            _userClasses.hasContent = true;
+          });
+          resolve();
+        }).catch(error => {reject(error);});
+      });
     });
   },
 
   _getUserOperations(model) {
     return new Ember.RSVP.Promise((resolve, reject) => {
+      let _this = this;
+      let _userOperations = SecurityAssignDataObject.create({
+        headers: ['Наименование', 'Наличие'],
+        rows: [],
+        hasContent: false
+      });
+      _this.set('userOperations', _userOperations);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
-      let builder = new Builder(this.store, modelName).where('isOperation', FilterOperator.Eq, true);
+      let builder = new Builder(_this.store, modelName)
+      .select('id,name,isOperation')
+      .where('isOperation', FilterOperator.Eq, true)
+      .orderBy('name asc');
 
-      this.store.query(modelName, builder.build()).then(function(roles) {
-      resolve();
-      }).catch(error => {reject(error);});
+      _this.store.query(modelName, builder.build()).then(function(operations) {
+        operations.forEach(operation => {
+          _userOperations.rows.push({
+            name: operation.get('name'),
+            columns: [
+              { checked: false, readonly: false }
+            ]
+          });
+          _userOperations.hasContent = true;
+        });
+      }).catch(error => {reject(error);}).then(()=> {
+        // Load Permissions for user.
+        modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
+        builder = new Builder(_this.store, modelName)
+
+        //.select('id,role.name') //TODO: Fix loads by select and delete next line.
+        .selectByProjection('CheckAccessOperation')
+
+        // where subject is operation
+        .where('agent', FilterOperator.Eq, model.get('id'))
+        .orderBy('subject.name asc');
+
+        _this.store.query(modelName, builder.build()).then(function(permissions) {
+          permissions.forEach(permission => {
+            _userOperations.rows.forEach(row => {
+              if (row.name === permission.get('subject.name')) {
+                row.columns[0].checked = true;
+              }
+            });
+            _userOperations.hasContent = true;
+          });
+          resolve();
+        }).catch(error => {reject(error);});
+      });
     });
   }
 });
