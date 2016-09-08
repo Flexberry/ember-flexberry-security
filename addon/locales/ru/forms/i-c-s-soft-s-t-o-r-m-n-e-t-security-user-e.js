@@ -10,7 +10,21 @@ export default {
   'editTime-caption': 'Дата изменения',
   'editor-caption': 'Редактор',
   'user-roles-caption': 'Роли',
+  'user-roles-name': 'Наименование',
+  'user-roles-own': 'Собственное',
+  'user-roles-inherit': 'Унаследовано',
   'user-groups-caption': 'Группы',
+  'user-groups-name': 'Наименование',
+  'user-groups-assign': 'Наличие',
   'user-classes-caption': 'Классы',
-  'user-operations-caption': 'Операции'
+  'user-classes-name': 'Наименование',
+  'user-classes-full': 'Полный доступ',
+  'user-classes-read': 'Чтение',
+  'user-classes-insert': 'Вставка',
+  'user-classes-update': 'Обновление',
+  'user-classes-delete': 'Удаление',
+  'user-classes-execute': 'Исполнение',
+  'user-operations-caption': 'Операции',
+  'user-operations-name': 'Наименование',
+  'user-operations-assign': 'Наличие'
 };
