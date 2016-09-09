@@ -67,8 +67,8 @@ export default EditFormRoute.extend({
       _this.set('userRoles', _userRoles);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
 
-      let isRolePredicate = new SimplePredicate('isRole', FilterOperator.Eq,  true);
-      let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq,  true);
+      let isRolePredicate = new SimplePredicate('isRole', FilterOperator.Eq, true);
+      let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq, true);
       let predicate = new ComplexPredicate(Condition.And, isRolePredicate, enabledPredicate);
 
       let builder = new Builder(_this.store, modelName)
@@ -81,8 +81,8 @@ export default EditFormRoute.extend({
           _userRoles.rows.push({
             name: role.get('name'),
             columns: [
-              SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null }),
-              SecurityAssignDataCellObject.create({ checked: false, readonly: true, model: null })
+              SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null, inited: false }),
+              SecurityAssignDataCellObject.create({ checked: false, readonly: true, model: null, inited: false })
             ]
           });
           _userRoles.hasContent = true;
@@ -95,15 +95,17 @@ export default EditFormRoute.extend({
 
           //.select('id,role.name') //TODO: Fix loads by select and delete next line.
           .selectByProjection('Sec_LinkRoleL')
-          .where('agent', FilterOperator.Eq,  model.get('id'))
+          .where('agent', FilterOperator.Eq, model.get('id'))
           .orderBy('role.name asc');
 
         _this.store.query(modelName, builder.build()).then(function (linkRoles) {
           linkRoles.forEach(linkRole => {
             _userRoles.rows.forEach(row => {
               if (row.name === linkRole.get('role.name')) {
-                row.columns[0].set('checked', true);
-                row.columns[0].set('model', linkRole);
+                let cell = row.columns[0];
+                cell.set('checked', true);
+                cell.set('model', linkRole);
+                cell.set('inited', true);
               }
             });
             _userRoles.hasContent = true;
@@ -129,8 +131,8 @@ export default EditFormRoute.extend({
       _this.set('userGroups', _userGroups);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
 
-      let isGroupPredicate = new SimplePredicate('isGroup', FilterOperator.Eq,  true);
-      let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq,  true);
+      let isGroupPredicate = new SimplePredicate('isGroup', FilterOperator.Eq, true);
+      let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq, true);
       let predicate = new ComplexPredicate(Condition.And, isGroupPredicate, enabledPredicate);
 
       let builder = new Builder(_this.store, modelName)
@@ -156,7 +158,7 @@ export default EditFormRoute.extend({
 
           //.select('id,group.name') //TODO: Fix loads by select and delete next line.
           .selectByProjection('Sec_LinkGroupL')
-          .where('user', FilterOperator.Eq,  model.get('id'))
+          .where('user', FilterOperator.Eq, model.get('id'))
           .orderBy('group.name asc');
 
         _this.store.query(modelName, builder.build()).then(function (linkGroups) {
@@ -195,7 +197,7 @@ export default EditFormRoute.extend({
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
       let builder = new Builder(_this.store, modelName)
         .select('id,name,isClass')
-        .where('isClass', FilterOperator.Eq,  true)
+        .where('isClass', FilterOperator.Eq, true)
         .orderBy('name asc');
 
       _this.store.query(modelName, builder.build()).then(function (classes) {
@@ -219,8 +221,8 @@ export default EditFormRoute.extend({
         // Load Permissions for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
 
-        let isClassPredicate = new SimplePredicate('subject.isClass', FilterOperator.Eq,  true);
-        let agentIdPredicate = new SimplePredicate('agent', FilterOperator.Eq,  model.get('id'));
+        let isClassPredicate = new SimplePredicate('subject.isClass', FilterOperator.Eq, true);
+        let agentIdPredicate = new SimplePredicate('agent', FilterOperator.Eq, model.get('id'));
         let predicate = new ComplexPredicate(Condition.And, isClassPredicate, agentIdPredicate);
 
         builder = new Builder(_this.store, modelName)
@@ -268,7 +270,7 @@ export default EditFormRoute.extend({
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
       let builder = new Builder(_this.store, modelName)
         .select('id,name,isOperation')
-        .where('isOperation', FilterOperator.Eq,  true)
+        .where('isOperation', FilterOperator.Eq, true)
         .orderBy('name asc');
 
       _this.store.query(modelName, builder.build()).then(function (operations) {
@@ -284,8 +286,8 @@ export default EditFormRoute.extend({
       }).catch(error => { reject(error); }).then(() => {
         // Load Permissions for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
-        let isOperationPredicate = new SimplePredicate('subject.isOperation', FilterOperator.Eq,  true);
-        let agentIdPredicate = new SimplePredicate('agent', FilterOperator.Eq,  model.get('id'));
+        let isOperationPredicate = new SimplePredicate('subject.isOperation', FilterOperator.Eq, true);
+        let agentIdPredicate = new SimplePredicate('agent', FilterOperator.Eq, model.get('id'));
         let predicate = new ComplexPredicate(Condition.And, isOperationPredicate, agentIdPredicate);
         builder = new Builder(_this.store, modelName)
           .selectByProjection('CheckAccessOperation')
