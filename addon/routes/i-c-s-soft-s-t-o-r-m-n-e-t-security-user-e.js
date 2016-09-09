@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import EditFormRoute from 'ember-flexberry/routes/edit-form';
 import SecurityAssignDataObject from '../objects/security-assign-data';
+import SecurityAssignDataCellObject from '../objects/security-assign-data-cell';
 import { Query } from 'ember-flexberry-data';
 const { Builder, FilterOperator, SimplePredicate, ComplexPredicate, Condition } = Query;
 
@@ -80,8 +81,8 @@ export default EditFormRoute.extend({
           _userRoles.rows.push({
             name: role.get('name'),
             columns: [
-              _this.store.createRecord('security-assign-data-cell', { checked: false, readonly: false, model: null }),
-              _this.store.createRecord('security-assign-data-cell', { checked: false, readonly: true, model: null }),
+              SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null }),
+              SecurityAssignDataCellObject.create({ checked: false, readonly: true, model: null })
             ]
           });
           _userRoles.hasContent = true;
