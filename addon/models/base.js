@@ -1,5 +1,5 @@
-import BaseModel from 'ember-flexberry/models/base';
+import { Projection } from 'ember-flexberry-data';
 import { Offline } from 'ember-flexberry-data';
 
-export default BaseModel.extend(Offline.ModelMixin, {
+export default Projection.Model.extend(Offline.ModelMixin, {
 });
