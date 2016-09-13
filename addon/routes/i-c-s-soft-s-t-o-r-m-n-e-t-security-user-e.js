@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import EditFormRoute from 'ember-flexberry/routes/edit-form';
 import SecurityAssignDataObject from '../objects/security-assign-data';
+import SecurityAssignDataRowObject from '../objects/security-assign-data-row';
 import SecurityAssignDataCellObject from '../objects/security-assign-data-cell';
 import { Query } from 'ember-flexberry-data';
 const { Builder, FilterOperator, SimplePredicate, ComplexPredicate, Condition } = Query;
@@ -55,7 +56,6 @@ export default EditFormRoute.extend({
       let _this = this;
       let i18n = _this.get('i18n');
       let _userRoles = SecurityAssignDataObject.create({
-        // TODO: translate it.
         headers: [
           i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-name'),
           i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-own'),
@@ -75,19 +75,10 @@ export default EditFormRoute.extend({
         .select('id,name,isRole')
         .where(predicate)
         .orderBy('name asc');
+      let _roles;
 
       _this.store.query(modelName, builder.build()).then(function (roles) {
-        roles.forEach(role => {
-          _userRoles.rows.push({
-            name: role.get('name'),
-            columns: [
-              SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null, inited: false }),
-              SecurityAssignDataCellObject.create({ checked: false, readonly: true, model: null, inited: false })
-            ]
-          });
-          _userRoles.hasContent = true;
-        });
-
+        _roles = roles;
       }).catch(error => { reject(error); }).then(() => {
         // Load LinkRoles for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role';
@@ -99,17 +90,29 @@ export default EditFormRoute.extend({
           .orderBy('role.name asc');
 
         _this.store.query(modelName, builder.build()).then(function (linkRoles) {
-          linkRoles.forEach(linkRole => {
-            _userRoles.rows.forEach(row => {
-              if (row.name === linkRole.get('role.name')) {
-                let cell = row.columns[0];
-                cell.set('checked', true);
-                cell.set('model', linkRole);
-                cell.set('inited', true);
+
+          _roles.forEach(role => {
+            let roleName = role.get('name');
+            let ownCellObject;
+            let inheritCellObject = SecurityAssignDataCellObject.create({ checked: false, readonly: true, model: null, inited: true });
+            linkRoles.forEach(linkRole => {
+              if (roleName === linkRole.get('role.name')) {
+                ownCellObject = SecurityAssignDataCellObject.create({ checked: true, readonly: false, model: linkRole, inited: true });
               }
             });
+
+            if (!ownCellObject) {
+              ownCellObject = SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null, inited: true });
+            }
+
+            _userRoles.rows.push(SecurityAssignDataRowObject.create({
+              name: roleName,
+              columns: [ownCellObject, inheritCellObject],
+              model: role
+            }));
             _userRoles.hasContent = true;
           });
+
           resolve();
         }).catch(error => { reject(error); });
       });
