@@ -3,6 +3,7 @@ import EditFormRoute from 'ember-flexberry/routes/edit-form';
 import SecurityAssignDataObject from '../objects/security-assign-data';
 import SecurityAssignDataRowObject from '../objects/security-assign-data-row';
 import SecurityAssignDataCellObject from '../objects/security-assign-data-cell';
+import typeAccess from '../enums/i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access';
 import { Query } from 'ember-flexberry-data';
 const { Builder, FilterOperator, SimplePredicate, ComplexPredicate, Condition } = Query;
 
@@ -83,9 +84,7 @@ export default EditFormRoute.extend({
         // Load LinkRoles for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role';
         builder = new Builder(_this.store, modelName)
-
-          //.select('id,role.name') //TODO: Fix loads by select and delete next line.
-          .selectByProjection('Sec_LinkRoleL')
+          .select('id,role.name')
           .where('agent', FilterOperator.Eq, model.get('id'))
           .orderBy('role.name asc');
 
@@ -143,36 +142,41 @@ export default EditFormRoute.extend({
         .where(predicate)
         .orderBy('name asc');
 
+      let _groups;
+
       _this.store.query(modelName, builder.build()).then(function (groups) {
-
-        groups.forEach(group => {
-          _userGroups.rows.push({
-            name: group.get('name'),
-            columns: [{ checked: false, readonly: false }
-            ]
-          });
-          _userGroups.hasContent = true;
-        });
-
+        _groups = groups;
       }).catch(error => { reject(error); }).then(() => {
         // Load LinkGroups for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group';
         builder = new Builder(_this.store, modelName)
-
-          //.select('id,group.name') //TODO: Fix loads by select and delete next line.
-          .selectByProjection('Sec_LinkGroupL')
+          .select('id,group.name')
           .where('user', FilterOperator.Eq, model.get('id'))
           .orderBy('group.name asc');
 
         _this.store.query(modelName, builder.build()).then(function (linkGroups) {
-          linkGroups.forEach(linkGroup => {
-            _userGroups.rows.forEach(row => {
-              if (row.name === linkGroup.get('group.name')) {
-                row.columns[0].checked = true;
+
+          _groups.forEach(group => {
+            let groupName = group.get('name');
+            let cellObject;
+            linkGroups.forEach(linkGroup => {
+              if (groupName === linkGroup.get('group.name')) {
+                cellObject = SecurityAssignDataCellObject.create({ checked: true, readonly: false, model: linkGroup, inited: true });
               }
             });
+
+            if (!cellObject) {
+              cellObject = SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null, inited: true });
+            }
+
+            _userGroups.rows.push(SecurityAssignDataRowObject.create({
+              name: groupName,
+              columns: [cellObject],
+              model: group
+            }));
             _userGroups.hasContent = true;
           });
+
           resolve();
         }).catch(error => { reject(error); });
       });
@@ -202,24 +206,10 @@ export default EditFormRoute.extend({
         .select('id,name,isClass')
         .where('isClass', FilterOperator.Eq, true)
         .orderBy('name asc');
+      let _classes;
 
       _this.store.query(modelName, builder.build()).then(function (classes) {
-        classes.forEach(cls => {
-          _userClasses.rows.push({
-            name: cls.get('name'),
-            columns: [
-              { checked: false, readonly: false },
-              { checked: false, readonly: false },
-              { checked: false, readonly: false },
-              { checked: false, readonly: false },
-              { checked: false, readonly: false },
-              { checked: false, readonly: false }
-            ]
-          });
-          _userClasses.hasContent = true;
-        });
-
-        resolve();
+        _classes = classes;
       }).catch(error => { reject(error); }).then(() => {
         // Load Permissions for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
@@ -234,22 +224,106 @@ export default EditFormRoute.extend({
           .orderBy('subject.name asc');
 
         _this.store.query(modelName, builder.build()).then(function (permissions) {
-          permissions.forEach(permission => {
-            _userClasses.rows.forEach(row => {
-              if (row.name === permission.get('subject.name')) {
+          _classes.forEach(cls => {
+            let className = cls.get('name');
+            let cellObjectFull;
+            let cellObjectRead;
+            let cellObjectInsert;
+            let cellObjectUpdate;
+            let cellObjectDelete;
+            let cellObjectExecute;
+            let rowPermission;
+            permissions.forEach(permission => {
+              if (className === permission.get('subject.name')) {
                 let accesses = permission.get('access');
+                rowPermission = permission;
                 accesses.forEach(access => {
                   switch (access.get('typeAccess')) {
-                    case 'Full': row.columns[0].checked = true; break;
-                    case 'Read': row.columns[1].checked = true; break;
-                    case 'Insert': row.columns[2].checked = true; break;
-                    case 'Update': row.columns[3].checked = true; break;
-                    case 'Delete': row.columns[4].checked = true; break;
-                    case 'Execute': row.columns[5].checked = true; break;
+                    case 'Full':
+                      cellObjectFull = SecurityAssignDataCellObject.create({
+                        checked: true, readonly: false, model: access, inited: true, operation: typeAccess.Full
+                      });
+                      break;
+                    case 'Read':
+                      cellObjectRead = SecurityAssignDataCellObject.create({
+                        checked: true, readonly: false, model: access, inited: true, operation: typeAccess.Read
+                      });
+                      break;
+                    case 'Insert':
+                      cellObjectInsert = SecurityAssignDataCellObject.create({
+                        checked: true, readonly: false, model: access, inited: true, operation: typeAccess.Insert
+                      });
+                      break;
+                    case 'Update':
+                      cellObjectUpdate = SecurityAssignDataCellObject.create({
+                        checked: true, readonly: false, model: access, inited: true, operation: typeAccess.Update
+                      });
+                      break;
+                    case 'Delete':
+                      cellObjectDelete = SecurityAssignDataCellObject.create({
+                        checked: true, readonly: false, model: access, inited: true, operation: typeAccess.Delete
+                      });
+                      break;
+                    case 'Execute':
+                      cellObjectExecute = SecurityAssignDataCellObject.create({
+                        checked: true, readonly: false, model: access, inited: true, operation: typeAccess.Execute
+                      });
+                      break;
                   }
                 });
               }
             });
+
+            if (!cellObjectFull) {
+              cellObjectFull = SecurityAssignDataCellObject.create({
+                checked: false, readonly: false, model: null, inited: true, operation: typeAccess.Full
+              });
+            }
+
+            if (!cellObjectRead) {
+              cellObjectRead = SecurityAssignDataCellObject.create({
+                checked: false, readonly: false, model: null, inited: true, operation: typeAccess.Read
+              });
+            }
+
+            if (!cellObjectInsert) {
+              cellObjectInsert = SecurityAssignDataCellObject.create({
+                checked: false, readonly: false, model: null, inited: true, operation: typeAccess.Insert
+              });
+            }
+
+            if (!cellObjectUpdate) {
+              cellObjectUpdate = SecurityAssignDataCellObject.create({
+                checked: false, readonly: false, model: null, inited: true, operation: typeAccess.Update
+              });
+            }
+
+            if (!cellObjectDelete) {
+              cellObjectDelete = SecurityAssignDataCellObject.create({
+                checked: false, readonly: false, model: null, inited: true, operation: typeAccess.Delete
+              });
+            }
+
+            if (!cellObjectExecute) {
+              cellObjectExecute = SecurityAssignDataCellObject.create({
+                checked: false, readonly: false, model: null, inited: true, operation: typeAccess.Execute
+              });
+            }
+
+            _userClasses.rows.push(SecurityAssignDataRowObject.create({
+              name: className,
+              columns: [
+                cellObjectFull,
+                cellObjectRead,
+                cellObjectInsert,
+                cellObjectUpdate,
+                cellObjectDelete,
+                cellObjectExecute
+                ],
+              model: cls,
+              permission: rowPermission
+            }));
+            _userClasses.hasContent = true;
           });
           resolve();
         }).catch(error => { reject(error); });
@@ -275,17 +349,10 @@ export default EditFormRoute.extend({
         .select('id,name,isOperation')
         .where('isOperation', FilterOperator.Eq, true)
         .orderBy('name asc');
+      let _operations;
 
       _this.store.query(modelName, builder.build()).then(function (operations) {
-        operations.forEach(operation => {
-          _userOperations.rows.push({
-            name: operation.get('name'),
-            columns: [
-              { checked: false, readonly: false }
-            ]
-          });
-          _userOperations.hasContent = true;
-        });
+        _operations = operations;
       }).catch(error => { reject(error); }).then(() => {
         // Load Permissions for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition';
@@ -298,13 +365,28 @@ export default EditFormRoute.extend({
           .orderBy('subject.name asc');
 
         _this.store.query(modelName, builder.build()).then(function (permissions) {
-          permissions.forEach(permission => {
-            _userOperations.rows.forEach(row => {
-              if (row.name === permission.get('subject.name')) {
-                row.columns[0].checked = true;
+          _operations.forEach(operation => {
+            let operationName = operation.get('name');
+            let cellObject;
+
+            permissions.forEach(permission => {
+              if (operationName === permission.get('subject.name')) {
+                cellObject = SecurityAssignDataCellObject.create({ checked: true, readonly: false, model: permission, inited: true });
               }
             });
+
+            if (!cellObject) {
+              cellObject = SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null, inited: true });
+            }
+
+            _userOperations.rows.push(SecurityAssignDataRowObject.create({
+              name: operationName,
+              columns: [cellObject],
+              model: operation
+            }));
+            _userOperations.hasContent = true;
           });
+
           resolve();
         }).catch(error => { reject(error); });
       });

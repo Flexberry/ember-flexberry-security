@@ -11,6 +11,7 @@ export default Ember.Object.extend({
   model: null,
   inited: false,
   create: false,
+  operation: null,
 
   checkedChanged: Ember.observer('checked', function() {
     if (this.get('inited')) {

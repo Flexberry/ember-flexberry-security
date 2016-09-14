@@ -15,7 +15,7 @@ export default EditFormController.extend({
     @method onSaveActionFulfilled.
   */
   onSaveActionFulfilled() {
-    // TODO: Get security objects for update it on backend.
+    // Get security objects for update it on backend.
     let objectsForUpdate = [];
     if (this.userRoles && this.userRoles.hasContent) {
       this.userRoles.rows.forEach(row => {
@@ -36,7 +36,82 @@ export default EditFormController.extend({
       });
     }
 
-    // Save objects for update on backend.
+    if (this.userGroups && this.userGroups.hasContent) {
+      this.userGroups.rows.forEach(row => {
+        let cell = row.columns[0];
+        let linkGroup = cell.get('model');
+        if (!linkGroup && cell.get('create')) {
+          let group = row.get('model');
+          linkGroup = this.store.createRecord('i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group');
+          linkGroup.set('group', group);
+          linkGroup.set('user', this.model);
+          linkGroup.set('tableCellCreate', cell);
+
+          objectsForUpdate.push(linkGroup);
+        } else if (linkGroup && linkGroup.get('isDeleted')) {
+          linkGroup.set('tableCellDelete', cell);
+          objectsForUpdate.push(linkGroup);
+        }
+      });
+    }
+
+    if (this.userClasses && this.userClasses.hasContent) {
+      this.userClasses.rows.forEach(row => {
+        let permission = row.get('permission');
+        let deletePermission = permission != null;
+
+        row.columns.forEach(cell => {
+          let access = cell.get('model');
+          if (!access && cell.get('create')) {
+            if (!permission) {
+              permission = this.store.createRecord('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition');
+              permission.set('agent', this.model);
+              permission.set('subject', row.get('model'));
+              row.set('permission', permission);
+              objectsForUpdate.push(permission);
+            }
+
+            access = this.store.createRecord('i-c-s-soft-s-t-o-r-m-n-e-t-security-access');
+            access.set('permition', permission);
+            access.set('typeAccess', cell.get('operation'));
+            access.set('tableCellCreate', cell);
+            deletePermission = false;
+
+            objectsForUpdate.push(access);
+          } else if (access && access.get('isDeleted')) {
+            access.set('tableCellDelete', cell);
+            objectsForUpdate.push(access);
+          } else if (access) {
+            deletePermission = false;
+          }
+        });
+        if (deletePermission) {
+          permission.deleteRecord();
+          objectsForUpdate.push(permission);
+        }
+      });
+    }
+
+    if (this.userOperations && this.userOperations.hasContent) {
+      this.userOperations.rows.forEach(row => {
+        let cell = row.columns[0];
+        let operation = cell.get('model');
+        if (!operation && cell.get('create')) {
+          let cls = row.get('model');
+          operation = this.store.createRecord('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition');
+          operation.set('subject', cls);
+          operation.set('agent', this.model);
+          operation.set('tableCellCreate', cell);
+
+          objectsForUpdate.push(operation);
+        } else if (operation && operation.get('isDeleted')) {
+          operation.set('tableCellDelete', cell);
+          objectsForUpdate.push(operation);
+        }
+      });
+    }
+
+    // Save objects on backend.
     objectsForUpdate.forEach(obj => {
       obj.save().then(model => {
         // Refresh table state.
@@ -49,6 +124,7 @@ export default EditFormController.extend({
         let tableCellCreate = model.get('tableCellCreate');
         if (tableCellCreate) {
           tableCellCreate.set('create', false);
+          tableCellCreate.set('model', obj);
           model.set('tableCellCreate', null);
         }
       }).catch((errorData) => {
