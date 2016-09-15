@@ -43,7 +43,6 @@
     "ember-flexberry": "0.6.0",
     "ember-link-action": "0.0.34",
     "ember-load-initializers": "^0.5.1",
-    "ember-localforage-adapter": "git+https://github.com/Flexberry/ember-localforage-adapter.git#9fa5dc18b2598795fba5004df788d3e73c6354e2",
     "ember-moment": "6.0.0",
     "ember-resolver": "^2.0.3",
     "ember-try": "^0.2.2",
