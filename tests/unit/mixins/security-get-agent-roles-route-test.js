@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SecurityGetAgentRolesMixin from 'ember-flexberry-security/mixins/security-get-agent-roles-controller';
+import SecurityGetAgentRolesMixin from 'ember-flexberry-security/mixins/security-get-agent-roles-route';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | security get agent roles');

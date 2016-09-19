@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SecurityGetAgentOperationsMixin from 'ember-flexberry-security/mixins/security-get-agent-operations-controller';
+import SecurityGetAgentOperationsMixin from 'ember-flexberry-security/mixins/security-get-agent-operations-route';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | security get agent operations');

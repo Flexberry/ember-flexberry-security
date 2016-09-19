@@ -1,15 +1,15 @@
 import Ember from 'ember';
 import EditFormNewRoute from 'ember-flexberry/routes/edit-form-new';
-import SecurityGetAgentRolesControllerMixin from '../../mixins/security-get-agent-roles-controller';
-import SecurityGetAgentGroupsControllerMixin from '../../mixins/security-get-agent-groups-controller';
-import SecurityGetAgentClassesControllerMixin from '../../mixins/security-get-agent-classes-controller';
-import SecurityGetAgentOperationsControllerMixin from '../../mixins/security-get-agent-operations-controller';
+import SecurityGetAgentRolesRouteMixin from '../../mixins/security-get-agent-roles-route';
+import SecurityGetAgentGroupsRouteMixin from '../../mixins/security-get-agent-groups-route';
+import SecurityGetAgentClassesRouteMixin from '../../mixins/security-get-agent-classes-route';
+import SecurityGetAgentOperationsRouteMixin from '../../mixins/security-get-agent-operations-route';
 
 export default EditFormNewRoute.extend(
-    SecurityGetAgentRolesControllerMixin,
-    SecurityGetAgentGroupsControllerMixin,
-    SecurityGetAgentClassesControllerMixin,
-    SecurityGetAgentOperationsControllerMixin,
+    SecurityGetAgentRolesRouteMixin,
+    SecurityGetAgentGroupsRouteMixin,
+    SecurityGetAgentClassesRouteMixin,
+    SecurityGetAgentOperationsRouteMixin,
 {
   modelProjection: 'UserE',
   modelName: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent',

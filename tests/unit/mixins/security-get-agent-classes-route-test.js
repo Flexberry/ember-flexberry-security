@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SecurityGetAgentClassesMixin from 'ember-flexberry-security/mixins/security-get-agent-classes-controller';
+import SecurityGetAgentClassesMixin from 'ember-flexberry-security/mixins/security-get-agent-classes-route';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | security get agent classes');
