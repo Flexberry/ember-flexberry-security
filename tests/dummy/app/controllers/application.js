@@ -163,7 +163,7 @@ export default Ember.Controller.extend({
     syncUp() {
       let _this = this;
       _this.set('synchronizes', true);
-      let syncer = Ember.getOwner(this).lookup('syncer:main');
+      let syncer = Ember.getOwner(this).lookup('service:syncer');
       syncer.syncUp().then(() => {
         _this.set('synchronizes', false);
       }).catch((reason) => {
