@@ -40,14 +40,15 @@
     "ember-data": "^2.4.2",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
-    "ember-flexberry": "0.6.0",
-    "ember-flexberry-data": "git+https://github.com/Flexberry/ember-flexberry-data.git#fix-offline-safari",
+    "ember-flexberry": "git+https://github.com/Flexberry/ember-flexberry.git#release-0.6.2",
     "ember-link-action": "0.0.34",
     "ember-load-initializers": "^0.5.1",
     "ember-moment": "6.0.0",
     "ember-resolver": "^2.0.3",
     "ember-try": "^0.2.2",
+    "inflection": "1.10.0",
     "loader.js": "^4.0.1",
+    "node-uuid": "1.4.7",
     "semantic-ui-ember": "0.9.3"
   },
   "keywords": [
