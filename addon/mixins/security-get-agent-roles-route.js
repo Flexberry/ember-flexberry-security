@@ -25,6 +25,7 @@ export default Ember.Mixin.create({
 
       let isRolePredicate = new SimplePredicate('isRole', FilterOperator.Eq, true);
       let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq, true);
+      // TODO: filter 'not model.id', 'not All users'.
       let predicate = new ComplexPredicate(Condition.And, isRolePredicate, enabledPredicate);
 
       let builder = new Builder(_this.store, modelName)

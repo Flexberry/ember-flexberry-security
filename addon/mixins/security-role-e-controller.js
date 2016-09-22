@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  userRoles: null,
-  userGroups: null,
-  userClasses: null,
-  userOperations: null,
+  roleRoles: null,
+  roleUsers: null,
+  roleClasses: null,
+  roleOperations: null,
 
   /*
     This method will be invoked when save operation successfully completed.
@@ -13,8 +13,8 @@ export default Ember.Mixin.create({
   onSaveActionFulfilled() {
     // Get security objects for update it on backend.
     let objectsForUpdate = [];
-    if (this.userRoles && this.userRoles.hasContent) {
-      this.userRoles.rows.forEach(row => {
+    if (this.roleRoles && this.roleRoles.hasContent) {
+      this.roleRoles.rows.forEach(row => {
         let cell = row.columns[0];
         let linkRole = cell.get('model');
         if (!linkRole && cell.get('create')) {
@@ -32,27 +32,27 @@ export default Ember.Mixin.create({
       });
     }
 
-    if (this.userGroups && this.userGroups.hasContent) {
-      this.userGroups.rows.forEach(row => {
+    if (this.roleUsers && this.roleUsers.hasContent) {
+      this.roleUsers.rows.forEach(row => {
         let cell = row.columns[0];
-        let linkGroup = cell.get('model');
-        if (!linkGroup && cell.get('create')) {
-          let group = row.get('model');
-          linkGroup = this.store.createRecord('i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group');
-          linkGroup.set('group', group);
-          linkGroup.set('user', this.model);
-          linkGroup.set('tableCellCreate', cell);
+        let linkRole = cell.get('model');
+        if (!linkRole && cell.get('create')) {
+          let role = row.get('model');
+          linkRole = this.store.createRecord('i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role');
+          linkRole.set('role', role);
+          linkRole.set('agent', this.model);
+          linkRole.set('tableCellCreate', cell);
 
-          objectsForUpdate.push(linkGroup);
-        } else if (linkGroup && linkGroup.get('isDeleted')) {
-          linkGroup.set('tableCellDelete', cell);
-          objectsForUpdate.push(linkGroup);
+          objectsForUpdate.push(linkRole);
+        } else if (linkRole && linkRole.get('isDeleted')) {
+          linkRole.set('tableCellDelete', cell);
+          objectsForUpdate.push(linkRole);
         }
       });
     }
 
-    if (this.userClasses && this.userClasses.hasContent) {
-      this.userClasses.rows.forEach(row => {
+    if (this.roleClasses && this.roleClasses.hasContent) {
+      this.roleClasses.rows.forEach(row => {
         let permission = row.get('permission');
         let deletePermission = permission != null;
 
@@ -88,8 +88,8 @@ export default Ember.Mixin.create({
       });
     }
 
-    if (this.userOperations && this.userOperations.hasContent) {
-      this.userOperations.rows.forEach(row => {
+    if (this.roleOperations && this.roleOperations.hasContent) {
+      this.roleOperations.rows.forEach(row => {
         let cell = row.columns[0];
         let operation = cell.get('model');
         if (!operation && cell.get('create')) {
@@ -127,6 +127,5 @@ export default Ember.Mixin.create({
         this.onSaveActionRejected(errorData);
       });
     });
-
   }
 });
