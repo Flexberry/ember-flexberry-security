@@ -6,7 +6,7 @@ module.exports = function(environment) {
     modulePrefix: 'dummy',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -39,6 +39,15 @@ module.exports = function(environment) {
 
       // Flag: indicates whether to use user settings service or not.
       useUserSettingsService: true,
+
+      resolveWithoutDeviceTypeDetection: [
+        'component:flexberry-objectlistview',
+        'component:flexberry-groupedit',
+        'component:object-list-view',
+        'component:object-list-view-row',
+        'template:components/object-list-view',
+        'template:components/object-list-view-row',
+      ],
 
       // Custom property with components settings.
       components: {
