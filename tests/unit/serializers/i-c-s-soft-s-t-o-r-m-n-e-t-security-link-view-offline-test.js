@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view-offline', 'Unit | Serializer | i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view-offline', {
+moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view', 'Unit | Serializer | i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view-offline', {
   needs: [
     'serializer:i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view-offline',
   ],

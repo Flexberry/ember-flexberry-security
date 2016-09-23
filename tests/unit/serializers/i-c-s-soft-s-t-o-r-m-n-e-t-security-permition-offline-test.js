@@ -1,8 +1,9 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-offline', 'Unit | Serializer | i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-offline', {
+moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', 'Unit | Serializer | i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-offline', {
   needs: [
     'serializer:i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-offline',
+    'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-access',
   ],
 });
 
