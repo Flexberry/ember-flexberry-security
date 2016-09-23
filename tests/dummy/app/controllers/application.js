@@ -146,6 +146,17 @@ export default Ember.Controller.extend({
               title: i18n.t('forms.application.sitemap.application.ember-flexberry-dummy-test-poly-list.title'),
               children: null
             }]
+        },
+        {
+          link: null,
+          caption: 'Performance',
+          title: 'Performance testing',
+          children: [{
+            link: 'performance-testing-listform',
+            caption: 'Performance test 1',
+            title: 'No UI component test',
+            children: null
+          }]
         }
       ]
     };

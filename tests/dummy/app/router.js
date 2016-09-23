@@ -62,6 +62,7 @@ Router.map(function () {
   this.route('ember-flexberry-dummy-test-poly-edit', { path: 'ember-flexberry-dummy-test-poly-edit/:id' });
   this.route('ember-flexberry-dummy-test-poly-edit.new', { path: 'ember-flexberry-dummy-test-poly-edit/new' });
   this.route('login');
+  this.route('performance-testing-listform');
 });
 
 export default Router;
