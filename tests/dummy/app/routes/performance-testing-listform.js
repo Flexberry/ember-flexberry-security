@@ -6,18 +6,18 @@ export default ListFormRoute.extend({
 
     @property modelProjection
     @type String
-    @default 'AuditEntityL'
+    @default 'ApplicationUserL'
   */
-  modelProjection: 'AuditEntityL',
+  modelProjection: 'ApplicationUserL',
 
   /**
     Name of model to be used as list's records types.
 
     @property modelName
     @type String
-    @default 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity'
+    @default 'ember-flexberry-dummy-application-user'
   */
-  modelName: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity',
+  modelName: 'ember-flexberry-dummy-application-user',
 
   developerUserSettings: { ICSSoftSTORMNETBusinessAuditObjectsAuditEntityL: {} },
 

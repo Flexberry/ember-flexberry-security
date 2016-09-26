@@ -153,8 +153,14 @@ export default Ember.Controller.extend({
           title: 'Performance testing',
           children: [{
             link: 'performance-testing-listform',
-            caption: 'Performance test 1',
-            title: 'No UI component test',
+            caption: 'Listform route & controller',
+            title: 'Listform route & controller',
+            children: null
+          },
+          {
+            link: 'performance-testing-query',
+            caption: 'Query',
+            title: 'Query',
             children: null
           }]
         }

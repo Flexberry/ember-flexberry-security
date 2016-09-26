@@ -11,6 +11,11 @@ export default ListFormController.extend({
   editFormRoute: 'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e',
   queryExecTime: null,
   objectsCount: 0,
-  perPage: 50
+  perPage: 50,
+  actions: {
+    clearStore() {
+      this.store.unloadAll();
+    }
+  }
 
 });
