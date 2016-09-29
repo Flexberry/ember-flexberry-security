@@ -8,5 +8,6 @@ export default ListFormController.extend({
     @type String
     @default 'ember-flexberry-dummy-application-user-edit'
    */
-  editFormRoute: 'ember-flexberry-dummy-application-user-edit'
+  editFormRoute: 'ember-flexberry-dummy-application-user-edit',
+  perPage:50
 });

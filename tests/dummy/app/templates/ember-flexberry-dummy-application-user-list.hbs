@@ -1,6 +1,18 @@
+<br/>
+<br/>
+<br/>
+
 <h3>{{t 'forms.ember-flexberry-dummy-application-user-list.caption'}}</h3>
+  init time: {{initTime}}<br/>
+  beforeModel time: {{beforeModelTime}}<br/>
+  model time: {{modelTime}}<br/>
+  afterModel time: {{afterModelTime}}<br/>
+  activate time: {{activateTime}}<br/>
+  setupController time: {{setupControllerTime}}<br/>
+  renderTemplate time: {{renderTemplateTime}}<br/>
+
 <div class="row">
-  {{flexberry-objectlistview
+  {{flexberry-simple-olv
     modelName="ember-flexberry-dummy-application-user"
     modelProjection=modelProjection
     editFormRoute=editFormRoute
