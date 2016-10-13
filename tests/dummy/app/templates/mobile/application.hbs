@@ -8,8 +8,21 @@
   <div class="full height">
     <div class="ui top fixed inverted menu">
       <a {{ action 'toggleSidebar' }} class="launch icon item"><i class="sidebar icon"></i></a>
-      <div class="right menu">
-      </div>
+          <div class="right menu">
+            <div style="margin:0.65em;">
+              {{ui-checkbox
+                checked=onlineStatus
+                label=(if onlineStatus "Online" "Offline")
+                class="toggle"
+              }}
+            </div>
+            <button class="ui button mini {{unless (and onlineStatus (not synchronizes)) 'disabled'}} {{if synchronizes 'loading'}}" {{action 'syncUp'}} style="margin:0.5em;">
+              {{t "forms.application.sync-up"}}
+            </button>
+            <button class="ui button mini" {{action (if login 'logout' 'goToLoginForm')}} style="margin:0.5em;">
+              {{t (if login "forms.login.logout" "forms.login.caption")}}
+            </button>
+          </div>
     </div>
     <div class="flexberry-content ui attached segment">
       {{outlet}}

@@ -7,5 +7,5 @@ module('Unit | Mixin | offline-schema');
 test('it works', function(assert) {
   let OfflineSchemaObject = Ember.Object.extend(OfflineSchemaMixin);
   let subject = OfflineSchemaObject.create();
-  assert.ok(subject);
+  assert.ok(typeof subject.get('offlineSchema') === 'object', 'Offline schema this is object.');
 });
