@@ -8,5 +8,11 @@ export default {
   'createTime-caption': 'Create time',
   'creator-caption': 'Creator',
   'editTime-caption': 'Edit time',
-  'editor-caption': 'Editor'
+  'editor-caption': 'Editor',
+  'role-roles-caption': 'Roles',
+  'role-users-caption': 'Users',
+  'role-users-name': 'Name',
+  'role-users-assign': 'Assign',
+  'role-classes-caption': 'Classes',
+  'role-operations-caption': 'Operations'
 };

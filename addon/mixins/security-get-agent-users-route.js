@@ -6,53 +6,48 @@ import { Query } from 'ember-flexberry-data';
 const { Builder, FilterOperator, SimplePredicate, ComplexPredicate, Condition } = Query;
 
 export default Ember.Mixin.create({
-
-  getAgentRoles(model, varName) {
+  getAgentUsers(model, varName) {
     return new Ember.RSVP.Promise((resolve, reject) => {
       let _this = this;
       let i18n = _this.get('i18n');
-      let _userRoles = SecurityAssignDataObject.create({
+      let _roleUsers = SecurityAssignDataObject.create({
         headers: [
-          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-name'),
-          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-own'),
-          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-inherit')
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-users-name'),
+          i18n.t('forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-users-assign')
         ],
         rows: [],
         hasContent: false
       });
-      _this.set(varName, _userRoles);
+      _this.set(varName, _roleUsers);
       let modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent';
 
-      let isRolePredicate = new SimplePredicate('isRole', FilterOperator.Eq, true);
+      let isRolePredicate = new SimplePredicate('isUser', FilterOperator.Eq, true);
       let enabledPredicate = new SimplePredicate('enabled', FilterOperator.Eq, true);
-
-      // TODO: filter 'not model.id', 'not All users'.
       let predicate = new ComplexPredicate(Condition.And, isRolePredicate, enabledPredicate);
 
       let builder = new Builder(_this.store, modelName)
-        .select('id,name,isRole')
+        .select('id,name,isUser')
         .where(predicate)
         .orderBy('name asc');
-      let _roles;
+      let _users;
 
-      _this.store.query(modelName, builder.build()).then(function (roles) {
-        _roles = roles;
+      _this.store.query(modelName, builder.build()).then(function (users) {
+        _users = users;
       }).catch(error => { reject(error); }).then(() => {
         // Load LinkRoles for user.
         modelName = 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role';
         builder = new Builder(_this.store, modelName)
-          .select('id,role.name')
-          .where('agent', FilterOperator.Eq, model.get('id'))
-          .orderBy('role.name asc');
+          .select('id,role,agent,agent.name')
+          .where('role', FilterOperator.Eq, model.get('id'))
+          .orderBy('agent.name asc');
 
         _this.store.query(modelName, builder.build()).then(function (linkRoles) {
 
-          _roles.forEach(role => {
-            let roleName = role.get('name');
+          _users.forEach(user => {
+            let userId = user.get('id');
             let ownCellObject;
-            let inheritCellObject = SecurityAssignDataCellObject.create({ checked: false, readonly: true, model: null, inited: true });
             linkRoles.forEach(linkRole => {
-              if (roleName === linkRole.get('role.name')) {
+              if (userId === linkRole.get('agent.id')) {
                 ownCellObject = SecurityAssignDataCellObject.create({ checked: true, readonly: false, model: linkRole, inited: true });
               }
             });
@@ -61,17 +56,17 @@ export default Ember.Mixin.create({
               ownCellObject = SecurityAssignDataCellObject.create({ checked: false, readonly: false, model: null, inited: true });
             }
 
-            _userRoles.rows.push(SecurityAssignDataRowObject.create({
-              name: roleName,
-              columns: [ownCellObject, inheritCellObject],
-              model: role
+            _roleUsers.rows.push(SecurityAssignDataRowObject.create({
+              name: user.get('name'),
+              columns: [ownCellObject],
+              model: user
             }));
-            _userRoles.hasContent = true;
+            _roleUsers.hasContent = true;
           });
 
           resolve();
         }).catch(error => { reject(error); });
       });
     });
-  },
+  }
 });

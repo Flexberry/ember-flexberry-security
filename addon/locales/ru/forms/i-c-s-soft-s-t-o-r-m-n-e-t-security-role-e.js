@@ -8,5 +8,11 @@ export default {
   'createTime-caption': 'Дата создания',
   'creator-caption': 'Создатель',
   'editTime-caption': 'Дата изменения',
-  'editor-caption': 'Редактор'
+  'editor-caption': 'Редактор',
+  'role-roles-caption': 'Роли',
+  'role-users-caption': 'Пользователи',
+  'role-users-name': 'Пользователь',
+  'role-users-assign': 'Наличие',
+  'role-classes-caption': 'Классы',
+  'role-operations-caption': 'Операции'
 };

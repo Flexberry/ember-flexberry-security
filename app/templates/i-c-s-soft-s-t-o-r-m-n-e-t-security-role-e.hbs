@@ -50,11 +50,62 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.enabled-caption'}}</label>
   {{
-    flexberry-checkbox 
-    readonly=readonly 
+    flexberry-checkbox
+    readonly=readonly
     value=model.enabled
   }}
   {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
 </div>
 
-</form>
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-roles-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=roleRoles
+      }}
+    {{/flexberry-toggler}}
+  </div>
+
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-users-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=roleUsers
+      }}
+    {{/flexberry-toggler}}
+  </div>
+
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-classes-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=roleClasses
+      }}
+    {{/flexberry-toggler}}
+  </div>
+
+  <div class="field">
+    {{#flexberry-toggler
+      caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-operations-caption')
+      class='styled'
+    }}
+      {{
+        security-assign
+        readonly=readonly
+        value=roleOperations
+      }}
+    {{/flexberry-toggler}}
+  </div>
+  </form>
