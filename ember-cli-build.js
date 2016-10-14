@@ -9,6 +9,13 @@ module.exports = function(defaults) {
       enabled: true,
       esnext: true,
       configPath: './.jscsrc'
+    },
+
+    // disable processImport https://github.com/jakubpawlowicz/clean-css/issues/755
+    minifyCSS: {
+      options: {
+        processImport: false
+      }
     }
   });
 
