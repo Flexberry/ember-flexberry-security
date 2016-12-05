@@ -1,17 +1,24 @@
 <h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.caption'}}</h3>
 
-{{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-      type='error'
-      closeable=true
-      visible=true
-      title='Error occurred'
-      message=currentError
-    }}
-  {{/each}}
-{{/if}}
-<form class="ui form flexberry-vertical-form" role="form">
+<form class="ui {{state}} form flexberry-vertical-form" role="form">
+  {{ui-message
+    type="success"
+    closeable=true
+    visible=showFormSuccessMessage
+    caption=formSuccessMessageCaption
+    message=formSuccessMessage
+    onShow=(action "onSuccessMessageShow")
+    onHide=(action "onSuccessMessageHide")
+  }}
+  {{ui-message
+    type="error"
+    closeable=true
+    visible=showFormErrorMessage
+    caption=formErrorMessageCaption
+    message=formErrorMessage
+    onShow=(action "onErrorMessageShow")
+    onHide=(action "onErrorMessageHide")
+  }}
   <div class="field">
     <div class="sixteen wide">
       {{flexberry-validationsummary errors=model.errors}}
@@ -50,8 +57,8 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.enabled-caption'}}</label>
   {{
-    flexberry-checkbox 
-    readonly=readonly 
+    flexberry-checkbox
+    readonly=readonly
     value=model.enabled
   }}
   {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
