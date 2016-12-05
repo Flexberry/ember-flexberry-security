@@ -1,12 +1,15 @@
 <h3>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l.caption'}}</h3>
 <div class="row">
-  {{flexberry-objectlistview
+  {{flexberry-simpleolv
     modelName="i-c-s-soft-s-t-o-r-m-n-e-t-security-agent"
     modelProjection=modelProjection
     editFormRoute=editFormRoute
     content=model
-    createNewButton=true
     refreshButton=true
+    createNewButton=true
+    deleteButton=true
+    colsConfigButton=true
+    showCheckBoxInRow=true
     sorting=computedSorting
     orderable=true
     sortByColumn=(action "sortByColumn")
