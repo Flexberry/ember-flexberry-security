@@ -1,5 +1,5 @@
 /**
-  @module ember-flexberry-dummy
+  @module ember-flexberry-security
 */
 
 import Ember from 'ember';
@@ -13,7 +13,7 @@ export default Ember.Mixin.create({
   /**
     Resets routes controller, clears save/delete operations messages.
   */
-  resetController: function(controller, isExisting, transition) {
+  resetController: function(controller) {
     this._super.apply(this, arguments);
 
     controller.set('showFormSuccessMessage', false);

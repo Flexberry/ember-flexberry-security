@@ -1,5 +1,5 @@
 /**
-  @module ember-flexberry-dummy
+  @module ember-flexberry-security
 */
 
 import Ember from 'ember';
@@ -171,9 +171,8 @@ export default Ember.Mixin.create({
     This method will be invoked when save operation completed, but failed.
 
     @method onSaveActionRejected.
-    @param {Object} errorData Data about save operation fail.
    */
-  onSaveActionRejected(errorData) {
+  onSaveActionRejected() {
     this._super(...arguments);
 
     this.set('showFormSuccessMessage', false);
@@ -185,9 +184,8 @@ export default Ember.Mixin.create({
     regardless of save promise's state (was it fulfilled or rejected).
 
     @method onSaveActionAlways.
-    @param {Object} data Data about completed save operation.
    */
-  onSaveActionAlways(data) {
+  onSaveActionAlways() {
     this._super(...arguments);
   },
 
@@ -218,9 +216,8 @@ export default Ember.Mixin.create({
     This method will be invoked when delete operation completed, but failed.
 
     @method onDeleteActionRejected.
-    @param {Object} errorData Data about delete operation fail.
    */
-  onDeleteActionRejected(errorData) {
+  onDeleteActionRejected() {
     this._super(...arguments);
 
     this.set('showFormSuccessMessage', false);
@@ -232,9 +229,8 @@ export default Ember.Mixin.create({
     regardless of delete promise's state (was it fulfilled or rejected).
 
     @method onDeleteActionAlways.
-    @param {Object} data Data about completed delete operation.
    */
-  onDeleteActionAlways(data) {
+  onDeleteActionAlways() {
     this._super(...arguments);
   },
 
