@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0-beta.4] - 2016-12-22
+### Changed
+* Update dependency on `ember-flexberry` to 0.9.0-beta.0
+
+## [0.1.0-beta.3] - 2017-02-21
+### Changed
+* Update dependency on `ember-flexberry` to 0.8.6.
+
 ## [0.1.0-beta.2] - 2016-12-06
 ### Changed
 * Security list forms now uses `flexberry-objectlistview` component instead `flexberry-simpleolv`.
