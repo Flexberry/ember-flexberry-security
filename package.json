@@ -1,6 +1,6 @@
 {
   "name": "ember-flexberry-security",
-  "version": "0.1.0-beta.11",
+  "version": "0.1.0-beta.12",
   "description": "Role based security module, authentification and authorization module, audit modile for ember-flexberry.",
   "directories": {
     "doc": "doc",
