@@ -8,7 +8,7 @@
     "semantic-ui-daterangepicker": "5d46ed2e6e5a0bf398bb6a5df82e06036dfc46be",
     "blueimp-file-upload": "9.11.2",
     "devicejs": "0.2.7",
-    "semantic-ui": "^2.2.10",
+    "semantic-ui": "git://github.com/Flexberry/Semantic-UI.git#fixed-abort",
     "flatpickr-calendar": "2.3.4"
   }
 }

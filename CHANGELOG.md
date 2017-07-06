@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+* Update dependency on `ember-flexberry` to 0.9.0-beta.13
+* Change theme to blue-sky.
 
 ## [0.1.0-beta.16] - 2017-06-21
 ### Changed
