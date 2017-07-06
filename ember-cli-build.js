@@ -4,19 +4,57 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
-    // Add options here
     jscsOptions: {
       enabled: true,
       esnext: true,
       configPath: './.jscsrc'
     },
-
-    // disable processImport https://github.com/jakubpawlowicz/clean-css/issues/755
-    minifyCSS: {
-      options: {
-        processImport: false
+    lessOptions: {
+      paths: [
+        'bower_components/semantic-ui'
+      ]
+    },
+    SemanticUI: {
+      import: {
+        css: false,
+        javascript: true,
+        images: false,
+        fonts: true
       }
     }
+    // Add options here
+  });
+
+  app.import('vendor/font-icon.css');
+  app.import('vendor/fonts/icons.eot', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/icons.otf', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/icons.svg', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/icons.ttf', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/icons.woff', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/icons.woff2', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/crim.eot', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/crim.otf', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/crim.svg', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/crim.ttf', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/crim.woff', { destDir: 'assets/fonts' });
+  app.import('vendor/fonts/crim.woff2', { destDir: 'assets/fonts' });
+  app.import('vendor/serviceImages/close.png', {
+    destDir: 'assets/themes/blue-sky/assets/images'
+  });
+  app.import('vendor/serviceImages/close-hover.png', {
+    destDir: 'assets/themes/blue-sky/assets/images'
+  });
+  app.import('vendor/serviceImages/plus.png', {
+    destDir: 'assets/themes/blue-sky/assets/images'
+  });
+  app.import('vendor/serviceImages/minus.png', {
+    destDir: 'assets/themes/blue-sky/assets/images'
+  });
+  app.import('vendor/serviceImages/header-bgw.png', {
+    destDir: 'assets/themes/orange/assets/images'
+  });
+  app.import('vendor/serviceImages/bgw-head-calendar.png', {
+    destDir: 'assets/themes/orange/assets/images'
   });
 
   // Use `app.import` to add additional libraries to the generated

@@ -155,7 +155,19 @@ export default Ember.Controller.extend({
     /**
     */
     toggleSidebar() {
-      Ember.$('.ui.sidebar').sidebar('toggle');
+      Ember.$('.ui.sidebar.main.menu').sidebar({
+        onHide: function() {
+          Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
+          Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
+        }
+      }).sidebar('toggle');
+      if (Ember.$('.inverted.vertical.menu').hasClass('visible')) {
+        Ember.$('.sidebar.icon.text-menu-1').removeClass('hidden-menu');
+        Ember.$('.sidebar.icon.text-menu-2').addClass('hidden-menu');
+      } else {
+        Ember.$('.sidebar.icon.text-menu-1').addClass('hidden-menu');
+        Ember.$('.sidebar.icon.text-menu-2').removeClass('hidden-menu');
+      }
     },
 
     /**

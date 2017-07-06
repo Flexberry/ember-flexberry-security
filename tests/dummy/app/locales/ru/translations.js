@@ -47,7 +47,7 @@ Ember.$.extend(true, translations, {
     'ember-flexberry-dummy-vote': EmberFlexberryDummyVoteModel,
   },
 
-  'application-name': 'Dummy',
+  'application-name': 'Ember-flexberry-security',
 
   forms: {
     loading: {
@@ -82,6 +82,12 @@ Ember.$.extend(true, translations, {
             caption: '',
             title: 'Меню'
           },
+          'show-menu': {
+            caption: 'Показать меню'
+          },
+          'hide-menu': {
+            caption: 'Скрыть меню'
+          },
           'user-settings-service-checkbox': {
             caption: 'Использовать сервис сохранения пользовательских настроек'
           },
@@ -93,7 +99,7 @@ Ember.$.extend(true, translations, {
       },
 
       footer: {
-        'application-name': 'Dummy',
+        'application-name': 'Ember-flexberry-security',
         'application-version': {
           caption: 'Версия аддона {{version}}',
           title: 'Это версия аддона ember-flexberry, которая сейчас используется в этом тестовом приложении ' +
@@ -104,7 +110,7 @@ Ember.$.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: 'Dummy',
+          caption: 'Ember-flexberry-security',
           title: 'Dummy'
         },
         'application-version': {
