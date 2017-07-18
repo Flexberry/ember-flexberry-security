@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0-beta.18] - 2017-07-18
+### Added
+* Add classes for tooglers on edit forms.
+
+### Changed
+* Update dependency on `ember-flexberry` to 0.9.0-beta.14
+
 ## [0.1.0-beta.17] - 2017-07-06
 ### Changed
 * Update dependency on `ember-flexberry` to 0.9.0-beta.13
