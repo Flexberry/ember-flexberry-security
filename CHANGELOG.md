@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0-beta.21] - 2017-08-14
+### Added
+* Add loader for list's forms.
+
 ## [0.1.0-beta.20] - 2017-08-14
 ### Added
 * Temporarily added heimdalljs-logger dependency.
