@@ -47,6 +47,7 @@
     "ember-moment": "6.0.0",
     "ember-resolver": "^2.0.3",
     "ember-try": "^0.2.2",
+    "heimdalljs-logger": "^0.1.7",
     "inflection": "1.10.0",
     "loader.js": "^4.0.1",
     "node-uuid": "1.4.7",
