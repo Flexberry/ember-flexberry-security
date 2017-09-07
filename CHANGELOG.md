@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0-beta.22] - 2017-09-07
+### Added
+* Add dependency on `ember-block-slots` 1.1.3.
+
+### Changed
+* Update dependency on `ember-flexberry` to 0.9.0-beta.17
+
 ## [0.1.0-beta.21] - 2017-08-14
 ### Added
 * Add loader for list's forms.
