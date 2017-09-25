@@ -2,53 +2,53 @@ export default {
   projections: {
     AuditView: {
       filterText: {
-        caption: 'Заголовок фильтра'
+        __caption__: 'Заголовок фильтра'
       },
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       filterTypeNView: {
-        caption: 'Тип фильтра'
+        __caption__: 'Тип фильтра'
       },
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         name: {
-          caption: 'Имя'
+          __caption__: 'Имя'
         }
       }
     },
     Sec_FilterE: {
       name: {
-        caption: 'Наименование'
+        __caption__: 'Наименование'
       },
       filterText: {
-        caption: 'Заголовок фильтра'
+        __caption__: 'Заголовок фильтра'
       },
       subject: {
-        caption: 'Объект',
+        __caption__: 'Объект',
         name: {
-          caption: 'Название объекта'
+          __caption__: 'Название объекта'
         }
       },
       filterTypeNView: {
-        caption: 'Тип фильтра'
+        __caption__: 'Тип фильтра'
       }
     },
     Sec_FilterL: {
       name: {
-        caption: 'Наименование'
+        __caption__: 'Наименование'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

@@ -2,221 +2,221 @@ export default {
   projections: {
     AuditView: {
       address: {
-        caption: 'Address'
+        __caption__: 'Address'
       },
       text: {
-        caption: 'Text'
+        __caption__: 'Text'
       },
       date: {
-        caption: 'Date'
+        __caption__: 'Date'
       },
       votes: {
-        caption: 'Votes'
+        __caption__: 'Votes'
       },
       moderated: {
-        caption: 'Moderated'
+        __caption__: 'Moderated'
       },
       type: {
-        caption: 'Type',
+        __caption__: 'Type',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       author: {
-        caption: 'Author',
+        __caption__: 'Author',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       files: {
-        caption: 'Files',
+        __caption__: 'Files',
         order: {
-          caption: 'Order'
+          __caption__: 'Order'
         },
         file: {
-          caption: 'File'
+          __caption__: 'File'
         }
       },
       comments: {
-        caption: 'Comments',
+        __caption__: 'Comments',
         text: {
-          caption: 'Text'
+          __caption__: 'Text'
         },
         votes: {
-          caption: 'Votes'
+          __caption__: 'Votes'
         },
         moderated: {
-          caption: 'Moderated'
+          __caption__: 'Moderated'
         },
         author: {
-          caption: 'Author',
+          __caption__: 'Author',
           name: {
-            caption: 'Name'
+            __caption__: 'Name'
           }
         },
         userVotes: {
-          caption: 'User votes',
+          __caption__: 'User votes',
           voteType: {
-          caption: 'Vote type'
+          __caption__: 'Vote type'
         },
           applicationUser: {
-            caption: 'Application user',
+            __caption__: 'Application user',
             name: {
-              caption: 'Name'
+              __caption__: 'Name'
             }
           }
         }
       },
       userVotes: {
-        caption: 'User votes',
+        __caption__: 'User votes',
         voteType: {
-          caption: 'Vote type'
+          __caption__: 'Vote type'
         },
         applicationUser: {
-          caption: 'Application user',
+          __caption__: 'Application user',
           name: {
-            caption: 'Name'
+            __caption__: 'Name'
           }
         }
       }
     },
     SuggestionE: {
       address: {
-        caption: 'Address'
+        __caption__: 'Address'
       },
       text: {
-        caption: 'Text'
+        __caption__: 'Text'
       },
       date: {
-        caption: 'Date'
+        __caption__: 'Date'
       },
       votes: {
-        caption: 'Votes'
+        __caption__: 'Votes'
       },
       moderated: {
-        caption: 'Moderated'
+        __caption__: 'Moderated'
       },
       type: {
-        caption: 'Type',
+        __caption__: 'Type',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       author: {
-        caption: 'Author',
+        __caption__: 'Author',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       editor1: {
-        caption: 'Editor1',
+        __caption__: 'Editor1',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       createTime: {
-        caption: ''
+        __caption__: ''
       },
       creator: {
-        caption: ''
+        __caption__: ''
       },
       editTime: {
-        caption: ''
+        __caption__: ''
       },
       editor: {
-        caption: ''
+        __caption__: ''
       },
       files: {
-        caption: 'Files',
+        __caption__: 'Files',
         order: {
-          caption: 'Order'
+          __caption__: 'Order'
         },
         file: {
-          caption: 'File'
+          __caption__: 'File'
         },
         suggestion: {
-          caption: ''
+          __caption__: ''
         }
       },
       userVotes: {
-        caption: 'User votes',
+        __caption__: 'User votes',
         voteType: {
-          caption: 'Vote type'
+          __caption__: 'Vote type'
         },
         applicationUser: {
-          caption: 'Application user',
+          __caption__: 'Application user',
           name: {
-            caption: 'Name'
+            __caption__: 'Name'
           }
         },
         suggestion: {
-          caption: ''
+          __caption__: ''
         }
       },
       comments: {
-        caption: 'Comments',
+        __caption__: 'Comments',
         text: {
-          caption: 'Text'
+          __caption__: 'Text'
         },
         votes: {
-          caption: 'Votes'
+          __caption__: 'Votes'
         },
         moderated: {
-          caption: 'Moderated'
+          __caption__: 'Moderated'
         },
         author: {
-          caption: 'Author',
+          __caption__: 'Author',
           name: {
-            caption: 'Name'
+            __caption__: 'Name'
           }
         }
       }
     },
     SuggestionL: {
       address: {
-        caption: 'Address'
+        __caption__: 'Address'
       },
       text: {
-        caption: 'Text'
+        __caption__: 'Text'
       },
       date: {
-        caption: 'Date'
+        __caption__: 'Date'
       },
       votes: {
-        caption: 'Votes'
+        __caption__: 'Votes'
       },
       moderated: {
-        caption: 'Moderated'
+        __caption__: 'Moderated'
       },
       type: {
-        caption: '',
+        __caption__: '',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       author: {
-        caption: '',
+        __caption__: '',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       editor1: {
-        caption: '',
+        __caption__: '',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       createTime: {
-        caption: ''
+        __caption__: ''
       },
       creator: {
-        caption: ''
+        __caption__: ''
       },
       editTime: {
-        caption: ''
+        __caption__: ''
       },
       editor: {
-        caption: ''
+        __caption__: ''
       }
     }
   }

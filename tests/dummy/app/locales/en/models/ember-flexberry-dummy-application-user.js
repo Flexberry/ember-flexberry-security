@@ -2,104 +2,104 @@ export default {
   projections: {
     ApplicationUserE: {
       name: {
-        caption: 'name'
+        __caption__: 'name'
       },
       eMail: {
-        caption: 'eMail'
+        __caption__: 'eMail'
       },
       phone1: {
-        caption: 'phone1'
+        __caption__: 'phone1'
       },
       phone2: {
-        caption: 'phone2'
+        __caption__: 'phone2'
       },
       phone3: {
-        caption: 'phone3'
+        __caption__: 'phone3'
       },
       activated: {
-        caption: 'activated'
+        __caption__: 'activated'
       },
       vK: {
-        caption: 'vK'
+        __caption__: 'vK'
       },
       facebook: {
-        caption: 'facebook'
+        __caption__: 'facebook'
       },
       twitter: {
-        caption: 'twitter'
+        __caption__: 'twitter'
       },
       birthday: {
-        caption: 'birthday'
+        __caption__: 'birthday'
       },
       gender: {
-        caption: 'gender'
+        __caption__: 'gender'
       },
       vip: {
-        caption: 'vip'
+        __caption__: 'vip'
       },
       karma: {
-        caption: 'karma'
+        __caption__: 'karma'
       }
     },
     ApplicationUserL: {
       name: {
-        caption: 'name'
+        __caption__: 'name'
       },
       eMail: {
-        caption: 'eMail'
+        __caption__: 'eMail'
       },
       activated: {
-        caption: 'activated'
+        __caption__: 'activated'
       },
       birthday: {
-        caption: 'birthday'
+        __caption__: 'birthday'
       },
       gender: {
-        caption: 'gender'
+        __caption__: 'gender'
       },
       karma: {
-        caption: 'karma'
+        __caption__: 'karma'
       }
     },
     AuditView: {
       name: {
-        caption: 'name'
+        __caption__: 'name'
       },
       eMail: {
-        caption: 'eMail'
+        __caption__: 'eMail'
       },
       phone1: {
-        caption: 'phone1'
+        __caption__: 'phone1'
       },
       phone2: {
-        caption: 'phone2'
+        __caption__: 'phone2'
       },
       phone3: {
-        caption: 'phone3'
+        __caption__: 'phone3'
       },
       activated: {
-        caption: 'activated'
+        __caption__: 'activated'
       },
       vK: {
-        caption: 'vK'
+        __caption__: 'vK'
       },
       facebook: {
-        caption: 'facebook'
+        __caption__: 'facebook'
       },
       twitter: {
-        caption: 'twitter'
+        __caption__: 'twitter'
       },
       birthday: {
-        caption: 'birthday'
+        __caption__: 'birthday'
       },
       gender: {
-        caption: 'gender'
+        __caption__: 'gender'
       },
       vip: {
-        caption: 'vip'
+        __caption__: 'vip'
       },
       karma: {
-        caption: 'karma'
+        __caption__: 'karma'
       }
     }
   }

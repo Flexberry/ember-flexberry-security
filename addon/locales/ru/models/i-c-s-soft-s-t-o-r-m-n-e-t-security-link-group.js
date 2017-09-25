@@ -2,127 +2,127 @@ export default {
   projections: {
     AuditView: {
       group: {
-        caption: 'Группа',
+        __caption__: 'Группа',
         name: {
-          caption: 'Имя группы'
+          __caption__: 'Имя группы'
         }
       },
       user: {
-        caption: 'Пользователь',
+        __caption__: 'Пользователь',
         name: {
-          caption: 'Имя пользователя'
+          __caption__: 'Имя пользователя'
         },
         login: {
-          caption: 'Логин пользователя'
+          __caption__: 'Логин пользователя'
         }
       }
     },
     GetGroupsNameByUserKey: {
       group: {
-        caption: 'Группа',
+        __caption__: 'Группа',
         name: {
-          caption: 'Наименование'
+          __caption__: 'Наименование'
         },
         isGroup: {
-          caption: 'Группа'
+          __caption__: 'Группа'
         },
         enabled: {
-          caption: 'Актуальна'
+          __caption__: 'Актуальна'
         }
       },
       user: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       }
     },
     GetUserByUsername: {
       group: {
-        caption: 'Группа',
+        __caption__: 'Группа',
         name: {
-          caption: 'Наименование'
+          __caption__: 'Наименование'
         },
         isGroup: {
-          caption: 'Группа'
+          __caption__: 'Группа'
         },
         enabled: {
-          caption: 'Актуальна'
+          __caption__: 'Актуальна'
         }
       },
       user: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       }
     },
     LinkedAgents: {
       group: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       user: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       }
     },
     SearchLinkGroup: {
       user: {
-        caption: 'Пользователь',
+        __caption__: 'Пользователь',
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         },
         isGroup: {
-          caption: 'Группа'
+          __caption__: 'Группа'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       },
       group: {
-        caption: 'Группа',
+        __caption__: 'Группа',
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         },
         isGroup: {
-          caption: 'Группа'
+          __caption__: 'Группа'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       }
     },
     Sec_LinkGroupE: {
       user: {
-        caption: 'Пользователь',
+        __caption__: 'Пользователь',
         name: {
-          caption: 'Имя'
+          __caption__: 'Имя'
         }
       },
       group: {
-        caption: 'Группа',
+        __caption__: 'Группа',
         name: {
-          caption: 'Наименование'
+          __caption__: 'Наименование'
         }
       }
     },
     Sec_LinkGroupL: {
       user: {
-        caption: 'Пользователь',
+        __caption__: 'Пользователь',
         name: {
-          caption: 'Имя пользователя'
+          __caption__: 'Имя пользователя'
         }
       },
       group: {
-        caption: 'Группа',
+        __caption__: 'Группа',
         name: {
-          caption: 'Наименование'
+          __caption__: 'Наименование'
         }
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

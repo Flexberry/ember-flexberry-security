@@ -2,127 +2,127 @@ export default {
   projections: {
     AuditView: {
       group: {
-        caption: 'Group',
+        __caption__: 'Group',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       user: {
-        caption: 'User',
+        __caption__: 'User',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         },
         login: {
-          caption: 'Login'
+          __caption__: 'Login'
         }
       }
     },
     GetGroupsNameByUserKey: {
       group: {
-        caption: 'Group',
+        __caption__: 'Group',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         },
         isGroup: {
-          caption: 'Group'
+          __caption__: 'Group'
         },
         enabled: {
-          caption: 'Enabled'
+          __caption__: 'Enabled'
         }
       },
       user: {
-        caption: 'User'
+        __caption__: 'User'
       }
     },
     GetUserByUsername: {
       group: {
-        caption: 'Group',
+        __caption__: 'Group',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         },
         isGroup: {
-          caption: 'Group'
+          __caption__: 'Group'
         },
         enabled: {
-          caption: 'Enabled'
+          __caption__: 'Enabled'
         }
       },
       user: {
-        caption: 'User'
+        __caption__: 'User'
       }
     },
     LinkedAgents: {
       group: {
-        caption: 'Group'
+        __caption__: 'Group'
       },
       user: {
-        caption: 'User'
+        __caption__: 'User'
       }
     },
     SearchLinkGroup: {
       user: {
-        caption: 'Userr',
+        __caption__: 'Userr',
         isUser: {
-          caption: 'User'
+          __caption__: 'User'
         },
         isGroup: {
-          caption: 'Group'
+          __caption__: 'Group'
         },
         isRole: {
-          caption: 'Role'
+          __caption__: 'Role'
         }
       },
       group: {
-        caption: 'Group',
+        __caption__: 'Group',
         isUser: {
-          caption: 'User'
+          __caption__: 'User'
         },
         isGroup: {
-          caption: 'Group'
+          __caption__: 'Group'
         },
         isRole: {
-          caption: 'Role'
+          __caption__: 'Role'
         }
       }
     },
     Sec_LinkGroupE: {
       user: {
-        caption: 'User',
+        __caption__: 'User',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       group: {
-        caption: 'Group',
+        __caption__: 'Group',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       }
     },
     Sec_LinkGroupL: {
       user: {
-        caption: 'User',
+        __caption__: 'User',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       group: {
-        caption: 'Group',
+        __caption__: 'Group',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       createTime: {
-        caption: 'Create time'
+        __caption__: 'Create time'
       },
       creator: {
-        caption: 'Creator'
+        __caption__: 'Creator'
       },
       editTime: {
-        caption: 'Edit time'
+        __caption__: 'Edit time'
       },
       editor: {
-        caption: 'Editor'
+        __caption__: 'Editor'
       }
     }
   }

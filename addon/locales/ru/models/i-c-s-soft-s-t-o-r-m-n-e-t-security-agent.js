@@ -2,359 +2,359 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       pwd: {
-        caption: 'Пароль'
+        __caption__: 'Пароль'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       connString: {
-        caption: 'Строка соединения'
+        __caption__: 'Строка соединения'
       },
       enabled: {
-        caption: 'Включён'
+        __caption__: 'Включён'
       },
       email: {
-        caption: 'Email'
+        __caption__: 'Email'
       }
     },
     CheckExistLogin: {
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       }
     },
     CheckLoginPwd: {
       enabled: {
-        caption: 'Включен'
+        __caption__: 'Включен'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       pwd: {
-        caption: 'Пароль'
+        __caption__: 'Пароль'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       email: {
-        caption: 'E-mail'
+        __caption__: 'E-mail'
       }
     },
     OwnProperties: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       enabled: {
-        caption: 'Актуально'
+        __caption__: 'Актуально'
       }
     },
     RoleOrGroupE: {
       name: {
-        caption: 'Название'
+        __caption__: 'Название'
       },
       enabled: {
-        caption: 'Актуально'
+        __caption__: 'Актуально'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата редактирования'
+        __caption__: 'Дата редактирования'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     RoleOrGroupL: {
       name: {
-        caption: 'Название'
+        __caption__: 'Название'
       },
       enabled: {
-        caption: 'Актуально'
+        __caption__: 'Актуально'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата редактирования'
+        __caption__: 'Дата редактирования'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     Sec_AgentE: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       pwd: {
-        caption: 'Пароль'
+        __caption__: 'Пароль'
       },
       connString: {
-        caption: 'Строка подключения'
+        __caption__: 'Строка подключения'
       },
       enabled: {
-        caption: 'Актуален'
+        __caption__: 'Актуален'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       }
     },
     Sec_AgentL: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       connString: {
-        caption: 'Строка подключения'
+        __caption__: 'Строка подключения'
       },
       enabled: {
-        caption: 'Запись активна'
+        __caption__: 'Запись активна'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     Sec_AgentTypeAccess: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       connString: {
-        caption: 'Строка соединения'
+        __caption__: 'Строка соединения'
       },
       full: {
-        caption: 'Полный доступ'
+        __caption__: 'Полный доступ'
       },
       read: {
-        caption: 'Чтение'
+        __caption__: 'Чтение'
       },
       insert: {
-        caption: 'Вставка'
+        __caption__: 'Вставка'
       },
       update: {
-        caption: 'Обновление'
+        __caption__: 'Обновление'
       },
       delete: {
-        caption: 'Удаление'
+        __caption__: 'Удаление'
       },
       execute: {
-        caption: 'Исполнение'
+        __caption__: 'Исполнение'
       }
     },
     Sec_GetRoles: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       enabled: {
-        caption: 'Запись активна'
+        __caption__: 'Запись активна'
       }
     },
     Sec_NotUserL: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       connString: {
-        caption: 'Строка подключения'
+        __caption__: 'Строка подключения'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     Sec_OpAgentRolesE: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       }
     },
     Sec_RolesL: {
       name: {
-        caption: 'Название'
+        __caption__: 'Название'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     UserE: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       email: {
-        caption: 'E-Mail'
+        __caption__: 'E-Mail'
       },
       enabled: {
-        caption: 'Актуален'
+        __caption__: 'Актуален'
       },
       pwd: {
-        caption: 'Пароль'
+        __caption__: 'Пароль'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     UserL: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       login: {
-        caption: 'Логин'
+        __caption__: 'Логин'
       },
       email: {
-        caption: 'E-Mail'
+        __caption__: 'E-Mail'
       },
       isUser: {
-        caption: 'Пользователь'
+        __caption__: 'Пользователь'
       },
       isGroup: {
-        caption: 'Группа'
+        __caption__: 'Группа'
       },
       isRole: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       },
       enabled: {
-        caption: 'Актуален'
+        __caption__: 'Актуален'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

@@ -2,21 +2,21 @@ export default {
   projections: {
     AuditView: {
       order: {
-        caption: 'order'
+        __caption__: 'order'
       },
       file: {
-        caption: 'file'
+        __caption__: 'file'
       }
     },
     SuggestionFileE: {
       order: {
-        caption: 'order'
+        __caption__: 'order'
       },
       file: {
-        caption: 'file'
+        __caption__: 'file'
       },
       suggestion: {
-        caption: 'suggestion'
+        __caption__: 'suggestion'
       }
     }
   }

@@ -2,56 +2,56 @@ export default {
   projections: {
     AuditView: {
       view: {
-        caption: 'Представление',
+        __caption__: 'Представление',
         name: {
-          caption: 'Имя представления'
+          __caption__: 'Имя представления'
         }
       },
       attribute: {
-        caption: 'Атрибут',
+        __caption__: 'Атрибут',
         name: {
-          caption: 'Имя атрибута'
+          __caption__: 'Имя атрибута'
         }
       }
     },
     Sec_LinkAttributeE: {
       attribute: {
-        caption: 'Атрибут',
+        __caption__: 'Атрибут',
         name: {
-          caption: 'Имя'
+          __caption__: 'Имя'
         }
       },
       view: {
-        caption: 'Представление',
+        __caption__: 'Представление',
         name: {
-          caption: 'Название'
+          __caption__: 'Название'
         }
       }
     },
     Sec_LinkAttributeL: {
       attribute: {
-        caption: 'Атрибут',
+        __caption__: 'Атрибут',
         name: {
-          caption: 'Атрибут'
+          __caption__: 'Атрибут'
         }
       },
       view: {
-        caption: 'Вид',
+        __caption__: 'Вид',
         name: {
-          caption: 'Название'
+          __caption__: 'Название'
         }
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

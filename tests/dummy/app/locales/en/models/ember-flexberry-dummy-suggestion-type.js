@@ -2,70 +2,70 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'name'
+        __caption__: 'name'
       },
       moderated: {
-        caption: 'moderated'
+        __caption__: 'moderated'
       },
       parent: {
-        caption: 'parent',
+        __caption__: 'parent',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         }
       },
       localizedTypes: {
-        caption: 'localizedTypes',
+        __caption__: 'localizedTypes',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         },
         localization: {
-          caption: 'localization',
+          __caption__: 'localization',
           name: {
-            caption: 'name'
+            __caption__: 'name'
           }
         }
       }
     },
     SuggestionTypeE: {
       name: {
-        caption: 'name'
+        __caption__: 'name'
       },
       moderated: {
-        caption: 'moderated'
+        __caption__: 'moderated'
       },
       parent: {
-        caption: 'parent',
+        __caption__: 'parent',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         }
       },
       localizedTypes: {
-        caption: 'localizedTypes',
+        __caption__: 'localizedTypes',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         },
         localization: {
-          caption: 'localization',
+          __caption__: 'localization',
           name: {
-            caption: 'name'
+            __caption__: 'name'
           }
         },
         suggestionType: {
-          caption: 'suggestionType'
+          __caption__: 'suggestionType'
         }
       }
     },
     SuggestionTypeL: {
       name: {
-        caption: 'name'
+        __caption__: 'name'
       },
       moderated: {
-        caption: 'moderated'
+        __caption__: 'moderated'
       },
       parent: {
-        caption: 'parent',
+        __caption__: 'parent',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         }
       }
     }

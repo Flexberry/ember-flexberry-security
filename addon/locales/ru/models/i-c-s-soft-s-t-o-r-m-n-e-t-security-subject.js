@@ -2,155 +2,155 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       type: {
-        caption: 'Тип'
+        __caption__: 'Тип'
       },
       isAttribute: {
-        caption: 'Атрибут'
+        __caption__: 'Атрибут'
       },
       isOperation: {
-        caption: 'Операция'
+        __caption__: 'Операция'
       },
       isView: {
-        caption: 'Представление'
+        __caption__: 'Представление'
       },
       isClass: {
-        caption: 'Класс'
+        __caption__: 'Класс'
       },
       sharedOper: {
-        caption: 'Разделяемая операция'
+        __caption__: 'Разделяемая операция'
       }
     },
     DetermineProperties: {
       isAttribute: {
-        caption: 'Атрибут'
+        __caption__: 'Атрибут'
       },
       isOperation: {
-        caption: 'Операция'
+        __caption__: 'Операция'
       },
       isView: {
-        caption: 'Представление'
+        __caption__: 'Представление'
       },
       isClass: {
-        caption: 'Класс'
+        __caption__: 'Класс'
       }
     },
     Sec_OperationLE: {
       name: {
-        caption: 'Наименование'
+        __caption__: 'Наименование'
       },
       isAttribute: {
-        caption: 'Атрибут'
+        __caption__: 'Атрибут'
       },
       isOperation: {
-        caption: 'Операция'
+        __caption__: 'Операция'
       },
       isView: {
-        caption: 'Представление'
+        __caption__: 'Представление'
       },
       isClass: {
-        caption: 'Класс'
+        __caption__: 'Класс'
       },
       type: {
-        caption: 'Тип'
+        __caption__: 'Тип'
       },
       sharedOper: {
-        caption: 'Общая операция'
+        __caption__: 'Общая операция'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     Sec_SubjectE: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       isClass: {
-        caption: 'Класс'
+        __caption__: 'Класс'
       },
       isView: {
-        caption: 'Представление'
+        __caption__: 'Представление'
       },
       isOperation: {
-        caption: 'Операция'
+        __caption__: 'Операция'
       }
     },
     Sec_SubjectL: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       isAttribute: {
-        caption: 'Атрибут'
+        __caption__: 'Атрибут'
       },
       isOperation: {
-        caption: 'Операция'
+        __caption__: 'Операция'
       },
       isView: {
-        caption: 'Представление'
+        __caption__: 'Представление'
       },
       isClass: {
-        caption: 'Класс'
+        __caption__: 'Класс'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     },
     Sec_SubjectTypeAccess: {
       name: {
-        caption: 'Имя'
+        __caption__: 'Имя'
       },
       isAttribute: {
-        caption: 'Атрибут'
+        __caption__: 'Атрибут'
       },
       isOperation: {
-        caption: 'Операция'
+        __caption__: 'Операция'
       },
       isView: {
-        caption: 'Представление'
+        __caption__: 'Представление'
       },
       isClass: {
-        caption: 'Класс'
+        __caption__: 'Класс'
       },
       full: {
-        caption: 'Полный доступ'
+        __caption__: 'Полный доступ'
       },
       read: {
-        caption: 'Чтение'
+        __caption__: 'Чтение'
       },
       insert: {
-        caption: 'Вставка'
+        __caption__: 'Вставка'
       },
       update: {
-        caption: 'Обновление'
+        __caption__: 'Обновление'
       },
       delete: {
-        caption: 'Удаление'
+        __caption__: 'Удаление'
       },
       execute: {
-        caption: 'Исполнение'
+        __caption__: 'Исполнение'
       },
       permitted: {
-        caption: 'Разрешение'
+        __caption__: 'Разрешение'
       }
     }
   }

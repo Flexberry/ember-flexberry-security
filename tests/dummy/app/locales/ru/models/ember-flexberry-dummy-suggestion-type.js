@@ -2,70 +2,70 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       moderated: {
-        caption: 'Moderated'
+        __caption__: 'Moderated'
       },
       parent: {
-        caption: 'Parent',
+        __caption__: 'Parent',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       localizedTypes: {
-        caption: 'Localized types',
+        __caption__: 'Localized types',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         },
         localization: {
-          caption: 'Localization',
+          __caption__: 'Localization',
           name: {
-            caption: 'Name'
+            __caption__: 'Name'
           }
         }
       }
     },
     SuggestionTypeE: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       moderated: {
-        caption: 'Moderated'
+        __caption__: 'Moderated'
       },
       parent: {
-        caption: 'Parent',
+        __caption__: 'Parent',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       localizedTypes: {
-        caption: 'Localized types',
+        __caption__: 'Localized types',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         },
         localization: {
-          caption: 'Localization',
+          __caption__: 'Localization',
           name: {
-            caption: 'Name'
+            __caption__: 'Name'
           }
         },
         suggestionType: {
-          caption: ''
+          __caption__: ''
         }
       }
     },
     SuggestionTypeL: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       moderated: {
-        caption: 'Moderated'
+        __caption__: 'Moderated'
       },
       parent: {
-        caption: 'Parent',
+        __caption__: 'Parent',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       }
     }

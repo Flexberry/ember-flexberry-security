@@ -2,27 +2,27 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       localization: {
-        caption: 'Localization',
+        __caption__: 'Localization',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       }
     },
     LocalizedSuggestionTypeE: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       localization: {
-        caption: 'Localization',
+        __caption__: 'Localization',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       suggestionType: {
-        caption: ''
+        __caption__: ''
       }
     }
   }

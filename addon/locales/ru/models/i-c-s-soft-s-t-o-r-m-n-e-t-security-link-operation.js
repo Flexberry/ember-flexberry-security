@@ -2,56 +2,56 @@ export default {
   projections: {
     AuditView: {
       class: {
-        caption: 'Класс',
+        __caption__: 'Класс',
         name: {
-          caption: 'Имя класса'
+          __caption__: 'Имя класса'
         }
       },
       operation: {
-        caption: 'Операция',
+        __caption__: 'Операция',
         name: {
-          caption: 'Имя операции'
+          __caption__: 'Имя операции'
         }
       }
     },
     Sec_LinkOperationE: {
       operation: {
-        caption: 'Операция',
+        __caption__: 'Операция',
         name: {
-          caption: 'Наименование операции'
+          __caption__: 'Наименование операции'
         }
       },
       class: {
-        caption: 'Класс',
+        __caption__: 'Класс',
         name: {
-          caption: 'Наименование класса'
+          __caption__: 'Наименование класса'
         }
       }
     },
     Sec_LinkOperationL: {
       operation: {
-        caption: 'Операция',
+        __caption__: 'Операция',
         name: {
-          caption: 'Наименование операции'
+          __caption__: 'Наименование операции'
         }
       },
       class: {
-        caption: 'Класс',
+        __caption__: 'Класс',
         name: {
-          caption: 'Наименование класса'
+          __caption__: 'Наименование класса'
         }
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

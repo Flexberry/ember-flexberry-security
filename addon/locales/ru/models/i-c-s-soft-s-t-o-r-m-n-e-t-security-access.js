@@ -2,146 +2,146 @@ export default {
   projections: {
     AuditView: {
       typeAccess: {
-        caption: 'Тип доступа'
+        __caption__: 'Тип доступа'
       },
       filter: {
-        caption: 'Фильтр',
+        __caption__: 'Фильтр',
         name: {
-          caption: 'Имя фильтра'
+          __caption__: 'Имя фильтра'
         },
         filterText: {
-          caption: 'Заголовок фильтра'
+          __caption__: 'Заголовок фильтра'
         }
       },
       permition: {
-        caption: 'Разрешение',
+        __caption__: 'Разрешение',
         agent: {
-          caption: 'Агент',
+          __caption__: 'Агент',
           name: {
-            caption: 'Имя агента'
+            __caption__: 'Имя агента'
           },
           login: {
-            caption: 'Логи агента'
+            __caption__: 'Логи агента'
           }
         },
         subject: {
-          caption: 'Субъект',
+          __caption__: 'Субъект',
           name: {
-            caption: 'Имя субъекта'
+            __caption__: 'Имя субъекта'
           }
         }
       }
     },
     CheckAccessClass: {
       typeAccess: {
-        caption: 'Тип доступа'
+        __caption__: 'Тип доступа'
       },
       permition: {
-        caption: 'Разрешение',
+        __caption__: 'Разрешение',
         subject: {
-          caption: 'Субъект',
+          __caption__: 'Субъект',
           name: {
-            caption: 'Имя субъекта'
+            __caption__: 'Имя субъекта'
           }
         },
         agent: {
-          caption: 'Агент'
+          __caption__: 'Агент'
         }
       },
       filter: {
-        caption: 'Фильтр',
+        __caption__: 'Фильтр',
         filterText: {
-          caption: 'Заголовок фильтра'
+          __caption__: 'Заголовок фильтра'
         }
       }
     },
     CheckAccessOnObject: {
       filter: {
-        caption: 'Фильтр',
+        __caption__: 'Фильтр',
         filterText: {
-          caption: 'Заголовок фильтра'
+          __caption__: 'Заголовок фильтра'
         },
         name: {
-          caption: 'Название'
+          __caption__: 'Название'
         }
       },
       typeAccess: {
-        caption: 'Тип  доступа'
+        __caption__: 'Тип  доступа'
       }
     },
     Sec_AccessD: {
       typeAccess: {
-        caption: 'Тип доступа'
+        __caption__: 'Тип доступа'
       }
     },
     Sec_AccessE: {
       permition: {
-        caption: '~',
+        __caption__: '~',
         agent: {
-          caption: 'Агент',
+          __caption__: 'Агент',
           name: {
-            caption: 'Имя агента'
+            __caption__: 'Имя агента'
           }
         },
         subject: {
-          caption: 'Субъект',
+          __caption__: 'Субъект',
           name: {
-            caption: 'Имя субъекта'
+            __caption__: 'Имя субъекта'
           },
           isClass: {
-            caption: 'Класс'
+            __caption__: 'Класс'
           },
           isOperation: {
-            caption: 'Операция'
+            __caption__: 'Операция'
           }
         }
       },
       typeAccess: {
-        caption: 'Тип доступа'
+        __caption__: 'Тип доступа'
       },
       filter: {
-        caption: 'Фильтр',
+        __caption__: 'Фильтр',
         name: {
-          caption: 'Имя фильтра'
+          __caption__: 'Имя фильтра'
         }
       }
     },
     Sec_AccessL: {
       permition: {
-        caption: 'Разрешение',
+        __caption__: 'Разрешение',
         agent: {
-          caption: 'Агент',
+          __caption__: 'Агент',
           name: {
-            caption: 'Имя агента'
+            __caption__: 'Имя агента'
           }
         },
         subject: {
-          caption: 'Субъект',
+          __caption__: 'Субъект',
           name: {
-            caption: 'Имя субъекта'
+            __caption__: 'Имя субъекта'
           }
         }
       },
       typeAccess: {
-        caption: 'Тип доступа'
+        __caption__: 'Тип доступа'
       },
       filter: {
-        caption: 'Фильтр',
+        __caption__: 'Фильтр',
         name: {
-          caption: 'Фильтр'
+          __caption__: 'Фильтр'
         }
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

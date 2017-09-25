@@ -2,88 +2,88 @@ export default {
   projections: {
     AuditView: {
       text: {
-        caption: 'text'
+        __caption__: 'text'
       },
       votes: {
-        caption: 'votes'
+        __caption__: 'votes'
       },
       moderated: {
-        caption: 'moderated'
+        __caption__: 'moderated'
       },
       author: {
-        caption: 'author',
+        __caption__: 'author',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         }
       },
       userVotes: {
-        caption: 'userVotes',
+        __caption__: 'userVotes',
         voteType: {
-          caption: 'voteType'
+          __caption__: 'voteType'
         },
         applicationUser: {
-          caption: 'applicationUser',
+          __caption__: 'applicationUser',
           name: {
-            caption: 'name'
+            __caption__: 'name'
           }
         }
       }
     },
     CommentD: {
       text: {
-        caption: 'text'
+        __caption__: 'text'
       },
       votes: {
-        caption: 'votes'
+        __caption__: 'votes'
       },
       moderated: {
-        caption: 'moderated'
+        __caption__: 'moderated'
       },
       author: {
-        caption: 'author',
+        __caption__: 'author',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         }
       }
     },
     CommentE: {
       suggestion: {
-        caption: 'suggestion',
+        __caption__: 'suggestion',
         address: {
-          caption: 'address'
+          __caption__: 'address'
         }
       },
       text: {
-        caption: 'text'
+        __caption__: 'text'
       },
       votes: {
-        caption: 'votes'
+        __caption__: 'votes'
       },
       moderated: {
-        caption: 'moderated'
+        __caption__: 'moderated'
       },
       author: {
-        caption: 'author',
+        __caption__: 'author',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         },
         phone1: {
-          caption: 'phone1'
+          __caption__: 'phone1'
         }
       },
       userVotes: {
-        caption: 'userVotes',
+        __caption__: 'userVotes',
         voteType: {
-          caption: 'voteType'
+          __caption__: 'voteType'
         },
         applicationUser: {
-          caption: 'applicationUser',
+          __caption__: 'applicationUser',
           name: {
-            caption: 'name'
+            __caption__: 'name'
           }
         },
         comment: {
-          caption: 'comment'
+          __caption__: 'comment'
         }
       }
     }

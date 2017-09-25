@@ -2,17 +2,17 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       }
     },
     LocalizationE: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       }
     },
     LocalizationL: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       }
     }
   }

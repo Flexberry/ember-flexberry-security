@@ -2,133 +2,133 @@ export default {
   projections: {
     AuditEntityE: {
       objectPrimaryKey: {
-        caption: 'Object primary key'
+        __caption__: 'Object primary key'
       },
       objectType: {
-        caption: 'Object type',
+        __caption__: 'Object type',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       operationTime: {
-        caption: 'Operation time'
+        __caption__: 'Operation time'
       },
       operationType: {
-        caption: 'Operation type'
+        __caption__: 'Operation type'
       },
       executionResult: {
-        caption: 'Execution result'
+        __caption__: 'Execution result'
       },
       source: {
-        caption: 'Source'
+        __caption__: 'Source'
       },
       user: {
-        caption: 'User',
+        __caption__: 'User',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         },
         login: {
-          caption: 'Login'
+          __caption__: 'Login'
         }
       },
       createTime: {
-        caption: 'Create time'
+        __caption__: 'Create time'
       },
       creator: {
-        caption: 'Creator'
+        __caption__: 'Creator'
       },
       editTime: {
-        caption: 'Edit time'
+        __caption__: 'Edit time'
       },
       editor: {
-        caption: 'Editor'
+        __caption__: 'Editor'
       },
       auditFields: {
-        caption_: 'Audit fields',
+        __caption___: 'Audit fields',
         field: {
-          caption: 'Field'
+          __caption__: 'Field'
         },
-        caption: {
-          caption: 'Caption'
+        __caption__: {
+          __caption__: '__caption__'
         },
         oldValue: {
-          caption: 'Old value'
+          __caption__: 'Old value'
         },
         newValue: {
-          caption: 'New value'
+          __caption__: 'New value'
         },
         mainChange: {
-          caption: 'Main change'
+          __caption__: 'Main change'
         }
       }
     },
     AuditEntityL: {
       objectPrimaryKey: {
-        caption: 'Object primary key'
+        __caption__: 'Object primary key'
       },
       objectType: {
-        caption: 'Object type',
+        __caption__: 'Object type',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       operationTime: {
-        caption: 'Operation time'
+        __caption__: 'Operation time'
       },
       operationType: {
-        caption: 'Operation type'
+        __caption__: 'Operation type'
       },
       executionResult: {
-        caption: 'Execution result'
+        __caption__: 'Execution result'
       },
       user: {
-        caption: 'User',
+        __caption__: 'User',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       source: {
-        caption: 'Source'
+        __caption__: 'Source'
       }
     },
     AuditEntityUpdateView: {
       operationTime: {
-        caption: 'Operation time'
+        __caption__: 'Operation time'
       },
       executionResult: {
-        caption: 'Execution result'
+        __caption__: 'Execution result'
       },
       auditFields: {
-        caption: 'Audit fields',
+        __caption__: 'Audit fields',
         field: {
-          caption: 'Field'
+          __caption__: 'Field'
         },
         oldValue: {
-          caption: 'Old value'
+          __caption__: 'Old value'
         },
         newValue: {
-          caption: 'New value'
+          __caption__: 'New value'
         }
       }
     },
     ConstructNotStoredAttr: {
       objectPrimaryKey: {
-        caption: 'Object primary key'
+        __caption__: 'Object primary key'
       },
       operationTime: {
-        caption: 'Operation time'
+        __caption__: 'Operation time'
       },
       operationType: {
-        caption: 'Operation type'
+        __caption__: 'Operation type'
       },
       user: {
-        caption: 'User',
+        __caption__: 'User',
         name: {
-          caption: 'Name'
+          __caption__: 'Name'
         }
       },
       executionResult: {
-        caption: 'Execution result'
+        __caption__: 'Execution result'
       }
     }
   }
