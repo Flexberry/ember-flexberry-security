@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+* Update dependency on `ember-flexberry` to 0.9.2-beta.5
+
 ### Fixed
 * Displaying messages on the edit forms for next objects:
   * User
