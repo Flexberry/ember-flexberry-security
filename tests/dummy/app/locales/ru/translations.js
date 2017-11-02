@@ -163,6 +163,15 @@ Ember.$.extend(true, translations, {
       'show-audit-button-text': 'Аудит'
     },
 
+    'edit-form': {
+      'save-success-message-caption': 'Сохранение завершилось успешно',
+      'save-success-message': 'Объект сохранен',
+      'save-error-message-caption': 'Ошибка сохранения',
+      'delete-success-message-caption': 'Удаление завершилось успешно',
+      'delete-success-message': 'Объект удален',
+      'delete-error-message-caption': 'Ошибка удаления'
+    },
+
     'ember-flexberry-dummy-application-user-list': EmberFlexberryDummyApplicationUserListForm,
     'ember-flexberry-dummy-localization-list': EmberFlexberryDummyLocalizationListForm,
     'ember-flexberry-dummy-suggestion-list': EmberFlexberryDummySuggestionListForm,

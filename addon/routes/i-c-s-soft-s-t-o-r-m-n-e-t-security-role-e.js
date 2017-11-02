@@ -1,5 +1,5 @@
 import EditFormRoute from 'ember-flexberry/routes/edit-form';
-import EditFormRouteOperationsIndicationMixin from '../mixins/edit-form-route-operations-indication';
+import EditFormRouteOperationsIndicationMixin from 'ember-flexberry/mixins/edit-form-route-operations-indication';
 import SecurityRoleERouteMixin from '../mixins/security-role-e-route';
 
 export default EditFormRoute.extend(EditFormRouteOperationsIndicationMixin, SecurityRoleERouteMixin, {
