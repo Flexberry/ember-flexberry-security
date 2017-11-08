@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0-beta.32] - 2017-11-08
+### Changed
+* Update dependency on `ember-flexberry` to 0.9.2-beta.6
+
 ## [0.1.0-beta.31] - 2017-11-02
 ### Changed
 * Update dependency on `ember-flexberry` to 0.9.2-beta.5
