@@ -1,5 +1,5 @@
 export default {
-  caption: '',
+  caption: 'Запись аудита',
   'objectPrimaryKey-caption': 'Идентификатор',
   'operationTime-caption': 'Время операции',
   'operationType-caption': 'Тип операции',
