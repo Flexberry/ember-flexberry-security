@@ -2,7 +2,7 @@ export default {
   projections: {
     SearchView: {
       name: {
-        caption: 'Поиск'
+        __caption__: 'Поиск'
       }
     }
   }

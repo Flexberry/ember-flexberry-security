@@ -2,27 +2,27 @@ export default {
   projections: {
     AuditView: {
       voteType: {
-        caption: 'voteType'
+        __caption__: 'voteType'
       },
       applicationUser: {
-        caption: 'applicationUser',
+        __caption__: 'applicationUser',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         }
       }
     },
     CommentVoteE: {
       voteType: {
-        caption: 'voteType'
+        __caption__: 'voteType'
       },
       applicationUser: {
-        caption: 'applicationUser',
+        __caption__: 'applicationUser',
         name: {
-          caption: 'name'
+          __caption__: 'name'
         }
       },
       comment: {
-        caption: 'comment'
+        __caption__: 'comment'
       }
     }
   }

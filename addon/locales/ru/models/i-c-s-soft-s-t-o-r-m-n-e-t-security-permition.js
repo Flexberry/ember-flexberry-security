@@ -2,49 +2,49 @@ export default {
   projections: {
     AuditView: {
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин агента'
+          __caption__: 'Логин агента'
         }
       },
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         name: {
-          caption: 'Имя субъекта'
+          __caption__: 'Имя субъекта'
         }
       },
       access: {
-        caption: 'Доступ',
+        __caption__: 'Доступ',
         typeAccess: {
-          caption: 'Тип доступа'
+          __caption__: 'Тип доступа'
         },
         filter: {
-          caption: 'Фильтр',
+          __caption__: 'Фильтр',
           name: {
-            caption: 'Имя фильтра'
+            __caption__: 'Имя фильтра'
           },
           filterText: {
-            caption: 'Заголовок фильтра'
+            __caption__: 'Заголовок фильтра'
           }
         },
         permition: {
-          caption: 'Разрешение',
+          __caption__: 'Разрешение',
           agent: {
-            caption: 'Агент',
+            __caption__: 'Агент',
             name: {
-              caption: 'Имя агента'
+              __caption__: 'Имя агента'
             },
             login: {
-              caption: 'Логин'
+              __caption__: 'Логин'
             }
           },
           subject: {
-            caption: 'Субъект',
+            __caption__: 'Субъект',
             name: {
-              caption: 'Имя субъекта'
+              __caption__: 'Имя субъекта'
             }
           }
         }
@@ -52,188 +52,188 @@ export default {
     },
     CheckAccessOnObject: {
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         isAttribute: {
-          caption: 'Атрибут'
+          __caption__: 'Атрибут'
         },
         isOperation: {
-          caption: 'Операция'
+          __caption__: 'Операция'
         },
         isView: {
-          caption: 'Представление'
+          __caption__: 'Представление'
         },
         isClass: {
-          caption: 'Класс'
+          __caption__: 'Класс'
         },
         name: {
-          caption: 'Имя субъекта'
+          __caption__: 'Имя субъекта'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин'
+          __caption__: 'Логин'
         },
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         },
         isGroup: {
-          caption: 'Группа'
+          __caption__: 'Группа'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       },
       access: {
-        caption: 'Доступ',
+        __caption__: 'Доступ',
         filter: {
-          caption: 'Фильтр',
+          __caption__: 'Фильтр',
           filterText: {
-            caption: 'Заголовок фильтра'
+            __caption__: 'Заголовок фильтра'
           },
           name: {
-            caption: 'Наименование'
+            __caption__: 'Наименование'
           }
         },
         typeAccess: {
-          caption: 'Тип доступа'
+          __caption__: 'Тип доступа'
         }
       }
     },
     CheckAccessOperation: {
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         name: {
-          caption: 'Имя субъекта'
+          __caption__: 'Имя субъекта'
         },
         isOperation: {
-          caption: 'Операция'
+          __caption__: 'Операция'
         }
       },
       agent: {
-        caption: 'Агент'
+        __caption__: 'Агент'
       }
     },
     Sec_CheckClasses: {
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         name: {
-          caption: 'Имя субъекта'
+          __caption__: 'Имя субъекта'
         },
         isOperation: {
-          caption: 'Операция'
+          __caption__: 'Операция'
         },
         isClass: {
-          caption: 'Класс'
+          __caption__: 'Класс'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин'
+          __caption__: 'Логин'
         },
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       }
     },
     Sec_CheckClassesAndGetDetails: {
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         name: {
-          caption: 'Имя субъекта'
+          __caption__: 'Имя субъекта'
         },
         isOperation: {
-          caption: 'Операция'
+          __caption__: 'Операция'
         },
         isClass: {
-          caption: 'Класс'
+          __caption__: 'Класс'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин'
+          __caption__: 'Логин'
         },
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       },
       access: {
-        caption: 'Доступ',
+        __caption__: 'Доступ',
         typeAccess: {
-          caption: 'Тип доступа'
+          __caption__: 'Тип доступа'
         }
       }
     },
     Sec_PermitionE: {
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         }
       },
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         name: {
-          caption: 'Имя субъекта'
+          __caption__: 'Имя субъекта'
         }
       },
       access: {
-        caption: 'Доступ',
+        __caption__: 'Доступ',
         typeAccess: {
-          caption: 'Тип доступа'
+          __caption__: 'Тип доступа'
         }
       }
     },
     Sec_PermitionL: {
       subject: {
-        caption: 'Субъект',
+        __caption__: 'Субъект',
         name: {
-          caption: 'Имя субъекта'
+          __caption__: 'Имя субъекта'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         },
         isGroup: {
-          caption: 'Группа'
+          __caption__: 'Группа'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

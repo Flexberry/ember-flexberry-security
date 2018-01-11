@@ -1,49 +1,74 @@
-{{#ui-sidebar class="inverted vertical menu" dimPage=false}}
-  <div class="header item">
-    <a class="brand" href="#">Flexberry Ember Security</a>
-  </div>
+{{#if isInAcceptanceTestMode}}
+  {{outlet}}
+  {{outlet "modal"}}
+{{else}}
+{{#ui-sidebar class="inverted vertical main menu"}}
   {{render "sitemap" sitemap}}
 {{/ui-sidebar}}
-<div id="example" class="pusher">
-  <div class="full height">
+<div class="bgw-fix">
+  <div class="background-logo">
     <div class="ui top attached">
       <div class="ui attached menu">
-        <div class="ui container">
-          <a {{ action 'toggleSidebar' }} title="Menu" class="launch icon item"><i class="sidebar icon"></i></a>
-          <div class="right menu">
-            <div style="margin:0.65em;">
-              {{ui-checkbox
-                checked=onlineStatus
-                label=(if onlineStatus "Online" "Offline")
-                class="toggle"
-              }}
-            </div>
-            <button class="ui basic button mini {{unless (and onlineStatus (not synchronizes)) 'disabled'}} {{if synchronizes 'loading'}}" {{action 'syncUp'}} style="margin:0.5em;">
-              {{t "forms.application.sync-up"}}
-            </button>
-            <button class="ui basic button mini" {{action (if login 'logout' 'goToLoginForm')}} style="margin:0.5em;">
-              {{t (if login "forms.login.logout" "forms.login.caption")}}
-            </button>
-          </div>
+        <div class="ui container flex-container">
+          <a {{action 'toggleSidebar'}}
+            class="launch icon item"
+            title={{t "forms.application.header.menu.sitemap-button.title"}}>
+            {{t "forms.application.header.menu.sitemap-button.caption"}}
+            <i class="sidebar icon text-menu-show"><span class="text_menu ">{{t "forms.application.header.menu.show-menu.caption"}}</span><span class="text_menu hidden text-menu-hide">{{t "forms.application.header.menu.hide-menu.caption"}}</span></i>
+            <i class="sidebar icon hidden text-menu-hide hidden-text"><span class="text_menu hidden-text">{{t "forms.application.header.menu.hide-menu.caption"}}</span></i>
+          </a>
         </div>
       </div>
     </div>
-    <div class="flexberry-content ui attached segment">
-      <div class="ui main container">
-        <div class="stackable grid container">
-            {{outlet}}
-            {{outlet "modal"}}
-        </div>
-      </div>
+    <a class="item logo"
+      href="https://github.com/flexberry"
+      target="_blank"
+      title={{t "forms.application.sitemap.application-name.title"}}>
+      <img class="ui centered image" src="assets/images/flexberry-logo.png" />
+    </a>
+    <div class="page-header-caption"><a href="https://github.com/flexberry">{{t "application-name"}}</a></div>
+    <div class="page-header-userbar">
+      <button class="ui basic button mini {{unless (and onlineStatus (not synchronizes)) 'disabled'}} {{if synchronizes 'loading'}}" {{action 'syncUp'}} style="margin:0.5em; background:#FFF linear-gradient(#FFFFFF, #FFF) !important;">
+        {{t "forms.application.sync-up"}}
+      </button>
+      <button class="ui basic button mini" {{action (if login 'logout' 'goToLoginForm')}} style="margin:0.5em; background:#FFF linear-gradient(#FFFFFF, #FFF) !important;">
+        {{t (if login "forms.login.logout" "forms.login.caption")}}
+      </button>
     </div>
   </div>
-  <div class="ui vertical footer segment">
-    <div class="ui container">
-      <div class="ui text menu">
-      <a class="brand item" href="#">Flexberry PLATFORM</a>
-        <div class="right menu">
+</div>
+<div id="example" class="pusher">
+  <div class="ui form {{objectlistviewEventsService.loadingState}}">
+    <div class="full height">
+      <div class="flexberry-content ui attached segment">
+        <div class="ui main container">
+          <div class="stackable grid container">
+            {{outlet}}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="ui main container">
+  {{outlet "modal"}}
+</div>
+<div class="ui vertical footer segment">
+  <div class="ui container flex-container">
+    <div class="ui text menu">
+    <a class="brand item" href="#">
+      {{t "forms.application.footer.application-name"}}
+    </a>
+    <div class="item lang" style="margin:0.65em;">
+      <label style="margin-right: 5px;">
+        {{if onlineStatus "Online" "Offline"}}
+      </label>
+      {{ui-checkbox
+        checked=onlineStatus
+        class="toggle"
+      }}
+    </div>
+    </div>
+  </div>
+</div>
+{{/if}}

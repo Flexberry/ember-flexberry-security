@@ -47,7 +47,7 @@ Ember.$.extend(true, translations, {
     'ember-flexberry-dummy-vote': EmberFlexberryDummyVoteModel,
   },
 
-  'application-name': 'Application caption',
+  'application-name': 'Ember-flexberry-security',
 
   forms: {
     loading: {
@@ -82,6 +82,12 @@ Ember.$.extend(true, translations, {
             caption: '',
             title: 'Menu'
           },
+          'show-menu': {
+            caption: 'Show menu'
+          },
+          'hide-menu': {
+            caption: 'Hide menu'
+          },
           'user-settings-service-checkbox': {
             caption: 'Use service to save user settings'
           },
@@ -93,7 +99,7 @@ Ember.$.extend(true, translations, {
       },
 
       footer: {
-        'application-name': 'Application caption',
+        'application-name': 'Ember-flexberry-security',
         'application-version': {
           caption: 'Addon version {{version}}',
           title: 'It is version of ember-flexberry addon, which uses in this dummy application ' +
@@ -104,7 +110,7 @@ Ember.$.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: 'Application caption',
+          caption: 'Ember-flexberry-security',
           title: 'Application title'
         },
         'application-version': {
@@ -155,6 +161,15 @@ Ember.$.extend(true, translations, {
     },
     audit: {
       'show-audit-button-text': 'Audit'
+    },
+
+    'edit-form': {
+      'save-success-message-caption': 'Save operation succeed',
+      'save-success-message': 'Object saved',
+      'save-error-message-caption': 'Save operation failed',
+      'delete-success-message-caption': 'Delete operation succeed',
+      'delete-success-message': 'Object deleted',
+      'delete-error-message-caption': 'Delete operation failed'
     },
 
     'ember-flexberry-dummy-application-user-list': EmberFlexberryDummyApplicationUserListForm,

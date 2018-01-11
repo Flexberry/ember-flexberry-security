@@ -1,6 +1,6 @@
 {
   "name": "ember-flexberry-security",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.35",
   "description": "Role based security module, authentification and authorization module, audit modile for ember-flexberry.",
   "keywords": [
     "ember-addon"
@@ -41,7 +41,7 @@
     "ember-cli-moment-shim": "^1.0.0",
     "ember-cli-qunit": "^3.1.0",
     "ember-cli-release": "^0.2.9",
-    "ember-cli-sass": "5.2.0",
+    "ember-cli-less": "^1.5.4",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-shims": "^1.0.2",
     "ember-cli-uglify": "^1.2.0",

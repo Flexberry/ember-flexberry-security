@@ -18,6 +18,11 @@ matrix:
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-release
 
+dist: trusty
+
+addons:
+  chrome: stable
+
 before_install:
   - npm config set spin false
   - npm install -g npm@^2
@@ -34,8 +39,8 @@ script:
   - ember try $EMBER_TRY_SCENARIO test
 
 after_success:
-  - test $EMBER_TRY_SCENARIO == "default" && test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "develop" && ember build && firebase deploy --project flexberry-ember-security-dev --token "$FIREBASE_TOKEN" -m "Travis Build №$TRAVIS_BUILD_NUMBER."
-  - test $EMBER_TRY_SCENARIO == "default" && test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && ember build && firebase deploy --project flexberry-ember-security --token "$FIREBASE_TOKEN" -m "Travis Build №$TRAVIS_BUILD_NUMBER."
+  - test $EMBER_TRY_SCENARIO == "default" && test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "develop" && ember build && firebase deploy --project flexberry-ember-security-dev --token "$FIREBASE_TOKEN" --non-interactive -m "Travis Build №$TRAVIS_BUILD_NUMBER."
+  - test $EMBER_TRY_SCENARIO == "default" && test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && ember build && firebase deploy --project flexberry-ember-security --token "$FIREBASE_TOKEN" --non-interactive -m "Travis Build №$TRAVIS_BUILD_NUMBER."
   - test $EMBER_TRY_SCENARIO == "default" && test $TRAVIS_PULL_REQUEST == "false" && (test $TRAVIS_BRANCH == "master" || test $TRAVIS_BRANCH == "develop") && bash scripts/update-docs.sh
 
 after_script:

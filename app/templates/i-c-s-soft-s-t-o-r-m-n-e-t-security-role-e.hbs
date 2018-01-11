@@ -1,18 +1,25 @@
 <h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.caption'}}</h3>
-
-{{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-      type='error'
-      closeable=true
-      visible=true
-      title='Error occurred'
-      message=currentError
-    }}
-  {{/each}}
-{{/if}}
 <form class="ui form flexberry-vertical-form" role="form">
-  <div class="field">
+  {{ui-message
+    type="success"
+    closeable=true
+    visible=showFormSuccessMessage
+    caption=formSuccessMessageCaption
+    message=formSuccessMessage
+    onShow=(action "onSuccessMessageShow")
+    onHide=(action "onSuccessMessageHide")
+  }}
+  {{ui-message
+    type="error"
+    closeable=true
+    visible=showFormErrorMessage
+    caption=formErrorMessageCaption
+    message=formErrorMessage
+    onShow=(action "onErrorMessageShow")
+    onHide=(action "onErrorMessageHide")
+  }}
+  
+    <div class="field">
     <div class="sixteen wide">
       {{flexberry-validationsummary errors=model.errors}}
     </div>
@@ -20,16 +27,16 @@
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
-        <button type="submit" class="ui positive button" {{action 'save'}}>
+        <button type="submit" class="ui button save-button" {{action 'save'}}>
           {{t "forms.edit-form.save-button-text"}}
         </button>
         {{#unless model.isNew}}
-          <button type="submit" class="ui negative button" {{action 'delete'}}>
+          <button type="submit" class="ui button save-del-button" {{action 'delete'}}>
             {{t "forms.edit-form.delete-button-text"}}
           </button>
         {{/unless}}
       {{/unless}}
-      <button type="submit" class="ui button" {{action 'close'}}>
+      <button type="submit" class="ui button close-button" {{action 'close'}}>
         {{t "forms.edit-form.close-button-text"}}
       </button>
     </div>
@@ -57,7 +64,7 @@
   {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
 </div>
 
-  <div class="field">
+  <div class="field roles">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-roles-caption')
       class='styled'
@@ -70,7 +77,7 @@
     {{/flexberry-toggler}}
   </div>
 
-  <div class="field">
+  <div class="field users">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-users-caption')
       class='styled'
@@ -83,7 +90,7 @@
     {{/flexberry-toggler}}
   </div>
 
-  <div class="field">
+  <div class="field classes">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-classes-caption')
       class='styled'
@@ -96,7 +103,7 @@
     {{/flexberry-toggler}}
   </div>
 
-  <div class="field">
+  <div class="field operations">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e.role-operations-caption')
       class='styled'

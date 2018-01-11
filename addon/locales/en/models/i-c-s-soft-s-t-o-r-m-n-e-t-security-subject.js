@@ -2,155 +2,155 @@ export default {
   projections: {
     AuditView: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       type: {
-        caption: 'Type'
+        __caption__: 'Type'
       },
       isAttribute: {
-        caption: 'Attribute'
+        __caption__: 'Attribute'
       },
       isOperation: {
-        caption: 'Operation'
+        __caption__: 'Operation'
       },
       isView: {
-        caption: 'View'
+        __caption__: 'View'
       },
       isClass: {
-        caption: 'Class'
+        __caption__: 'Class'
       },
       sharedOper: {
-        caption: 'Shared oper'
+        __caption__: 'Shared oper'
       }
     },
     DetermineProperties: {
       isAttribute: {
-        caption: 'Attribute'
+        __caption__: 'Attribute'
       },
       isOperation: {
-        caption: 'Operation'
+        __caption__: 'Operation'
       },
       isView: {
-        caption: 'View'
+        __caption__: 'View'
       },
       isClass: {
-        caption: 'Class'
+        __caption__: 'Class'
       }
     },
     Sec_OperationLE: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       isAttribute: {
-        caption: 'Attribute'
+        __caption__: 'Attribute'
       },
       isOperation: {
-        caption: 'Operation'
+        __caption__: 'Operation'
       },
       isView: {
-        caption: 'View'
+        __caption__: 'View'
       },
       isClass: {
-        caption: 'Class'
+        __caption__: 'Class'
       },
       type: {
-        caption: 'Type'
+        __caption__: 'Type'
       },
       sharedOper: {
-        caption: 'Shared oper'
+        __caption__: 'Shared oper'
       },
       createTime: {
-        caption: 'Create time'
+        __caption__: 'Create time'
       },
       creator: {
-        caption: 'Creator'
+        __caption__: 'Creator'
       },
       editTime: {
-        caption: 'Edit time'
+        __caption__: 'Edit time'
       },
       editor: {
-        caption: 'Editor'
+        __caption__: 'Editor'
       }
     },
     Sec_SubjectE: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       isClass: {
-        caption: 'Class'
+        __caption__: 'Class'
       },
       isView: {
-        caption: 'View'
+        __caption__: 'View'
       },
       isOperation: {
-        caption: 'Operation'
+        __caption__: 'Operation'
       }
     },
     Sec_SubjectL: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       isAttribute: {
-        caption: 'Attribute'
+        __caption__: 'Attribute'
       },
       isOperation: {
-        caption: 'Operation'
+        __caption__: 'Operation'
       },
       isView: {
-        caption: 'View'
+        __caption__: 'View'
       },
       isClass: {
-        caption: 'Class'
+        __caption__: 'Class'
       },
       createTime: {
-        caption: 'Create time'
+        __caption__: 'Create time'
       },
       creator: {
-        caption: 'Creator'
+        __caption__: 'Creator'
       },
       editTime: {
-        caption: 'Edit time'
+        __caption__: 'Edit time'
       },
       editor: {
-        caption: 'Editor'
+        __caption__: 'Editor'
       }
     },
     Sec_SubjectTypeAccess: {
       name: {
-        caption: 'Name'
+        __caption__: 'Name'
       },
       isAttribute: {
-        caption: 'Attribute'
+        __caption__: 'Attribute'
       },
       isOperation: {
-        caption: 'Operation'
+        __caption__: 'Operation'
       },
       isView: {
-        caption: 'View'
+        __caption__: 'View'
       },
       isClass: {
-        caption: 'Class'
+        __caption__: 'Class'
       },
       full: {
-        caption: 'Full'
+        __caption__: 'Full'
       },
       read: {
-        caption: 'Read'
+        __caption__: 'Read'
       },
       insert: {
-        caption: 'Insert'
+        __caption__: 'Insert'
       },
       update: {
-        caption: 'Update'
+        __caption__: 'Update'
       },
       delete: {
-        caption: 'Delete'
+        __caption__: 'Delete'
       },
       execute: {
-        caption: 'Execute'
+        __caption__: 'Execute'
       },
       permitted: {
-        caption: 'Permitted'
+        __caption__: 'Permitted'
       }
     }
   }

@@ -2,23 +2,23 @@ export default {
   projections: {
     TestPolyEdit: {
       selfPole: {
-        caption: 'selfPole'
+        __caption__: 'selfPole'
       },
       relation: {
-        caption: 'relation',
+        __caption__: 'relation',
         pole: {
-          caption: 'pole'
+          __caption__: 'pole'
         }
       }
     },
     TestPolyList: {
       selfPole: {
-        caption: 'selfPole'
+        __caption__: 'selfPole'
       },
       relation: {
-        caption: 'relation',
+        __caption__: 'relation',
         pole: {
-          caption: 'pole'
+          __caption__: 'pole'
         }
       }
     }

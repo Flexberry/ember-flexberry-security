@@ -107,26 +107,51 @@ export default Ember.Mixin.create({
       });
     }
 
-    // Save objects on backend.
-    objectsForUpdate.forEach(obj => {
-      obj.save().then(model => {
-        // Refresh table state.
-        let tableCellDelete = model.get('tableCellDelete');
-        if (tableCellDelete) {
-          tableCellDelete.set('model', null);
-          model.set('tableCellDelete', null);
-        }
+    let promises = [];
 
-        let tableCellCreate = model.get('tableCellCreate');
-        if (tableCellCreate) {
-          tableCellCreate.set('create', false);
-          tableCellCreate.set('model', obj);
-          model.set('tableCellCreate', null);
-        }
-      }).catch((errorData) => {
-        this.onSaveActionRejected(errorData);
-      });
+    let updateModelTableCell = (model, obj) => {
+      // Refresh table state.
+      let tableCellDelete = model.get('tableCellDelete');
+      if (tableCellDelete) {
+        tableCellDelete.set('model', null);
+        model.set('tableCellDelete', null);
+      }
+
+      let tableCellCreate = model.get('tableCellCreate');
+      if (tableCellCreate) {
+        tableCellCreate.set('create', false);
+        tableCellCreate.set('model', obj);
+        model.set('tableCellCreate', null);
+      }
+    };
+
+    // Save objects on backend (without hasMany related objects).
+    objectsForUpdate.forEach(obj => {
+      if (obj.constructor.modelName !== 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access') {
+        let promise = new Ember.RSVP.Promise((resolve, reject) => {
+          obj.save().then(model => {
+            updateModelTableCell(model, obj);
+            resolve();
+          }).catch((errorData) => {
+            this.onSaveActionRejected(errorData);
+            reject();
+          });
+        });
+        promises.push(promise);
+      }
     });
+
+    // Save hasMany objects.
+    Ember.RSVP.all(promises).then(()=> {
+      objectsForUpdate.forEach(obj => {
+        if (obj.constructor.modelName === 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access') {
+          obj.save().then(model => {
+            updateModelTableCell(model, obj);
+          }).catch((errorData) => {
+            this.onSaveActionRejected(errorData);
+          });
+        }      });
+    }, this.onSaveActionRejected);
 
   }
 });

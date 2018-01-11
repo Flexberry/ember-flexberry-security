@@ -2,187 +2,187 @@ export default {
   projections: {
     AuditView: {
       startDate: {
-        caption: 'Дата начала'
+        __caption__: 'Дата начала'
       },
       endDate: {
-        caption: 'Дата окончания'
+        __caption__: 'Дата окончания'
       },
       role: {
-        caption: 'Роль',
+        __caption__: 'Роль',
         name: {
-          caption: 'Имя роли'
+          __caption__: 'Имя роли'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин агента'
+          __caption__: 'Логин агента'
         }
       }
     },
     GetParentRoles: {
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       },
       role: {
-        caption: 'Роль',
+        __caption__: 'Роль',
         name: {
-          caption: 'Наименование роли'
+          __caption__: 'Наименование роли'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         }
       },
       startDate: {
-        caption: 'Начальная дата'
+        __caption__: 'Начальная дата'
       },
       endDate: {
-        caption: 'Конечная дата'
+        __caption__: 'Конечная дата'
       }
     },
     LinkedAgents: {
       startDate: {
-        caption: 'Начальная дата'
+        __caption__: 'Начальная дата'
       },
       endDate: {
-        caption: 'Конечная дата'
+        __caption__: 'Конечная дата'
       },
       agent: {
-        caption: 'Агент'
+        __caption__: 'Агент'
       },
       role: {
-        caption: 'Роль'
+        __caption__: 'Роль'
       }
     },
     SearchLinkRole: {
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин'
+          __caption__: 'Логин'
         },
         enabled: {
-          caption: 'Актуален'
+          __caption__: 'Актуален'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         },
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         }
       },
       role: {
-        caption: 'Роль',
+        __caption__: 'Роль',
         name: {
-          caption: 'Наименование роли'
+          __caption__: 'Наименование роли'
         },
         login: {
-          caption: 'Логин'
+          __caption__: 'Логин'
         },
         isUser: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         },
         isRole: {
-          caption: 'Роль'
+          __caption__: 'Роль'
         },
         enabled: {
-          caption: 'Актуальна'
+          __caption__: 'Актуальна'
         }
       },
       startDate: {
-        caption: 'Начальная дата'
+        __caption__: 'Начальная дата'
       },
       endDate: {
-        caption: 'Конечная дата'
+        __caption__: 'Конечная дата'
       }
     },
     Sec_GetRoles: {
       role: {
-        caption: 'Роль',
+        __caption__: 'Роль',
         name: {
-          caption: 'Наименование роли'
+          __caption__: 'Наименование роли'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин'
+          __caption__: 'Логин'
         }
       },
       startDate: {
-        caption: 'Начальная дата'
+        __caption__: 'Начальная дата'
       },
       endDate: {
-        caption: 'Конечная дата'
+        __caption__: 'Конечная дата'
       }
     },
     Sec_LinkRoleE: {
       role: {
-        caption: 'Роль',
+        __caption__: 'Роль',
         name: {
-          caption: 'Наименование роли'
+          __caption__: 'Наименование роли'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         }
       },
       startDate: {
-        caption: 'Начальная дата'
+        __caption__: 'Начальная дата'
       },
       endDate: {
-        caption: 'Конечная дата'
+        __caption__: 'Конечная дата'
       }
     },
     Sec_LinkRoleL: {
       role: {
-        caption: 'Роль',
+        __caption__: 'Роль',
         name: {
-          caption: 'Наименование роли'
+          __caption__: 'Наименование роли'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин'
+          __caption__: 'Логин'
         }
       },
       startDate: {
-        caption: 'Начальная дата'
+        __caption__: 'Начальная дата'
       },
       endDate: {
-        caption: 'Конечная дата'
+        __caption__: 'Конечная дата'
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

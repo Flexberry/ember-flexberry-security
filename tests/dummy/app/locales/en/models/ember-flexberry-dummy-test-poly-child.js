@@ -2,18 +2,18 @@ export default {
   projections: {
     TestPolyChildEdit: {
       pole: {
-        caption: 'pole'
+        __caption__: 'pole'
       },
       childPole: {
-        caption: 'childPole'
+        __caption__: 'childPole'
       }
     },
     TestPolyChildList: {
       pole: {
-        caption: 'pole'
+        __caption__: 'pole'
       },
       childPole: {
-        caption: 'childPole'
+        __caption__: 'childPole'
       }
     }
   }

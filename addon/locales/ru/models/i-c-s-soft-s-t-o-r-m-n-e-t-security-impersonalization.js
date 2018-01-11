@@ -2,62 +2,62 @@ export default {
   projections: {
     AuditView: {
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Имя агента'
+          __caption__: 'Имя агента'
         },
         login: {
-          caption: 'Логин агента'
+          __caption__: 'Логин агента'
         }
       },
       user: {
-        caption: 'Пользователь',
+        __caption__: 'Пользователь',
         name: {
-          caption: 'Имя пользователя'
+          __caption__: 'Имя пользователя'
         },
         login: {
-          caption: 'Логин пользователя'
+          __caption__: 'Логин пользователя'
         }
       }
     },
     Sec_ImpersonalizationE: {
       user: {
-        caption: 'Пользователь',
+        __caption__: 'Пользователь',
         name: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Агент'
+          __caption__: 'Агент'
         }
       }
     },
     Sec_ImpersonalizationL: {
       user: {
-        caption: 'Пользователь',
+        __caption__: 'Пользователь',
         name: {
-          caption: 'Пользователь'
+          __caption__: 'Пользователь'
         }
       },
       agent: {
-        caption: 'Агент',
+        __caption__: 'Агент',
         name: {
-          caption: 'Агент'
+          __caption__: 'Агент'
         }
       },
       createTime: {
-        caption: 'Дата создания'
+        __caption__: 'Дата создания'
       },
       creator: {
-        caption: 'Создатель'
+        __caption__: 'Создатель'
       },
       editTime: {
-        caption: 'Дата изменения'
+        __caption__: 'Дата изменения'
       },
       editor: {
-        caption: 'Редактор'
+        __caption__: 'Редактор'
       }
     }
   }

@@ -41,10 +41,10 @@
 
   <div class="field">
     <div class="flexberry-edit-panel">
-      <button type="submit" class="ui positive button" {{action (if login 'logout' 'login')}}>
+      <button type="submit" class="ui button theme-button" {{action (if login 'logout' 'login')}}>
         {{t (if login "forms.login.logout" "forms.login.caption")}}
       </button>
-      <button type="submit" class="ui button" {{action 'closeLoginForm'}}>
+      <button type="submit" class="ui button theme-button" {{action 'closeLoginForm'}}>
         {{t "forms.login.back"}}
       </button>
     </div>

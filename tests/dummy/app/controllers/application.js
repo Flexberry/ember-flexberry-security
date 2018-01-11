@@ -13,6 +13,14 @@ export default Ember.Controller.extend({
   offlineGlobals: Ember.inject.service('offline-globals'),
 
   /**
+    Service that triggers objectlistview events.
+
+    @property objectlistviewEventsService
+    @type Service
+  */
+  objectlistviewEventsService: Ember.inject.service('objectlistview-events'),
+
+  /**
   */
   onlineStatus: Ember.computed('offlineGlobals.isOnline', {
     get() {
@@ -153,9 +161,69 @@ export default Ember.Controller.extend({
 
   actions: {
     /**
+      Toggles application sitemap's side bar.
+
+      @method actions.toggleSidebar
     */
     toggleSidebar() {
-      Ember.$('.ui.sidebar').sidebar('toggle');
+      let sidebar = Ember.$('.ui.sidebar.main.menu');
+      let objectlistviewEventsService = this.get('objectlistviewEventsService');
+      sidebar.sidebar({
+        closable: false,
+        dimPage: false,
+        onHide: function() {
+          Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
+          Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
+        },
+        onHidden: function() {
+          objectlistviewEventsService.updateWidthTrigger();
+        }
+      }).sidebar('toggle');
+
+      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
+        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
+        Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
+        Ember.$('.bgw-opacity').addClass('hidden');
+      } else {
+        Ember.$('.sidebar.icon.text-menu-show').addClass('hidden');
+        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
+        Ember.$('.bgw-opacity').removeClass('hidden');
+      }
+
+      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
+        Ember.$('.full.height').css({ transition: 'width 0.45s ease-in-out 0s', width: '100%' });
+      } else {
+        Ember.$('.full.height').css({ transition: 'width 0.3s ease-in-out 0s', width: 'calc(100% - ' + sidebar.width() + 'px)' });
+      }
+    },
+
+    /**
+      Toggles application sitemap's side bar in mobile view.
+
+      @method actions.toggleSidebarMobile
+    */
+    toggleSidebarMobile() {
+      let sidebar = Ember.$('.ui.sidebar.main.menu');
+      let objectlistviewEventsService = this.get('objectlistviewEventsService');
+      sidebar.sidebar({
+        onHide: function() {
+          Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
+          Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
+        },
+        onHidden: function() {
+          objectlistviewEventsService.updateWidthTrigger();
+        }
+      }).sidebar('toggle');
+
+      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
+        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
+        Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
+        Ember.$('.bgw-opacity').addClass('hidden');
+      } else {
+        Ember.$('.sidebar.icon.text-menu-show').addClass('hidden');
+        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
+        Ember.$('.bgw-opacity').removeClass('hidden');
+      }
     },
 
     /**
