@@ -1,3 +1,3 @@
 /* globals Ember */
-var version = '0.1.0-beta.35';
+var version = '0.1.0-beta.36';
 Ember.libraries.register('Ember Flexberry Security', version);
