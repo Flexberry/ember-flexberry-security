@@ -38,6 +38,7 @@
   <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition-caption'}}</label>
   {{
+    componentName='LookupPermitions'
     flexberry-lookup
     choose='showLookupDialog'
     remove='removeLookupValue'
@@ -92,6 +93,7 @@
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-caption'}}</label>
   {{
     flexberry-lookup
+    componentName='LookupAccesses'
     choose='showLookupDialog'
     remove='removeLookupValue'
     value=model.filter

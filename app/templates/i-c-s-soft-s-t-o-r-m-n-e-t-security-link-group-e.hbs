@@ -39,6 +39,7 @@
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption'}}</label>
   {{
     flexberry-lookup
+    componentName='LookupUsers'
     choose='showLookupDialog'
     remove='removeLookupValue'
     value=model.user
@@ -55,6 +56,8 @@
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption'}}</label>
   {{
     flexberry-lookup
+    componentName='LookupGroups'
+    componentName='LookupPermition'
     choose='showLookupDialog'
     remove='removeLookupValue'
     value=model.group
