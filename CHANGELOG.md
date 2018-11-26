@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0-beta.39] - 2018-02-20
+### Fixed
+* `i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e` template.
+
 ## [0.1.0-beta.38] - 2018-02-20
 ### Changed
 * Update dependency on `ember-flexberry` to 0.11.0
