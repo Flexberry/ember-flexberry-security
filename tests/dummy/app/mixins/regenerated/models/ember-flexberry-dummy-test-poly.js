@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   selfPole: DS.attr('string'),
   relation: DS.belongsTo('ember-flexberry-dummy-test-poly-base', { inverse: null, async: false, polymorphic: true }),
   validations: {
@@ -11,15 +11,15 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('TestPolyEdit', 'ember-flexberry-dummy-test-poly', {
-    selfPole: Projection.attr('Self Pole'),
-    relation: Projection.belongsTo('ember-flexberry-dummy-test-poly-base', 'Relation', {
-      pole: Projection.attr('Pole', { hidden: true })
+    selfPole: attr('Self Pole'),
+    relation: belongsTo('ember-flexberry-dummy-test-poly-base', 'Relation', {
+      pole: attr('Pole', { hidden: true })
     }, { displayMemberPath: 'pole' })
   });
   model.defineProjection('TestPolyList', 'ember-flexberry-dummy-test-poly', {
-    selfPole: Projection.attr('SelfPole'),
-    relation: Projection.belongsTo('ember-flexberry-dummy-test-poly-base', '', {
-      pole: Projection.attr('Pole', { hidden: true })
+    selfPole: attr('SelfPole'),
+    relation: belongsTo('ember-flexberry-dummy-test-poly-base', '', {
+      pole: attr('Pole', { hidden: true })
     }, { displayMemberPath: 'pole' })
   });
 };

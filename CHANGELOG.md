@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.0-beta.0] 
+### Added
+* Ember 3 support.
+
 ## [0.1.0-beta.39] - 2018-02-20
 ### Fixed
 * `i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e` template.

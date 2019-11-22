@@ -1,6 +1,8 @@
-import Ember from 'ember';
+import { merge } from '@ember/polyfills';
 import ListFormRoute from 'ember-flexberry/routes/list-form';
-import { Query } from 'ember-flexberry-data';
+import { SimplePredicate, StringPredicate } from 'ember-flexberry-data/query/predicate';
+import FilterOperator from 'ember-flexberry-data/query/filter-operator';
+import { computed } from '@ember/object';
 
 export default ListFormRoute.extend({
   /**
@@ -44,7 +46,11 @@ export default ListFormRoute.extend({
     @type Object
     @default {}
   */
-  developerUserSettings: { ICSSoftSTORMNETBusinessAuditObjectsAuditEntityL: {} },
+  developerUserSettings: computed(function() {
+    return {
+      ICSSoftSTORMNETBusinessAuditObjectsAuditEntityL: {}
+    }
+  }),
 
   queryParams: {
     filterByObjectId: {
@@ -69,7 +75,7 @@ export default ListFormRoute.extend({
     @return {BasePredicate} The predicate to limit loaded data.
    */
   objectListViewLimitPredicate: function(options) {
-    let methodOptions = Ember.merge({
+    let methodOptions = merge({
       modelName: undefined,
       projectionName: undefined,
       params: undefined
@@ -80,14 +86,14 @@ export default ListFormRoute.extend({
 
       let objectTypeName = options.params.filterByObjectType;
       if (objectTypeName) {
-        let limitFunction = new Query.SimplePredicate('objectType.Name', Query.FilterOperator.Eq, objectTypeName);
+        let limitFunction = new SimplePredicate('objectType.Name', FilterOperator.Eq, objectTypeName);
         return limitFunction;
       }
 
       let objectPrimaryKey = options.params.filterByObjectId;
 
       if (objectPrimaryKey) {
-        let limitFunction = new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey);
+        let limitFunction = new StringPredicate('objectPrimaryKey').contains(objectPrimaryKey);
 
         return limitFunction;
       }

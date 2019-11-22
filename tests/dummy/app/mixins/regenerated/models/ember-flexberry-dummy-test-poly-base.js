@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
 
-export let Model = Ember.Mixin.create({
+export let Model = Mixin.create({
   pole: DS.attr('string'),
   validations: {
 

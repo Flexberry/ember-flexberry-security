@@ -1,6 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import Promise, { all } from 'rsvp';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   userRoles: null,
   userGroups: null,
   userClasses: null,
@@ -128,7 +129,7 @@ export default Ember.Mixin.create({
     // Save objects on backend (without hasMany related objects).
     objectsForUpdate.forEach(obj => {
       if (obj.constructor.modelName !== 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access') {
-        let promise = new Ember.RSVP.Promise((resolve, reject) => {
+        let promise = new Promise((resolve, reject) => {
           obj.save().then(model => {
             updateModelTableCell(model, obj);
             resolve();
@@ -142,7 +143,7 @@ export default Ember.Mixin.create({
     });
 
     // Save hasMany objects.
-    Ember.RSVP.all(promises).then(()=> {
+    all(promises).then(()=> {
       objectsForUpdate.forEach(obj => {
         if (obj.constructor.modelName === 'i-c-s-soft-s-t-o-r-m-n-e-t-security-access') {
           obj.save().then(model => {

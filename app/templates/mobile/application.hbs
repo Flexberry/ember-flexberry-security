@@ -1,9 +1,16 @@
-{{#ui-sidebar class="inverted vertical menu"}}
+{{#flexberry-sidebar
+  class="inverted vertical main menu"
+  settings=(hash
+  closable=false
+  dimPage=false
+  onShow=(action "updateWidth")
+  onHidden=(action "updateWidth"))
+}}
   <div class="header item">
     <a class="brand" href="#">Flexberry Ember Demo</a>
   </div>
-  {{render "sitemap" sitemap}}
-{{/ui-sidebar}}
+  {{flexberry-sitemap sitemap=sitemap}}
+{{/flexberry-sidebar}}
 <div id="example-mobile" class="pusher">
   <div class="full height">
     <div class="ui top fixed inverted menu">

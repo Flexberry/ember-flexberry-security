@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Promise from 'rsvp';
 import EditFormNewRoute from 'ember-flexberry/routes/edit-form-new';
 import SecurityUserERouteMixin from '../../mixins/security-user-e-route';
 
@@ -8,7 +8,7 @@ export default EditFormNewRoute.extend(SecurityUserERouteMixin, {
   templateName: 'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e',
 
   afterModel: function(model) {
-    return new Ember.RSVP.Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
 
       model.set('isUser', true);
       model.set('isGroup', false);

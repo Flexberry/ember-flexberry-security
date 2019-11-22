@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 
-export let Serializer = Ember.Mixin.create({
+export let Serializer = Mixin.create({
   attrs: {
     localization: { serialize: 'odata-id', deserialize: 'records' },
     suggestionType: { serialize: 'odata-id', deserialize: 'records' }

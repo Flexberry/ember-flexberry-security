@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
 /**
  * Overload wrapper tag name for disabling wrapper.
@@ -6,6 +6,6 @@ import Ember from 'ember';
  * The sidebar, as per Semantic-UI's documentation,
  * will need to be directly below the body element.
  */
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: ''
 });

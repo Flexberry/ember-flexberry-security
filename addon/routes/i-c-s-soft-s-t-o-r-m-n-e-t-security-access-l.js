@@ -1,4 +1,5 @@
 import ListFormRoute from 'ember-flexberry/routes/list-form';
+import { computed } from '@ember/object';
 
 export default ListFormRoute.extend({
   /**
@@ -42,5 +43,9 @@ export default ListFormRoute.extend({
     @type Object
     @default {}
   */
-  developerUserSettings: { ICSSoftSTORMNETSecurityAccessL: {} },
+  developerUserSettings: computed(function() {
+    return {
+      ICSSoftSTORMNETSecurityAccessL: {}
+    }
+  }),
 });

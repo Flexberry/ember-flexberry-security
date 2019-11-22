@@ -1,11 +1,12 @@
-import Ember from 'ember';
+import EmberObject from '@ember/object';
+import { observer } from '@ember/object';
 
 /**
   @class SecurityAssignDataCellObject
-  @extends <a href="http://emberjs.com/api/classes/Ember.Object.html">Ember.Object</a>
+  @extends <a href="http://emberjs.com/api/classes/EmberObject.html">EmberObject</a>
   @public
 */
-export default Ember.Object.extend({
+export default EmberObject.extend({
   checked: false,
   readonly: false,
   model: null,
@@ -13,7 +14,7 @@ export default Ember.Object.extend({
   create: false,
   operation: null,
 
-  checkedChanged: Ember.observer('checked', function() {
+  checkedChanged: observer('checked', function() {
     if (this.get('inited')) {
       let newState = this.get('checked');
       let model = this.get('model');

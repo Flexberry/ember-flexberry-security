@@ -1,11 +1,11 @@
-import Ember from 'ember';
+import EmberObject from '@ember/object';
 
 /**
   @class SecurityAssignDataObject
-  @extends <a href="http://emberjs.com/api/classes/Ember.Object.html">Ember.Object</a>
+  @extends <a href="http://emberjs.com/api/classes/EmberObject.html">EmberObject</a>
   @public
 */
-export default Ember.Object.extend({
+export default EmberObject.extend({
 
   headers: null,
   rows: null,

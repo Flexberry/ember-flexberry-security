@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   voteType: DS.attr('ember-flexberry-dummy-vote-type'),
   createTime: DS.attr('date'),
   creator: DS.attr('string'),
@@ -17,17 +17,17 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'ember-flexberry-dummy-comment-vote', {
-    voteType: Projection.attr('Vote type'),
-    applicationUser: Projection.belongsTo('ember-flexberry-dummy-application-user', 'Application user', {
-      name: Projection.attr('Name', { hidden: true })
+    voteType: attr('Vote type'),
+    applicationUser: belongsTo('ember-flexberry-dummy-application-user', 'Application user', {
+      name: attr('Name', { hidden: true })
     }, { displayMemberPath: 'name' })
   });
   model.defineProjection('CommentVoteE', 'ember-flexberry-dummy-comment-vote', {
-    voteType: Projection.attr('Vote type'),
-    applicationUser: Projection.belongsTo('ember-flexberry-dummy-application-user', 'Application user', {
-      name: Projection.attr('Name', { hidden: true })
+    voteType: attr('Vote type'),
+    applicationUser: belongsTo('ember-flexberry-dummy-application-user', 'Application user', {
+      name: attr('Name', { hidden: true })
     }, { displayMemberPath: 'name' }),
-    comment: Projection.belongsTo('ember-flexberry-dummy-comment', '', {
+    comment: belongsTo('ember-flexberry-dummy-comment', '', {
 
     })
   });

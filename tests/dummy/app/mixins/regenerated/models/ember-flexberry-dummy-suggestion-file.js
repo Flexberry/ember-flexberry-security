@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   order: DS.attr('number'),
   file: DS.attr('file'),
   createTime: DS.attr('date'),
@@ -16,13 +16,13 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'ember-flexberry-dummy-suggestion-file', {
-    order: Projection.attr('Order'),
-    file: Projection.attr('File')
+    order: attr('Order'),
+    file: attr('File')
   });
   model.defineProjection('SuggestionFileE', 'ember-flexberry-dummy-suggestion-file', {
-    order: Projection.attr('Order'),
-    file: Projection.attr('File'),
-    suggestion: Projection.belongsTo('ember-flexberry-dummy-suggestion', '', {
+    order: attr('Order'),
+    file: attr('File'),
+    suggestion: belongsTo('ember-flexberry-dummy-suggestion', '', {
 
     })
   });

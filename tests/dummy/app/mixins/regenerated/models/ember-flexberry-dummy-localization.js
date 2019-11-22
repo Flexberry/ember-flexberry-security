@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   name: DS.attr('string'),
   createTime: DS.attr('date'),
   creator: DS.attr('string'),
@@ -14,12 +14,12 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'ember-flexberry-dummy-localization', {
-    name: Projection.attr('Name')
+    name: attr('Name')
   });
   model.defineProjection('LocalizationE', 'ember-flexberry-dummy-localization', {
-    name: Projection.attr('Name')
+    name: attr('Name')
   });
   model.defineProjection('LocalizationL', 'ember-flexberry-dummy-localization', {
-    name: Projection.attr('Name')
+    name: attr('Name')
   });
 };

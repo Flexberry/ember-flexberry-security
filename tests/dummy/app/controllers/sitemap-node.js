@@ -1,9 +1,10 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import $ from 'jquery';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   actions: {
     hideSidebar() {
-      Ember.$('.ui.sidebar').sidebar('hide');
+      $('.ui.sidebar').sidebar('hide');
     },
 
     /**
@@ -12,15 +13,15 @@ export default Ember.Controller.extend({
       @method actions.subMenuEl
     */
     subMenuEl(event) {
-      let $this =  Ember.$(event.currentTarget).parent().find('.subMenu:first');
+      let $this =  $(event.currentTarget).parent().find('.subMenu:first');
       if ($this.hasClass('hidden')) {
         $this.removeClass('hidden');
-        Ember.$(event.target).parent().find('.item-minus:first').removeClass('hidden');
-        Ember.$(event.target).parent().find('.item-plus:first').addClass('hidden');
+        $(event.target).parent().find('.item-minus:first').removeClass('hidden');
+        $(event.target).parent().find('.item-plus:first').addClass('hidden');
       } else {
         $this.addClass('hidden');
-        Ember.$(event.target).parent().find('.item-minus:first').addClass('hidden');
-        Ember.$(event.target).parent().find('.item-plus:first').removeClass('hidden');
+        $(event.target).parent().find('.item-minus:first').addClass('hidden');
+        $(event.target).parent().find('.item-plus:first').removeClass('hidden');
       }
     }
   }

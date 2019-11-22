@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   name: DS.attr('string'),
   createTime: DS.attr('date'),
   creator: DS.attr('string'),
@@ -18,17 +18,17 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'ember-flexberry-dummy-localized-suggestion-type', {
-    name: Projection.attr('Name'),
-    localization: Projection.belongsTo('ember-flexberry-dummy-localization', 'Localization', {
-      name: Projection.attr('Name', { hidden: true })
+    name: attr('Name'),
+    localization: belongsTo('ember-flexberry-dummy-localization', 'Localization', {
+      name: attr('Name', { hidden: true })
     }, { displayMemberPath: 'name' })
   });
   model.defineProjection('LocalizedSuggestionTypeE', 'ember-flexberry-dummy-localized-suggestion-type', {
-    name: Projection.attr('Name'),
-    localization: Projection.belongsTo('ember-flexberry-dummy-localization', 'Localization', {
-      name: Projection.attr('Name', { hidden: true })
+    name: attr('Name'),
+    localization: belongsTo('ember-flexberry-dummy-localization', 'Localization', {
+      name: attr('Name', { hidden: true })
     }, { displayMemberPath: 'name' }),
-    suggestionType: Projection.belongsTo('ember-flexberry-dummy-suggestion-type', '', {
+    suggestionType: belongsTo('ember-flexberry-dummy-suggestion-type', '', {
 
     })
   });

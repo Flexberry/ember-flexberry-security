@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import { all } from 'rsvp';
 import SecurityGetAgentRolesRouteMixin from './security-get-agent-roles-route';
 import SecurityGetAgentUsersRouteMixin from './security-get-agent-users-route';
 import SecurityGetAgentClassesRouteMixin from './security-get-agent-classes-route';
 import SecurityGetAgentOperationsRouteMixin from './security-get-agent-operations-route';
 
-export default Ember.Mixin.create(
+export default Mixin.create(
     SecurityGetAgentRolesRouteMixin,
     SecurityGetAgentUsersRouteMixin,
     SecurityGetAgentClassesRouteMixin,
@@ -16,7 +17,7 @@ export default Ember.Mixin.create(
   roleOperations: null,
 
   fillData(model) {
-    return Ember.RSVP.all([
+    return all([
     this.getAgentRoles(model, 'roleRoles'),
     this.getAgentUsers(model, 'roleUsers'),
     this.getAgentClasses(model, 'roleClasses'),

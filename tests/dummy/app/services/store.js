@@ -1,7 +1,8 @@
-import { Projection, Offline } from 'ember-flexberry-data';
-import OfflineSchemaMixin from 'ember-flexberry-security/mixins/offline-schema';
+import StoreMixin from 'ember-flexberry-data/mixins/store';
+import OfflineStore from 'ember-flexberry-data/stores/base-store';
+import OfflineSchemaMixin from 'ember-flexberry-data/mixins/offline-schema';
 
-export default Offline.Store.reopen(Projection.StoreMixin, OfflineSchemaMixin, {
+export default OfflineStore.reopen(StoreMixin, OfflineSchemaMixin, {
   init() {
     this.set('offlineSchema', {
       'ember-flexberry-data': {
