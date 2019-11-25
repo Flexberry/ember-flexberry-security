@@ -37,6 +37,7 @@ install:
 
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+  - if [ "$EMBER_TRY_SCENARIO" == "ember-default" ]; then bash ./scripts/test-generator.sh; fi
 
 after_script:
   - test $EMBER_TRY_SCENARIO == "default" && test $TRAVIS_BRANCH == "dummy-test" && ember build && firebase deploy --project flexberry-ember-security-test --token "$FIREBASE_TOKEN" -m "Travis Build №$TRAVIS_BUILD_NUMBER."
