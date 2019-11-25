@@ -8,9 +8,13 @@ moduleForComponent('security-assign', 'Integration | Component | security assign
   integration: true,
 
   beforeEach: function () {
+    this.inject.service('i18n', { as: 'i18n' });
     Component.reopen({
       i18n: service('i18n')
     });
+
+    // Set 'ru' as initial locale.
+    this.set('i18n.locale', 'ru');
   }
 });
 

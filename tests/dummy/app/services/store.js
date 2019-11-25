@@ -1,6 +1,6 @@
 import StoreMixin from 'ember-flexberry-data/mixins/store';
 import OfflineStore from 'ember-flexberry-data/stores/base-store';
-import OfflineSchemaMixin from 'ember-flexberry-data/mixins/offline-schema';
+import OfflineSchemaMixin from 'ember-flexberry-security/mixins/offline-schema';
 
 export default OfflineStore.reopen(StoreMixin, OfflineSchemaMixin, {
   init() {

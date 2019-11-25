@@ -4,6 +4,11 @@ moduleFor('route:i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-
 'Unit | Route | i c s soft s t o r m n e t business audit objects audit entity e', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
+  needs: [
+    'service:objectlistview-events',
+    'service:appState',
+    'service:detail-interaction'
+  ]
 });
 
 test('it exists', function(assert) {

@@ -14,7 +14,8 @@ moduleForModel('ember-flexberry-dummy-suggestion-type', 'Unit | Model | ember-fl
     'model:ember-flexberry-dummy-test-poly-base',
     'model:ember-flexberry-dummy-test-poly-child',
     'model:ember-flexberry-dummy-test-poly',
-    'model:ember-flexberry-dummy-vote'
+    'model:ember-flexberry-dummy-vote',
+    'service:syncer'
   ]
 });
 

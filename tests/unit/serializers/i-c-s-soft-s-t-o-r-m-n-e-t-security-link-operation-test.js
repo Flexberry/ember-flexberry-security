@@ -20,7 +20,8 @@ moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-link-operation', 'Unit | Ser
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view',
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-permition',
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-session',
-    'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-subject'
+    'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-subject',
+    'service:syncer'
   ]
 });
 
