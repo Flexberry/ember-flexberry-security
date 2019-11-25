@@ -36,7 +36,7 @@ install:
   - bower install
 
 script:
-  - ember try $EMBER_TRY_SCENARIO test
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
 
 after_script:
   - test $EMBER_TRY_SCENARIO == "default" && test $TRAVIS_BRANCH == "dummy-test" && ember build && firebase deploy --project flexberry-ember-security-test --token "$FIREBASE_TOKEN" -m "Travis Build №$TRAVIS_BUILD_NUMBER."
