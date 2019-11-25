@@ -16,14 +16,8 @@ cache:
     - $HOME/.cache
 
 env:
-  global:
-    # See https://git.io/vdao3 for details.
-    - JOBS=1
-  matrix:
-    # we recommend new addons test the current and previous LTS
-    # as well as latest stable release (bonus points to beta/canary)
-    - EMBER_TRY_SCENARIO=ember-default
-    - EMBER_TRY_SCENARIO=ember-release
+  - EMBER_TRY_SCENARIO=default
+  - EMBER_TRY_SCENARIO=ember-release
 
 matrix:
   fast_finish: true
@@ -42,7 +36,7 @@ install:
   - bower install
 
 script:
-  - npm run lint:js
+  - yarn lint:js
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
