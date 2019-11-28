@@ -1,5 +1,5 @@
 import Mixin from '@ember/object/mixin';
-import Promise, { all } from 'rsvp';
+import { Promise, all } from 'rsvp';
 
 export default Mixin.create({
   roleRoles: null,

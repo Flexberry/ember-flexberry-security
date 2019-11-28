@@ -1,4 +1,4 @@
-import Promise from 'rsvp';
+import { Promise } from 'rsvp';
 import EditFormNewRoute from 'ember-flexberry/routes/edit-form-new';
 import SecurityUserERouteMixin from '../../mixins/security-user-e-route';
 

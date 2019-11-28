@@ -1,5 +1,5 @@
 import Mixin from '@ember/object/mixin';
-import Promise from 'rsvp';
+import { Promise } from 'rsvp';
 import SecurityAssignDataObject from '../objects/security-assign-data';
 import SecurityAssignDataRowObject from '../objects/security-assign-data-row';
 import SecurityAssignDataCellObject from '../objects/security-assign-data-cell';
