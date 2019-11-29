@@ -1,14 +1,17 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import { Promise } from 'rsvp';
 import SecurityAssignDataObject from '../objects/security-assign-data';
 import SecurityAssignDataRowObject from '../objects/security-assign-data-row';
 import SecurityAssignDataCellObject from '../objects/security-assign-data-cell';
 import typeAccess from '../enums/i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access';
-import { Query } from 'ember-flexberry-data';
-const { Builder, FilterOperator, SimplePredicate, ComplexPredicate, Condition } = Query;
+import Builder from 'ember-flexberry-data/query/builder';
+import FilterOperator from 'ember-flexberry-data/query/filter-operator';
+import Condition from 'ember-flexberry-data/query/condition';
+import { SimplePredicate, ComplexPredicate } from 'ember-flexberry-data/query/predicate';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   getAgentClasses(model, varName) {
-    return new Ember.RSVP.Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       let _this = this;
       let i18n = _this.get('i18n');
       let _userClasses = SecurityAssignDataObject.create({

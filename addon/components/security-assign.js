@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import { isArray } from '@ember/array';
 import FlexberryBaseComponent from 'ember-flexberry/components/flexberry-base-component';
 import { translationMacro as t } from 'ember-i18n';
 
@@ -27,10 +28,10 @@ export default FlexberryBaseComponent.extend({
     @type Number
     @readOnly
   */
-  colspan: Ember.computed('value.headers.length', function() {
+  colspan: computed('value.headers.length', function() {
     let columnsCount = 0;
     let columns = this.get('value.headers');
-    columnsCount += Ember.isArray(columns) ? columns.length : 0;
+    columnsCount += isArray(columns) ? columns.length : 0;
 
     return columnsCount;
   }),

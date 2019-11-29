@@ -1,8 +1,13 @@
-import Ember from 'ember';
+import { debug } from '@ember/debug';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
+import { getOwner } from '@ember/application';
 import config from '../config/environment';
 import { translationMacro as t } from 'ember-i18n';
+import $ from 'jquery';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
 
   /**
   */
@@ -10,7 +15,7 @@ export default Ember.Controller.extend({
 
   /**
   */
-  offlineGlobals: Ember.inject.service('offline-globals'),
+  offlineGlobals: service('offline-globals'),
 
   /**
     Service that triggers objectlistview events.
@@ -18,11 +23,11 @@ export default Ember.Controller.extend({
     @property objectlistviewEventsService
     @type Service
   */
-  objectlistviewEventsService: Ember.inject.service('objectlistview-events'),
+  objectlistviewEventsService: service('objectlistview-events'),
 
   /**
   */
-  onlineStatus: Ember.computed('offlineGlobals.isOnline', {
+  onlineStatus: computed('offlineGlobals.isOnline', {
     get() {
       return this.get('offlineGlobals.isOnline');
     },
@@ -41,7 +46,7 @@ export default Ember.Controller.extend({
 
   /**
   */
-  sitemap: Ember.computed('i18n.locale', function () {
+  sitemap: computed('i18n.locale', function () {
     let i18n = this.get('i18n');
 
     return {
@@ -161,39 +166,48 @@ export default Ember.Controller.extend({
 
   actions: {
     /**
+      Call `updateWidthTrigger` for `objectlistviewEventsService`.
+
+      @method actions.updateWidth
+    */
+    updateWidth() {
+      this.get('objectlistviewEventsService').updateWidthTrigger();
+    },
+
+    /**
       Toggles application sitemap's side bar.
 
       @method actions.toggleSidebar
     */
     toggleSidebar() {
-      let sidebar = Ember.$('.ui.sidebar.main.menu');
+      let sidebar = $('.ui.sidebar.main.menu');
       let objectlistviewEventsService = this.get('objectlistviewEventsService');
       sidebar.sidebar({
         closable: false,
         dimPage: false,
         onHide: function() {
-          Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
-          Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
+          $('.sidebar.icon.text-menu-show').removeClass('hidden');
+          $('.sidebar.icon.text-menu-hide').addClass('hidden');
         },
         onHidden: function() {
           objectlistviewEventsService.updateWidthTrigger();
         }
       }).sidebar('toggle');
 
-      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
-        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
-        Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
-        Ember.$('.bgw-opacity').addClass('hidden');
+      if ($('.inverted.vertical.main.menu').hasClass('visible')) {
+        $('.sidebar.icon.text-menu-show').removeClass('hidden');
+        $('.sidebar.icon.text-menu-hide').addClass('hidden');
+        $('.bgw-opacity').addClass('hidden');
       } else {
-        Ember.$('.sidebar.icon.text-menu-show').addClass('hidden');
-        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
-        Ember.$('.bgw-opacity').removeClass('hidden');
+        $('.sidebar.icon.text-menu-show').addClass('hidden');
+        $('.sidebar.icon.text-menu-show').removeClass('hidden');
+        $('.bgw-opacity').removeClass('hidden');
       }
 
-      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
-        Ember.$('.full.height').css({ transition: 'width 0.45s ease-in-out 0s', width: '100%' });
+      if ($('.inverted.vertical.main.menu').hasClass('visible')) {
+        $('.full.height').css({ transition: 'width 0.45s ease-in-out 0s', width: '100%' });
       } else {
-        Ember.$('.full.height').css({ transition: 'width 0.3s ease-in-out 0s', width: 'calc(100% - ' + sidebar.width() + 'px)' });
+        $('.full.height').css({ transition: 'width 0.3s ease-in-out 0s', width: 'calc(100% - ' + sidebar.width() + 'px)' });
       }
     },
 
@@ -203,26 +217,26 @@ export default Ember.Controller.extend({
       @method actions.toggleSidebarMobile
     */
     toggleSidebarMobile() {
-      let sidebar = Ember.$('.ui.sidebar.main.menu');
+      let sidebar = $('.ui.sidebar.main.menu');
       let objectlistviewEventsService = this.get('objectlistviewEventsService');
       sidebar.sidebar({
         onHide: function() {
-          Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
-          Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
+          $('.sidebar.icon.text-menu-show').removeClass('hidden');
+          $('.sidebar.icon.text-menu-hide').addClass('hidden');
         },
         onHidden: function() {
           objectlistviewEventsService.updateWidthTrigger();
         }
       }).sidebar('toggle');
 
-      if (Ember.$('.inverted.vertical.main.menu').hasClass('visible')) {
-        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
-        Ember.$('.sidebar.icon.text-menu-hide').addClass('hidden');
-        Ember.$('.bgw-opacity').addClass('hidden');
+      if ($('.inverted.vertical.main.menu').hasClass('visible')) {
+        $('.sidebar.icon.text-menu-show').removeClass('hidden');
+        $('.sidebar.icon.text-menu-hide').addClass('hidden');
+        $('.bgw-opacity').addClass('hidden');
       } else {
-        Ember.$('.sidebar.icon.text-menu-show').addClass('hidden');
-        Ember.$('.sidebar.icon.text-menu-show').removeClass('hidden');
-        Ember.$('.bgw-opacity').removeClass('hidden');
+        $('.sidebar.icon.text-menu-show').addClass('hidden');
+        $('.sidebar.icon.text-menu-show').removeClass('hidden');
+        $('.bgw-opacity').removeClass('hidden');
       }
     },
 
@@ -231,11 +245,11 @@ export default Ember.Controller.extend({
     syncUp() {
       let _this = this;
       _this.set('synchronizes', true);
-      let syncer = Ember.getOwner(this).lookup('service:syncer');
+      let syncer = getOwner(this).lookup('service:syncer');
       syncer.syncUp().then(() => {
         _this.set('synchronizes', false);
       }).catch((reason) => {
-        Ember.Logger.debug(reason);
+        debug(reason);
       });
     },
 
@@ -248,7 +262,7 @@ export default Ember.Controller.extend({
       if (login && password) {
         _this._resetLoginErrors();
         _this.set('tryToLogin', true);
-        Ember.$.ajax({
+        $.ajax({
           type: 'GET',
           xhrFields: { withCredentials: true },
           url: `${config.APP.backendUrls.api}/Login(login='${login}',password='${password}')`,
@@ -281,7 +295,7 @@ export default Ember.Controller.extend({
     */
     logout() {
       let _this = this;
-      Ember.$.ajax({
+      $.ajax({
         type: 'GET',
         xhrFields: { withCredentials: true },
         url: `${config.APP.backendUrls.api}/Logout()`,

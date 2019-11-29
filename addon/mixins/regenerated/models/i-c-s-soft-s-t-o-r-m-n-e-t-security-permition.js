@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   createTime: DS.attr('date'),
   creator: DS.attr('string'),
   editTime: DS.attr('date'),
@@ -17,115 +17,115 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', {
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
-      name: Projection.attr('Имя агента'),
-      login: Projection.attr('Логин агента')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
+      name: attr('Имя агента'),
+      login: attr('Логин агента')
     }),
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Субъект', {
-      name: Projection.attr('Имя субъекта')
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Субъект', {
+      name: attr('Имя субъекта')
     }),
-    access: Projection.hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', 'Access', {
-      typeAccess: Projection.attr('Тип доступа'),
-      filter: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', 'Фильтр', {
-        name: Projection.attr('Имя фильтра'),
-        filterText: Projection.attr('Заголовок фильтра', { hidden: true })
+    access: hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', 'Access', {
+      typeAccess: attr('Тип доступа'),
+      filter: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', 'Фильтр', {
+        name: attr('Имя фильтра'),
+        filterText: attr('Заголовок фильтра', { hidden: true })
       }, { displayMemberPath: 'filterText' }),
-      permition: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', 'Разрешение', {
-        agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-          name: Projection.attr('Имя агента'),
-          login: Projection.attr('Логи агента')
+      permition: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', 'Разрешение', {
+        agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+          name: attr('Имя агента'),
+          login: attr('Логи агента')
         }, { hidden: true }),
-        subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-          name: Projection.attr('Имя субъекта')
+        subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+          name: attr('Имя субъекта')
         }, { hidden: true })
       })
     })
   });
   model.defineProjection('CheckAccessOnObject', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', {
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-      isAttribute: Projection.attr(''),
-      isOperation: Projection.attr(''),
-      isView: Projection.attr(''),
-      isClass: Projection.attr(''),
-      name: Projection.attr('')
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+      isAttribute: attr(''),
+      isOperation: attr(''),
+      isView: attr(''),
+      isClass: attr(''),
+      name: attr('')
     }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr(''),
-      login: Projection.attr(''),
-      isUser: Projection.attr(''),
-      isGroup: Projection.attr(''),
-      isRole: Projection.attr('')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr(''),
+      login: attr(''),
+      isUser: attr(''),
+      isGroup: attr(''),
+      isRole: attr('')
     }),
-    access: Projection.hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', '', {
-      filter: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', '', {
-        filterText: Projection.attr(''),
-        name: Projection.attr('')
+    access: hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', '', {
+      filter: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', '', {
+        filterText: attr(''),
+        name: attr('')
       }),
-      typeAccess: Projection.attr('')
+      typeAccess: attr('')
     })
   });
   model.defineProjection('CheckAccessOperation', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', {
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-      name: Projection.attr(''),
-      isOperation: Projection.attr('')
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+      name: attr(''),
+      isOperation: attr('')
     }, { hidden: true }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
 
     })
   });
   model.defineProjection('Sec_CheckClasses', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', {
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-      name: Projection.attr(''),
-      isOperation: Projection.attr(''),
-      isClass: Projection.attr('')
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+      name: attr(''),
+      isOperation: attr(''),
+      isClass: attr('')
     }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr(''),
-      login: Projection.attr(''),
-      isUser: Projection.attr(''),
-      isRole: Projection.attr('')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr(''),
+      login: attr(''),
+      isUser: attr(''),
+      isRole: attr('')
     })
   });
   model.defineProjection('Sec_CheckClassesAndGetDetails', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', {
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-      name: Projection.attr(''),
-      isOperation: Projection.attr(''),
-      isClass: Projection.attr('')
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+      name: attr(''),
+      isOperation: attr(''),
+      isClass: attr('')
     }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr(''),
-      login: Projection.attr(''),
-      isUser: Projection.attr(''),
-      isRole: Projection.attr('')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr(''),
+      login: attr(''),
+      isUser: attr(''),
+      isRole: attr('')
     }),
-    access: Projection.hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', 'Доступ', {
-      typeAccess: Projection.attr('Тип доступа')
+    access: hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', 'Доступ', {
+      typeAccess: attr('Тип доступа')
     })
   });
   model.defineProjection('Sec_PermitionE', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', {
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
-      name: Projection.attr('', { hidden: true })
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
+      name: attr('', { hidden: true })
     }, { displayMemberPath: 'name' }),
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Субъект', {
-      name: Projection.attr('', { hidden: true })
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Субъект', {
+      name: attr('', { hidden: true })
     }, { displayMemberPath: 'name' }),
-    access: Projection.hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', 'Доступ', {
-      typeAccess: Projection.attr('Тип доступа')
+    access: hasMany('i-c-s-soft-s-t-o-r-m-n-e-t-security-access', 'Доступ', {
+      typeAccess: attr('Тип доступа')
     })
   });
   model.defineProjection('Sec_PermitionL', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', {
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-      name: Projection.attr('Субъект')
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+      name: attr('Субъект')
     }, { hidden: true }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr('Агент'),
-      isUser: Projection.attr('Юзер'),
-      isGroup: Projection.attr('Группа'),
-      isRole: Projection.attr('Роль')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr('Агент'),
+      isUser: attr('Юзер'),
+      isGroup: attr('Группа'),
+      isRole: attr('Роль')
     }, { hidden: true }),
-    createTime: Projection.attr('Дата создания'),
-    creator: Projection.attr('Создатель'),
-    editTime: Projection.attr('Дата изменения'),
-    editor: Projection.attr('Редактор')
+    createTime: attr('Дата создания'),
+    creator: attr('Создатель'),
+    editTime: attr('Дата изменения'),
+    editor: attr('Редактор')
   });
 };

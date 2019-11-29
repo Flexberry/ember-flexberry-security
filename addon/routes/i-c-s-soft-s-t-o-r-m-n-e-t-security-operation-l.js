@@ -1,6 +1,8 @@
-import Ember from 'ember';
+import { merge } from '@ember/polyfills';
 import ListFormRoute from 'ember-flexberry/routes/list-form';
-import { Query } from 'ember-flexberry-data';
+import { SimplePredicate } from 'ember-flexberry-data/query/predicate';
+import FilterOperator from 'ember-flexberry-data/query/filter-operator';
+import { computed } from '@ember/object';
 
 export default ListFormRoute.extend({
   /**
@@ -44,7 +46,11 @@ export default ListFormRoute.extend({
     @type Object
     @default {}
   */
-  developerUserSettings: { ICSSoftSTORMNETSecurityOperationL: {} },
+  developerUserSettings: computed(function() {
+    return {
+      ICSSoftSTORMNETSecurityOperationL: {}
+    }
+  }),
   /**
     It overrides base method and forms the limit predicate for loaded data.
     If there is displayed even number or records per page, records where 'address' attribute contains letter 'S' are filtered.
@@ -59,7 +65,7 @@ export default ListFormRoute.extend({
     @return {BasePredicate} The predicate to limit loaded data.
    */
   objectListViewLimitPredicate: function(options) {
-    let methodOptions = Ember.merge({
+    let methodOptions = merge({
       modelName: undefined,
       projectionName: undefined,
       params: undefined
@@ -67,7 +73,7 @@ export default ListFormRoute.extend({
 
     if (methodOptions.modelName === this.get('modelName') &&
         methodOptions.projectionName === this.get('modelProjection')) {
-      let limitFunction = new Query.SimplePredicate('isOperation', Query.FilterOperator.Eq, true);
+      let limitFunction = new SimplePredicate('isOperation', FilterOperator.Eq, true);
       return limitFunction;
     }
 

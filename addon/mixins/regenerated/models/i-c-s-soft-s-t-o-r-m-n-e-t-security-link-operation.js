@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   createTime: DS.attr('date'),
   creator: DS.attr('string'),
   editTime: DS.attr('date'),
@@ -16,31 +16,31 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-operation', {
-    class: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Класс', {
-      name: Projection.attr('Имя класса')
+    class: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Класс', {
+      name: attr('Имя класса')
     }),
-    operation: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Операция', {
-      name: Projection.attr('Имя операции')
+    operation: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Операция', {
+      name: attr('Имя операции')
     })
   });
   model.defineProjection('Sec_LinkOperationE', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-operation', {
-    operation: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-      name: Projection.attr('Операция')
+    operation: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+      name: attr('Операция')
     }),
-    class: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
-      name: Projection.attr('Класс')
+    class: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', '', {
+      name: attr('Класс')
     })
   });
   model.defineProjection('Sec_LinkOperationL', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-operation', {
-    operation: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Операция', {
-      name: Projection.attr('Операция')
+    operation: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Операция', {
+      name: attr('Операция')
     }),
-    class: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Класс', {
-      name: Projection.attr('Класс')
+    class: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Класс', {
+      name: attr('Класс')
     }),
-    createTime: Projection.attr('Дата создания'),
-    creator: Projection.attr('Создатель'),
-    editTime: Projection.attr('Дата изменения'),
-    editor: Projection.attr('Редактор')
+    createTime: attr('Дата создания'),
+    creator: attr('Создатель'),
+    editTime: attr('Дата изменения'),
+    editor: attr('Редактор')
   });
 };

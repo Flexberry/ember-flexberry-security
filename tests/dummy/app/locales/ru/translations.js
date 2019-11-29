@@ -1,6 +1,6 @@
-import Ember from 'ember';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations';
 import EmberFlexberrySecurityTranslations from 'ember-flexberry-security/locales/ru/translations';
+import $ from 'jquery';
 
 import EmberFlexberryDummyApplicationUserListForm from './forms/ember-flexberry-dummy-application-user-list';
 import EmberFlexberryDummyLocalizationListForm from './forms/ember-flexberry-dummy-localization-list';
@@ -29,9 +29,9 @@ import EmberFlexberryDummyTestPolyModel from './models/ember-flexberry-dummy-tes
 import EmberFlexberryDummyVoteModel from './models/ember-flexberry-dummy-vote';
 
 const translations = {};
-Ember.$.extend(true, translations, EmberFlexberryTranslations, EmberFlexberrySecurityTranslations);
+$.extend(true, translations, EmberFlexberryTranslations, EmberFlexberrySecurityTranslations);
 
-Ember.$.extend(true, translations, {
+$.extend(true, translations, {
   models: {
     'ember-flexberry-dummy-application-user': EmberFlexberryDummyApplicationUserModel,
     'ember-flexberry-dummy-comment-vote': EmberFlexberryDummyCommentVoteModel,

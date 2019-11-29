@@ -1,5 +1,5 @@
-import Ember from 'ember';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/ru/translations';
+import $ from 'jquery';
 
 import ICSSoftSTORMNETBusinessAuditObjectsAuditEntityLForm from
 './forms/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l';
@@ -46,9 +46,9 @@ import ICSSoftSTORMNETSecuritySessionModel from './models/i-c-s-soft-s-t-o-r-m-n
 import ICSSoftSTORMNETSecuritySubjectModel from './models/i-c-s-soft-s-t-o-r-m-n-e-t-security-subject';
 
 const translations = {};
-Ember.$.extend(true, translations, EmberFlexberryTranslations);
+$.extend(true, translations, EmberFlexberryTranslations);
 
-Ember.$.extend(true, translations, {
+$.extend(true, translations, {
   models: {
     'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity': ICSSoftSTORMNETBusinessAuditObjectsAuditEntityModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field': ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel,

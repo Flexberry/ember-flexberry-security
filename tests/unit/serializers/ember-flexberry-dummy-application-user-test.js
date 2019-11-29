@@ -21,7 +21,8 @@ moduleForModel('ember-flexberry-dummy-application-user', 'Unit | Serializer | em
     'model:ember-flexberry-dummy-test-poly-base',
     'model:ember-flexberry-dummy-test-poly-child',
     'model:ember-flexberry-dummy-test-poly',
-    'model:ember-flexberry-dummy-vote'
+    'model:ember-flexberry-dummy-vote',
+    'service:syncer'
   ]
 });
 

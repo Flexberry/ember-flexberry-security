@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   filterText: DS.attr('string'),
   name: DS.attr('string'),
   filterTypeNView: DS.attr('string'),
@@ -17,26 +17,26 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', {
-    filterText: Projection.attr('Filter text'),
-    name: Projection.attr('Name'),
-    filterTypeNView: Projection.attr('Filter type n view'),
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Subject', {
-      name: Projection.attr('Name')
+    filterText: attr('Filter text'),
+    name: attr('Name'),
+    filterTypeNView: attr('Filter type n view'),
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Subject', {
+      name: attr('Name')
     })
   });
   model.defineProjection('Sec_FilterE', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', {
-    name: Projection.attr('Наименование'),
-    filterText: Projection.attr('', { hidden: true }),
-    subject: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Объект', {
-      name: Projection.attr('Название объекта')
+    name: attr('Наименование'),
+    filterText: attr('', { hidden: true }),
+    subject: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', 'Объект', {
+      name: attr('Название объекта')
     }, { displayMemberPath: 'name' }),
-    filterTypeNView: Projection.attr('')
+    filterTypeNView: attr('')
   });
   model.defineProjection('Sec_FilterL', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-filter', {
-    name: Projection.attr(''),
-    createTime: Projection.attr('Дата создания'),
-    creator: Projection.attr('Создатель'),
-    editTime: Projection.attr('Дата изменения'),
-    editor: Projection.attr('Редактор')
+    name: attr(''),
+    createTime: attr('Дата создания'),
+    creator: attr('Создатель'),
+    editTime: attr('Дата изменения'),
+    editor: attr('Редактор')
   });
 };

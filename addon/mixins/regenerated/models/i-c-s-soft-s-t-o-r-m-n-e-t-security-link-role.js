@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   startDate: DS.attr('date'),
   endDate: DS.attr('date'),
   createTime: DS.attr('date'),
@@ -18,90 +18,90 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
-    startDate: Projection.attr('Дата начала'),
-    endDate: Projection.attr('Дата окончания'),
-    role: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Роль', {
-      name: Projection.attr('Имя роли')
+    startDate: attr('Дата начала'),
+    endDate: attr('Дата окончания'),
+    role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Роль', {
+      name: attr('Имя роли')
     }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
-      name: Projection.attr('Имя агента'),
-      login: Projection.attr('Логин агента')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
+      name: attr('Имя агента'),
+      login: attr('Логин агента')
     })
   });
   model.defineProjection('GetParentRoles', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr(''),
-      isRole: Projection.attr('')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr(''),
+      isRole: attr('')
     }),
-    role: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr(''),
-      isRole: Projection.attr('')
+    role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr(''),
+      isRole: attr('')
     }),
-    startDate: Projection.attr(''),
-    endDate: Projection.attr('')
+    startDate: attr(''),
+    endDate: attr('')
   });
   model.defineProjection('LinkedAgents', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
-    startDate: Projection.attr(''),
-    endDate: Projection.attr(''),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+    startDate: attr(''),
+    endDate: attr(''),
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
 
     }),
-    role: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+    role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
 
     })
   });
   model.defineProjection('SearchLinkRole', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr(''),
-      login: Projection.attr(''),
-      enabled: Projection.attr(''),
-      isRole: Projection.attr(''),
-      isUser: Projection.attr('')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr(''),
+      login: attr(''),
+      enabled: attr(''),
+      isRole: attr(''),
+      isUser: attr('')
     }),
-    role: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr(''),
-      login: Projection.attr(''),
-      isUser: Projection.attr(''),
-      isRole: Projection.attr(''),
-      enabled: Projection.attr('')
+    role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr(''),
+      login: attr(''),
+      isUser: attr(''),
+      isRole: attr(''),
+      enabled: attr('')
     }),
-    startDate: Projection.attr(''),
-    endDate: Projection.attr('')
+    startDate: attr(''),
+    endDate: attr('')
   });
   model.defineProjection('Sec_GetRoles', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
-    role: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Роль', {
-      name: Projection.attr('Роль')
+    role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Роль', {
+      name: attr('Роль')
     }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
-      name: Projection.attr('Агент'),
-      login: Projection.attr('Логин')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
+      name: attr('Агент'),
+      login: attr('Логин')
     }),
-    startDate: Projection.attr(''),
-    endDate: Projection.attr('')
+    startDate: attr(''),
+    endDate: attr('')
   });
   model.defineProjection('Sec_LinkRoleE', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
-    role: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr('Роль')
+    role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr('Роль')
     }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
-      name: Projection.attr('Агент')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', '', {
+      name: attr('Агент')
     }),
-    startDate: Projection.attr(''),
-    endDate: Projection.attr('')
+    startDate: attr(''),
+    endDate: attr('')
   });
   model.defineProjection('Sec_LinkRoleL', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
-    role: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Роль', {
-      name: Projection.attr('Роль')
+    role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Роль', {
+      name: attr('Роль')
     }),
-    agent: Projection.belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
-      name: Projection.attr('Агент'),
-      login: Projection.attr('Логин')
+    agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
+      name: attr('Агент'),
+      login: attr('Логин')
     }),
-    startDate: Projection.attr(''),
-    endDate: Projection.attr(''),
-    createTime: Projection.attr('Дата создания'),
-    creator: Projection.attr('Создатель'),
-    editTime: Projection.attr('Дата изменения'),
-    editor: Projection.attr('Редактор')
+    startDate: attr(''),
+    endDate: attr(''),
+    createTime: attr('Дата создания'),
+    creator: attr('Создатель'),
+    editTime: attr('Дата изменения'),
+    editor: attr('Редактор')
   });
 };

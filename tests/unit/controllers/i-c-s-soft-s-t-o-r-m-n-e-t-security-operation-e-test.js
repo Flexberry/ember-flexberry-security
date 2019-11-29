@@ -3,6 +3,14 @@ import { moduleFor, test } from 'ember-qunit';
 moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e', 'Unit | Controller | i c s soft s t o r m n e t security operation e', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
+  needs: [
+    'service:objectlistviewEvents',
+    'controller:lookup-dialog',
+    'controller:flexberry-file-view-dialog',
+    'service:user-settings',
+    'service:appState',
+    'service:detail-interaction'
+  ]
 });
 
 // Replace this with your real tests.

@@ -1,16 +1,17 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import config from '../config/environment';
 import { translationMacro as t } from 'ember-i18n';
 import ModalApplicationRouteMixin from 'ember-flexberry/mixins/modal-application-route';
+import $ from 'jquery';
 
-export default Ember.Route.extend(ModalApplicationRouteMixin, {
+export default Route.extend(ModalApplicationRouteMixin, {
   /**
   */
   activate() {
     let _this = this;
     let controller = _this.controllerFor('application');
     if (!controller.get('login')) {
-      Ember.$.ajax({
+      $.ajax({
         type: 'GET',
         xhrFields: { withCredentials: true },
         url: `${config.APP.backendUrls.api}/GetAuthenticatedUser()`,
@@ -31,7 +32,7 @@ export default Ember.Route.extend(ModalApplicationRouteMixin, {
       let login = _this.controller.get('login');
       if (!login && transition.targetName !== 'login' && transition.targetName !== 'index') {
         transition.abort();
-        Ember.$.ajax({
+        $.ajax({
           type: 'GET',
           xhrFields: { withCredentials: true },
           url: `${config.APP.backendUrls.api}/GetAuthenticatedUser()`,

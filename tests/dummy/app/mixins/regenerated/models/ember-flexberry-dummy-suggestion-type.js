@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { Projection } from 'ember-flexberry-data';
-export let Model = Ember.Mixin.create({
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
+export let Model = Mixin.create({
   name: DS.attr('string'),
   moderated: DS.attr('boolean'),
   createTime: DS.attr('date'),
@@ -17,39 +17,39 @@ export let Model = Ember.Mixin.create({
 });
 export let defineProjections = function (model) {
   model.defineProjection('AuditView', 'ember-flexberry-dummy-suggestion-type', {
-    name: Projection.attr('Name'),
-    moderated: Projection.attr('Moderated'),
-    parent: Projection.belongsTo('ember-flexberry-dummy-suggestion-type', 'Parent', {
-      name: Projection.attr('Name')
+    name: attr('Name'),
+    moderated: attr('Moderated'),
+    parent: belongsTo('ember-flexberry-dummy-suggestion-type', 'Parent', {
+      name: attr('Name')
     }),
-    localizedTypes: Projection.hasMany('ember-flexberry-dummy-localized-suggestion-type', 'Localized types', {
-      name: Projection.attr('Name'),
-      localization: Projection.belongsTo('ember-flexberry-dummy-localization', 'Localization', {
-        name: Projection.attr('Name', { hidden: true })
+    localizedTypes: hasMany('ember-flexberry-dummy-localized-suggestion-type', 'Localized types', {
+      name: attr('Name'),
+      localization: belongsTo('ember-flexberry-dummy-localization', 'Localization', {
+        name: attr('Name', { hidden: true })
       }, { displayMemberPath: 'name' })
     })
   });
   model.defineProjection('SuggestionTypeE', 'ember-flexberry-dummy-suggestion-type', {
-    name: Projection.attr('Name'),
-    moderated: Projection.attr('Moderated'),
-    parent: Projection.belongsTo('ember-flexberry-dummy-suggestion-type', 'Parent', {
-      name: Projection.attr('Name', { hidden: true })
+    name: attr('Name'),
+    moderated: attr('Moderated'),
+    parent: belongsTo('ember-flexberry-dummy-suggestion-type', 'Parent', {
+      name: attr('Name', { hidden: true })
     }, { displayMemberPath: 'name' }),
-    localizedTypes: Projection.hasMany('ember-flexberry-dummy-localized-suggestion-type', 'Localized types', {
-      name: Projection.attr('Name'),
-      localization: Projection.belongsTo('ember-flexberry-dummy-localization', 'Localization', {
-        name: Projection.attr('Name', { hidden: true })
+    localizedTypes: hasMany('ember-flexberry-dummy-localized-suggestion-type', 'Localized types', {
+      name: attr('Name'),
+      localization: belongsTo('ember-flexberry-dummy-localization', 'Localization', {
+        name: attr('Name', { hidden: true })
       }, { displayMemberPath: 'name' }),
-      suggestionType: Projection.belongsTo('ember-flexberry-dummy-suggestion-type', '', {
+      suggestionType: belongsTo('ember-flexberry-dummy-suggestion-type', '', {
 
       })
     })
   });
   model.defineProjection('SuggestionTypeL', 'ember-flexberry-dummy-suggestion-type', {
-    name: Projection.attr('Name'),
-    moderated: Projection.attr('Moderated'),
-    parent: Projection.belongsTo('ember-flexberry-dummy-suggestion-type', 'Parent', {
-      name: Projection.attr('Name', { hidden: true })
+    name: attr('Name'),
+    moderated: attr('Moderated'),
+    parent: belongsTo('ember-flexberry-dummy-suggestion-type', 'Parent', {
+      name: attr('Name', { hidden: true })
     }, { displayMemberPath: 'name' })
   });
 };
