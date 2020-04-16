@@ -4,9 +4,12 @@ moduleFor('controller:ember-flexberry-dummy-suggestion-edit', 'Unit | Controller
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
   needs: [
-    'service:objectlistviewEvents',
+    'controller:colsconfig-dialog',
     'controller:lookup-dialog',
     'controller:flexberry-file-view-dialog',
+    'controller:advlimit-dialog',
+    'service:objectlistviewEvents',
+    'service:advLimit',
     'service:user-settings',
     'service:appState',
     'service:detail-interaction'

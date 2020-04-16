@@ -7,6 +7,7 @@ moduleFor('route:ember-flexberry-dummy-suggestion-list', 'Unit | Route | ember f
     'service:objectlistviewEvents',
     'service:formLoadTimeTracker',
     'service:colsConfigMenu',
+    'service:advLimit',
     'service:appState',
   ]
 });

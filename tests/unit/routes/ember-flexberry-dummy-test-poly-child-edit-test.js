@@ -6,6 +6,7 @@ moduleFor('route:ember-flexberry-dummy-test-poly-child-edit', 'Unit | Route | em
   needs: [
     'service:objectlistview-events',
     'service:appState',
+    'service:colsConfigMenu',
     'service:detail-interaction'
   ]
 });

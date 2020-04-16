@@ -6,6 +6,7 @@ moduleFor('route:ember-flexberry-dummy-test-poly-edit', 'Unit | Route | ember fl
   needs: [
     'service:objectlistview-events',
     'service:appState',
+    'service:colsConfigMenu',
     'service:detail-interaction'
   ]
 });

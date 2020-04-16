@@ -7,6 +7,7 @@ moduleFor('route:i-c-s-soft-s-t-o-r-m-n-e-t-security-role-l', 'Unit | Route | i 
     'service:objectlistviewEvents',
     'service:formLoadTimeTracker',
     'service:colsConfigMenu',
+    'service:advLimit',
     'service:appState',
   ]
 });

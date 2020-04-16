@@ -6,6 +6,7 @@ moduleFor('route:ember-flexberry-dummy-suggestion-edit', 'Unit | Route | ember f
   needs: [
     'service:objectlistview-events',
     'service:appState',
+    'service:colsConfigMenu',
     'service:detail-interaction'
   ]
 });

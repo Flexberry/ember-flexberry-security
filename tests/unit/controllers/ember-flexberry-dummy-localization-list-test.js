@@ -5,6 +5,9 @@ moduleFor('controller:ember-flexberry-dummy-localization-list', 'Unit | Controll
   // needs: ['controller:foo']
   needs: [
     'controller:colsconfig-dialog',
+    'controller:advlimit-dialog',
+    'controller:colsconfig-dialog',
+    'service:advLimit',
     'service:user-settings',
     'service:objectlistview-events'
   ]
