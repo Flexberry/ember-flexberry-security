@@ -6,6 +6,7 @@ moduleFor('route:ember-flexberry-dummy-application-user-edit', 'Unit | Route | e
   needs: [
     'service:objectlistview-events',
     'service:appState',
+    'service:colsConfigMenu',
     'service:detail-interaction'
   ]
 });

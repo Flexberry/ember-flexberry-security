@@ -4,11 +4,14 @@ moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e', 'Unit | Contr
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
   needs: [
-    'service:objectlistviewEvents',
+    'controller:colsconfig-dialog',
     'controller:lookup-dialog',
     'controller:flexberry-file-view-dialog',
+    'controller:advlimit-dialog',
     'service:user-settings',
     'service:appState',
+    'service:objectlistviewEvents',
+    'service:advLimit',
     'service:detail-interaction'
   ]
 });

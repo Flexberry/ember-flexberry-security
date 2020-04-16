@@ -5,9 +5,12 @@ moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-en
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
   needs: [
-    'service:objectlistviewEvents',
+    'controller:colsconfig-dialog',
     'controller:lookup-dialog',
     'controller:flexberry-file-view-dialog',
+    'controller:advlimit-dialog',
+    'service:objectlistviewEvents',
+    'service:advLimit',
     'service:user-settings',
     'service:appState',
     'service:detail-interaction'

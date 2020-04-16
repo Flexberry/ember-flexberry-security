@@ -6,6 +6,7 @@ moduleFor('route:ember-flexberry-dummy-localization-edit', 'Unit | Route | ember
   needs: [
     'service:objectlistview-events',
     'service:appState',
+    'service:colsConfigMenu',
     'service:detail-interaction'
   ]
 });

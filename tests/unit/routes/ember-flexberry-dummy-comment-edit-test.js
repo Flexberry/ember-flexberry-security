@@ -6,6 +6,7 @@ moduleFor('route:ember-flexberry-dummy-comment-edit', 'Unit | Route | ember flex
   needs: [
     'service:objectlistview-events',
     'service:appState',
+    'service:colsConfigMenu',
     'service:detail-interaction'
   ]
 });

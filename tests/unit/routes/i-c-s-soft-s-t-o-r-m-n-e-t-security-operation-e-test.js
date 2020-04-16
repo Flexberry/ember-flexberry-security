@@ -6,6 +6,7 @@ moduleFor('route:i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e', 'Unit | Route
   needs: [
     'service:objectlistview-events',
     'service:appState',
+    'service:colsConfigMenu',
     'service:detail-interaction'
   ]
 });

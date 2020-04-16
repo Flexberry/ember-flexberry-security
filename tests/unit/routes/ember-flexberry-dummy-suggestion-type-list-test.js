@@ -7,6 +7,7 @@ moduleFor('route:ember-flexberry-dummy-suggestion-type-list', 'Unit | Route | em
     'service:objectlistviewEvents',
     'service:formLoadTimeTracker',
     'service:colsConfigMenu',
+    'service:advLimit',
     'service:appState',
   ]
 });

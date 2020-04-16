@@ -7,6 +7,8 @@ moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-en
   needs: [
     'service:user-settings',
     'service:objectlistview-events',
+    'service:advLimit',
+    'controller:advlimit-dialog',
     'controller:colsconfig-dialog'
   ]
 });

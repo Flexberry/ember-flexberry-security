@@ -5,6 +5,8 @@ moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-l', 'Unit | 
   // needs: ['controller:foo']
   needs: [
     'controller:colsconfig-dialog',
+    'controller:advlimit-dialog',
+    'service:advLimit',
     'service:user-settings',
     'service:objectlistview-events'
   ]

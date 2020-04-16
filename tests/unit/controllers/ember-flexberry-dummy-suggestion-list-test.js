@@ -6,6 +6,8 @@ moduleFor('controller:ember-flexberry-dummy-suggestion-list', 'Unit | Controller
   needs: [
     'service:user-settings',
     'service:objectlistview-events',
+    'service:advLimit',
+    'controller:advlimit-dialog',
     'controller:colsconfig-dialog'
   ]
 });

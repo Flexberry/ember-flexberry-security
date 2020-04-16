@@ -6,8 +6,11 @@ moduleFor('controller:ember-flexberry-dummy-suggestion-type-edit', 'Unit | Contr
   needs: [
     'service:user-settings',
     'service:objectlistviewEvents',
+    'service:advLimit',
+    'controller:colsconfig-dialog',
     'controller:lookup-dialog',
     'controller:flexberry-file-view-dialog',
+    'controller:advlimit-dialog',
     'service:appState',
     'service:detail-interaction'
   ]

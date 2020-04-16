@@ -6,6 +6,8 @@ moduleFor('controller:ember-flexberry-dummy-test-poly-child-list', 'Unit | Contr
   needs: [
     'service:user-settings',
     'service:objectlistview-events',
+    'service:advLimit',
+    'controller:advlimit-dialog',
     'controller:colsconfig-dialog'
   ]
 });

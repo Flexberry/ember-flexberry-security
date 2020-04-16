@@ -8,6 +8,8 @@ moduleFor('route:ember-flexberry-dummy-application-user-list', 'Unit | Route | e
     'service:formLoadTimeTracker',
     'service:colsConfigMenu',
     'service:appState',
+    'service:colsConfigMenu',
+    'service:advLimit'
   ]
 });
 

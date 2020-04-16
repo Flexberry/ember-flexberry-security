@@ -6,7 +6,10 @@ moduleFor('controller:ember-flexberry-dummy-application-user-list', 'Unit | Cont
   needs: [
     'service:user-settings',
     'service:objectlistview-events',
-    'controller:colsconfig-dialog' 
+    'service:advLimit',
+    'controller:colsconfig-dialog',
+    'controller:advlimit-dialog',
+    'controller:colsconfig-dialog'
   ]
 });
 
