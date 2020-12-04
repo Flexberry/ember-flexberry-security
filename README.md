@@ -15,7 +15,7 @@ Role based security module, authentification and authorization module, audit mod
 ## Running
 
 * `ember server`
-* Visit your app at http://localhost:4200.
+* Visit your app at http://localhost:4210.
 
 ## Running Tests
 
