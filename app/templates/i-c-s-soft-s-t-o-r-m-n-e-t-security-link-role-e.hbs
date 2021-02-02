@@ -43,26 +43,13 @@
     choose='showLookupDialog'
     remove='removeLookupValue'
     value=model.role
-
+	displayAttributeName='name'
     relationName='role'
     projection='RoleOrGroupL'
     title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption')
     readonly=readonly
   }}
   {{flexberry-validationmessage error=model.errors.role pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=true
-    required=true
-    value=model.role.name
-    class=(if model.errors.role.name 'error' '')
-    label=(Роль)
-  }}
-  {{flexberry-validationmessage error=model.errors.role.name pointing="pointing"}}
 </div>
 
 <div class="field">
@@ -73,26 +60,13 @@
     choose='showLookupDialog'
     remove='removeLookupValue'
     value=model.agent
-
+	displayAttributeName='name'
     relationName='agent'
     projection='RoleOrGroupL'
     title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption')
     readonly=readonly
   }}
   {{flexberry-validationmessage error=model.errors.agent pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=true
-    required=true
-    value=model.agent.name
-    class=(if model.errors.agent.name 'error' '')
-    label=(Агент)
-  }}
-  {{flexberry-validationmessage error=model.errors.agent.name pointing="pointing"}}
 </div>
 
 <div class="field">

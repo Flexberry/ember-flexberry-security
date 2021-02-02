@@ -60,7 +60,7 @@
     required=true
     value=model.permition.agent.name
     class=(if model.errors.permition.agent.name 'error' '')
-    label=(Агент)
+    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.agent-caption')
   }}
   {{flexberry-validationmessage error=model.errors.permition.agent.name pointing="pointing"}}
 </div>
@@ -73,7 +73,7 @@
     required=true
     value=model.permition.subject.name
     class=(if model.errors.permition.subject.name 'error' '')
-    label=(Субъект)
+    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.subject-caption')
   }}
   {{flexberry-validationmessage error=model.errors.permition.subject.name pointing="pointing"}}
 </div>
@@ -114,7 +114,7 @@
     required=true
     value=model.filter.name
     class=(if model.errors.filter.name 'error' '')
-    label=(Имя фильтра)
+    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-name-caption')
   }}
   {{flexberry-validationmessage error=model.errors.filter.name pointing="pointing"}}
 </div>
