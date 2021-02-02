@@ -26,7 +26,6 @@
     "ember-ajax": "^3.0.0",
     "ember-block-slots": "1.1.11",
     "ember-browserify": "1.1.9",
-    "ember-cli": "~3.1.4",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars": "^2.0.1",
@@ -35,6 +34,7 @@
     "ember-cli-less": "^1.5.7",
     "ember-cli-moment-shim": "^3.8.0",
     "ember-cli-qunit": "^4.1.1",
+    "ember-cli-release": "^0.2.9",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
@@ -43,7 +43,6 @@
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-flexberry": "~3.5.0",
-    "ember-flexberry-data": "~3.4.0",
     "ember-link-action": "0.0.36",
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "7.7.0",
@@ -60,7 +59,9 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "ember-cli": "~3.1.4",
+    "ember-cli-babel": "^6.6.0",
+    "ember-flexberry-data": "~3.4.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",

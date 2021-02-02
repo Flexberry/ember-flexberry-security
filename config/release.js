@@ -1,5 +1,4 @@
-/* jshint node: true */
-
+/* jshint node:true */
 // var RSVP = require('rsvp');
 var path = require('path');
 var fs = require('fs');
