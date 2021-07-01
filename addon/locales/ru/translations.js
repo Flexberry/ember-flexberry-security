@@ -11,6 +11,12 @@ import ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel from
 './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field';
 import ICSSoftSTORMNETBusinessAuditObjectsObjectTypeModel from
 './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-object-type';
+import NewPlatformFlexberryAuditBigDataAuditRecordLForm from 
+'./forms/new-platform-flexberry-audit-big-data-audit-record-l';
+import NewPlatformFlexberryAuditBigDataAuditRecordEForm from 
+'./forms/new-platform-flexberry-audit-big-data-audit-record-e';
+import NewPlatformFlexberryAuditBigDataAuditRecordModel from 
+'./models/new-platform-flexberry-audit-big-data-audit-record';
 
 import ICSSoftSTORMNETSecurityAccessLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l';
 import ICSSoftSTORMNETSecurityClassLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l';
@@ -53,6 +59,7 @@ Ember.$.extend(true, translations, {
     'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity': ICSSoftSTORMNETBusinessAuditObjectsAuditEntityModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field': ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-object-type': ICSSoftSTORMNETBusinessAuditObjectsObjectTypeModel,
+    'new-platform-flexberry-audit-big-data-audit-record': NewPlatformFlexberryAuditBigDataAuditRecordModel,
 
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-access': ICSSoftSTORMNETSecurityAccessModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-agent': ICSSoftSTORMNETSecurityAgentModel,
@@ -139,6 +146,8 @@ Ember.$.extend(true, translations, {
 
     'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-l': ICSSoftSTORMNETBusinessAuditObjectsAuditEntityLForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e': ICSSoftSTORMNETBusinessAuditObjectsAuditEntityEForm,
+    'new-platform-flexberry-audit-big-data-audit-record-l': NewPlatformFlexberryAuditBigDataAuditRecordLForm,
+    'new-platform-flexberry-audit-big-data-audit-record-e': NewPlatformFlexberryAuditBigDataAuditRecordEForm,
 
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l': ICSSoftSTORMNETSecurityAccessLForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l': ICSSoftSTORMNETSecurityClassLForm,
