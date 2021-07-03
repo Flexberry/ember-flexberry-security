@@ -1,111 +1,122 @@
-<h3 class="ui header">{{t "forms.new-platform-flexberry-audit-big-data-audit-record-e.caption"}}</h3>
+<h3 class="ui header">{{t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.caption'}}</h3>
 
 <form class="ui form flexberry-vertical-form" role="form">
-  {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
-      {{#unless readonly}}
-        <button class="ui button save-button" {{action "save"}}>
-          {{t "forms.edit-form.save-button-text"}}
-        </button>
-        {{#unless model.isNew}}
-          <button class="ui button save-del-button" {{action "delete"}}>
-            {{t "forms.edit-form.delete-button-text"}}
-          </button>
-        {{/unless}}
-      {{/unless}}
-      <button class="ui button close-button" {{action "close"}}>
+      <button type="submit" class="ui button close-button" {{action 'close'}}>
         {{t "forms.edit-form.close-button-text"}}
       </button>
     </div>
   </div>
   <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.objectPrimaryKey
-      class=(if (v-get validationObject "objectPrimaryKey" "isInvalid") "error")
-      label=(t "forms.new-platform-flexberry-audit-big-data-audit-record-e.objectPrimaryKey-caption")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "objectPrimaryKey" "messages")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.objectType
-      class=(if (v-get validationObject "objectType" "isInvalid") "error")
-      label=(t "forms.new-platform-flexberry-audit-big-data-audit-record-e.objectType-caption")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "objectType" "messages")}}
-  </div>
-  <div class="field">
-    <label>{{t "forms.new-platform-flexberry-audit-big-data-audit-record-e.operationTime-caption"}}</label>
-    {{
-      flexberry-simpledatetime
-      type="date"
-      readonly=readonly
-      value=model.operationTime
-      class=(if (v-get validationObject "operationTime" "isInvalid") "error")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "operationTime" "messages")}}
-  </div>
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.objectPrimaryKey
+    class=(if model.errors.objectPrimaryKey 'error' '')
+    label=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.objectPrimaryKey-caption')
+    data-test-new-platform-flexberry-audit-big-data-audit-record-e-objectPrimaryKey=true
+  }}
+</div>
 
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.operationType
-      class=(if (v-get validationObject "operationType" "isInvalid") "error")
-      label=(t "forms.new-platform-flexberry-audit-big-data-audit-record-e.operationType-caption")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "operationType" "messages")}}
-  </div>
-  <div class="field">
-    <label>{{t "forms.new-platform-flexberry-audit-big-data-audit-record-e.executionStatus-caption"}}</label>
-    {{flexberry-dropdown
-      items=(flexberry-enum "new-platform-flexberry-audit-big-data-execution-status")
-      value=model.executionStatus
-      readonly=readonly
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "executionStatus" "messages")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.source
-      class=(if (v-get validationObject "source" "isInvalid") "error")
-      label=(t "forms.new-platform-flexberry-audit-big-data-audit-record-e.source-caption")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "source" "messages")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.userName
-      class=(if (v-get validationObject "userName" "isInvalid") "error")
-      label=(t "forms.new-platform-flexberry-audit-big-data-audit-record-e.userName-caption")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "userName" "messages")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.userLogin
-      class=(if (v-get validationObject "userLogin" "isInvalid") "error")
-      label=(t "forms.new-platform-flexberry-audit-big-data-audit-record-e.userLogin-caption")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "userLogin" "messages")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.serializedFields
-      class=(if (v-get validationObject "serializedFields" "isInvalid") "error")
-      label=(t "forms.new-platform-flexberry-audit-big-data-audit-record-e.serializedFields-caption")
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "serializedFields" "messages")}}
-  </div>
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.objectType
+    class=(if model.errors.objectType 'error' '')
+    label=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.objectType-caption')
+    data-test-new-platform-flexberry-audit-big-data-audit-record-e-objectType=true
+  }}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.operationTime-caption'}}</label>
+  {{
+    flexberry-simpledatetime
+    placeholder=(t 'components.flexberry-datepicker.placeholder')
+    readonly=readonly
+    value=model.operationTime
+    class=(if model.errors.operationTime 'error' '')
+    data-test-new-platform-flexberry-audit-big-data-audit-record-e-operationTime=true
+  }}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.operationType
+    class=(if model.errors.operationType 'error' '')
+    label=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.operationType-caption')
+    data-test-new-platform-flexberry-audit-big-data-audit-record-e-operationType=true
+  }}
+</div>
+
+<div class="field" data-test-new-platform-flexberry-audit-big-data-audit-record-e-executionStatus="true">
+  <label>{{t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.executionStatus-caption'}}</label>
+  {{
+    flexberry-dropdown
+    items=(flexberry-enum 'new-platform-flexberry-audit-big-data-execution-status')
+    value=recordStatus
+    readonly=readonly
+  }}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.source
+    class=(if model.errors.source 'error' '')
+    label=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.source-caption')
+    data-test-new-platform-flexberry-audit-big-data-audit-record-e-source=true
+  }}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.userName
+    class=(if model.errors.userName 'error' '')
+    label=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.userName-caption')
+    data-test-new-platform-flexberry-audit-big-data-audit-record-e-userName=true
+  }}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.userLogin
+    class=(if model.errors.userLogin 'error' '')
+    label=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.userLogin-caption')
+    data-test-new-platform-flexberry-audit-big-data-audit-record-e-userLogin=true
+  }}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.serializedFields-caption'}}</label>
+  {{
+    audit-fields-view
+    nameColumnCaption=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.serializedFields-name-column-caption')
+    oldValueColumnCaption=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.serializedFields-old-value-column-caption')
+    newValueColumnCaption=(t 'forms.new-platform-flexberry-audit-big-data-audit-record-e.serializedFields-new-value-column-caption')
+    auditFields=deserializedAuditFields
+  }}
+</div>
+
 </form>

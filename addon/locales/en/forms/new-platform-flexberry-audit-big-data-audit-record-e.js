@@ -8,5 +8,8 @@ export default {
   'source-caption': 'source',
   'userName-caption': 'userName',
   'userLogin-caption': 'userLogin',
-  'serializedFields-caption': 'serializedFields'
+  'serializedFields-caption': 'serializedFields',
+  'serializedFields-name-column-caption': 'Field name',
+  'serializedFields-old-value-column-caption': 'Old value',
+  'serializedFields-new-value-column-caption': 'New value'
 };

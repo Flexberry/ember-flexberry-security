@@ -2,31 +2,31 @@ export default {
   projections: {
     AllFields: {
       userName: {
-        __caption__: ''
+        __caption__: 'Имя пользователя'
       },
       userLogin: {
-        __caption__: ''
+        __caption__: 'Логин'
       },
       objectType: {
-        __caption__: ''
+        __caption__: 'Тип объекта'
       },
       objectPrimaryKey: {
-        __caption__: ''
+        __caption__: 'Идентификатор'
       },
       operationTime: {
-        __caption__: ''
+        __caption__: 'Время операции'
       },
       operationType: {
-        __caption__: ''
+        __caption__: 'Тип операции'
       },
       executionStatus: {
-        __caption__: ''
+        __caption__: 'Статус'
       },
       source: {
-        __caption__: ''
+        __caption__: 'Источник'
       },
       serializedFields: {
-        __caption__: ''
+        __caption__: 'Изменения'
       },
       headAuditEntity: {
         __caption__: ''
@@ -34,96 +34,58 @@ export default {
     },
     AuditRecordE: {
       objectPrimaryKey: {
-        __caption__: ''
+        __caption__: 'Идентификатор'
       },
       objectType: {
-        __caption__: ''
+        __caption__: 'Тип объекта'
       },
       operationTime: {
-        __caption__: ''
+        __caption__: 'Время операции'
       },
       operationType: {
-        __caption__: ''
+        __caption__: 'Тип операции'
       },
       executionStatus: {
-        __caption__: ''
+        __caption__: 'Статус'
       },
       source: {
-        __caption__: ''
+        __caption__: 'Источник'
       },
       userName: {
-        __caption__: ''
+        __caption__: 'Имя пользователя'
       },
       userLogin: {
-        __caption__: ''
+        __caption__: 'Логин'
       },
       serializedFields: {
-        __caption__: ''
+        __caption__: 'Изменения'
       }
     },
     AuditRecordL: {
       objectPrimaryKey: {
-        __caption__: ''
+        __caption__: 'Идентификатор'
       },
       objectType: {
-        __caption__: ''
+        __caption__: 'Тип объекта'
       },
       operationTime: {
-        __caption__: ''
+        __caption__: 'Время операции'
       },
       operationType: {
-        __caption__: ''
+        __caption__: 'Тип операции'
       },
       executionStatus: {
-        __caption__: ''
+        __caption__: 'Статус'
       },
       source: {
-        __caption__: ''
+        __caption__: 'Источник'
       },
       userName: {
-        __caption__: ''
+        __caption__: 'Имя пользователя'
       },
       userLogin: {
-        __caption__: ''
+        __caption__: 'Логин'
       }
-    }
-  },
-  validations: {
-    userName: {
-      __caption__: 'userName'
-    },
-    userLogin: {
-      __caption__: 'userLogin'
-    },
-    operationId: {
-      __caption__: 'operationId'
-    },
-    operationTags: {
-      __caption__: 'operationTags'
-    },
-    objectType: {
-      __caption__: 'objectType'
-    },
-    objectPrimaryKey: {
-      __caption__: 'objectPrimaryKey'
-    },
-    operationTime: {
-      __caption__: 'operationTime'
-    },
-    operationType: {
-      __caption__: 'operationType'
-    },
-    executionStatus: {
-      __caption__: 'executionStatus'
-    },
-    source: {
-      __caption__: 'source'
-    },
-    serializedFields: {
-      __caption__: 'serializedFields'
-    },
-    headAuditEntity: {
-      __caption__: 'headAuditEntity'
     }
   }
 };

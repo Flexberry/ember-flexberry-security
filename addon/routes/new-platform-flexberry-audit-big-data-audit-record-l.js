@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import ListFormRoute from 'ember-flexberry/routes/list-form';
 import { Query } from 'ember-flexberry-data';
+import operationTypes from '../enums/new-platform-flexberry-audit-big-data-audit-operation-type';
 
 export default ListFormRoute.extend({
   /**
@@ -57,8 +58,7 @@ export default ListFormRoute.extend({
 
   /**
     It overrides base method and forms the limit predicate for loaded data.
-    If there is displayed even number or records per page, records where 'address' attribute contains letter 'S' are filtered.
-    If there is displayed odd number or records per page, records where 'address' attribute contains letter 'п' are filtered.
+    Display only not Ratify record.
 
     @public
     @method objectListViewLimitPredicate
@@ -78,19 +78,25 @@ export default ListFormRoute.extend({
     if (methodOptions.modelName === this.get('modelName') &&
         methodOptions.projectionName === this.get('modelProjection')) {
 
+      let ratifyLimitFunction = new Query.SimplePredicate('operationType', Query.FilterOperator.Neq, operationTypes.Ratify);
+
+      let conditions = [];
+      conditions.pushObject(ratifyLimitFunction);
+
       let objectTypeName = options.params.filterByObjectType;
       if (objectTypeName) {
-        let limitFunction = new Query.SimplePredicate('objectType.Name', Query.FilterOperator.Eq, objectTypeName);
-        return limitFunction;
+        conditions.pushObject(new Query.SimplePredicate('objectType.Name', Query.FilterOperator.Eq, objectTypeName));
       }
 
       let objectPrimaryKey = options.params.filterByObjectId;
-
       if (objectPrimaryKey) {
-        let limitFunction = new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey);
-
-        return limitFunction;
+        conditions.pushObject(new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey));
       }
+
+      let isComplexPredicate = conditions.get('length') > 1;
+      let limitFunction = (isComplexPredicate) ? new Query.ComplexPredicate(Query.Condition.And, ...conditions) : ratifyLimitFunction;
+
+      return limitFunction;
     }
 
     return undefined;

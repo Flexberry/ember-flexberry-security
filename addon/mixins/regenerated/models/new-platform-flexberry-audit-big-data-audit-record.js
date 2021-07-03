@@ -50,9 +50,8 @@ export let defineProjections = function (modelClass) {
     objectType: Projection.attr('', { index: 1 }),
     operationTime: Projection.attr('', { index: 2 }),
     operationType: Projection.attr('', { index: 3 }),
-    executionStatus: Projection.attr('', { index: 4 }),
-    source: Projection.attr('', { index: 5 }),
-    userName: Projection.attr('', { index: 6 }),
-    userLogin: Projection.attr('', { index: 7 })
+    source: Projection.attr('', { index: 4 }),
+    userName: Projection.attr('', { index: 5 }),
+    userLogin: Projection.attr('', { index: 6 })
   });
 };
