@@ -9,7 +9,7 @@ export default Adapter.Odata.extend({
     this._super(...arguments);
 
     const config = getOwner(this).resolveRegistration('config:environment');
-    const auditBigDataOdataHost = config.APP.bpmBackendUrls.auditBigDataOdata || '';
+    const auditBigDataOdataHost = config.APP.auditBigDataOdata || '';
     this.set('host', auditBigDataOdataHost);
   },
 });

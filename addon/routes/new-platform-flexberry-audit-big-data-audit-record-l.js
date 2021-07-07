@@ -81,16 +81,16 @@ export default ListFormRoute.extend({
       let ratifyLimitFunction = new Query.SimplePredicate('operationType', Query.FilterOperator.Neq, operationTypes.Ratify);
 
       let conditions = [];
-      conditions.pushObject(ratifyLimitFunction);
+      conditions.push(ratifyLimitFunction);
 
       let objectTypeName = options.params.filterByObjectType;
       if (objectTypeName) {
-        conditions.pushObject(new Query.SimplePredicate('objectType.Name', Query.FilterOperator.Eq, objectTypeName));
+        conditions.push(new Query.SimplePredicate('objectType.Name', Query.FilterOperator.Eq, objectTypeName));
       }
 
       let objectPrimaryKey = options.params.filterByObjectId;
       if (objectPrimaryKey) {
-        conditions.pushObject(new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey));
+        conditions.push(new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey));
       }
 
       let isComplexPredicate = conditions.get('length') > 1;

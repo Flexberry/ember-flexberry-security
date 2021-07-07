@@ -1,3 +1,3 @@
 export default {
-  caption: 'NewPlatformFlexberryAuditBigDataAuditRecordL'
+  caption: 'Audit records'
 };

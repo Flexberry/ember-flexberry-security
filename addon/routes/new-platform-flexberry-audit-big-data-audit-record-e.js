@@ -10,23 +10,23 @@ export default EditFormRoute.extend({
    * @inheritdoc
    */
   afterModel(model, transition) {
-    let _this = this;
-
     let status = executionStatus.Unexecuted;
     const headAuditEntityKey = model.get('id');
-    const store = _this.store;
-    const modelName = _this.get('modelName');
-    const projectionName = _this.get('modelProjection');
+    const store = this.store;
+    const modelName = this.get('modelName');
+    const projectionName = this.get('modelProjection');
+    const controller = this.controllerFor(this.routeName);
     let headAuditEntityPredicate = new Query.SimplePredicate('headAuditEntity', Query.FilterOperator.Eq, headAuditEntityKey);
     
     let builder = new Query.Builder(store, modelName)
     .selectByProjection(projectionName)
     .where(headAuditEntityPredicate);
 
-    store.queryRecord(modelName, builder.build()).then(function (ratifyRecord) {
-      status = ratifyRecord.get('executionStatus');
-      let controller = _this.get('controller');
-      controller.set('recordStatus', status);
+    return store.queryRecord(modelName, builder.build()).then(ratifyRecord => {
+      if (ratifyRecord) {
+        status = ratifyRecord.get('executionStatus');
+        controller.set('recordStatus', status);
+      }
     });
   },
 });
