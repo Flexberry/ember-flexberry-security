@@ -1,3 +1,3 @@
 export default {
-  caption: 'Audit records'
+  caption: 'Audit Records'
 };
