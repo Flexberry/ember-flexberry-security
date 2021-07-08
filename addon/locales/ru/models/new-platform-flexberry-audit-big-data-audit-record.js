@@ -37,13 +37,13 @@ export default {
         __caption__: 'Идентификатор'
       },
       objectType: {
-        __caption__: 'Тип объекта'
+        __caption__: 'Тип Объекта'
       },
       operationTime: {
-        __caption__: 'Время операции'
+        __caption__: 'Время Операции'
       },
       operationType: {
-        __caption__: 'Тип операции'
+        __caption__: 'Тип Операции'
       },
       executionStatus: {
         __caption__: 'Статус'
@@ -52,7 +52,7 @@ export default {
         __caption__: 'Источник'
       },
       userName: {
-        __caption__: 'Имя пользователя'
+        __caption__: 'Имя Пользователя'
       },
       userLogin: {
         __caption__: 'Логин'
@@ -66,13 +66,13 @@ export default {
         __caption__: 'Идентификатор'
       },
       objectType: {
-        __caption__: 'Тип объекта'
+        __caption__: 'Тип Объекта'
       },
       operationTime: {
-        __caption__: 'Время операции'
+        __caption__: 'Время Операции'
       },
       operationType: {
-        __caption__: 'Тип операции'
+        __caption__: 'Тип Операции'
       },
       executionStatus: {
         __caption__: 'Статус'
@@ -81,7 +81,7 @@ export default {
         __caption__: 'Источник'
       },
       userName: {
-        __caption__: 'Имя пользователя'
+        __caption__: 'Имя Пользователя'
       },
       userLogin: {
         __caption__: 'Логин'

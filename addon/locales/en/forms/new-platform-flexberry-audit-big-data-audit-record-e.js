@@ -9,7 +9,7 @@ export default {
   'userName-caption': 'User Name',
   'userLogin-caption': 'User Login',
   'serializedFields-caption': 'Changes',
-  'serializedFields-name-column-caption': 'Field name',
-  'serializedFields-old-value-column-caption': 'Old value',
-  'serializedFields-new-value-column-caption': 'New value'
+  'serializedFields-name-column-caption': 'Field Name',
+  'serializedFields-old-value-column-caption': 'Old Value',
+  'serializedFields-new-value-column-caption': 'New Value'
 };
