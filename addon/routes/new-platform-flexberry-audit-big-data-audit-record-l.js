@@ -93,7 +93,7 @@ export default ListFormRoute.extend({
         conditions.push(new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey));
       }
 
-      let isComplexPredicate = conditions.get('length') > 1;
+      let isComplexPredicate = conditions.length > 1;
       let limitFunction = (isComplexPredicate) ? new Query.ComplexPredicate(Query.Condition.And, ...conditions) : ratifyLimitFunction;
 
       return limitFunction;
