@@ -1,6 +1,6 @@
 import EditFormController from 'ember-flexberry/controllers/edit-form';
 import executionStatus from '../enums/new-platform-flexberry-audit-big-data-execution-status';
-import { deserializeAuditFields } from '../utils/audit-fields-deserializer';
+import { deserializeAuditFields } from '../utils/audit-fields-json-deserializer';
 
 export default EditFormController.extend({
   // Caption of this particular edit form.

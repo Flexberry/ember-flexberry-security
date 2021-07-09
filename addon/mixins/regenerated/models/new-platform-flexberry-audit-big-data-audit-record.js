@@ -13,7 +13,7 @@ export let Model = Ember.Mixin.create({
   operationType: DS.attr('string'),
   executionStatus: DS.attr('new-platform-flexberry-audit-big-data-execution-status'),
   source: DS.attr('string'),
-  serializedFields: DS.attr('string'),
+  serializedFields: DS.attr('audit-big-data-serialized-fields'),
   headAuditEntity: DS.belongsTo('new-platform-flexberry-audit-big-data-audit-record', { inverse: null, async: false })
 });
 
