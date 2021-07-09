@@ -29,7 +29,7 @@ export default {
         __caption__: 'Изменения'
       },
       headAuditEntity: {
-        __caption__: ''
+        __caption__: 'Основная запись'
       }
     },
     AuditRecordE: {
@@ -37,13 +37,13 @@ export default {
         __caption__: 'Идентификатор'
       },
       objectType: {
-        __caption__: 'Тип Объекта'
+        __caption__: 'Тип объекта'
       },
       operationTime: {
-        __caption__: 'Время Операции'
+        __caption__: 'Время операции'
       },
       operationType: {
-        __caption__: 'Тип Операции'
+        __caption__: 'Тип операции'
       },
       executionStatus: {
         __caption__: 'Статус'
@@ -52,7 +52,7 @@ export default {
         __caption__: 'Источник'
       },
       userName: {
-        __caption__: 'Имя Пользователя'
+        __caption__: 'Имя пользователя'
       },
       userLogin: {
         __caption__: 'Логин'
@@ -66,13 +66,13 @@ export default {
         __caption__: 'Идентификатор'
       },
       objectType: {
-        __caption__: 'Тип Объекта'
+        __caption__: 'Тип объекта'
       },
       operationTime: {
-        __caption__: 'Время Операции'
+        __caption__: 'Время операции'
       },
       operationType: {
-        __caption__: 'Тип Операции'
+        __caption__: 'Тип операции'
       },
       executionStatus: {
         __caption__: 'Статус'
@@ -81,7 +81,7 @@ export default {
         __caption__: 'Источник'
       },
       userName: {
-        __caption__: 'Имя Пользователя'
+        __caption__: 'Имя пользователя'
       },
       userLogin: {
         __caption__: 'Логин'
