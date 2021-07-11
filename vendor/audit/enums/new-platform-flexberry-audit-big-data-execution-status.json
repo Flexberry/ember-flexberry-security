@@ -1,0 +1,10 @@
+﻿{
+  "nameSpace": "NewPlatform.Flexberry.AuditBigData",
+  "className": "ExecutionStatus",
+  "enumObjects": {
+    "Unknown": "",
+    "Unexecuted": "",
+    "Executed": "",
+    "Failed": ""
+  }
+}
