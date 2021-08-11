@@ -15,8 +15,14 @@ moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-link-view', 'Unit | Model | 
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-permition',
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-session',
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-subject',
-    'service:syncer'
-  ]
+    'validator:ds-error',
+    'validator:presence',
+    'validator:number',
+    'validator:date',
+    'validator:belongs-to',
+    'validator:has-many',
+    'service:syncer',
+  ],
 });
 
 test('it exists', function(assert) {

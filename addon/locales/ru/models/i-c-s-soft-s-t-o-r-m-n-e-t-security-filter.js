@@ -51,5 +51,31 @@ export default {
         __caption__: 'Редактор'
       }
     }
+  },
+  validations: {
+    filterText: {
+      __caption__: 'Filter text'
+    },
+    name: {
+      __caption__: 'Name'
+    },
+    filterTypeNView: {
+      __caption__: 'Filter type n view'
+    },
+    createTime: {
+      __caption__: 'Дата создания'
+    },
+    creator: {
+      __caption__: 'Создатель'
+    },
+    editTime: {
+      __caption__: 'Дата изменения'
+    },
+    editor: {
+      __caption__: 'Редактор'
+    },
+    subject: {
+      __caption__: 'Subject'
+    }
   }
 };

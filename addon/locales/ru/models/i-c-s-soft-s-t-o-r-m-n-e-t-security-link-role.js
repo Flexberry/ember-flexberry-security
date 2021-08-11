@@ -185,5 +185,31 @@ export default {
         __caption__: 'Редактор'
       }
     }
+  },
+  validations: {
+    startDate: {
+      __caption__: 'Дата начала'
+    },
+    endDate: {
+      __caption__: 'Дата окончания'
+    },
+    createTime: {
+      __caption__: 'Дата создания'
+    },
+    creator: {
+      __caption__: 'Создатель'
+    },
+    editTime: {
+      __caption__: 'Дата изменения'
+    },
+    editor: {
+      __caption__: 'Редактор'
+    },
+    role: {
+      __caption__: 'Роль'
+    },
+    agent: {
+      __caption__: 'Агент'
+    }
   }
 };

@@ -21,6 +21,9 @@ export default {
       },
       sharedOper: {
         __caption__: 'Разделяемая операция'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     DetermineProperties: {
@@ -70,6 +73,9 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     Sec_SubjectE: {
@@ -84,6 +90,9 @@ export default {
       },
       isOperation: {
         __caption__: 'Операция'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     Sec_SubjectL: {
@@ -113,6 +122,9 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     Sec_SubjectTypeAccess: {
@@ -152,6 +164,65 @@ export default {
       permitted: {
         __caption__: 'Разрешение'
       }
+    }
+  },
+  validations: {
+    name: {
+      __caption__: 'Имя'
+    },
+    type: {
+      __caption__: 'Тип'
+    },
+    isAttribute: {
+      __caption__: 'Атрибут'
+    },
+    isOperation: {
+      __caption__: 'Операция'
+    },
+    isView: {
+      __caption__: 'Представление'
+    },
+    isClass: {
+      __caption__: 'Класс'
+    },
+    sharedOper: {
+      __caption__: 'Разделяемая операция'
+    },
+    comment: {
+      __caption__: 'Комментарий'
+    },
+    full: {
+      __caption__: 'Полный доступ'
+    },
+    read: {
+      __caption__: 'Чтение'
+    },
+    insert: {
+      __caption__: 'Вставка'
+    },
+    update: {
+      __caption__: 'Обновление'
+    },
+    delete: {
+      __caption__: 'Удаление'
+    },
+    execute: {
+      __caption__: 'Исполнение'
+    },
+    permitted: {
+      __caption__: 'permitted'
+    },
+    createTime: {
+      __caption__: 'Дата создания'
+    },
+    creator: {
+      __caption__: 'Создатель'
+    },
+    editTime: {
+      __caption__: 'Дата изменения'
+    },
+    editor: {
+      __caption__: 'Редактор'
     }
   }
 };

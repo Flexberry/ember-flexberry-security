@@ -60,5 +60,25 @@ export default {
         __caption__: 'Редактор'
       }
     }
+  },
+  validations: {
+    createTime: {
+      __caption__: 'Дата создания'
+    },
+    creator: {
+      __caption__: 'Создатель'
+    },
+    editTime: {
+      __caption__: 'Дата изменения'
+    },
+    editor: {
+      __caption__: 'Редактор'
+    },
+    user: {
+      __caption__: 'Пользователь'
+    },
+    agent: {
+      __caption__: 'Агент'
+    }
   }
 };
