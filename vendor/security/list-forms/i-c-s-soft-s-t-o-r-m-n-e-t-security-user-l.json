@@ -1,6 +1,7 @@
 ﻿{
   "newForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e",
   "editForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e",
+  "external": false,
   "caption": "Пользователи",
   "name": "ICSSoftSTORMNETSecurityUserL",
   "className": "UserL",

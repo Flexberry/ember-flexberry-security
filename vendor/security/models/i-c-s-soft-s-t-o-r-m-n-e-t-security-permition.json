@@ -2,6 +2,7 @@
   "name": "ICSSoftSTORMNETSecurityPermition",
   "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
   "className": "Permition",
+  "nameSpace": "ICSSoft.STORMNET.Security",
   "parentModelName": null,
   "parentClassName": null,
   "attrs": [
@@ -10,28 +11,36 @@
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "creator",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editTime",
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editor",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     }
   ],
   "belongsTo": [
@@ -84,6 +93,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "Агент",
           "name": "agent",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -104,6 +114,7 @@
             }
           ],
           "index": 3,
+          "type": "default",
           "caption": "Субъект",
           "name": "subject",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -164,6 +175,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "",
           "name": "subject",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -208,6 +220,7 @@
             }
           ],
           "index": 6,
+          "type": "default",
           "caption": "",
           "name": "agent",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -250,6 +263,7 @@
             }
           ],
           "index": -1,
+          "type": "default",
           "caption": "",
           "name": "subject",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -263,6 +277,7 @@
           "hidden": false,
           "attrs": [],
           "index": 2,
+          "type": "default",
           "caption": "",
           "name": "agent",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -303,6 +318,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "",
           "name": "subject",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -341,6 +357,7 @@
             }
           ],
           "index": 4,
+          "type": "default",
           "caption": "",
           "name": "agent",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -381,6 +398,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "",
           "name": "subject",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -419,6 +437,7 @@
             }
           ],
           "index": 4,
+          "type": "default",
           "caption": "",
           "name": "agent",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -455,6 +474,7 @@
             }
           ],
           "index": 0,
+          "type": "standard",
           "caption": "Агент",
           "name": "agent",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -475,6 +495,7 @@
             }
           ],
           "index": 2,
+          "type": "standard",
           "caption": "Субъект",
           "name": "subject",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -536,6 +557,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "",
           "name": "subject",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -574,6 +596,7 @@
             }
           ],
           "index": 1,
+          "type": "default",
           "caption": "",
           "name": "agent",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -582,5 +605,8 @@
       ],
       "hasMany": []
     }
-  ]
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
 }

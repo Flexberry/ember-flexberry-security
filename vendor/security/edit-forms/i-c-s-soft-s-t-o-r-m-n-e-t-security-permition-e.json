@@ -5,16 +5,19 @@
       "displayAttributeName": null,
       "required": false,
       "relationName": "Agent",
-      "projection": "RoleOrGroupL"
+      "projection": "RoleOrGroupL",
+      "detailModelName": null
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Subject",
-      "projection": "Sec_SubjectE"
+      "projection": "Sec_SubjectE",
+      "detailModelName": null
     }
   ],
+  "external": false,
   "caption": "Разрешение",
   "name": "ICSSoftSTORMNETSecurityPermitionE",
   "className": "PermitionE",

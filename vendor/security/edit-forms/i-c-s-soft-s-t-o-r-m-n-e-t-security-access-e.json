@@ -5,30 +5,35 @@
       "displayAttributeName": null,
       "required": false,
       "relationName": "Permition",
-      "projection": "Sec_PermitionL"
+      "projection": "Sec_PermitionL",
+      "detailModelName": null
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Permition.Agent",
-      "projection": "Sec_AccessL"
+      "projection": "Sec_AccessL",
+      "detailModelName": null
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Permition.Subject",
-      "projection": "Sec_AccessL"
+      "projection": "Sec_AccessL",
+      "detailModelName": null
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Filter",
-      "projection": ""
+      "projection": "",
+      "detailModelName": null
     }
   ],
+  "external": false,
   "caption": "Доступ",
   "name": "ICSSoftSTORMNETSecurityAccessE",
   "className": "AccessE",

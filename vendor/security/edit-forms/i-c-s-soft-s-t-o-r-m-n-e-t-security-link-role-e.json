@@ -5,16 +5,19 @@
       "displayAttributeName": null,
       "required": false,
       "relationName": "Role",
-      "projection": "RoleOrGroupL"
+      "projection": "RoleOrGroupL",
+      "detailModelName": null
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Agent",
-      "projection": "RoleOrGroupL"
+      "projection": "RoleOrGroupL",
+      "detailModelName": null
     }
   ],
+  "external": false,
   "caption": null,
   "name": "ICSSoftSTORMNETSecurityLinkRoleE",
   "className": "LinkRoleE",
