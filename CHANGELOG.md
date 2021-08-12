@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.0-beta.41] - 2021-08-04
+### Changed
+* Audit big data forms.
+
+### Fixed
+* Displaying audit big data fields.
+
 ## [0.1.0-beta.40] - 2021-07-03
 ### Added
 * Audit big data forms.
