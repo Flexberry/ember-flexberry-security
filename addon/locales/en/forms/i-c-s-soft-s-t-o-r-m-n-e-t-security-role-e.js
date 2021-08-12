@@ -9,6 +9,7 @@ export default {
   'creator-caption': 'Creator',
   'editTime-caption': 'Edit time',
   'editor-caption': 'Editor',
+  'comment-caption': 'comment',
   'role-roles-caption': 'Roles',
   'role-users-caption': 'Users',
   'role-users-name': 'Name',

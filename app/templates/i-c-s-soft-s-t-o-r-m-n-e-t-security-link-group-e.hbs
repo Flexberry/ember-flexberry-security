@@ -1,23 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.caption"}}</h3>
 
-{{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-      type='error'
-      closeable=true
-      visible=true
-      title='Error occurred'
-      message=currentError
-    }}
-  {{/each}}
-{{/if}}
 <form class="ui form flexberry-vertical-form" role="form">
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -35,39 +19,49 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupUsers'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.user
-    displayAttributeName='name'
-    relationName='user'
-    projection='RoleOrGroupL'
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.user pointing="pointing"}}
-</div>
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.user
+      class=(if (v-get validationObject "user" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="user"
+      projection="RoleOrGroupL"
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption")
+      readonly=readonly
+      componentName="userLookup"
+      class=(if (v-get validationObject "user" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e-user=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "user" "message")}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupGroups'
-    componentName='LookupPermition'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.group
-    displayAttributeName='name'
-    relationName='group'
-    projection='RoleOrGroupL'
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.group pointing="pointing"}}
-</div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.group
+      class=(if (v-get validationObject "group" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="group"
+      projection="RoleOrGroupL"
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption")
+      readonly=readonly
+      componentName="groupLookup"
+      class=(if (v-get validationObject "group" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e-group=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "group" "message")}}
+  </div>
 
 </form>

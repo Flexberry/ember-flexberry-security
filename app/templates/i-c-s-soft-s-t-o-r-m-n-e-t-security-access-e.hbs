@@ -1,23 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.caption"}}</h3>
 
-{{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-      type='error'
-      closeable=true
-      visible=true
-      title='Error occurred'
-      message=currentError
-    }}
-  {{/each}}
-{{/if}}
 <form class="ui form flexberry-vertical-form" role="form">
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -35,88 +19,86 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupPermitions'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.permition
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.permition
+      relationName="permition"
+      projection="Sec_PermitionL"
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition-caption")
+      readonly=readonly
+      componentName="permitionLookup"
+      class=(if (v-get validationObject "permition" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-permition=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "permition" "message")}}
+  </div>
 
-    relationName='permition'
-    projection='Sec_PermitionL'
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.permition pointing="pointing"}}
-</div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.permition.agent.name
+      class=(if (v-get validationObject.permition.agent "name" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition.agent.name-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-permition-agent-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject.permition.agent "name" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.permition.subject.name
+      class=(if (v-get validationObject.permition.subject "name" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition.subject.name-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-permition-subject-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject.permition.subject "name" "message")}}
+  </div>
+  <div class="field" data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-typeAccess="true">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.typeAccess-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access")
+      value=model.typeAccess
+      class=(if (v-get validationObject "typeAccess" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "typeAccess" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.filter
+      class=(if (v-get validationObject "filter" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="filter"
+      projection=""
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-caption")
+      readonly=readonly
+      componentName="filterLookup"
+      class=(if (v-get validationObject "filter" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-filter=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "filter" "message")}}
+  </div>
 
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=true
-    required=true
-    value=model.permition.agent.name
-    class=(if model.errors.permition.agent.name 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.agent-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.permition.agent.name pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=true
-    required=true
-    value=model.permition.subject.name
-    class=(if model.errors.permition.subject.name 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.subject-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.permition.subject.name pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.typeAccess-caption'}}</label>
-  {{
-    flexberry-dropdown
-    items=(flexberry-enum 'i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access')
-    value=model.typeAccess
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.typeAccess pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupAccesses'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.filter
-    displayAttributeName='name'
-    relationName='filter'
-    projection=''
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.filter pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=true
-    required=true
-    value=model.filter.name
-    class=(if model.errors.filter.name 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-name-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.filter.name pointing="pointing"}}
-</div>
-
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.filter.name
+      class=(if (v-get validationObject.filter "name" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter.name-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-filter-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject.filter "name" "message")}}
+  </div>
 </form>

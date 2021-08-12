@@ -1,13 +1,15 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:i-c-s-soft-s-t-o-r-m-n-e-t-security-class-e', 'Unit | Route | i c s soft s t o r m n e t security class e', {
+moduleFor('route:i-c-s-soft-s-t-o-r-m-n-e-t-security-class-e', 'Unit | Route | i-c-s-soft-s-t-o-r-m-n-e-t-security-class-e', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
   needs: [
+    'service:cols-config-menu',
+    'service:detail-interaction',
     'service:objectlistview-events',
-    'service:appState',
-    'service:detail-interaction'
-  ]
+    'service:user-settings',
+    'service:app-state',
+    'service:adv-limit',
+  ],
 });
 
 test('it exists', function(assert) {

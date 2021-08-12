@@ -1,30 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.caption"}}</h3>
 
 <form class="ui form flexberry-vertical-form" role="form">
-  {{ui-message
-    type="success"
-    closeable=true
-    visible=showFormSuccessMessage
-    caption=formSuccessMessageCaption
-    message=formSuccessMessage
-    onShow=(action "onSuccessMessageShow")
-    onHide=(action "onSuccessMessageHide")
-  }}
-  {{ui-message
-    type="error"
-    closeable=true
-    visible=showFormErrorMessage
-    caption=formErrorMessageCaption
-    message=formErrorMessage
-    onShow=(action "onErrorMessageShow")
-    onHide=(action "onErrorMessageHide")
-  }}
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -42,27 +19,40 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.name
-    class=(if model.errors.name 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.name-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
-</div>
+    {{flexberry-field
+      readonly=readonly
+      value=model.name
+      class=(if (v-get validationObject "name" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.name-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "name" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.enabled-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.enabled
+      class=(if (v-get validationObject "enabled" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e-enabled=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "enabled" "message")}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.enabled-caption'}}</label>
-  {{
-    flexberry-checkbox
-    readonly=readonly
-    value=model.enabled
-  }}
-  {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
-</div>
-
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.comment
+      class=(if (v-get validationObject "comment" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e.comment-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-group-e-comment=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "comment" "message")}}
+  </div>
 </form>

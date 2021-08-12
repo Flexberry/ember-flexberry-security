@@ -1,13 +1,16 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l', 'Unit | Controller | i c s soft s t o r m n e t security class l', {
+moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l', 'Unit | Controller | i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
   needs: [
-    'service:user-settings',
+    'controller:advlimit-dialog',
+    'controller:colsconfig-dialog',
+    'controller:filters-dialog',
     'service:objectlistview-events',
-    'controller:colsconfig-dialog'
-  ]
+    'service:user-settings',
+    'service:app-state',
+    'service:adv-limit',
+  ],
 });
 
 // Replace this with your real tests.

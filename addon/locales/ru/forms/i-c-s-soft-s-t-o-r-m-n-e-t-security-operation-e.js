@@ -10,5 +10,6 @@ export default {
   'createTime-caption': 'Дата создания',
   'creator-caption': 'Создатель',
   'editTime-caption': 'Дата изменения',
-  'editor-caption': 'Редактор'
+  'editor-caption': 'Редактор',
+  'comment-caption': 'Комментарий'
 };

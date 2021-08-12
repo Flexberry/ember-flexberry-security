@@ -1,23 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.caption"}}</h3>
 
-{{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-      type='error'
-      closeable=true
-      visible=true
-      title='Error occurred'
-      message=currentError
-    }}
-  {{/each}}
-{{/if}}
 <form class="ui form flexberry-vertical-form" role="form">
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -35,60 +19,71 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupRoles'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.role
-	displayAttributeName='name'
-    relationName='role'
-    projection='RoleOrGroupL'
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.role pointing="pointing"}}
-</div>
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.role
+      relationName="role"
+      displayAttributeName='name'
+      projection="RoleOrGroupL"
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption")
+      readonly=readonly
+      componentName="roleLookup"
+      class=(if (v-get validationObject "role" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e-role=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "role" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.agent
+      displayAttributeName='name'
+      relationName="agent"
+      projection="RoleOrGroupL"
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption")
+      readonly=readonly
+      componentName="agentLookup"
+      class=(if (v-get validationObject "agent" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e-agent=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "agent" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.startDate-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.startDate
+      class=(if (v-get validationObject "startDate" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e-startDate=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "startDate" "message")}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupAgents'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.agent
-	displayAttributeName='name'
-    relationName='agent'
-    projection='RoleOrGroupL'
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.agent pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.startDate-caption'}}</label>
-  {{flexberry-simpledatetime
-    placeholder='(no value)'
-    readonly=readonly
-    value=model.startDate
-    class=(if model.errors.startDate 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.startDate pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.endDate-caption'}}</label>
-  {{flexberry-simpledatetime
-    placeholder='(no value)'
-    readonly=readonly
-    value=model.endDate
-    class=(if model.errors.endDate 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.endDate pointing="pointing"}}
-</div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.endDate-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.endDate
+      class=(if (v-get validationObject "endDate" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e-endDate=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "endDate" "message")}}
+  </div>
 
 </form>

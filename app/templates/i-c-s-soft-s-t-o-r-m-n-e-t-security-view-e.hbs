@@ -1,23 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e.caption"}}</h3>
 
-{{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-      type='error'
-      closeable=true
-      visible=true
-      title='Error occurred'
-      message=currentError
-    }}
-  {{/each}}
-{{/if}}
 <form class="ui form flexberry-vertical-form" role="form">
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -35,17 +19,29 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.name
-    class=(if model.errors.name 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e.name-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
-</div>
-
+    {{flexberry-field
+      readonly=readonly
+      value=model.name
+      class=(if (v-get validationObject "name" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e.name-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "name" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.comment
+      class=(if (v-get validationObject "comment" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e.comment-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e-comment=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "comment" "message")}}
+  </div>
 </form>

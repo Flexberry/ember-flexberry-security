@@ -3,5 +3,6 @@ export default {
   'name-caption': 'Name',
   'isClass-caption': 'Is class',
   'isView-caption': 'Is view',
-  'isOperation-caption': 'Is operation'
+  'isOperation-caption': 'Is operation',
+  'comment-caption': 'comment'
 };
