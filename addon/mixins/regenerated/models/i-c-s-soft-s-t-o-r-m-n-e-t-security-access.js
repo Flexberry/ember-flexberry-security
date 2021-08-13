@@ -1,5 +1,4 @@
 import Mixin from '@ember/object/mixin';
-import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
 import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
