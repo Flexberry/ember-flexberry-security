@@ -27,6 +27,9 @@ export default {
       },
       email: {
         __caption__: 'Email'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     CheckExistLogin: {
@@ -52,6 +55,9 @@ export default {
       },
       email: {
         __caption__: 'E-mail'
+      },
+      domain: {
+        __caption__: ''
       }
     },
     OwnProperties: {
@@ -72,6 +78,9 @@ export default {
       },
       enabled: {
         __caption__: 'Актуально'
+      },
+      comment: {
+        __caption__: ''
       }
     },
     RoleOrGroupE: {
@@ -101,6 +110,9 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: ''
       }
     },
     RoleOrGroupL: {
@@ -130,6 +142,9 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: ''
       }
     },
     Sec_AgentE: {
@@ -150,6 +165,9 @@ export default {
       },
       isUser: {
         __caption__: 'Пользователь'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     Sec_AgentL: {
@@ -185,6 +203,9 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     Sec_AgentTypeAccess: {
@@ -234,6 +255,32 @@ export default {
       },
       enabled: {
         __caption__: 'Запись активна'
+      },
+      comment: {
+        __caption__: 'Комментарий'
+      }
+    },
+    Sec_GroupsL: {
+      name: {
+        __caption__: 'Название'
+      },
+      isGroup: {
+        __caption__: ''
+      },
+      enabled: {
+        __caption__: ''
+      },
+      createTime: {
+        __caption__: 'Дата создания'
+      },
+      creator: {
+        __caption__: 'Создатель'
+      },
+      editTime: {
+        __caption__: 'Дата изменения'
+      },
+      editor: {
+        __caption__: 'Редактор'
       }
     },
     Sec_NotUserL: {
@@ -263,6 +310,9 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     Sec_OpAgentRolesE: {
@@ -280,6 +330,9 @@ export default {
       isRole: {
         __caption__: 'Роль'
       },
+      enabled: {
+        __caption__: ''
+      },
       createTime: {
         __caption__: 'Дата создания'
       },
@@ -291,6 +344,9 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: 'Комментарий'
       }
     },
     UserE: {
@@ -320,6 +376,18 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      isUser: {
+        __caption__: ''
+      },
+      isGroup: {
+        __caption__: ''
+      },
+      isRole: {
+        __caption__: ''
+      },
+      comment: {
+        __caption__: ''
       }
     },
     UserL: {
@@ -355,7 +423,78 @@ export default {
       },
       editor: {
         __caption__: 'Редактор'
+      },
+      comment: {
+        __caption__: ''
       }
+    }
+  },
+  validations: {
+    name: {
+      __caption__: 'Имя'
+    },
+    login: {
+      __caption__: 'Логин'
+    },
+    pwd: {
+      __caption__: 'Пароль'
+    },
+    isUser: {
+      __caption__: 'Пользователь'
+    },
+    isGroup: {
+      __caption__: 'Группа'
+    },
+    isRole: {
+      __caption__: 'Роль'
+    },
+    connString: {
+      __caption__: 'Строка соединения'
+    },
+    enabled: {
+      __caption__: 'Включён'
+    },
+    email: {
+      __caption__: 'Email'
+    },
+    comment: {
+      __caption__: 'Комментарий'
+    },
+    domain: {
+      __caption__: 'domain'
+    },
+    agentKey: {
+      __caption__: 'agentKey'
+    },
+    full: {
+      __caption__: 'Полный доступ'
+    },
+    read: {
+      __caption__: 'Чтение'
+    },
+    insert: {
+      __caption__: 'Вставка'
+    },
+    update: {
+      __caption__: 'Обновление'
+    },
+    delete: {
+      __caption__: 'Удаление'
+    },
+    execute: {
+      __caption__: 'Исполнение'
+    },
+    createTime: {
+      __caption__: 'createTime'
+    },
+    creator: {
+      __caption__: 'creator'
+    },
+    editTime: {
+      __caption__: 'editTime'
+    },
+    editor: {
+      __caption__: 'editor'
     }
   }
 };

@@ -65,6 +65,8 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "https://flexberry-ember-security.firebaseapp.com"
+    "after": [
+      "ember-flexberry-data"
+    ]
   }
 }

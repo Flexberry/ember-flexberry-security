@@ -27,6 +27,9 @@ export default {
       },
       email: {
         __caption__: 'E-mail'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     CheckExistLogin: {
@@ -52,6 +55,9 @@ export default {
       },
       email: {
         __caption__: 'E-mail'
+      },
+      domain: {
+        __caption__: 'domain'
       }
     },
     OwnProperties: {
@@ -72,6 +78,9 @@ export default {
       },
       enabled: {
         __caption__: 'Enabled'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     RoleOrGroupE: {
@@ -101,6 +110,9 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     RoleOrGroupL: {
@@ -130,6 +142,9 @@ export default {
       },
       editor: {
         __caption__: 'Editorr'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     Sec_AgentE: {
@@ -150,6 +165,9 @@ export default {
       },
       isUser: {
         __caption__: 'User'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     Sec_AgentL: {
@@ -185,6 +203,9 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     Sec_AgentTypeAccess: {
@@ -234,6 +255,32 @@ export default {
       },
       enabled: {
         __caption__: 'Enabled'
+      },
+      comment: {
+        __caption__: 'comment'
+      }
+    },
+    Sec_GroupsL: {
+      name: {
+        __caption__: 'name'
+      },
+      isGroup: {
+        __caption__: 'isGroup'
+      },
+      enabled: {
+        __caption__: 'enabled'
+      },
+      createTime: {
+        __caption__: 'createTime'
+      },
+      creator: {
+        __caption__: 'creator'
+      },
+      editTime: {
+        __caption__: 'editTime'
+      },
+      editor: {
+        __caption__: 'editor'
       }
     },
     Sec_NotUserL: {
@@ -263,6 +310,9 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     Sec_OpAgentRolesE: {
@@ -280,6 +330,9 @@ export default {
       isRole: {
         __caption__: 'Role'
       },
+      enabled: {
+        __caption__: 'enabled'
+      },
       createTime: {
         __caption__: 'Create time'
       },
@@ -291,6 +344,9 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     UserE: {
@@ -320,6 +376,18 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      isUser: {
+        __caption__: 'isUser'
+      },
+      isGroup: {
+        __caption__: 'isGroup'
+      },
+      isRole: {
+        __caption__: 'isRole'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     UserL: {
@@ -355,7 +423,78 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      comment: {
+        __caption__: 'comment'
       }
+    }
+  },
+  validations: {
+    name: {
+      __caption__: 'name'
+    },
+    login: {
+      __caption__: 'login'
+    },
+    pwd: {
+      __caption__: 'pwd'
+    },
+    isUser: {
+      __caption__: 'isUser'
+    },
+    isGroup: {
+      __caption__: 'isGroup'
+    },
+    isRole: {
+      __caption__: 'isRole'
+    },
+    connString: {
+      __caption__: 'connString'
+    },
+    enabled: {
+      __caption__: 'enabled'
+    },
+    email: {
+      __caption__: 'email'
+    },
+    comment: {
+      __caption__: 'comment'
+    },
+    domain: {
+      __caption__: 'domain'
+    },
+    agentKey: {
+      __caption__: 'agentKey'
+    },
+    full: {
+      __caption__: 'full'
+    },
+    read: {
+      __caption__: 'read'
+    },
+    insert: {
+      __caption__: 'insert'
+    },
+    update: {
+      __caption__: 'update'
+    },
+    delete: {
+      __caption__: 'delete'
+    },
+    execute: {
+      __caption__: 'execute'
+    },
+    createTime: {
+      __caption__: 'createTime'
+    },
+    creator: {
+      __caption__: 'creator'
+    },
+    editTime: {
+      __caption__: 'editTime'
+    },
+    editor: {
+      __caption__: 'editor'
     }
   }
 };

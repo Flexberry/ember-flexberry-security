@@ -125,5 +125,25 @@ export default {
         __caption__: 'Editor'
       }
     }
+  },
+  validations: {
+    createTime: {
+      __caption__: 'createTime'
+    },
+    creator: {
+      __caption__: 'creator'
+    },
+    editTime: {
+      __caption__: 'editTime'
+    },
+    editor: {
+      __caption__: 'editor'
+    },
+    group: {
+      __caption__: 'group'
+    },
+    user: {
+      __caption__: 'user'
+    }
   }
 };
