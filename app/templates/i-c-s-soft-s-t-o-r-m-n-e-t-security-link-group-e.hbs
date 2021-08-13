@@ -30,7 +30,7 @@
       choose="showLookupDialog"
       remove="removeLookupValue"
       value=model.user
-      class=(if (v-get validationObject "user" "isInvalid") "error")
+      class=(if (v-get validationObject "model.user" "isInvalid") "error")
       displayAttributeName="name"
       autocomplete=true
       relationName="user"
@@ -38,10 +38,9 @@
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption")
       readonly=readonly
       componentName="userLookup"
-      class=(if (v-get validationObject "user" "isInvalid") "error")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e-user=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "user" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.user" "message")}}
   </div>
 
   <div class="field">
@@ -50,7 +49,7 @@
       choose="showLookupDialog"
       remove="removeLookupValue"
       value=model.group
-      class=(if (v-get validationObject "group" "isInvalid") "error")
+      class=(if (v-get validationObject "model.group" "isInvalid") "error")
       displayAttributeName="name"
       autocomplete=true
       relationName="group"
@@ -58,10 +57,9 @@
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption")
       readonly=readonly
       componentName="groupLookup"
-      class=(if (v-get validationObject "group" "isInvalid") "error")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e-group=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "group" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.group" "message")}}
   </div>
 
 </form>

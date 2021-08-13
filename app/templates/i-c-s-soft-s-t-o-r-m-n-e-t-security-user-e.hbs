@@ -28,41 +28,41 @@
     {{flexberry-field
       readonly=readonly
       value=model.name
-      class=(if (v-get validationObject "name" "isInvalid") "error")
+      class=(if (v-get validationObject "model.name" "isInvalid") "error")
       label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.name-caption")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-name=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "name" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.name" "message")}}
   </div>
   <div class="field">
     {{flexberry-field
       readonly=readonly
       value=model.login
-      class=(if (v-get validationObject "login" "isInvalid") "error")
+      class=(if (v-get validationObject "model.login" "isInvalid") "error")
       label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.login-caption")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-login=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "login" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.login" "message")}}
   </div>
   <div class="field">
     {{flexberry-field
       readonly=readonly
       value=model.email
-      class=(if (v-get validationObject "email" "isInvalid") "error")
+      class=(if (v-get validationObject "model.email" "isInvalid") "error")
       label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.email-caption")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-email=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "email" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.email" "message")}}
   </div>
   <div class="field">
     <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption"}}</label>
     {{flexberry-checkbox
       readonly=readonly
       value=model.enabled
-      class=(if (v-get validationObject "enabled" "isInvalid") "error")
+      class=(if (v-get validationObject "model.enabled" "isInvalid") "error")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-enabled=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "enabled" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.enabled" "message")}}
   </div>
 
   <div class="field">
@@ -71,21 +71,21 @@
       required=true
       type='password'
       value=model.pwd
-      class=(if (v-get validationObject "pwd" "isInvalid") "error")
+      class=(if (v-get validationObject "model.pwd" "isInvalid") "error")
       label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-pwd=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "pwd" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.pwd" "message")}}
   </div>
   <div class="field">
     {{flexberry-field
       readonly=readonly
       value=model.comment
-      class=(if (v-get validationObject "comment" "isInvalid") "error")
+      class=(if (v-get validationObject "model.comment" "isInvalid") "error")
       label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.comment-caption")
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-comment=true
     }}
-    {{flexberry-validationmessage error=(v-get validationObject "comment" "message")}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.comment" "message")}}
   </div>
   <div class="field roles">
     {{#flexberry-toggler
