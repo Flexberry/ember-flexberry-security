@@ -2,6 +2,7 @@
   "name": "ICSSoftSTORMNETSecurityAccess",
   "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-access",
   "className": "Access",
+  "nameSpace": "ICSSoft.STORMNET.Security",
   "parentModelName": null,
   "parentClassName": null,
   "attrs": [
@@ -10,35 +11,45 @@
       "type": "i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access",
       "flexberryType": "tTypeAccess",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "createTime",
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "creator",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editTime",
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editor",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     }
   ],
   "belongsTo": [
@@ -92,6 +103,7 @@
             }
           ],
           "index": 1,
+          "type": "standard",
           "caption": "Фильтр",
           "name": "filter",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
@@ -123,6 +135,7 @@
                 }
               ],
               "index": -1,
+              "type": null,
               "caption": "",
               "name": "agent",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -143,6 +156,7 @@
                 }
               ],
               "index": -1,
+              "type": null,
               "caption": "",
               "name": "subject",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -152,6 +166,7 @@
           "hidden": false,
           "attrs": [],
           "index": 4,
+          "type": "default",
           "caption": "Разрешение",
           "name": "permition",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
@@ -192,6 +207,7 @@
                 }
               ],
               "index": 2,
+              "type": null,
               "caption": "",
               "name": "subject",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -205,6 +221,7 @@
               "hidden": false,
               "attrs": [],
               "index": 4,
+              "type": null,
               "caption": "",
               "name": "agent",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -214,6 +231,7 @@
           "hidden": false,
           "attrs": [],
           "index": 1,
+          "type": "default",
           "caption": "",
           "name": "permition",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
@@ -234,6 +252,7 @@
             }
           ],
           "index": -1,
+          "type": "default",
           "caption": "",
           "name": "filter",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
@@ -275,6 +294,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "",
           "name": "filter",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
@@ -329,6 +349,7 @@
                 }
               ],
               "index": 1,
+              "type": null,
               "caption": "",
               "name": "agent",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -361,6 +382,7 @@
                 }
               ],
               "index": 3,
+              "type": null,
               "caption": "",
               "name": "subject",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -370,6 +392,7 @@
           "hidden": false,
           "attrs": [],
           "index": 0,
+          "type": "default",
           "caption": "~",
           "name": "permition",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
@@ -390,6 +413,7 @@
             }
           ],
           "index": 8,
+          "type": "standard",
           "caption": "~",
           "name": "filter",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
@@ -454,6 +478,7 @@
                 }
               ],
               "index": -1,
+              "type": null,
               "caption": "",
               "name": "agent",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-agent",
@@ -474,6 +499,7 @@
                 }
               ],
               "index": -1,
+              "type": null,
               "caption": "",
               "name": "subject",
               "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -483,6 +509,7 @@
           "hidden": true,
           "attrs": [],
           "index": 0,
+          "type": "default",
           "caption": "",
           "name": "permition",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-permition",
@@ -503,6 +530,7 @@
             }
           ],
           "index": -1,
+          "type": "default",
           "caption": "Фильтр",
           "name": "filter",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-filter",
@@ -511,5 +539,8 @@
       ],
       "hasMany": []
     }
-  ]
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
 }

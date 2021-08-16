@@ -144,5 +144,28 @@ export default {
         __caption__: 'Редактор'
       }
     }
+  },
+  validations: {
+    typeAccess: {
+      __caption__: 'Тип доступа'
+    },
+    createTime: {
+      __caption__: 'Дата создания'
+    },
+    creator: {
+      __caption__: 'Создатель'
+    },
+    editTime: {
+      __caption__: 'Дата изменения'
+    },
+    editor: {
+      __caption__: 'Редактор'
+    },
+    filter: {
+      __caption__: 'Фильтр'
+    },
+    permition: {
+      __caption__: 'Разрешение'
+    }
   }
 };

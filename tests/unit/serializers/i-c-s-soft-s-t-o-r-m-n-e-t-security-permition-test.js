@@ -4,8 +4,10 @@ moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', 'Unit | Serializ
   // Specify the other units that are required for this test.
   needs: [
     'serializer:i-c-s-soft-s-t-o-r-m-n-e-t-security-permition',
+    'service:syncer',
     'transform:file',
     'transform:decimal',
+    'transform:guid',
 
     'transform:i-c-s-soft-s-t-o-r-m-n-e-t-security-t-type-access',
 
@@ -21,8 +23,13 @@ moduleForModel('i-c-s-soft-s-t-o-r-m-n-e-t-security-permition', 'Unit | Serializ
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-permition',
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-session',
     'model:i-c-s-soft-s-t-o-r-m-n-e-t-security-subject',
-    'service:syncer'
-  ]
+    'validator:ds-error',
+    'validator:presence',
+    'validator:number',
+    'validator:date',
+    'validator:belongs-to',
+    'validator:has-many',
+  ],
 });
 
 // Replace this with your real tests.

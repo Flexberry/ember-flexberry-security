@@ -144,5 +144,28 @@ export default {
         __caption__: 'Editor'
       }
     }
+  },
+  validations: {
+    typeAccess: {
+      __caption__: 'typeAccess'
+    },
+    createTime: {
+      __caption__: 'createTime'
+    },
+    creator: {
+      __caption__: 'creator'
+    },
+    editTime: {
+      __caption__: 'editTime'
+    },
+    editor: {
+      __caption__: 'editor'
+    },
+    filter: {
+      __caption__: 'filter'
+    },
+    permition: {
+      __caption__: 'permition'
+    }
   }
 };

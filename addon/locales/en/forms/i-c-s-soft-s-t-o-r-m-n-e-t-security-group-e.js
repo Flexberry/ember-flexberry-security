@@ -8,5 +8,6 @@ export default {
   'createTime-caption': 'Create time',
   'creator-caption': 'Creator',
   'editTime-caption': 'Edit time',
-  'editor-caption': 'Editor'
+  'editor-caption': 'Editor',
+  'comment-caption': 'Comment'
 };

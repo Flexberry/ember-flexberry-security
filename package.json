@@ -42,7 +42,7 @@
     "ember-data": "~3.1.2",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
-    "ember-flexberry": "~3.5.0",
+    "ember-flexberry": "~3.6.0-beta.3",
     "ember-link-action": "0.0.36",
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "7.7.0",
@@ -61,10 +61,9 @@
   "dependencies": {
     "ember-cli": "~3.1.4",
     "ember-cli-babel": "^6.6.0",
-    "ember-flexberry-data": "~3.4.0"
+    "ember-flexberry-data": "~3.6.0-beta.1"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config",
-    "demoURL": "https://flexberry-ember-security.firebaseapp.com"
+    "configPath": "tests/dummy/config"
   }
 }

@@ -3,5 +3,6 @@ export default {
   'name-caption': 'Имя',
   'isClass-caption': 'Класс',
   'isView-caption': 'Представление',
-  'isOperation-caption': 'Операция'
+  'isOperation-caption': 'Операция',
+  'comment-caption': 'Комментарий'
 };

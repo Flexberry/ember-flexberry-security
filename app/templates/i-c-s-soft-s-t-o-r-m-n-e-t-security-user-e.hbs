@@ -1,29 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.caption"}}</h3>
+
 <form class="ui form flexberry-vertical-form" role="form">
-  {{ui-message
-    type="success"
-    closeable=true
-    visible=showFormSuccessMessage
-    caption=formSuccessMessageCaption
-    message=formSuccessMessage
-    onShow=(action "onSuccessMessageShow")
-    onHide=(action "onSuccessMessageHide")
-  }}
-  {{ui-message
-    type="error"
-    closeable=true
-    visible=showFormErrorMessage
-    caption=formErrorMessageCaption
-    message=formErrorMessage
-    onShow=(action "onErrorMessageShow")
-    onHide=(action "onErrorMessageHide")
-  }}
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -41,70 +19,74 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-    {{
-      flexberry-field
-      placeholder=(t 'components.flexberry-field.placeholder')
+    {{flexberry-field
       readonly=readonly
-      required=true
       value=model.name
-      class=(if model.errors.name 'error' '')
-      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.name-caption')
+      class=(if (v-get validationObject "model.name" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.name-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-name=true
     }}
-    {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.name" "message")}}
   </div>
-
   <div class="field">
-    {{
-      flexberry-field
-      placeholder=(t 'components.flexberry-field.placeholder')
+    {{flexberry-field
       readonly=readonly
-      required=true
       value=model.login
-      class=(if model.errors.login 'error' '')
-      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.login-caption')
+      class=(if (v-get validationObject "model.login" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.login-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-login=true
     }}
-    {{flexberry-validationmessage error=model.errors.login pointing="pointing"}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.login" "message")}}
   </div>
-
   <div class="field">
-    {{
-      flexberry-field
-      placeholder=(t 'components.flexberry-field.placeholder')
+    {{flexberry-field
       readonly=readonly
-      required=true
-      type='email'
       value=model.email
-      class=(if model.errors.email 'error' '')
-      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.email-caption')
+      class=(if (v-get validationObject "model.email" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.email-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-email=true
     }}
-    {{flexberry-validationmessage error=model.errors.email pointing="pointing"}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.email" "message")}}
   </div>
-
   <div class="field">
-    <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption'}}</label>
-    {{
-      flexberry-checkbox
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.enabled-caption"}}</label>
+    {{flexberry-checkbox
       readonly=readonly
       value=model.enabled
+      class=(if (v-get validationObject "model.enabled" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-enabled=true
     }}
-    {{flexberry-validationmessage error=model.errors.enabled pointing="pointing"}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.enabled" "message")}}
   </div>
 
   <div class="field">
-    {{
-      flexberry-field
-      placeholder=(t 'components.flexberry-field.placeholder')
+    {{flexberry-field
       readonly=readonly
       required=true
       type='password'
       value=model.pwd
-      class=(if model.errors.pwd 'error' '')
-      label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption')
+      class=(if (v-get validationObject "model.pwd" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.pwd-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-pwd=true
     }}
-    {{flexberry-validationmessage error=model.errors.pwd pointing="pointing"}}
+    {{flexberry-validationmessage error=(v-get validationObject "model.pwd" "message")}}
   </div>
-
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.comment
+      class=(if (v-get validationObject "model.comment" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.comment-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e-comment=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "model.comment" "message")}}
+  </div>
   <div class="field roles">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-roles-caption')
@@ -117,7 +99,6 @@
       }}
     {{/flexberry-toggler}}
   </div>
-
   <div class="field groups">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-groups-caption')
@@ -130,7 +111,6 @@
       }}
     {{/flexberry-toggler}}
   </div>
-
   <div class="field classes">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-classes-caption')
@@ -143,7 +123,6 @@
       }}
     {{/flexberry-toggler}}
   </div>
-
   <div class="field operations">
     {{#flexberry-toggler
       caption=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e.user-operations-caption')

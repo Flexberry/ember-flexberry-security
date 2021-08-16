@@ -5,16 +5,19 @@
       "displayAttributeName": null,
       "required": false,
       "relationName": "User",
-      "projection": "RoleOrGroupL"
+      "projection": "RoleOrGroupL",
+      "detailModelName": null
     },
     {
       "master": null,
       "displayAttributeName": null,
       "required": false,
       "relationName": "Group",
-      "projection": "RoleOrGroupL"
+      "projection": "RoleOrGroupL",
+      "detailModelName": null
     }
   ],
+  "external": false,
   "caption": null,
   "name": "ICSSoftSTORMNETSecurityLinkGroupE",
   "className": "LinkGroupE",

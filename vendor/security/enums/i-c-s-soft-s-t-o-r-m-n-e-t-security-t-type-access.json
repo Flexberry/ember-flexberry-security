@@ -1,4 +1,5 @@
 ﻿{
+  "nameSpace": "ICSSoft.STORMNET.Security",
   "className": "tTypeAccess",
   "enumObjects": {
     "Full": null,

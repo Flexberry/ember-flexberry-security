@@ -1,6 +1,7 @@
 ﻿{
   "newForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e",
   "editForm": "i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e",
+  "external": false,
   "caption": "Роли",
   "name": "ICSSoftSTORMNETSecurityRoleL",
   "className": "RoleL",

@@ -1,16 +1,20 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e', 'Unit | Controller | i c s soft s t o r m n e t security link group e', {
+moduleFor('controller:i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e', 'Unit | Controller | i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
   needs: [
-    'service:objectlistviewEvents',
-    'controller:lookup-dialog',
+    'controller:advlimit-dialog',
+    'controller:colsconfig-dialog',
     'controller:flexberry-file-view-dialog',
+    'controller:lookup-dialog',
+    'controller:filters-dialog',
+    'service:detail-interaction',
+    'service:objectlistview-events',
     'service:user-settings',
-    'service:appState',
-    'service:detail-interaction'
-  ]
+    'service:app-state',
+    'service:adv-limit',
+    'service:lookup-events',
+  ],
 });
 
 // Replace this with your real tests.

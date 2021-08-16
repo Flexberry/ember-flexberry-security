@@ -1,30 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.caption"}}</h3>
 
 <form class="ui form flexberry-vertical-form" role="form">
-  {{ui-message
-    type="success"
-    closeable=true
-    visible=showFormSuccessMessage
-    caption=formSuccessMessageCaption
-    message=formSuccessMessage
-    onShow=(action "onSuccessMessageShow")
-    onHide=(action "onSuccessMessageHide")
-  }}
-  {{ui-message
-    type="error"
-    closeable=true
-    visible=showFormErrorMessage
-    caption=formErrorMessageCaption
-    message=formErrorMessage
-    onShow=(action "onErrorMessageShow")
-    onHide=(action "onErrorMessageHide")
-  }}
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -42,88 +19,98 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.name
-    class=(if model.errors.name 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.name-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
-</div>
+    {{flexberry-field
+      readonly=readonly
+      value=model.name
+      class=(if (v-get validationObject "name" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.name-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "name" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.type
+      class=(if (v-get validationObject "type" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.type-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-type=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "type" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.sharedOper-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.sharedOper
+      class=(if (v-get validationObject "sharedOper" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-sharedOper=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "sharedOper" "message")}}
+  </div>
 
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.type
-    class=(if model.errors.type 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.type-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.type pointing="pointing"}}
-</div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.createTime-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.createTime
+      class=(if (v-get validationObject "createTime" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-createTime=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "createTime" "message")}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.sharedOper-caption'}}</label>
-  {{
-    flexberry-checkbox
-    readonly=readonly
-    value=model.sharedOper
-  }}
-  {{flexberry-validationmessage error=model.errors.sharedOper pointing="pointing"}}
-</div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.creator
+      class=(if (v-get validationObject "creator" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.creator-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-creator=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "creator" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.editTime-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.editTime
+      class=(if (v-get validationObject "editTime" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-editTime=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "editTime" "message")}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.createTime-caption'}}</label>
-  {{flexberry-simpledatetime
-    placeholder='(no value)'
-    readonly=readonly
-    value=model.createTime
-    class=(if model.errors.createTime 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.createTime pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.creator
-    class=(if model.errors.creator 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.creator-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.creator pointing="pointing"}}
-</div>
-
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.editTime-caption'}}</label>
-  {{flexberry-simpledatetime
-    placeholder='(no value)'
-    readonly=readonly
-    value=model.editTime
-    class=(if model.errors.editTime 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.editTime pointing="pointing"}}
-</div>
-
-<div class="field">
-  {{
-    flexberry-field
-    placeholder=(t 'components.flexberry-field.placeholder')
-    readonly=readonly
-    required=true
-    value=model.editor
-    class=(if model.errors.editor 'error' '')
-    label=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.editor-caption')
-  }}
-  {{flexberry-validationmessage error=model.errors.editor pointing="pointing"}}
-</div>
-
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.editor
+      class=(if (v-get validationObject "editor" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.editor-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-editor=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "editor" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.comment
+      class=(if (v-get validationObject "comment" "isInvalid") "error")
+      label=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.comment-caption")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e-comment=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "comment" "message")}}
+  </div>
 </form>

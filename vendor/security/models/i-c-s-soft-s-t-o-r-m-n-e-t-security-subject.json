@@ -2,6 +2,7 @@
   "name": "ICSSoftSTORMNETSecuritySubject",
   "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
   "className": "Subject",
+  "nameSpace": "ICSSoft.STORMNET.Security",
   "parentModelName": null,
   "parentClassName": null,
   "attrs": [
@@ -10,126 +11,171 @@
       "type": "string",
       "flexberryType": "string100",
       "notNull": true,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "type",
       "type": "string",
       "flexberryType": "string100",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "isAttribute",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": true,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "isOperation",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": true,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "isView",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": true,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "isClass",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": true,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "sharedOper",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": "true"
+      "defaultValue": "true",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "comment",
+      "type": "string",
+      "flexberryType": "stringMAX",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "full",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
     },
     {
       "name": "read",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
     },
     {
       "name": "insert",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
     },
     {
       "name": "update",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
     },
     {
       "name": "delete",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
     },
     {
       "name": "execute",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
     },
     {
       "name": "permitted",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
     },
     {
       "name": "createTime",
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "creator",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editTime",
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editor",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     }
   ],
   "belongsTo": [],
@@ -180,6 +226,12 @@
           "caption": "Разделяемая операция",
           "hidden": false,
           "index": 6
+        },
+        {
+          "name": "comment",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 7
         }
       ],
       "belongsTo": [],
@@ -286,6 +338,12 @@
           "caption": "Редактор",
           "hidden": false,
           "index": 10
+        },
+        {
+          "name": "comment",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 11
         }
       ],
       "belongsTo": [],
@@ -318,6 +376,12 @@
           "caption": "Операция",
           "hidden": true,
           "index": 3
+        },
+        {
+          "name": "comment",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 4
         }
       ],
       "belongsTo": [],
@@ -380,6 +444,12 @@
           "caption": "Редактор",
           "hidden": false,
           "index": 8
+        },
+        {
+          "name": "comment",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 9
         }
       ],
       "belongsTo": [],
@@ -465,5 +535,8 @@
       "belongsTo": [],
       "hasMany": []
     }
-  ]
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
 }

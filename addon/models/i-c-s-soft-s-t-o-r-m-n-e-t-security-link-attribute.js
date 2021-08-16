@@ -1,7 +1,19 @@
-import { Model as LinkAttributeMixin, defineProjections } from '../mixins/regenerated/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-attribute';
+import { buildValidations } from 'ember-cp-validations';
 import __BaseModel from './base';
-let Model = __BaseModel.extend(LinkAttributeMixin, {
 
+import {
+  defineProjections,
+  ValidationRules,
+  Model as LinkAttributeMixin
+} from '../mixins/regenerated/models/i-c-s-soft-s-t-o-r-m-n-e-t-security-link-attribute';
+
+const Validations = buildValidations(ValidationRules, {
+  dependentKeys: ['model.i18n.locale'],
 });
+
+let Model = __BaseModel.extend(LinkAttributeMixin, Validations, {
+});
+
 defineProjections(Model);
+
 export default Model;

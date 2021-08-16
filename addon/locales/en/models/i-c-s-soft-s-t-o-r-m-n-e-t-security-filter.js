@@ -51,5 +51,31 @@ export default {
         __caption__: 'Editor'
       }
     }
+  },
+  validations: {
+    filterText: {
+      __caption__: 'filterText'
+    },
+    name: {
+      __caption__: 'name'
+    },
+    filterTypeNView: {
+      __caption__: 'filterTypeNView'
+    },
+    createTime: {
+      __caption__: 'createTime'
+    },
+    creator: {
+      __caption__: 'creator'
+    },
+    editTime: {
+      __caption__: 'editTime'
+    },
+    editor: {
+      __caption__: 'editor'
+    },
+    subject: {
+      __caption__: 'subject'
+    }
   }
 };

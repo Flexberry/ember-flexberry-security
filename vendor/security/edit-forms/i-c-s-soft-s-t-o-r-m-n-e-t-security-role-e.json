@@ -1,5 +1,6 @@
 ﻿{
   "propertyLookup": [],
+  "external": false,
   "caption": "Роль",
   "name": "ICSSoftSTORMNETSecurityRoleE",
   "className": "RoleE",

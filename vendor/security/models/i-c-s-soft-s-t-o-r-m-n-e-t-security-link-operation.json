@@ -2,6 +2,7 @@
   "name": "ICSSoftSTORMNETSecurityLinkOperation",
   "modelName": "i-c-s-soft-s-t-o-r-m-n-e-t-security-link-operation",
   "className": "LinkOperation",
+  "nameSpace": "ICSSoft.STORMNET.Security",
   "parentModelName": null,
   "parentClassName": null,
   "attrs": [
@@ -10,28 +11,36 @@
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "creator",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editTime",
       "type": "date",
       "flexberryType": "AuditNullableDateTime",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     },
     {
       "name": "editor",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
     }
   ],
   "belongsTo": [
@@ -72,6 +81,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "Класс",
           "name": "class",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -92,6 +102,7 @@
             }
           ],
           "index": 2,
+          "type": "default",
           "caption": "Операция",
           "name": "operation",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -120,6 +131,7 @@
             }
           ],
           "index": 0,
+          "type": "default",
           "caption": "",
           "name": "operation",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -140,6 +152,7 @@
             }
           ],
           "index": 2,
+          "type": "default",
           "caption": "",
           "name": "class",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -193,6 +206,7 @@
             }
           ],
           "index": 2,
+          "type": "default",
           "caption": "Операция",
           "name": "operation",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -213,6 +227,7 @@
             }
           ],
           "index": 3,
+          "type": "default",
           "caption": "Класс",
           "name": "class",
           "relatedTo": "i-c-s-soft-s-t-o-r-m-n-e-t-security-subject",
@@ -221,5 +236,8 @@
       ],
       "hasMany": []
     }
-  ]
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
 }

@@ -60,5 +60,25 @@ export default {
         __caption__: 'Editor'
       }
     }
+  },
+  validations: {
+    createTime: {
+      __caption__: 'createTime'
+    },
+    creator: {
+      __caption__: 'creator'
+    },
+    editTime: {
+      __caption__: 'editTime'
+    },
+    editor: {
+      __caption__: 'editor'
+    },
+    user: {
+      __caption__: 'user'
+    },
+    agent: {
+      __caption__: 'agent'
+    }
   }
 };

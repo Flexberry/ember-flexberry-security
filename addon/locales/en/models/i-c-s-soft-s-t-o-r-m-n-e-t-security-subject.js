@@ -21,6 +21,9 @@ export default {
       },
       sharedOper: {
         __caption__: 'Shared oper'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     DetermineProperties: {
@@ -70,6 +73,9 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     Sec_SubjectE: {
@@ -84,6 +90,9 @@ export default {
       },
       isOperation: {
         __caption__: 'Operation'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     Sec_SubjectL: {
@@ -113,6 +122,9 @@ export default {
       },
       editor: {
         __caption__: 'Editor'
+      },
+      comment: {
+        __caption__: 'comment'
       }
     },
     Sec_SubjectTypeAccess: {
@@ -152,6 +164,65 @@ export default {
       permitted: {
         __caption__: 'Permitted'
       }
+    }
+  },
+  validations: {
+    name: {
+      __caption__: 'name'
+    },
+    type: {
+      __caption__: 'type'
+    },
+    isAttribute: {
+      __caption__: 'isAttribute'
+    },
+    isOperation: {
+      __caption__: 'isOperation'
+    },
+    isView: {
+      __caption__: 'isView'
+    },
+    isClass: {
+      __caption__: 'isClass'
+    },
+    sharedOper: {
+      __caption__: 'sharedOper'
+    },
+    comment: {
+      __caption__: 'comment'
+    },
+    full: {
+      __caption__: 'full'
+    },
+    read: {
+      __caption__: 'read'
+    },
+    insert: {
+      __caption__: 'insert'
+    },
+    update: {
+      __caption__: 'update'
+    },
+    delete: {
+      __caption__: 'delete'
+    },
+    execute: {
+      __caption__: 'execute'
+    },
+    permitted: {
+      __caption__: 'permitted'
+    },
+    createTime: {
+      __caption__: 'createTime'
+    },
+    creator: {
+      __caption__: 'creator'
+    },
+    editTime: {
+      __caption__: 'editTime'
+    },
+    editor: {
+      __caption__: 'editor'
     }
   }
 };

@@ -9,6 +9,7 @@ export default {
   'creator-caption': 'Создатель',
   'editTime-caption': 'Дата изменения',
   'editor-caption': 'Редактор',
+  'comment-caption': 'Комментарий',
   'role-roles-caption': 'Роли',
   'role-users-caption': 'Пользователи',
   'role-users-name': 'Пользователь',

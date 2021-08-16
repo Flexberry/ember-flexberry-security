@@ -1,23 +1,7 @@
-<h3 class="ui header">{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.caption'}}</h3>
+<h3 class="ui header">{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.caption"}}</h3>
 
-{{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-      type='error'
-      closeable=true
-      visible=true
-      title='Error occurred'
-      message=currentError
-    }}
-  {{/each}}
-{{/if}}
 <form class="ui form flexberry-vertical-form" role="form">
   {{flexberry-error error=error}}
-  <div class="field">
-    <div class="sixteen wide">
-      {{flexberry-validationsummary errors=model.errors}}
-    </div>
-  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
@@ -35,52 +19,63 @@
       </button>
     </div>
   </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
   <div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupAgents'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.agent
-    displayAttributeName='name'
-    relationName='agent'
-    projection='RoleOrGroupL'
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.agent pointing="pointing"}}
-</div>
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.agent
+      class=(if (v-get validationObject "agent" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="agent"
+      projection="RoleOrGroupL"
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.agent-caption")
+      readonly=readonly
+      componentName="agentLookup"
+      class=(if (v-get validationObject "agent" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e-agent=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "agent" "message")}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption'}}</label>
-  {{
-    flexberry-lookup
-    componentName='LookupSubjects'
-    choose='showLookupDialog'
-    remove='removeLookupValue'
-    value=model.subject
-    displayAttributeName='name'
-    relationName='subject'
-    projection='Sec_SubjectE'
-    title=(t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption')
-    readonly=readonly
-  }}
-  {{flexberry-validationmessage error=model.errors.subject pointing="pointing"}}
-</div>
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.subject
+      class=(if (v-get validationObject "subject" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="subject"
+      projection="Sec_SubjectE"
+      title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.subject-caption")
+      readonly=readonly
+      componentName="subjectLookup"
+      class=(if (v-get validationObject "subject" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e-subject=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "subject" "message")}}
+  </div>
 
-<div class="field">
-  <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.access-caption'}}</label>
-  {{
-    flexberry-groupedit
-    componentName="accessGroupEdit"
-    modelProjection=modelProjection.attributes.access
-    content=model.access
-    readonly=readonly
-    orderable=false
-    class=(if model.errors.access 'error' '')
-  }}
-  {{flexberry-validationmessage error=model.errors.access pointing="pointing"}}
-</div>
-
+  <div class="field">
+    <label>{{t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e.access-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="accessGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.access
+      content=model.access
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "access" "isInvalid") "error")
+      data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-permition-e-access=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "access" "message")}}
+  </div>
 </form>

@@ -1,13 +1,19 @@
 import Mixin from '@ember/object/mixin';
+import $ from 'jquery';
 
 export let Serializer = Mixin.create({
-  attrs: {
-    agent: { serialize: 'odata-id', deserialize: 'records' },
-    subject: { serialize: 'odata-id', deserialize: 'records' },
-    access: { serialize: false, deserialize: 'records' }
+  getAttrs: function () {
+    let parentAttrs = this._super();
+    let attrs = {
+      agent: { serialize: 'odata-id', deserialize: 'records' },
+      subject: { serialize: 'odata-id', deserialize: 'records' },
+      access: { serialize: false, deserialize: 'records' }
+    };
+
+    return $.extend(true, {}, parentAttrs, attrs);
   },
-  /**
-  * Field name where object identifier is kept.
-  */
-  primaryKey: '__PrimaryKey'
+  init: function () {
+    this.set('attrs', this.getAttrs());
+    this._super(...arguments);
+  }
 });
