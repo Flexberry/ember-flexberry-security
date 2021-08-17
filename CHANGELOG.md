@@ -4,9 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [3.0.0-beta.0] 
+## [3.6.0]  - 2021-08-17
 ### Added
 * Ember 3 support.
+
+### Changed
+* Update dependency on `ember-flexberry` to 3.6.0
 
 ## [0.1.0-beta.39] - 2018-02-20
 ### Fixed

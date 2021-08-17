@@ -1,6 +1,6 @@
 {
   "name": "ember-flexberry-security",
-  "version": "3.0.0-beta.3",
+  "version": "3.6.0",
   "description": "Role based security module, authentification and authorization module, audit modile for ember-flexberry.",
   "directories": {
     "doc": "doc",
@@ -42,7 +42,7 @@
     "ember-data": "~3.1.2",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
-    "ember-flexberry": "~3.6.0-beta.3",
+    "ember-flexberry": "~3.6.0",
     "ember-link-action": "0.0.36",
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "7.7.0",
@@ -61,7 +61,7 @@
   "dependencies": {
     "ember-cli": "~3.1.4",
     "ember-cli-babel": "^6.6.0",
-    "ember-flexberry-data": "~3.6.0-beta.1"
+    "ember-flexberry-data": "~3.6.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
