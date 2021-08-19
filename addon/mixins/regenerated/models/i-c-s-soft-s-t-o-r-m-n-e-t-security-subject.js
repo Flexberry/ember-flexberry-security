@@ -346,10 +346,11 @@ export let defineProjections = function (modelClass) {
 
   modelClass.defineProjection('Sec_SubjectE', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', {
     name: attr('Имя', { index: 0 }),
-    isClass: attr('Класс', { index: 1, hidden: true }),
-    isView: attr('Представление', { index: 2, hidden: true }),
-    isOperation: attr('Операция', { index: 3, hidden: true }),
-    comment: attr('Комментарий', { index: 4 })
+    isAttribute: attr('Атрибут', { index: 1, hidden: true }),
+    isClass: attr('Класс', { index: 2, hidden: true }),
+    isView: attr('Представление', { index: 3, hidden: true }),
+    isOperation: attr('Операция', { index: 4, hidden: true }),
+    comment: attr('Комментарий', { index: 5 })
   });
 
   modelClass.defineProjection('Sec_SubjectL', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject', {
