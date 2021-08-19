@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.6.1-beta.0]  - 2021-08-19
+### Fixed
+* `Sec_SubjectE` projection in subject model.
+
 ## [3.6.0]  - 2021-08-17
 ### Added
 * Ember 3 support.
