@@ -10,13 +10,25 @@
     {{#each auditFields as |auditField|}}
       <tr>
         <td>
-        {{auditField.Field}}
+          {{#if auditField.Field}}
+            {{auditField.Field}}
+          {{else if auditField.field}}
+            {{auditField.field}}
+          {{/if}}        
         </td>
         <td>
-        {{auditField.OldValue}}
+          {{#if auditField.OldValue}}
+            {{auditField.OldValue}}
+          {{else if auditField.oldValue}}
+            {{auditField.oldValue}}
+          {{/if}}
         </td>
         <td>
-        {{auditField.NewValue}}
+          {{#if auditField.NewValue}}
+            {{auditField.NewValue}}
+          {{else if auditField.newValue}}
+            {{auditField.newValue}}
+          {{/if}}
         </td>
       </tr>
     {{/each}}
