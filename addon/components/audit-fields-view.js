@@ -7,7 +7,7 @@ export default FlexberryBaseComponent.extend({
     Audit fields.
 
     @property value
-    @type String
+    @type Array
   */
   auditFields: undefined,
 
@@ -34,4 +34,35 @@ export default FlexberryBaseComponent.extend({
     @type String
   */
   newValueColumnCaption: undefined,
+
+  /**
+    Audit fields with separated strings.
+
+    @property auditFieldsWithSeparatedLines
+    @type Array
+  */
+  auditFieldsWithSeparatedLines: Ember.computed('auditFields', function() {
+    const auditFields = this.get('auditFields');
+
+    let fieldsWithSeparatedLines = [];
+
+    auditFields.forEach(field => {
+        const fieldName =  field.field || field.Field || ' ';
+        let oldValueParameter = field.oldValue || field.OldValue || ' ';
+        let newValueParameter = field.newValue || field.NewValue || ' ';
+
+        let oldValueParameterSeparated = oldValueParameter.replace(',', '\n');
+        let newValueParameterSeparated = newValueParameter.replace(',', '\n');
+
+        let resultFieldObject = {
+          field: fieldName,
+          oldValue: oldValueParameterSeparated,
+          newValue: newValueParameterSeparated
+        };
+
+        fieldsWithSeparatedLines.push(resultFieldObject);
+    });
+
+    return fieldsWithSeparatedLines;
+  })
 });

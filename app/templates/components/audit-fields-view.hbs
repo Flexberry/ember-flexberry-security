@@ -7,16 +7,16 @@
     </tr>
   </thead>
   <tbody>
-    {{#each auditFields as |auditField|}}
+    {{#each auditFieldsWithSeparatedLines as |auditField|}}
       <tr>
         <td>
-          {{or auditField.Field auditField.field}}
+          {{auditField.field}}
         </td>
         <td>
-          {{or auditField.OldValue auditField.oldValue}}
+          {{auditField.oldValue}}
         </td>
         <td>
-          {{or auditField.NewValue auditField.newValue}}
+          {{auditField.newValue}}
         </td>
       </tr>
     {{/each}}
