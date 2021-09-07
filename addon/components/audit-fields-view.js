@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import FlexberryBaseComponent from 'ember-flexberry/components/flexberry-base-component';
-import { translationMacro as t } from 'ember-i18n';
 
 export default FlexberryBaseComponent.extend({
   /**
@@ -36,33 +35,32 @@ export default FlexberryBaseComponent.extend({
   newValueColumnCaption: undefined,
 
   /**
-    Audit fields with separated strings.
+    Audit fields optimized for showing in template.
 
-    @property auditFieldsWithSeparatedLines
+    @property auditFieldsForShow
     @type Array
   */
-  auditFieldsWithSeparatedLines: Ember.computed('auditFields', function() {
-    const auditFields = this.get('auditFields');
+  auditFieldsForShow: Ember.computed('auditFields', function() {
+    const originalAuditFields = this.get('auditFields');
 
-    let fieldsWithSeparatedLines = [];
+    let auditFieldsForShow = [];
 
-    auditFields.forEach(field => {
-        const fieldName =  field.field || field.Field || ' ';
-        let oldValueParameter = field.oldValue || field.OldValue || ' ';
-        let newValueParameter = field.newValue || field.NewValue || ' ';
+    originalAuditFields.forEach(field => {
+        let fieldName =  field.field || field.Field;
+        let oldValueParameter = field.oldValue || field.OldValue;
+        let newValueParameter = field.newValue || field.NewValue;
 
-        let oldValueParameterSeparated = oldValueParameter.replace(',', '\n');
-        let newValueParameterSeparated = newValueParameter.replace(',', '\n');
-
-        let resultFieldObject = {
-          field: fieldName,
-          oldValue: oldValueParameterSeparated,
-          newValue: newValueParameterSeparated
-        };
-
-        fieldsWithSeparatedLines.push(resultFieldObject);
+        if (fieldName && oldValueParameter && newValueParameter) {
+          let resultFieldObject = {
+            field: fieldName,
+            oldValue: oldValueParameter,
+            newValue: newValueParameter
+          };
+  
+          auditFieldsForShow.push(resultFieldObject);
+        }
     });
 
-    return fieldsWithSeparatedLines;
+    return auditFieldsForShow;
   })
 });
