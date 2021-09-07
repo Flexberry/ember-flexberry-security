@@ -41,16 +41,20 @@ export default FlexberryBaseComponent.extend({
     @type Array
   */
   auditFieldsForShow: Ember.computed('auditFields', function() {
-    const originalAuditFields = this.get('auditFields');
-
     let auditFieldsForShow = [];
+
+    const originalAuditFields = this.get('auditFields');
+    if (!originalAuditFields || !Ember.isArray(originalAuditFields)) {
+      return auditFieldsForShow;
+    }
 
     originalAuditFields.forEach(field => {
         let fieldName =  field.field || field.Field;
-        let oldValueParameter = field.oldValue || field.OldValue;
-        let newValueParameter = field.newValue || field.NewValue;
 
-        if (fieldName && oldValueParameter && newValueParameter) {
+        if (fieldName) {
+          let oldValueParameter = field.oldValue || field.OldValue;
+          let newValueParameter = field.newValue || field.NewValue;
+
           let resultFieldObject = {
             field: fieldName,
             oldValue: oldValueParameter,
