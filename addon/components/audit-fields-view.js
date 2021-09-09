@@ -49,13 +49,13 @@ export default FlexberryBaseComponent.extend({
     }
 
     originalAuditFields.forEach(field => {
-        let fieldName =  field.field || field.Field;
+        const fieldName =  field.field || field.Field;
 
         if (fieldName) {
-          let oldValueParameter = field.oldValue || field.OldValue;
-          let newValueParameter = field.newValue || field.NewValue;
+          const oldValueParameter = field.oldValue || field.OldValue;
+          const newValueParameter = field.newValue || field.NewValue;
 
-          let resultFieldObject = {
+          const resultFieldObject = {
             field: fieldName,
             oldValue: oldValueParameter,
             newValue: newValueParameter
