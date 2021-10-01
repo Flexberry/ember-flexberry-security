@@ -1,13 +1,12 @@
 import Ember from 'ember';
 import FlexberryBaseComponent from 'ember-flexberry/components/flexberry-base-component';
-import { translationMacro as t } from 'ember-i18n';
 
 export default FlexberryBaseComponent.extend({
   /**
     Audit fields.
 
     @property value
-    @type String
+    @type Array
   */
   auditFields: undefined,
 
@@ -34,4 +33,38 @@ export default FlexberryBaseComponent.extend({
     @type String
   */
   newValueColumnCaption: undefined,
+
+  /**
+    Audit fields optimized for showing in template.
+
+    @property auditFieldsForShow
+    @type Array
+  */
+  auditFieldsForShow: Ember.computed('auditFields', function() {
+    let auditFieldsForShow = [];
+
+    const originalAuditFields = this.get('auditFields');
+    if (!originalAuditFields || !Ember.isArray(originalAuditFields)) {
+      return auditFieldsForShow;
+    }
+
+    originalAuditFields.forEach(field => {
+        const fieldName =  field.field || field.Field;
+
+        if (fieldName) {
+          const oldValueParameter = field.oldValue || field.OldValue;
+          const newValueParameter = field.newValue || field.NewValue;
+
+          const resultFieldObject = {
+            field: fieldName,
+            oldValue: oldValueParameter,
+            newValue: newValueParameter
+          };
+  
+          auditFieldsForShow.push(resultFieldObject);
+        }
+    });
+
+    return auditFieldsForShow;
+  })
 });
