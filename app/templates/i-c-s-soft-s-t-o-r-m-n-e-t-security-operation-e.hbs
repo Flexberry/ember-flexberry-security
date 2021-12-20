@@ -81,8 +81,7 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.createTime-caption'}}</label>
   {{
-    flexberry-datepicker
-    placeholder='(no value)'
+    flexberry-simpledatetime
     readonly=readonly
     value=model.createTime
     class=(if model.errors.createTime 'error' '')
@@ -106,8 +105,7 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-operation-e.editTime-caption'}}</label>
   {{
-    flexberry-datepicker
-    placeholder='(no value)'
+    flexberry-simpledatetime
     readonly=readonly
     value=model.editTime
     class=(if model.errors.editTime 'error' '')

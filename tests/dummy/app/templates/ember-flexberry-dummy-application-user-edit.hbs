@@ -200,8 +200,7 @@
   <span style="color:red">{{model.errors.birthday}}</span>
   {{/if}}
   {{
-    flexberry-datepicker
-    placeholder='(no value)'
+    flexberry-simpledatetime
     readonly=readonly
     value=model.birthday
     class=(if model.errors.birthday 'error' '')

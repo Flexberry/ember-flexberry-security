@@ -36,9 +36,8 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.operationTime-caption'}}</label>
   {{
-    flexberry-datepicker
-    hasTimePicker=true
-    placeholder='(no value)'
+    flexberry-simpledatetime
+    type="datetime-local"
     readonly=readonly
     value=model.operationTime
     class=(if model.errors.operationTime 'error' '')
@@ -101,8 +100,7 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.createTime-caption'}}</label>
   {{
-    flexberry-datepicker
-    placeholder='(no value)'
+    flexberry-simpledatetime
     readonly=readonly
     value=model.createTime
     class=(if model.errors.createTime 'error' '')
@@ -124,8 +122,7 @@
 <div class="field">
   <label>{{t 'forms.i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-entity-e.editTime-caption'}}</label>
   {{
-    flexberry-datepicker
-    placeholder='(no value)'
+    flexberry-simpledatetime
     readonly=readonly
     value=model.editTime
     class=(if model.errors.editTime 'error' '')
