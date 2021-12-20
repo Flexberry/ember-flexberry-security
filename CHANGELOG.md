@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.0-beta.43] - 2021-12-20
+### Changed
+* `flexberry-datepicker` replaced with `flexberry-simpledatetime`.
+
 ## [0.1.0-beta.42] - 2021-09-02
 ### Fixed
 * Audit big data edit form.
