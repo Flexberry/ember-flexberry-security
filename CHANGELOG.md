@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.0-beta.44] - 2022-01-20
+### Fixed
+* `sourceType` for `TypeAccessEnum`.
+
 ## [0.1.0-beta.43] - 2021-12-20
 ### Changed
 * `flexberry-datepicker` replaced with `flexberry-simpledatetime`.
