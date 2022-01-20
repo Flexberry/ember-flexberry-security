@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.6.1-beta.1]  - 2022-01-20
+### Fixed
+* `sourceType` for `TypeAccessEnum`.
+
 ## [3.6.1-beta.0]  - 2021-08-19
 ### Fixed
 * `Sec_SubjectE` projection in subject model.
