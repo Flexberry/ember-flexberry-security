@@ -1,0 +1,15 @@
+{
+    "nameSpace": "NewPlatform.Flexberry.AuditBigData",
+    "className": "AuditOperationType",
+    "enumObjects": {
+      "Insert": "",
+      "Update": "",
+      "Delete": "",
+      "Select": "",
+      "Execute": "",
+      "SessionStart": "",
+      "SessionEnd": "",
+      "Ratify": "",
+      "Custom": ""
+    }
+  }

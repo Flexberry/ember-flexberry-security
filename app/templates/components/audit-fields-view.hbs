@@ -1,0 +1,24 @@
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>{{nameColumnCaption}}</th>
+      <th>{{oldValueColumnCaption}}</th>
+      <th>{{newValueColumnCaption}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each auditFields as |auditField|}}
+      <tr>
+        <td>
+        {{auditField.field}}
+        </td>
+        <td>
+        {{auditField.oldValue}}
+        </td>
+        <td>
+        {{auditField.newValue}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
