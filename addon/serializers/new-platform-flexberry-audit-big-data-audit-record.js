@@ -1,4 +1,9 @@
 import { Serializer as AuditRecordSerializer } from '../mixins/regenerated/serializers/new-platform-flexberry-audit-big-data-audit-record';
-import ODataSerializer from 'ember-flexberry-data/serializers/odata';
+import __ApplicationSerializer from './application';
 
-export default ODataSerializer.extend(AuditRecordSerializer);
+export default __ApplicationSerializer.extend(AuditRecordSerializer, {
+    /**
+    * Field name where object identifier is kept.
+    */
+    primaryKey: '__PrimaryKey'
+});

@@ -61,6 +61,11 @@ Router.map(function () {
   this.route('ember-flexberry-dummy-test-poly-list');
   this.route('ember-flexberry-dummy-test-poly-edit', { path: 'ember-flexberry-dummy-test-poly-edit/:id' });
   this.route('ember-flexberry-dummy-test-poly-edit.new', { path: 'ember-flexberry-dummy-test-poly-edit/new' });
+
+  this.route('new-platform-flexberry-audit-big-data-audit-record-l');
+  this.route('new-platform-flexberry-audit-big-data-audit-record-e', { path: 'new-platform-flexberry-audit-big-data-audit-record-e/:id' });
+  this.route('new-platform-flexberry-audit-big-data-audit-record-e.new', { path: 'new-platform-flexberry-audit-big-data-audit-record-e/new' });
+
   this.route('login');
 });
 

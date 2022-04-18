@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { isEmpty } from '@ember/utils';
 import DS from 'ember-data';
 
 /**
@@ -12,13 +12,13 @@ export default DS.StringTransform.extend({
     Deserializes serialized attribute value.
    */
   deserialize(serialized) {
-    return Ember.isEmpty(serialized) ? null : serialized;
+    return isEmpty(serialized) ? null : serialized;
   },
 
   /**
     Serializes deserialized attribute value.
    */
   serialize(deserialized) {
-    return Ember.isEmpty(deserialized) ? null : deserialized;
+    return isEmpty(deserialized) ? null : deserialized;
   }
 });

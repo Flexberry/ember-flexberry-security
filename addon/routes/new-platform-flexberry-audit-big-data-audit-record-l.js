@@ -1,7 +1,9 @@
-import Ember from 'ember';
 import ListFormRoute from 'ember-flexberry/routes/list-form';
-import { Query } from 'ember-flexberry-data';
+import { merge } from '@ember/polyfills';
 import operationTypes from '../enums/new-platform-flexberry-audit-big-data-audit-operation-type';
+import { SimplePredicate, ComplexPredicate } from 'ember-flexberry-data/query/predicate';
+import FilterOperator from 'ember-flexberry-data/query/filter-operator';
+import Condition from 'ember-flexberry-data/query/condition';
 
 export default ListFormRoute.extend({
   /**
@@ -64,7 +66,7 @@ export default ListFormRoute.extend({
     @return {BasePredicate} The predicate to limit loaded data.
    */
   objectListViewLimitPredicate: function(options) {
-    let methodOptions = Ember.merge({
+    let methodOptions = merge({
       modelName: undefined,
       projectionName: undefined,
       params: undefined
@@ -73,23 +75,23 @@ export default ListFormRoute.extend({
     if (methodOptions.modelName === this.get('modelName') &&
         methodOptions.projectionName === this.get('modelProjection')) {
 
-      let ratifyLimitFunction = new Query.SimplePredicate('operationType', Query.FilterOperator.Neq, operationTypes.Ratify);
+      let ratifyLimitFunction = new SimplePredicate('operationType', FilterOperator.Neq, operationTypes.Ratify);
 
       let conditions = [];
       conditions.push(ratifyLimitFunction);
 
       let objectTypeName = options.params.filterByObjectType;
       if (objectTypeName) {
-        conditions.push(new Query.SimplePredicate('objectType.Name', Query.FilterOperator.Eq, objectTypeName));
+        conditions.push(new SimplePredicate('objectType.Name', FilterOperator.Eq, objectTypeName));
       }
 
       let objectPrimaryKey = options.params.filterByObjectId;
       if (objectPrimaryKey) {
-        conditions.push(new Query.StringPredicate('objectPrimaryKey').contains(objectPrimaryKey));
+        conditions.push(new SimplePredicate('objectPrimaryKey').contains(objectPrimaryKey));
       }
 
       let isComplexPredicate = conditions.length > 1;
-      let limitFunction = (isComplexPredicate) ? new Query.ComplexPredicate(Query.Condition.And, ...conditions) : ratifyLimitFunction;
+      let limitFunction = (isComplexPredicate) ? new ComplexPredicate(Condition.And, ...conditions) : ratifyLimitFunction;
 
       return limitFunction;
     }

@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import FlexberryBaseComponent from 'ember-flexberry/components/flexberry-base-component';
 import { translationMacro as t } from 'ember-i18n';
 

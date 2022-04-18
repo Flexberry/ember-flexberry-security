@@ -1,9 +1,7 @@
-import Ember from 'ember';
-import { Adapter } from 'ember-flexberry-data';
+import OdataAdapter from 'ember-flexberry-data/adapters/odata';
+import { getOwner } from '@ember/application';
 
-const { getOwner } = Ember;
-
-export default Adapter.Odata.extend({
+export default OdataAdapter.extend({
 
   init: function () {
     this._super(...arguments);

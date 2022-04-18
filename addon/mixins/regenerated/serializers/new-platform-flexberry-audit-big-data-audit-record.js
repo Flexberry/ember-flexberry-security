@@ -1,12 +1,17 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import $ from 'jquery';
 
-export let Serializer = Ember.Mixin.create({
-  attrs: {
-    headAuditEntity: { serialize: 'odata-id', deserialize: 'records' }
+export let Serializer = Mixin.create({
+  getAttrs: function () {
+    let parentAttrs = this._super();
+    let attrs = {
+      headAuditEntity: { serialize: 'odata-id', deserialize: 'records' }
+    };
+
+    return $.extend(true, {}, parentAttrs, attrs);
   },
-
-  /**
-    Field name where object identifier is kept.
-  */
-  primaryKey: '__PrimaryKey'
+  init: function () {
+    this.set('attrs', this.getAttrs());
+    this._super(...arguments);
+  }
 });

@@ -1,6 +1,8 @@
 import EditFormRoute from 'ember-flexberry/routes/edit-form';
 import executionStatus from '../enums/new-platform-flexberry-audit-big-data-execution-status';
-import { Query } from 'ember-flexberry-data';
+import { SimplePredicate } from 'ember-flexberry-data/query/predicate';
+import FilterOperator from 'ember-flexberry-data/query/filter-operator';
+import QueryBuilder from 'ember-flexberry-data/query/builder';
 
 export default EditFormRoute.extend({
   modelProjection: 'AuditRecordE',
@@ -16,9 +18,9 @@ export default EditFormRoute.extend({
     const modelName = this.get('modelName');
     const projectionName = this.get('modelProjection');
     const controller = this.controllerFor(this.routeName);
-    let headAuditEntityPredicate = new Query.SimplePredicate('headAuditEntity', Query.FilterOperator.Eq, headAuditEntityKey);
+    let headAuditEntityPredicate = new SimplePredicate('headAuditEntity', FilterOperator.Eq, headAuditEntityKey);
 
-    let builder = new Query.Builder(store, modelName)
+    let builder = new QueryBuilder(store, modelName)
     .selectByProjection(projectionName)
     .where(headAuditEntityPredicate);
 
