@@ -1,4 +1,6 @@
 import FlexberryBaseComponent from 'ember-flexberry/components/flexberry-base-component';
+import { computed } from '@ember/object';
+import { isArray } from '@ember/array';
 
 export default FlexberryBaseComponent.extend({
   /**
@@ -34,11 +36,11 @@ export default FlexberryBaseComponent.extend({
     @property auditFieldsForShow
     @type Array
   */
-  auditFieldsForShow: Ember.computed('auditFields', function() {
+  auditFieldsForShow: computed('auditFields', function() {
     let auditFieldsForShow = [];
 
     const originalAuditFields = this.get('auditFields');
-    if (!originalAuditFields || !Ember.isArray(originalAuditFields)) {
+    if (!originalAuditFields || !isArray(originalAuditFields)) {
       return auditFieldsForShow;
     }
 
