@@ -4,7 +4,13 @@
   @returns {Object[]} parsed fields.
 */
 export function deserializeAuditFields(serializedFields) {
-    const auditFields = JSON.parse(serializedFields);
-  
-    return auditFields;
+  let deserializedAuditFields = '';
+
+  try {
+    deserializedAuditFields = JSON.parse(serializedFields);
+  } catch(e) {
+    throw new Error(`Audit fields json deserialization error. '${e}'`);
   }
+
+  return deserializedAuditFields;
+}

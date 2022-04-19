@@ -11,7 +11,7 @@ export default EditFormRoute.extend({
   /**
    * @inheritdoc
    */
-  afterModel(model, transition) {
+  afterModel(model) {
     let status = executionStatus.Unexecuted;
     const headAuditEntityKey = model.get('id');
     const store = this.store;

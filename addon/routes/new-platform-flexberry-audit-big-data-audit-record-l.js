@@ -4,6 +4,7 @@ import operationTypes from '../enums/new-platform-flexberry-audit-big-data-audit
 import { SimplePredicate, ComplexPredicate } from 'ember-flexberry-data/query/predicate';
 import FilterOperator from 'ember-flexberry-data/query/filter-operator';
 import Condition from 'ember-flexberry-data/query/condition';
+import { computed } from '@ember/object';
 
 export default ListFormRoute.extend({
   /**
@@ -43,7 +44,11 @@ export default ListFormRoute.extend({
     @type Object
     @default {}
   */
-  developerUserSettings: { NewPlatformFlexberryAuditBigDataAuditRecordL: {} },
+  developerUserSettings: computed(function() {
+    return {
+      NewPlatformFlexberryAuditBigDataAuditRecordL: {}
+    }
+  }),
 
   queryParams: {
     filterByObjectId: {

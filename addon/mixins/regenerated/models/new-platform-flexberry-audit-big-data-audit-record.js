@@ -1,7 +1,6 @@
 import Mixin from '@ember/object/mixin';
 import DS from 'ember-data';
-import { validator } from 'ember-cp-validations';
-import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
+import { attr, belongsTo } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
   userName: DS.attr('string'),
