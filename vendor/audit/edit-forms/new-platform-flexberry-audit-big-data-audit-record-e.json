@@ -1,14 +1,14 @@
 {
-    "propertyLookup": [],
-    "external": false,
-    "caption": null,
-    "name": "NewPlatformFlexberryAuditBigDataAuditRecordE",
-    "className": "AuditRecordE",
-    "attrs": [],
-    "projections": [
-      {
-        "modelName": "new-platform-flexberry-audit-big-data-audit-record",
-        "modelProjection": "AuditRecordE"
-      }
-    ]
-  }
+  "propertyLookup": [],
+  "external": false,
+  "caption": null,
+  "name": "NewPlatformFlexberryAuditBigDataAuditRecordE",
+  "className": "AuditRecordE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "new-platform-flexberry-audit-big-data-audit-record",
+      "modelProjection": "AuditRecordE"
+    }
+  ]
+}
