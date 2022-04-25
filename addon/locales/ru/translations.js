@@ -11,6 +11,12 @@ import ICSSoftSTORMNETBusinessAuditObjectsAuditFieldModel from
 './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-audit-field';
 import ICSSoftSTORMNETBusinessAuditObjectsObjectTypeModel from
 './models/i-c-s-soft-s-t-o-r-m-n-e-t-business-audit-objects-object-type';
+import NewPlatformFlexberryAuditBigDataAuditRecordLForm from 
+'./forms/new-platform-flexberry-audit-big-data-audit-record-l';
+import NewPlatformFlexberryAuditBigDataAuditRecordEForm from 
+'./forms/new-platform-flexberry-audit-big-data-audit-record-e';
+import NewPlatformFlexberryAuditBigDataAuditRecordModel from 
+'./models/new-platform-flexberry-audit-big-data-audit-record';
 
 import ICSSoftSTORMNETSecurityAccessLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-access-l';
 import ICSSoftSTORMNETSecurityClassLForm from './forms/i-c-s-soft-s-t-o-r-m-n-e-t-security-class-l';
@@ -66,6 +72,7 @@ $.extend(true, translations, {
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-permition': ICSSoftSTORMNETSecurityPermitionModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-session': ICSSoftSTORMNETSecuritySessionModel,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-subject': ICSSoftSTORMNETSecuritySubjectModel,
+    'new-platform-flexberry-audit-big-data-audit-record': NewPlatformFlexberryAuditBigDataAuditRecordModel,
   },
 
   forms: {
@@ -160,6 +167,8 @@ $.extend(true, translations, {
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-role-e': ICSSoftSTORMNETSecurityRoleEForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-user-e': ICSSoftSTORMNETSecurityUserEForm,
     'i-c-s-soft-s-t-o-r-m-n-e-t-security-view-e': ICSSoftSTORMNETSecurityViewEForm,
+    'new-platform-flexberry-audit-big-data-audit-record-l': NewPlatformFlexberryAuditBigDataAuditRecordLForm,
+    'new-platform-flexberry-audit-big-data-audit-record-e': NewPlatformFlexberryAuditBigDataAuditRecordEForm,
   },
 
 });

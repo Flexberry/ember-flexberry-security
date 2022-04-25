@@ -1,5 +1,6 @@
 import Mixin from '@ember/object/mixin';
 import { buildValidations, validator } from 'ember-cp-validations';
+import { computed } from '@ember/object';
 
 let ValidationRules = {
   'model.name': {
@@ -56,7 +57,7 @@ export default Mixin.create(Validations, {
    *
    * @property validationObject
    */
-  validationObject: Ember.computed(function() {
+  validationObject: computed(function() {
     return this;
   }),
 });

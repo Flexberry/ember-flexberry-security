@@ -1,0 +1,15 @@
+{
+  "newForm": "new-platform-flexberry-audit-big-data-audit-record-e",
+  "editForm": "new-platform-flexberry-audit-big-data-audit-record-e",
+  "external": false,
+  "caption": null,
+  "name": "NewPlatformFlexberryAuditBigDataAuditRecordL",
+  "className": "AuditRecordL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "new-platform-flexberry-audit-big-data-audit-record",
+      "modelProjection": "AuditRecordL"
+    }
+  ]
+}
