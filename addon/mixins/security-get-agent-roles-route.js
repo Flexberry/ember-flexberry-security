@@ -91,18 +91,21 @@ export default Ember.Mixin.create({
             });
 
             let counter = 0;
-            let iterationMax = _roles.length;
+            let iterationMax = _roles.content.length;
             
             // If counter >= iterationMax then there is a circle inheritance.
-            // processedOnBeforeStep - changed on before step, so it is needed to add to child roles new info.
+            // processedOnBeforeStep - changed on before step inheritance lists, so it is needed to add to child roles new info.
             while(counter < iterationMax && processedOnBeforeStep.length > 0) {
               // There are not so many inheritances in reality so it is not too long.
               let processedOnCurrentStep = [];
-              for (let inheritanceKey in processedOnBeforeStep){
+              let iMax = processedOnBeforeStep.length;
+              let innerKeys = Object.keys(_inheritanceProcessed);
+              for (let i = 0; i < iMax; i++) {
+                let inheritanceKey = processedOnBeforeStep[i];
                 let inheritance = _inheritanceProcessed[inheritanceKey];
                 if (inheritance.length > 0)
                 {
-                  for (let inheritanceAddKey in _inheritanceProcessed){
+                  innerKeys.forEach((inheritanceAddKey) => {
                     if (inheritanceKey != inheritanceAddKey)
                     {
                       let inheritanceAdd = _inheritanceProcessed[inheritanceAddKey];
@@ -112,7 +115,7 @@ export default Ember.Mixin.create({
                         processedOnCurrentStep.push(inheritanceAddKey);
                       }
                     }
-                  }
+                  });
                 }
               }
 
@@ -165,6 +168,7 @@ export default Ember.Mixin.create({
             // Set inited cells to datarows.
             _roles.forEach(role => {
               let roleId = Ember.get(role, 'id');
+              let roleName = role.get('name');
               let currentRoleCells = rolesList[roleId];
 
               _userRoles.rows.push(SecurityAssignDataRowObject.create({
