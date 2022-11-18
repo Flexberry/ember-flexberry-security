@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.0-beta.45] - 2022-11-18
+### Added
+* Parent roles display.
+
 ## [0.1.0-beta.44] - 2022-01-20
 ### Fixed
 * `sourceType` for `TypeAccessEnum`.
