@@ -61,7 +61,7 @@
   "dependencies": {
     "ember-cli": "~3.1.4",
     "ember-cli-babel": "^6.6.0",
-    "ember-flexberry-data": "~3.6.0"
+    "ember-flexberry-data": "~3.10.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
