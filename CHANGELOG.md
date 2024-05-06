@@ -2,21 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.6.1-beta.3] - 2024-04-12
-### Changed
-* Update dependency on `ember-flexberry-data` to 3.10.0
-* Update dependency on `ember-flexberry` to 3.10.1
-
-## [3.6.1-beta.2] - 2022-04-25
+## [3.6.1] - 2024-05-06
 ### Added
 * Audit big data forms.
 
-## [3.6.1-beta.1] - 2022-01-20
+### Changed
+* Update dependency on `ember-flexberry-data` to 3.12.0
+* Update dependency on `ember-flexberry` to 3.12.0
+
 ### Fixed
 * `sourceType` for `TypeAccessEnum`.
-
-## [3.6.1-beta.0] - 2021-08-19
-### Fixed
 * `Sec_SubjectE` projection in subject model.
 
 ## [3.6.0]  - 2021-08-17
