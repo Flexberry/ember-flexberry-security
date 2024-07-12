@@ -1,7 +1,7 @@
 import ListFormRoute from 'ember-flexberry/routes/list-form';
 import { merge } from '@ember/polyfills';
 import operationTypes from '../enums/new-platform-flexberry-audit-big-data-audit-operation-type';
-import { SimplePredicate, ComplexPredicate } from 'ember-flexberry-data/query/predicate';
+import { SimplePredicate, StringPredicate, ComplexPredicate } from 'ember-flexberry-data/query/predicate';
 import FilterOperator from 'ember-flexberry-data/query/filter-operator';
 import Condition from 'ember-flexberry-data/query/condition';
 import { computed } from '@ember/object';
@@ -92,7 +92,7 @@ export default ListFormRoute.extend({
 
       let objectPrimaryKey = options.params.filterByObjectId;
       if (objectPrimaryKey) {
-        conditions.push(new SimplePredicate('objectPrimaryKey').contains(objectPrimaryKey));
+        conditions.push(new StringPredicate('objectPrimaryKey').contains(objectPrimaryKey));
       }
 
       let isComplexPredicate = conditions.length > 1;

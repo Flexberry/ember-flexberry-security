@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.6.2-beta.1] - 2024-07-12
+### Fixed
+* `new-platform-flexberry-audit-big-data-audit-record-l` route.
+
 ## [3.6.1] - 2024-05-06
 ### Added
 * Audit big data forms.
