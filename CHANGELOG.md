@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.6.3-beta.1] - 2025-09-04
+### Added
+* Add filtering for list forms.
+* Add filtering, autocomplete for component `flexberry-lookup`.
+
 ## [3.6.2-beta.1] - 2024-07-12
 ### Fixed
 * `new-platform-flexberry-audit-big-data-audit-record-l` route.

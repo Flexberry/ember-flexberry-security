@@ -32,11 +32,13 @@
       value=model.role
       relationName="role"
       displayAttributeName='name'
+      autocomplete=true
       projection="RoleOrGroupL"
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.role-caption")
       readonly=readonly
       componentName="roleLookup"
       class=(if (v-get validationObject "role" "isInvalid") "error")
+      lookupWindowCustomProperties=(action 'getLookupCustomProperties')
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e-role=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "role" "message")}}
@@ -48,12 +50,14 @@
       remove="removeLookupValue"
       value=model.agent
       displayAttributeName='name'
+      autocomplete=true
       relationName="agent"
       projection="RoleOrGroupL"
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e.agent-caption")
       readonly=readonly
       componentName="agentLookup"
       class=(if (v-get validationObject "agent" "isInvalid") "error")
+      lookupWindowCustomProperties=(action 'getLookupCustomProperties')
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role-e-agent=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "agent" "message")}}
