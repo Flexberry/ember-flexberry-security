@@ -30,12 +30,14 @@
       choose="showLookupDialog"
       remove="removeLookupValue"
       value=model.permition
+      autocomplete=true
       relationName="permition"
       projection="Sec_PermitionL"
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.permition-caption")
       readonly=readonly
       componentName="permitionLookup"
       class=(if (v-get validationObject "permition" "isInvalid") "error")
+      lookupWindowCustomProperties=(action 'getLookupCustomProperties')
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-permition=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "permition" "message")}}
@@ -81,11 +83,12 @@
       displayAttributeName="name"
       autocomplete=true
       relationName="filter"
-      projection=""
+      projection="Sec_FilterL"
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e.filter-caption")
       readonly=readonly
       componentName="filterLookup"
       class=(if (v-get validationObject "filter" "isInvalid") "error")
+      lookupWindowCustomProperties=(action 'getLookupCustomProperties')
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-access-e-filter=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "filter" "message")}}

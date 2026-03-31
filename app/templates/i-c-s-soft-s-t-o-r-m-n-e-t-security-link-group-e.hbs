@@ -38,6 +38,7 @@
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.user-caption")
       readonly=readonly
       componentName="userLookup"
+      lookupWindowCustomProperties=(action 'getLookupCustomProperties')
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e-user=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "model.user" "message")}}
@@ -57,6 +58,7 @@
       title=(t "forms.i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e.group-caption")
       readonly=readonly
       componentName="groupLookup"
+      lookupWindowCustomProperties=(action 'getLookupCustomProperties')
       data-test-i-c-s-soft-s-t-o-r-m-n-e-t-security-link-group-e-group=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "model.group" "message")}}
