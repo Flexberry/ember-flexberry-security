@@ -153,11 +153,11 @@ export let defineProjections = function (modelClass) {
   modelClass.defineProjection('Sec_LinkRoleL', 'i-c-s-soft-s-t-o-r-m-n-e-t-security-link-role', {
     role: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Роль', {
       name: attr('Роль', { index: 0 })
-    }, { index: 4 }),
+    }, { index: 4, displayMemberPath: 'name' }),
     agent: belongsTo('i-c-s-soft-s-t-o-r-m-n-e-t-security-agent', 'Агент', {
       name: attr('Агент', { index: 1 }),
       login: attr('Логин', { index: 2 })
-    }, { index: 3 }),
+    }, { index: 3, displayMemberPath: 'name' }),
     startDate: attr('', { index: 5 }),
     endDate: attr('', { index: 6 }),
     createTime: attr('Дата создания', { index: 7 }),

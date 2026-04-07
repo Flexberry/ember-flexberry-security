@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.6.3-beta.2] - 2026-04-07
+### Added
+* Fix filtering for list forms.
+* Fix security-access-e form.
+
 ## [3.6.3-beta.1] - 2025-09-04
 ### Added
 * Add filtering for list forms.
